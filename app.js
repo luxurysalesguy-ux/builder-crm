@@ -100536,6 +100536,16 @@ function skuCount(skus, type) {
     if (type === "optional") return skus.filter((s)=>s.stOpt === "O").length;
     return skus.length;
 }
+// Count standard SKUs deduped by job address (don't double-count same house)
+function skuCountDeduped(jobs) {
+    const seen = new Set();
+    return jobs.reduce((total, j)=>{
+        const key = (j.address || "").trim().toLowerCase();
+        if (key && seen.has(key)) return total;
+        if (key) seen.add(key);
+        return total + skuCount(j.skus, "standard");
+    }, 0);
+}
 // ── Badges ────────────────────────────────────────────────────────────────────
 function TierBadge({ tier, full }) {
     const c = getTier(tier);
@@ -101564,7 +101574,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
         if (spFilter !== "all" && (j.salesperson || "").trim().toLowerCase() !== spFilter.trim().toLowerCase()) return false;
         return true;
     });
-    const totalStd = builder.jobs.reduce((a, j)=>a + skuCount(j.skus, "standard"), 0);
+    const totalStd = skuCountDeduped(builder.jobs);
     return /*#__PURE__*/ React.createElement("div", null, /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
@@ -101783,7 +101793,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
         }
     }, Object.keys(STATUS_CONFIG).map((st)=>{
         const cnt = builder.jobs.filter((j)=>j.status === st).length;
-        const std = builder.jobs.filter((j)=>j.status === st).reduce((a, j)=>a + skuCount(j.skus, "standard"), 0);
+        const std = skuCountDeduped(builder.jobs.filter((j)=>j.status === st));
         const sc = STATUS_CONFIG[st];
         return /*#__PURE__*/ React.createElement("div", {
             key: st,
@@ -103378,7 +103388,7 @@ export default function BuilderCRM() {
             fontSize: 11,
             marginTop: 1
         }
-    }, "Sub-Zero Group Southwest · Phoenix/Scottsdale · subzerosw@gmail.com")), /*#__PURE__*/ React.createElement("div", {
+    }, "Sub-Zero Group Southwest")), /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
             gap: 18
@@ -103682,7 +103692,7 @@ export default function BuilderCRM() {
     }, filteredBuilders.map((builder)=>{
         const tc = getTier(builder.tier);
         const ac = builder.jobs.filter((j)=>j.status === "Active").length;
-        const totalStd = builder.jobs.reduce((a, j)=>a + skuCount(j.skus, "standard"), 0);
+        const totalStd = skuCountDeduped(builder.jobs);
         return /*#__PURE__*/ React.createElement("div", {
             key: builder.id,
             onClick: ()=>setSelectedBuilderId(builder.id),
