@@ -102551,7 +102551,7 @@ function ExcelImporter({ builders, onImportApproved }) {
         conflict: items.filter((i)=>i._status === "conflict").length,
         mismatch: items.filter((i)=>i._status === "mismatch").length
     } : {};
-    const [page, setPage] = useState(0);
+    const [expandedItem, setExpandedItem] = useState(null);
     const PAGE_SIZE = 50;
     const visibleItems = items ? items.map((item, i)=>({
             item,
@@ -102744,29 +102744,27 @@ function ExcelImporter({ builders, onImportApproved }) {
         style: {
             display: "flex",
             flexDirection: "column",
-            gap: 6,
-            marginBottom: 12,
-            maxHeight: 500,
-            overflowY: "auto"
+            gap: 4,
+            marginBottom: 12
         }
     }, pagedItems.map(({ item, i })=>{
-        const sm = STATUS_META[item._status];
+        const sm = STATUS_META[item._status] || STATUS_META.mismatch;
         const isApproved = !!approved[i];
         const canApprove = item._status !== "mismatch";
+        const isExpanded = expandedItem === i;
         return /*#__PURE__*/ React.createElement("div", {
             key: i,
             style: {
                 border: `1px solid ${isApproved ? sm.color : "#E5E7EB"}`,
-                borderRadius: 8,
-                overflow: "hidden"
+                borderRadius: 6,
+                background: isApproved ? sm.bg : "white"
             }
         }, /*#__PURE__*/ React.createElement("div", {
             style: {
-                padding: "10px 14px",
-                background: isApproved ? sm.bg : "#FAFAFA",
+                padding: "8px 12px",
                 display: "flex",
-                alignItems: "flex-start",
-                gap: 10
+                alignItems: "center",
+                gap: 8
             }
         }, /*#__PURE__*/ React.createElement("div", {
             onClick: ()=>canApprove && setApproved((p)=>({
@@ -102774,75 +102772,122 @@ function ExcelImporter({ builders, onImportApproved }) {
                         [i]: !p[i]
                     })),
             style: {
-                width: 20,
-                height: 20,
-                borderRadius: 4,
+                width: 18,
+                height: 18,
+                borderRadius: 3,
                 border: `2px solid ${isApproved ? sm.color : "#D1D5DB"}`,
                 background: isApproved ? sm.color : "white",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 cursor: canApprove ? "pointer" : "not-allowed",
-                flexShrink: 0,
-                marginTop: 2
+                flexShrink: 0
             }
         }, isApproved && /*#__PURE__*/ React.createElement("span", {
             style: {
                 color: "white",
-                fontSize: 12,
+                fontSize: 10,
                 fontWeight: 900
             }
-        }, "✓")), /*#__PURE__*/ React.createElement("div", {
+        }, "✓")), /*#__PURE__*/ React.createElement("span", {
+            style: {
+                background: sm.bg,
+                color: sm.color,
+                border: `1px solid ${sm.color}`,
+                borderRadius: 4,
+                padding: "1px 6px",
+                fontSize: 10,
+                fontWeight: 700,
+                flexShrink: 0
+            }
+        }, sm.icon), /*#__PURE__*/ React.createElement("div", {
             style: {
                 flex: 1,
                 minWidth: 0
+            }
+        }, /*#__PURE__*/ React.createElement("span", {
+            style: {
+                fontWeight: 700,
+                fontSize: 12,
+                color: "#111827"
+            }
+        }, item.projectName || "Unnamed"), /*#__PURE__*/ React.createElement("span", {
+            style: {
+                fontSize: 11,
+                color: "#6B7280",
+                marginLeft: 8
+            }
+        }, item.builderName), /*#__PURE__*/ React.createElement("span", {
+            style: {
+                fontFamily: "monospace",
+                fontSize: 10,
+                color: "#9CA3AF",
+                marginLeft: 6
+            }
+        }, item.partnerCode)), (item._status === "conflict" || item._status === "mismatch") && /*#__PURE__*/ React.createElement("button", {
+            onClick: ()=>setExpandedItem(isExpanded ? null : i),
+            style: {
+                ...btnG,
+                fontSize: 10,
+                padding: "2px 8px",
+                flexShrink: 0
+            }
+        }, isExpanded ? "▲ Hide" : "▼ Review")), isExpanded && item._status === "conflict" && /*#__PURE__*/ React.createElement("div", {
+            style: {
+                padding: "8px 12px",
+                borderTop: "1px solid #FDE68A",
+                background: "#FFFBEB"
+            }
+        }, /*#__PURE__*/ React.createElement("div", {
+            style: {
+                fontSize: 11,
+                fontWeight: 700,
+                color: "#92400E",
+                marginBottom: 6
+            }
+        }, "⚠️ Approve to use incoming data:"), (item._conflicts || []).map((c)=>/*#__PURE__*/ React.createElement("div", {
+                key: c.field,
+                style: {
+                    fontSize: 11,
+                    marginBottom: 4,
+                    display: "flex",
+                    gap: 8,
+                    alignItems: "flex-start"
+                }
+            }, /*#__PURE__*/ React.createElement("strong", {
+                style: {
+                    minWidth: 60
+                }
+            }, c.field, ":"), /*#__PURE__*/ React.createElement("span", {
+                style: {
+                    color: "#DC2626",
+                    textDecoration: "line-through"
+                }
+            }, c.existing), /*#__PURE__*/ React.createElement("span", {
+                style: {
+                    color: "#374151"
+                }
+            }, "→"), /*#__PURE__*/ React.createElement("span", {
+                style: {
+                    color: "#059669"
+                }
+            }, c.incoming))), /*#__PURE__*/ React.createElement("div", {
+            style: {
+                fontSize: 11,
+                color: "#6B7280",
+                marginTop: 6
+            }
+        }, "📍 ", item.jobAddress, " · Reg# ", item.registrationNumber, " · ", (item.skus || []).length, " SKUs")), isExpanded && item._status === "mismatch" && /*#__PURE__*/ React.createElement("div", {
+            style: {
+                padding: "8px 12px",
+                borderTop: "1px solid #FCA5A5",
+                background: "#FEF2F2"
             }
         }, /*#__PURE__*/ React.createElement("div", {
             style: {
                 display: "flex",
                 alignItems: "center",
-                gap: 8,
-                flexWrap: "wrap",
-                marginBottom: 3
-            }
-        }, /*#__PURE__*/ React.createElement("span", {
-            style: {
-                fontWeight: 800,
-                fontSize: 13
-            }
-        }, item.projectName || "Unnamed Project"), /*#__PURE__*/ React.createElement("span", {
-            style: {
-                background: sm.bg,
-                color: sm.color,
-                borderRadius: 4,
-                padding: "1px 8px",
-                fontSize: 11,
-                fontWeight: 700
-            }
-        }, sm.icon, " ", sm.label)), /*#__PURE__*/ React.createElement("div", {
-            style: {
-                fontSize: 12,
-                color: "#374151",
-                marginBottom: 2
-            }
-        }, /*#__PURE__*/ React.createElement("strong", null, item.builderName), /*#__PURE__*/ React.createElement("span", {
-            style: {
-                fontFamily: "monospace",
-                color: "#6B7280",
-                marginLeft: 8
-            }
-        }, item.partnerCode || "NO PARTNER CODE")), /*#__PURE__*/ React.createElement("div", {
-            style: {
-                fontSize: 11,
-                color: "#6B7280",
-                marginBottom: item._status === "mismatch" ? 8 : 0
-            }
-        }, "📍 ", item.jobAddress, " · 👤 ", item.salesperson, " · ", item.skus.length, " SKUs · Reg# ", item.registrationNumber), item._status === "mismatch" && /*#__PURE__*/ React.createElement("div", {
-            style: {
-                display: "flex",
-                alignItems: "center",
-                gap: 8,
-                marginTop: 6
+                gap: 8
             }
         }, /*#__PURE__*/ React.createElement("label", {
             style: {
@@ -102861,8 +102906,7 @@ function ExcelImporter({ builders, onImportApproved }) {
                 padding: "3px 8px",
                 border: "1px solid #FCA5A5",
                 borderRadius: 4,
-                width: 180,
-                textTransform: "uppercase"
+                width: 180
             }
         }), mismatchEdits[i] && builders.find((b)=>b.partnerCode === mismatchEdits[i].trim().toUpperCase()) && /*#__PURE__*/ React.createElement("span", {
             style: {
@@ -102870,45 +102914,19 @@ function ExcelImporter({ builders, onImportApproved }) {
                 color: "#059669",
                 fontWeight: 700
             }
-        }, "✓ ", builders.find((b)=>b.partnerCode === mismatchEdits[i].trim().toUpperCase()).name), mismatchEdits[i] && !builders.find((b)=>b.partnerCode === mismatchEdits[i].trim().toUpperCase()) && mismatchEdits[i].length > 4 && /*#__PURE__*/ React.createElement("span", {
+        }, "✓ ", builders.find((b)=>b.partnerCode === mismatchEdits[i].trim().toUpperCase()).name), mismatchEdits[i] && mismatchEdits[i].length > 4 && !builders.find((b)=>b.partnerCode === mismatchEdits[i].trim().toUpperCase()) && /*#__PURE__*/ React.createElement("span", {
             style: {
                 fontSize: 11,
                 color: "#D97706",
                 fontWeight: 700
             }
-        }, "⚠ New builder will be created")), item._conflicts?.length > 0 && /*#__PURE__*/ React.createElement("div", {
+        }, "⚠ Will create new builder")), /*#__PURE__*/ React.createElement("div", {
             style: {
-                marginTop: 6,
-                padding: "6px 10px",
-                background: "#FFFBEB",
-                border: "1px solid #FDE68A",
-                borderRadius: 6
-            }
-        }, /*#__PURE__*/ React.createElement("div", {
-            style: {
-                fontWeight: 700,
                 fontSize: 11,
-                color: "#92400E",
-                marginBottom: 3
+                color: "#6B7280",
+                marginTop: 6
             }
-        }, "⚠️ Conflicts — approve to use incoming:"), item._conflicts.map((c)=>/*#__PURE__*/ React.createElement("div", {
-                key: c.field,
-                style: {
-                    fontSize: 11,
-                    marginBottom: 2
-                }
-            }, /*#__PURE__*/ React.createElement("strong", null, c.field, ":"), /*#__PURE__*/ React.createElement("span", {
-                style: {
-                    color: "#DC2626",
-                    marginLeft: 4,
-                    textDecoration: "line-through"
-                }
-            }, c.existing), /*#__PURE__*/ React.createElement("span", {
-                style: {
-                    color: "#059669",
-                    marginLeft: 6
-                }
-            }, "→ ", c.incoming)))))));
+        }, "📍 ", item.jobAddress, " · 👤 ", item.salesperson, " · Reg# ", item.registrationNumber)));
     })), totalPages > 1 && /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
