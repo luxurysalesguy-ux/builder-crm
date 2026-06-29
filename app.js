@@ -8,6 +8,13 @@ const TIER_ORDER = [
     4
 ];
 const TIER_CONFIG = {
+    0: {
+        label: "Tier 0",
+        sublabel: "Unassigned",
+        color: "#9CA3AF",
+        bg: "#F3F4F6",
+        text: "#374151"
+    },
     5: {
         label: "Tier 5",
         sublabel: "Entry",
@@ -44,6 +51,7 @@ const TIER_CONFIG = {
         text: "#065F46"
     }
 };
+const getTier = (t)=>TIER_CONFIG[t] || TIER_CONFIG[0];
 const STATUS_CONFIG = {
     Active: {
         color: "#10B981",
@@ -86358,7 +86366,7 @@ function skuCount(skus, type) {
 }
 // ── Badges ────────────────────────────────────────────────────────────────────
 function TierBadge({ tier, full }) {
-    const c = TIER_CONFIG[tier];
+    const c = getTier(tier);
     return /*#__PURE__*/ React.createElement("span", {
         style: {
             background: c.bg,
@@ -86672,7 +86680,7 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
         marks.current = [];
         const pts = [];
         builders.forEach((b)=>{
-            const tc = TIER_CONFIG[b.tier];
+            const tc = getTier(b.tier);
             if ((mapMode === "hq" || mapMode === "both") && b.lat) {
                 const icon = window.L.divIcon({
                     className: "",
@@ -86891,9 +86899,9 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
                 width: 9,
                 height: 9,
                 borderRadius: "50%",
-                background: TIER_CONFIG[t].color
+                background: getTier(t).color
             }
-        }), /*#__PURE__*/ React.createElement("span", null, TIER_CONFIG[t].label))), locStatus === "found" && /*#__PURE__*/ React.createElement("div", {
+        }), /*#__PURE__*/ React.createElement("span", null, getTier(t).label))), locStatus === "found" && /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
             alignItems: "center",
@@ -87206,7 +87214,7 @@ function BuilderForm({ builder, onSave, onCancel }) {
     }, TIER_ORDER.map((t)=>/*#__PURE__*/ React.createElement("option", {
             key: t,
             value: t
-        }, TIER_CONFIG[t].label, " · ", TIER_CONFIG[t].sublabel)))), /*#__PURE__*/ React.createElement("div", {
+        }, getTier(t).label, " · ", getTier(t).sublabel)))), /*#__PURE__*/ React.createElement("div", {
         style: {
             gridColumn: "1/-1"
         }
@@ -87375,7 +87383,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
     const [editingJob, setEditingJob] = useState(null);
     const [expandedJob, setExpandedJob] = useState(null);
     const [mapMode, setMapMode] = useState("jobs");
-    const tc = TIER_CONFIG[builder.tier];
+    const tc = getTier(builder.tier);
     const salespersons = [
         ...new Set(builder.jobs.map((j)=>j.salesperson).filter(Boolean))
     ];
@@ -87571,7 +87579,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
         ] : null,
         [
             "Tier",
-            `${TIER_CONFIG[builder.tier].label} · ${TIER_CONFIG[builder.tier].sublabel}`
+            `${getTier(builder.tier).label} · ${getTier(builder.tier).sublabel}`
         ],
         [
             "Contact",
@@ -93274,7 +93282,7 @@ export default function BuilderCRM() {
     }, "All Tiers"), TIER_ORDER.map((t)=>/*#__PURE__*/ React.createElement("option", {
             key: t,
             value: t
-        }, TIER_CONFIG[t].label, " · ", TIER_CONFIG[t].sublabel))), bActiveFilters > 0 && /*#__PURE__*/ React.createElement("button", {
+        }, getTier(t).label, " · ", getTier(t).sublabel))), bActiveFilters > 0 && /*#__PURE__*/ React.createElement("button", {
         onClick: ()=>{
             setBFilterType("all");
             setBFilterTier("all");
@@ -93395,7 +93403,7 @@ export default function BuilderCRM() {
             gap: 4
         }
     }, filteredBuilders.map((builder)=>{
-        const tc = TIER_CONFIG[builder.tier];
+        const tc = getTier(builder.tier);
         const ac = builder.jobs.filter((j)=>j.status === "Active").length;
         const totalStd = builder.jobs.reduce((a, j)=>a + skuCount(j.skus, "standard"), 0);
         return /*#__PURE__*/ React.createElement("div", {
@@ -93683,7 +93691,7 @@ export default function BuilderCRM() {
             gap: 8
         }
     }, filteredJobs.map((job)=>{
-        const tc = TIER_CONFIG[job.builderTier];
+        const tc = getTier(job.builderTier);
         const std = skuCount(job.skus, "standard");
         const opt = skuCount(job.skus, "optional");
         return /*#__PURE__*/ React.createElement("div", {
@@ -93811,4 +93819,3 @@ export default function BuilderCRM() {
         }
     }, "No jobs match this filter"))))));
 }
-
