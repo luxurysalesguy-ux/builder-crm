@@ -102384,10 +102384,35 @@ function ExcelImporter({ builders, onImportApproved }) {
         setParseError("");
         try {
             const data = await file.arrayBuffer();
-            const { read, utils } = await import("https://cdn.jsdelivr.net/npm/xlsx@0.18.5/+esm");
-            const wb = read(data);
+            // Load SheetJS — try multiple CDNs
+            let XLSX = window.XLSX;
+            if (!XLSX) {
+                const cdns = [
+                    "https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js",
+                    "https://cdn.sheetjs.com/xlsx-0.18.5/package/dist/xlsx.full.min.js"
+                ];
+                for (const cdn of cdns){
+                    try {
+                        await new Promise((res, rej)=>{
+                            const s = document.createElement("script");
+                            s.src = cdn;
+                            s.onload = res;
+                            s.onerror = rej;
+                            document.head.appendChild(s);
+                        });
+                        if (window.XLSX) {
+                            XLSX = window.XLSX;
+                            break;
+                        }
+                    } catch  {}
+                }
+            }
+            if (!XLSX) throw new Error("Could not load Excel parser. Check your network connection.");
+            const wb = XLSX.read(data, {
+                type: "array"
+            });
             const ws = wb.Sheets[wb.SheetNames[0]];
-            const rows = utils.sheet_to_json(ws, {
+            const rows = XLSX.utils.sheet_to_json(ws, {
                 defval: ""
             });
             const col = (row, ...keys)=>{
