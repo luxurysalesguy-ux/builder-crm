@@ -102551,10 +102551,14 @@ function ExcelImporter({ builders, onImportApproved }) {
         conflict: items.filter((i)=>i._status === "conflict").length,
         mismatch: items.filter((i)=>i._status === "mismatch").length
     } : {};
+    const [page, setPage] = useState(0);
+    const PAGE_SIZE = 50;
     const visibleItems = items ? items.map((item, i)=>({
             item,
             i
         })).filter(({ item })=>item._status !== "mismatch" || showMismatch) : [];
+    const pagedItems = visibleItems.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+    const totalPages = Math.ceil(visibleItems.length / PAGE_SIZE);
     const selectAll = ()=>{
         const next = {
             ...approved
@@ -102699,7 +102703,10 @@ function ExcelImporter({ builders, onImportApproved }) {
             fontSize: 12
         }
     }, "🟡 ", counts.conflict, " Conflict"), counts.mismatch > 0 && /*#__PURE__*/ React.createElement("button", {
-        onClick: ()=>setShowMismatch((s)=>!s),
+        onClick: ()=>{
+            setShowMismatch((s)=>!s);
+            setPage(0);
+        },
         style: {
             background: "#FEF2F2",
             color: "#DC2626",
@@ -102738,11 +102745,11 @@ function ExcelImporter({ builders, onImportApproved }) {
             display: "flex",
             flexDirection: "column",
             gap: 6,
-            marginBottom: 16,
-            maxHeight: 440,
+            marginBottom: 12,
+            maxHeight: 500,
             overflowY: "auto"
         }
-    }, visibleItems.map(({ item, i })=>{
+    }, pagedItems.map(({ item, i })=>{
         const sm = STATUS_META[item._status];
         const isApproved = !!approved[i];
         const canApprove = item._status !== "mismatch";
@@ -102902,7 +102909,51 @@ function ExcelImporter({ builders, onImportApproved }) {
                     marginLeft: 6
                 }
             }, "→ ", c.incoming)))))));
-    })), /*#__PURE__*/ React.createElement("div", {
+    })), totalPages > 1 && /*#__PURE__*/ React.createElement("div", {
+        style: {
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+            marginBottom: 12
+        }
+    }, /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setPage(0),
+        disabled: page === 0,
+        style: {
+            ...btnG,
+            padding: "4px 8px",
+            fontSize: 11
+        }
+    }, "«"), /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setPage((p)=>Math.max(0, p - 1)),
+        disabled: page === 0,
+        style: {
+            ...btnG,
+            padding: "4px 8px",
+            fontSize: 11
+        }
+    }, "‹"), /*#__PURE__*/ React.createElement("span", {
+        style: {
+            fontSize: 12,
+            color: "#374151"
+        }
+    }, "Page ", page + 1, " of ", totalPages, " · showing ", page * PAGE_SIZE + 1, "–", Math.min((page + 1) * PAGE_SIZE, visibleItems.length), " of ", visibleItems.length), /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setPage((p)=>Math.min(totalPages - 1, p + 1)),
+        disabled: page === totalPages - 1,
+        style: {
+            ...btnG,
+            padding: "4px 8px",
+            fontSize: 11
+        }
+    }, "›"), /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setPage(totalPages - 1),
+        disabled: page === totalPages - 1,
+        style: {
+            ...btnG,
+            padding: "4px 8px",
+            fontSize: 11
+        }
+    }, "»")), /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
             gap: 8,
