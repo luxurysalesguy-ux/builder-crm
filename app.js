@@ -1,10 +1,4 @@
 import React from "https://esm.sh/react@18";
-import React from "https://esm.sh/react@18";
-import React from "https://esm.sh/react@18";
-import React from "https://esm.sh/react@18";
-import React from "https://esm.sh/react@18";
-import React from "https://esm.sh/react@18";
-import React from "https://esm.sh/react@18";
 import { useState, useEffect, useRef, useMemo } from "https://esm.sh/react@18";
 const TIER_ORDER = [
     5,
@@ -101563,11 +101557,11 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
     const [mapMode, setMapMode] = useState("jobs");
     const tc = getTier(builder.tier) || getTier(5);
     const salespersons = [
-        ...new Set(builder.jobs.map((j)=>j.salesperson).filter(Boolean))
-    ];
+        ...new Set(builder.jobs.map((j)=>(j.salesperson || "").trim().toLowerCase()).filter(Boolean))
+    ].map((low)=>builder.jobs.find((j)=>(j.salesperson || "").trim().toLowerCase() === low).salesperson);
     const filteredJobs = builder.jobs.filter((j)=>{
         if (statusFilter !== "all" && j.status !== statusFilter) return false;
-        if (spFilter !== "all" && j.salesperson !== spFilter) return false;
+        if (spFilter !== "all" && (j.salesperson || "").trim().toLowerCase() !== spFilter.trim().toLowerCase()) return false;
         return true;
     });
     const totalStd = builder.jobs.reduce((a, j)=>a + skuCount(j.skus, "standard"), 0);
@@ -101648,11 +101642,15 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
     }, [
         [
             "details",
-            "📋 Builder Details"
+            "📋 Details"
         ],
         [
             "jobs",
             `💼 Jobs (${builder.jobs.length})`
+        ],
+        [
+            "map",
+            "🗺 Map"
         ]
     ].map(([id, label])=>/*#__PURE__*/ React.createElement("button", {
             key: id,
@@ -101837,153 +101835,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             color: "#1E3A5F",
             marginTop: 2
         }
-    }, totalStd))), !editing && /*#__PURE__*/ React.createElement("div", {
-        style: {
-            gridColumn: "1/-1"
-        }
-    }, /*#__PURE__*/ React.createElement("div", {
-        style: {
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-            marginBottom: 8
-        }
-    }, /*#__PURE__*/ React.createElement("span", {
-        style: {
-            fontWeight: 700,
-            fontSize: 14,
-            color: "#374151"
-        }
-    }, "Map"), /*#__PURE__*/ React.createElement("div", {
-        style: {
-            display: "flex",
-            background: "#F3F4F6",
-            borderRadius: 6,
-            overflow: "hidden"
-        }
-    }, [
-        [
-            "jobs",
-            "Job Sites"
-        ],
-        [
-            "hq",
-            "Builder HQ"
-        ],
-        [
-            "both",
-            "Both"
-        ]
-    ].map(([m, label])=>/*#__PURE__*/ React.createElement("button", {
-            key: m,
-            onClick: ()=>setMapMode(m),
-            style: {
-                padding: "4px 12px",
-                border: "none",
-                background: mapMode === m ? "#1E3A5F" : "transparent",
-                color: mapMode === m ? "white" : "#374151",
-                cursor: "pointer",
-                fontWeight: 600,
-                fontSize: 11
-            }
-        }, label)))), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
-        builders: [
-            builder
-        ],
-        mapMode: mapMode,
-        onBuilderClick: ()=>setTab("details"),
-        onJobClick: (bid, jid)=>{
-            setTab("jobs");
-            setExpandedJob(jid);
-        }
-    }) : /*#__PURE__*/ React.createElement("div", {
-        style: {
-            height: 350,
-            background: "#F3F4F6",
-            borderRadius: 10,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#9CA3AF"
-        }
-    }, "Loading map..."))), tab === "jobs" && /*#__PURE__*/ React.createElement("div", null, /*#__PURE__*/ React.createElement("div", {
-        style: {
-            marginBottom: 16
-        }
-    }, /*#__PURE__*/ React.createElement("div", {
-        style: {
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-            marginBottom: 8
-        }
-    }, /*#__PURE__*/ React.createElement("span", {
-        style: {
-            fontWeight: 700,
-            fontSize: 13,
-            color: "#374151"
-        }
-    }, "Job Map"), /*#__PURE__*/ React.createElement("div", {
-        style: {
-            display: "flex",
-            background: "#F3F4F6",
-            borderRadius: 6,
-            overflow: "hidden"
-        }
-    }, [
-        [
-            "jobs",
-            "Job Sites"
-        ],
-        [
-            "hq",
-            "Builder HQ"
-        ],
-        [
-            "both",
-            "Both"
-        ]
-    ].map(([m, label])=>/*#__PURE__*/ React.createElement("button", {
-            key: m,
-            onClick: ()=>setMapMode(m),
-            style: {
-                padding: "4px 12px",
-                border: "none",
-                background: mapMode === m ? "#1E3A5F" : "transparent",
-                color: mapMode === m ? "white" : "#374151",
-                cursor: "pointer",
-                fontWeight: 600,
-                fontSize: 11
-            }
-        }, label)))), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
-        builders: [
-            {
-                ...builder,
-                jobs: filteredJobs
-            }
-        ],
-        mapMode: mapMode,
-        onBuilderClick: ()=>setTab("details"),
-        onJobClick: (bid, jid)=>{
-            setExpandedJob(jid);
-            setTimeout(()=>{
-                document.getElementById(`job-${jid}`)?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
-            }, 100);
-        }
-    }) : /*#__PURE__*/ React.createElement("div", {
-        style: {
-            height: 350,
-            background: "#F3F4F6",
-            borderRadius: 10,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#9CA3AF"
-        }
-    }, "Loading map...")), /*#__PURE__*/ React.createElement("div", {
+    }, totalStd))), !editing && null), tab === "jobs" && /*#__PURE__*/ React.createElement("div", null, /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
             alignItems: "center",
@@ -102205,7 +102057,74 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             onChange: ()=>{},
             readOnly: true
         }))));
-    }))));
+    }))), tab === "map" && /*#__PURE__*/ React.createElement("div", {
+        style: card
+    }, /*#__PURE__*/ React.createElement("div", {
+        style: {
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+            marginBottom: 12
+        }
+    }, /*#__PURE__*/ React.createElement("span", {
+        style: {
+            fontWeight: 700,
+            fontSize: 13,
+            color: "#374151"
+        }
+    }, "Show"), /*#__PURE__*/ React.createElement("div", {
+        style: {
+            display: "flex",
+            background: "#F3F4F6",
+            borderRadius: 6,
+            overflow: "hidden"
+        }
+    }, [
+        [
+            "jobs",
+            "Job Sites"
+        ],
+        [
+            "hq",
+            "Builder HQ"
+        ],
+        [
+            "both",
+            "Both"
+        ]
+    ].map(([m, label])=>/*#__PURE__*/ React.createElement("button", {
+            key: m,
+            onClick: ()=>setMapMode(m),
+            style: {
+                padding: "4px 12px",
+                border: "none",
+                background: mapMode === m ? "#1E3A5F" : "transparent",
+                color: mapMode === m ? "white" : "#374151",
+                cursor: "pointer",
+                fontWeight: 600,
+                fontSize: 11
+            }
+        }, label)))), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
+        builders: [
+            builder
+        ],
+        mapMode: mapMode,
+        onBuilderClick: ()=>{},
+        onJobClick: (bid, jid)=>{
+            setTab("jobs");
+            setExpandedJob(jid);
+        }
+    }) : /*#__PURE__*/ React.createElement("div", {
+        style: {
+            height: 400,
+            background: "#F3F4F6",
+            borderRadius: 10,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#9CA3AF"
+        }
+    }, "Loading map...")));
 }
 // ── Quote Parser ──────────────────────────────────────────────────────────────
 function QuoteParser({ builders, onJobParsed, onNewBuilder }) {
@@ -102421,7 +102340,7 @@ function ExcelImporter({ builders, onImportApproved }) {
     const analyzeItems = (rawItems)=>{
         const analyzed = rawItems.map((item)=>{
             if (!getTier(item.tier)) return null;
-            const existingBuilder = builders.find((b)=>b.partnerCode && b.partnerCode === item.partnerCode);
+            const existingBuilder = builders.find((b)=>b.partnerCode && b.partnerCode === item.partnerCode) || !item.partnerCode && item.builderName && builders.find((b)=>b.name.trim().toLowerCase() === item.builderName.trim().toLowerCase());
             const existingJob = builders.flatMap((b)=>b.jobs).find((j)=>j.registrationNumber === item.registrationNumber);
             let status = "new_builder";
             const conflicts = [];
@@ -102441,7 +102360,7 @@ function ExcelImporter({ builders, onImportApproved }) {
                 if (conflicts.length > 0) status = "conflict";
                 else if (existingJob) status = "overwrite";
                 else status = "new_job";
-            } else if (!item.partnerCode) {
+            } else if (!item.partnerCode && !existingBuilder) {
                 status = "mismatch";
             }
             return {
@@ -102595,12 +102514,57 @@ function ExcelImporter({ builders, onImportApproved }) {
             icon: "🔴"
         }
     };
+    const [mismatchEdits, setMismatchEdits] = useState({});
+    // Re-analyze a single mismatch item after partner code edit
+    const applyMismatchEdit = (i, partnerCode)=>{
+        const newEdits = {
+            ...mismatchEdits,
+            [i]: partnerCode
+        };
+        setMismatchEdits(newEdits);
+        setItems((prev)=>prev.map((item, idx)=>{
+                if (idx !== i) return item;
+                const pc = partnerCode.trim().toUpperCase();
+                if (!pc) return {
+                    ...item,
+                    partnerCode: "",
+                    _status: "mismatch",
+                    _existingBuilder: null
+                };
+                const existingBuilder = builders.find((b)=>b.partnerCode === pc);
+                const existingJob = builders.flatMap((b)=>b.jobs).find((j)=>j.registrationNumber === item.registrationNumber);
+                let status = existingBuilder ? existingJob ? "overwrite" : "new_job" : "new_builder";
+                return {
+                    ...item,
+                    partnerCode: pc,
+                    _status: status,
+                    _existingBuilder: existingBuilder || null,
+                    _existingJob: existingJob || null,
+                    _conflicts: []
+                };
+            }));
+    };
+    const [showMismatch, setShowMismatch] = useState(false);
     const counts = items ? {
         clean: items.filter((i)=>i._status === "new_builder" || i._status === "new_job").length,
         overwrite: items.filter((i)=>i._status === "overwrite").length,
         conflict: items.filter((i)=>i._status === "conflict").length,
         mismatch: items.filter((i)=>i._status === "mismatch").length
     } : {};
+    const visibleItems = items ? items.map((item, i)=>({
+            item,
+            i
+        })).filter(({ item })=>item._status !== "mismatch" || showMismatch) : [];
+    const selectAll = ()=>{
+        const next = {
+            ...approved
+        };
+        items.forEach((item, i)=>{
+            if (item._status !== "mismatch") next[i] = true;
+        });
+        setApproved(next);
+    };
+    const deselectAll = ()=>setApproved({});
     return /*#__PURE__*/ React.createElement("div", {
         style: card
     }, /*#__PURE__*/ React.createElement("div", {
@@ -102703,8 +102667,9 @@ function ExcelImporter({ builders, onImportApproved }) {
         style: {
             display: "flex",
             gap: 10,
-            marginBottom: 16,
-            flexWrap: "wrap"
+            marginBottom: 12,
+            flexWrap: "wrap",
+            alignItems: "center"
         }
     }, /*#__PURE__*/ React.createElement("span", {
         style: {
@@ -102733,16 +102698,19 @@ function ExcelImporter({ builders, onImportApproved }) {
             fontWeight: 700,
             fontSize: 12
         }
-    }, "🟡 ", counts.conflict, " Conflict"), counts.mismatch > 0 && /*#__PURE__*/ React.createElement("span", {
+    }, "🟡 ", counts.conflict, " Conflict"), counts.mismatch > 0 && /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setShowMismatch((s)=>!s),
         style: {
             background: "#FEF2F2",
             color: "#DC2626",
             borderRadius: 6,
             padding: "4px 12px",
             fontWeight: 700,
-            fontSize: 12
+            fontSize: 12,
+            border: "1px solid #FCA5A5",
+            cursor: "pointer"
         }
-    }, "🔴 ", counts.mismatch, " No Partner Code"), /*#__PURE__*/ React.createElement("span", {
+    }, "🔴 ", counts.mismatch, " No Partner Code ", showMismatch ? "▲ Hide" : "▼ Show"), /*#__PURE__*/ React.createElement("span", {
         style: {
             background: "#F3F4F6",
             color: "#374151",
@@ -102751,7 +102719,21 @@ function ExcelImporter({ builders, onImportApproved }) {
             fontWeight: 700,
             fontSize: 12
         }
-    }, Object.values(approved).filter(Boolean).length, " / ", items.length, " approved")), /*#__PURE__*/ React.createElement("div", {
+    }, Object.values(approved).filter(Boolean).length, " / ", items.length - counts.mismatch, " approved"), /*#__PURE__*/ React.createElement("button", {
+        onClick: selectAll,
+        style: {
+            ...btnG,
+            fontSize: 11,
+            padding: "4px 10px"
+        }
+    }, "Select All"), /*#__PURE__*/ React.createElement("button", {
+        onClick: deselectAll,
+        style: {
+            ...btnG,
+            fontSize: 11,
+            padding: "4px 10px"
+        }
+    }, "Deselect All")), /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
             flexDirection: "column",
@@ -102760,7 +102742,7 @@ function ExcelImporter({ builders, onImportApproved }) {
             maxHeight: 440,
             overflowY: "auto"
         }
-    }, items.map((item, i)=>{
+    }, visibleItems.map(({ item, i })=>{
         const sm = STATUS_META[item._status];
         const isApproved = !!approved[i];
         const canApprove = item._status !== "mismatch";
@@ -102845,9 +102827,49 @@ function ExcelImporter({ builders, onImportApproved }) {
         }, item.partnerCode || "NO PARTNER CODE")), /*#__PURE__*/ React.createElement("div", {
             style: {
                 fontSize: 11,
-                color: "#6B7280"
+                color: "#6B7280",
+                marginBottom: item._status === "mismatch" ? 8 : 0
             }
-        }, "📍 ", item.jobAddress, " · 👤 ", item.salesperson, " · ", item.skus.length, " SKUs · Reg# ", item.registrationNumber), item._conflicts?.length > 0 && /*#__PURE__*/ React.createElement("div", {
+        }, "📍 ", item.jobAddress, " · 👤 ", item.salesperson, " · ", item.skus.length, " SKUs · Reg# ", item.registrationNumber), item._status === "mismatch" && /*#__PURE__*/ React.createElement("div", {
+            style: {
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                marginTop: 6
+            }
+        }, /*#__PURE__*/ React.createElement("label", {
+            style: {
+                fontSize: 11,
+                fontWeight: 700,
+                color: "#DC2626",
+                whiteSpace: "nowrap"
+            }
+        }, "Partner Code:"), /*#__PURE__*/ React.createElement("input", {
+            value: mismatchEdits[i] !== undefined ? mismatchEdits[i] : "",
+            onChange: (e)=>applyMismatchEdit(i, e.target.value),
+            placeholder: "e.g. CUPHXLINGH",
+            style: {
+                fontFamily: "monospace",
+                fontSize: 12,
+                padding: "3px 8px",
+                border: "1px solid #FCA5A5",
+                borderRadius: 4,
+                width: 180,
+                textTransform: "uppercase"
+            }
+        }), mismatchEdits[i] && builders.find((b)=>b.partnerCode === mismatchEdits[i].trim().toUpperCase()) && /*#__PURE__*/ React.createElement("span", {
+            style: {
+                fontSize: 11,
+                color: "#059669",
+                fontWeight: 700
+            }
+        }, "✓ ", builders.find((b)=>b.partnerCode === mismatchEdits[i].trim().toUpperCase()).name), mismatchEdits[i] && !builders.find((b)=>b.partnerCode === mismatchEdits[i].trim().toUpperCase()) && mismatchEdits[i].length > 4 && /*#__PURE__*/ React.createElement("span", {
+            style: {
+                fontSize: 11,
+                color: "#D97706",
+                fontWeight: 700
+            }
+        }, "⚠ New builder will be created")), item._conflicts?.length > 0 && /*#__PURE__*/ React.createElement("div", {
             style: {
                 marginTop: 6,
                 padding: "6px 10px",
@@ -103129,7 +103151,7 @@ export default function BuilderCRM() {
                     lat: null,
                     lng: null
                 };
-                const bIdx = updated.findIndex((b)=>b.partnerCode === item.partnerCode);
+                const bIdx = updated.findIndex((b)=>b.partnerCode && b.partnerCode === item.partnerCode || !item.partnerCode && item.builderName && b.name.trim().toLowerCase() === item.builderName.trim().toLowerCase());
                 if (bIdx >= 0) {
                     let b = {
                         ...updated[bIdx]
@@ -103199,8 +103221,8 @@ export default function BuilderCRM() {
         showToast(`✅ ${approvedItems.length} records imported — geocoding ${newGeoItems.length} addresses...`);
     };
     const allSalespersons = [
-        ...new Set(builders.flatMap((b)=>b.jobs.map((j)=>j.salesperson)).filter(Boolean))
-    ].sort();
+        ...new Set(builders.flatMap((b)=>b.jobs.map((j)=>(j.salesperson || "").trim().toLowerCase())).filter(Boolean))
+    ].sort().map((low)=>builders.flatMap((b)=>b.jobs).find((j)=>(j.salesperson || "").trim().toLowerCase() === low).salesperson);
     const totalJobs = builders.reduce((a, b)=>a + b.jobs.length, 0);
     const activeJobs = builders.reduce((a, b)=>a + b.jobs.filter((j)=>j.status === "Active").length, 0);
     const selectedBuilder = builders.find((b)=>b.id === selectedBuilderId);
@@ -103220,7 +103242,7 @@ export default function BuilderCRM() {
             })));
     const filteredJobs = allJobs.filter((j)=>{
         if (jFilterStatus !== "all" && j.status !== jFilterStatus) return false;
-        if (jFilterSalesperson !== "all" && j.salesperson !== jFilterSalesperson) return false;
+        if (jFilterSalesperson !== "all" && (j.salesperson || "").trim().toLowerCase() !== jFilterSalesperson.trim().toLowerCase()) return false;
         if (jSearch && !j.projectName.toLowerCase().includes(jSearch.toLowerCase()) && !j.builderName.toLowerCase().includes(jSearch.toLowerCase()) && !j.registrationNumber.includes(jSearch)) return false;
         return true;
     }).sort((a, b)=>(Number(b.registrationNumber) || 0) - (Number(a.registrationNumber) || 0));
