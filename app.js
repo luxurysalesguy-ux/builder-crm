@@ -101555,7 +101555,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
     const [editingJob, setEditingJob] = useState(null);
     const [expandedJob, setExpandedJob] = useState(null);
     const [mapMode, setMapMode] = useState("jobs");
-    const tc = getTier(builder.tier);
+    const tc = getTier(builder.tier) || getTier(5);
     const salespersons = [
         ...new Set(builder.jobs.map((j)=>j.salesperson).filter(Boolean))
     ];
@@ -101633,36 +101633,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             if (confirm("Delete this builder and all jobs?")) onDeleteBuilder(builder.id);
         },
         style: btnD
-    }, "Delete Builder")), geoProgress.running && /*#__PURE__*/ React.createElement("div", {
-        style: {
-            background: "#1E40AF",
-            padding: "6px 24px",
-            display: "flex",
-            alignItems: "center",
-            gap: 12
-        }
-    }, /*#__PURE__*/ React.createElement("div", {
-        style: {
-            flex: 1,
-            background: "rgba(255,255,255,0.2)",
-            borderRadius: 4,
-            height: 6,
-            overflow: "hidden"
-        }
-    }, /*#__PURE__*/ React.createElement("div", {
-        style: {
-            background: "#34D399",
-            height: "100%",
-            width: `${Math.round(geoProgress.done / geoProgress.total * 100)}%`,
-            transition: "width 0.5s"
-        }
-    })), /*#__PURE__*/ React.createElement("span", {
-        style: {
-            color: "white",
-            fontSize: 11,
-            whiteSpace: "nowrap"
-        }
-    }, "📍 Geocoding ", geoProgress.done, " / ", geoProgress.total, " addresses...")), /*#__PURE__*/ React.createElement("div", {
+    }, "Delete Builder")), /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
             borderBottom: "2px solid #E5E7EB",
@@ -103056,7 +103027,7 @@ export default function BuilderCRM() {
             });
         } catch  {}
     }, []);
-    const { progress: geoProgress1, addToQueue } = useGeocoder(builders, setBuilders);
+    const { progress: geoProgress, addToQueue } = useGeocoder(builders, setBuilders);
     const dupeSet = useMemo(()=>buildDupeSet(builders), [
         builders
     ]);
