@@ -8,13 +8,6 @@ const TIER_ORDER = [
     4
 ];
 const TIER_CONFIG = {
-    0: {
-        label: "Tier 0",
-        sublabel: "Unassigned",
-        color: "#9CA3AF",
-        bg: "#F3F4F6",
-        text: "#374151"
-    },
     5: {
         label: "Tier 5",
         sublabel: "Entry",
@@ -51,7 +44,7 @@ const TIER_CONFIG = {
         text: "#065F46"
     }
 };
-const getTier = (t)=>TIER_CONFIG[t] || TIER_CONFIG[0];
+const getTier = (t)=>TIER_CONFIG[t] || null;
 const STATUS_CONFIG = {
     Active: {
         color: "#10B981",
@@ -70462,182 +70455,6 @@ const SEED_BUILDERS = [
         ]
     },
     {
-        "id": "j12ceoh",
-        "partnerCode": "CUPHXWOODPN",
-        "name": "WOOD PARTNERS",
-        "type": "Builder Quote",
-        "tier": 0,
-        "roc": "200547",
-        "address": "",
-        "contact": "",
-        "email": "",
-        "phone": "",
-        "lat": null,
-        "lng": null,
-        "jobs": [
-            {
-                "id": "esdkkj0",
-                "registrationNumber": "261107",
-                "projectName": "5TH AND GOLDWATER",
-                "community": "",
-                "address": "NWC INDIAN SCHOOL RD AND GOLDWATER BLVD, SCOTTSDALE, AZ, 85251",
-                "salesperson": "Chris Taddeo",
-                "status": "Active",
-                "startDate": "Mar 12, 2026",
-                "endDate": "Dec 31, 2026",
-                "skus": [
-                    {
-                        "brand": "",
-                        "model": "SRT304",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SRT366",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "COVE",
-                        "model": "DW2451",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SO3050TE/S/T",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "MDD3050TE/S/T",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "SUBZERO",
-                        "model": "DEU2450BG/R",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "SUBZERO",
-                        "model": "DET3650CIID/R",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "COVE",
-                        "model": "DW2451/ADA",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "MD30TE/S",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "SUBZERO",
-                        "model": "DEU2450BG/ADA/R",
-                        "stOpt": "S"
-                    }
-                ],
-                "lat": null,
-                "lng": null
-            },
-            {
-                "id": "ccxce4g",
-                "registrationNumber": "261096",
-                "projectName": "5TH AND GOLDWATER",
-                "community": "",
-                "address": "NWC INDIAN SCHOOL RD AND GOLDWATER BLVD, SCOTTSDALE, AZ, 85251",
-                "salesperson": "Chris Taddeo",
-                "status": "Active",
-                "startDate": "Mar 11, 2026",
-                "endDate": "Dec 31, 2026",
-                "skus": [
-                    {
-                        "brand": "",
-                        "model": "CL3650UFDID/O",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SRT304",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "BEST",
-                        "model": "HBN33096SS",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SO3050PE/S/P",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SPO3050PE/S/P",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "SUBZERO",
-                        "model": "DEU2450BG/R",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "COVE",
-                        "model": "DW2451",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SRT366",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "BEST",
-                        "model": "HBN33696SS",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "SUBZERO",
-                        "model": "DET3650CIID/R",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SO3050TE/S/T",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "MDD3050TE/S/T",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "COVE",
-                        "model": "DW2451/ADA",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "SUBZERO",
-                        "model": "DEU2450BG/ADA/R",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "MD30TE/S",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "MD24TE/S",
-                        "stOpt": "S"
-                    }
-                ],
-                "lat": null,
-                "lng": null
-            }
-        ]
-    },
-    {
         "id": "cgkljlz",
         "partnerCode": "CATUCAZDKT",
         "name": "ARIZONA DESIGNS KITCHENS AND BATHS",
@@ -92345,10 +92162,10 @@ function ExcelImporter({ builders, onImportApproved }) {
     ];
     const analyzeItems = (rawItems)=>{
         const analyzed = rawItems.map((item)=>{
-            const existingBuilder = builders.find((b)=>b.partnerCode && b.partnerCode === item.partnerCode);
             const existingJob = builders.flatMap((b)=>b.jobs).find((j)=>j.registrationNumber === item.registrationNumber);
             let status = "new_builder";
             const conflicts = [];
+            if (!getTier(item.tier)) return null; // reject — no valid tier
             if (existingBuilder) {
                 const nameMismatch = item.builderName && item.builderName.toLowerCase().trim() !== existingBuilder.name.toLowerCase().trim();
                 const addrMismatch = item.builderAddress && existingBuilder.address && item.builderAddress.toLowerCase().trim() !== existingBuilder.address.toLowerCase().trim();
@@ -92375,7 +92192,7 @@ function ExcelImporter({ builders, onImportApproved }) {
                 _existingBuilder: existingBuilder || null,
                 _existingJob: existingJob || null
             };
-        });
+        }).filter(Boolean);
         setItems(analyzed);
         const autoApproved = {};
         analyzed.forEach((item, i)=>{
@@ -93819,3 +93636,4 @@ export default function BuilderCRM() {
         }
     }, "No jobs match this filter"))))));
 }
+
