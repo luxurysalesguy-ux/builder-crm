@@ -8,6 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗</text></svg>" />
   <style>* { margin:0; padding:0; box-sizing:border-box; } body { font-family:'Inter',system-ui,sans-serif; background:#F8FAFC; }</style>
+  <!-- SheetJS loaded before app so window.XLSX is available -->
+  <script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 </head>
 <body>
   <div id="root"></div>

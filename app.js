@@ -102384,31 +102384,9 @@ function ExcelImporter({ builders, onImportApproved }) {
         setParseError("");
         try {
             const data = await file.arrayBuffer();
-            // Load SheetJS — try multiple CDNs
-            let XLSX = window.XLSX;
-            if (!XLSX) {
-                const cdns = [
-                    "https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js",
-                    "https://cdn.sheetjs.com/xlsx-0.18.5/package/dist/xlsx.full.min.js"
-                ];
-                for (const cdn of cdns){
-                    try {
-                        await new Promise((res, rej)=>{
-                            const s = document.createElement("script");
-                            s.src = cdn;
-                            s.onload = res;
-                            s.onerror = rej;
-                            document.head.appendChild(s);
-                        });
-                        if (window.XLSX) {
-                            XLSX = window.XLSX;
-                            break;
-                        }
-                    } catch  {}
-                }
-            }
-            if (!XLSX) throw new Error("Could not load Excel parser. Check your network connection.");
-            const wb = XLSX.read(data, {
+            const XLSX = window.XLSX;
+            if (!XLSX) throw new Error("Excel parser not loaded. Please refresh the page and try again.");
+            const wb = XLSX.read(new Uint8Array(data), {
                 type: "array"
             });
             const ws = wb.Sheets[wb.SheetNames[0]];
@@ -102577,6 +102555,7 @@ function ExcelImporter({ builders, onImportApproved }) {
         mismatch: items.filter((i)=>i._status === "mismatch").length
     } : {};
     const [expandedItem, setExpandedItem] = useState(null);
+    const [page, setPage] = useState(0);
     const PAGE_SIZE = 50;
     const visibleItems = items ? items.map((item, i)=>({
             item,
