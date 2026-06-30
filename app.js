@@ -100890,7 +100890,7 @@ function useGeocoder(builders, setBuilders) {
     };
 }
 // ── Map ───────────────────────────────────────────────────────────────────────
-function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
+function MapView({ builders, mapMode, onBuilderClick, onJobClick, zoomToSingle = false }) {
     const ref = useRef(null);
     const inst = useRef(null);
     const marks = useRef([]);
@@ -100929,9 +100929,10 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
         builders.forEach((b)=>{
             const tc = getTier(b.tier);
             if ((mapMode === "hq" || mapMode === "both") && b.lat) {
+                const hqColor = b.type === "Cabinet Shop Quote" ? "#A855F7" : "#1E3A5F";
                 const icon = window.L.divIcon({
                     className: "",
-                    html: `<div style="width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:${tc.color};border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,.3)"></div>`,
+                    html: `<div style="width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:${hqColor};border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,.3)"></div>`,
                     iconSize: [
                         22,
                         22
@@ -100948,10 +100949,12 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
                     icon
                 }).addTo(map);
                 const popupId = `popup-hq-${b.id}`;
+                const typeLabel = b.type === "Cabinet Shop Quote" ? "Cabinet Shop" : "Builder";
                 marker.bindPopup(`
           <div style="min-width:160px">
             <strong style="font-size:13px">${b.name}</strong><br/>
-            <span style="font-size:11px;color:#6B7280">${tc.label} · ${b.partnerCode}</span><br/>
+            <span style="font-size:11px;color:${hqColor};font-weight:700">${typeLabel}</span>
+            <span style="font-size:11px;color:#6B7280"> · ${tc.label} · ${b.partnerCode}</span><br/>
             <button id="${popupId}" style="margin-top:8px;padding:4px 12px;background:#1E3A5F;color:white;border:none;border-radius:4px;cursor:pointer;font-size:12px;font-weight:700;width:100%">View Builder →</button>
           </div>`);
                 marker.on("popupopen", ()=>{
@@ -101027,16 +101030,18 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
                 });
             }
         });
-        if (!hasAutoFit.current && pts.length > 1) {
-            map.fitBounds(pts, {
+        // Default: stay centered on greater Phoenix (some pins are out-of-state).
+        // Exception: zoomToSingle lets a single-builder view (e.g. Builder Detail) zoom to its own pin.
+        if (zoomToSingle && !hasAutoFit.current && pts.length >= 1) {
+            if (pts.length === 1) map.setView(pts[0], 13);
+            else map.fitBounds(pts, {
                 padding: [
                     40,
                     40
                 ]
             });
             hasAutoFit.current = true;
-        } else if (!hasAutoFit.current && pts.length === 1) {
-            map.setView(pts[0], 13);
+        } else {
             hasAutoFit.current = true;
         }
     }, [
@@ -102184,7 +102189,8 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
         ],
         mapMode: "hq",
         onBuilderClick: ()=>{},
-        onJobClick: ()=>{}
+        onJobClick: ()=>{},
+        zoomToSingle: true
     }) : /*#__PURE__*/ React.createElement("div", {
         style: {
             height: 400,
@@ -103737,7 +103743,8 @@ export default function BuilderCRM() {
             display: "flex",
             alignItems: "center",
             gap: 8,
-            marginBottom: 8
+            marginBottom: 8,
+            flexWrap: "wrap"
         }
     }, /*#__PURE__*/ React.createElement("span", {
         style: {
@@ -103776,7 +103783,32 @@ export default function BuilderCRM() {
                 fontWeight: 600,
                 fontSize: 11
             }
-        }, label)))), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
+        }, label))), (mapMode === "hq" || mapMode === "both") && /*#__PURE__*/ React.createElement("div", {
+        style: {
+            display: "flex",
+            gap: 12,
+            fontSize: 11,
+            color: "#6B7280"
+        }
+    }, /*#__PURE__*/ React.createElement("span", null, /*#__PURE__*/ React.createElement("span", {
+        style: {
+            display: "inline-block",
+            width: 10,
+            height: 10,
+            borderRadius: "50%",
+            background: "#1E3A5F",
+            marginRight: 4
+        }
+    }), "Builder"), /*#__PURE__*/ React.createElement("span", null, /*#__PURE__*/ React.createElement("span", {
+        style: {
+            display: "inline-block",
+            width: 10,
+            height: 10,
+            borderRadius: "50%",
+            background: "#A855F7",
+            marginRight: 4
+        }
+    }), "Cabinet Shop"))), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
         builders: filteredBuilders,
         mapMode: mapMode,
         onBuilderClick: (id)=>setSelectedBuilderId(id),
