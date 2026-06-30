@@ -102128,7 +102128,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
                 gap: 14,
                 flexWrap: "wrap"
             }
-        }, /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", job.registrationNumber), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate))), /*#__PURE__*/ React.createElement("div", {
+        }, /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), job.cabinetDesignerName && /*#__PURE__*/ React.createElement("span", null, "🖋 ", job.cabinetDesignerName, job.cabinetDesignerEmail && ` · ${job.cabinetDesignerEmail}`), /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", job.registrationNumber), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate))), /*#__PURE__*/ React.createElement("div", {
             style: {
                 textAlign: "right",
                 flexShrink: 0
@@ -102535,6 +102535,8 @@ function ExcelImporter({ builders, onImportApproved }) {
                     jobAddress,
                     salesperson: col(row, "Your Name"),
                     dealer: col(row, "Your Dealer Name"),
+                    cabinetDesignerName: col(row, "Cabinet Designer Name"),
+                    cabinetDesignerEmail: col(row, "Cabinet Designer Email"),
                     status: "Active",
                     startDate: col(row, "Estimated Start Date"),
                     endDate: col(row, "Estimated Completion Date"),
@@ -104138,7 +104140,15 @@ export default function BuilderCRM() {
         builders: jobTabBuilders,
         mapMode: jobsMapMode,
         onBuilderClick: (id)=>setSelectedBuilderId(id),
-        onJobClick: (bid, jid)=>setSelectedBuilderId(bid)
+        onJobClick: (bid, jid)=>{
+            setSelectedBuilderId(bid);
+            setTimeout(()=>{
+                document.getElementById(`job-${jid}`)?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }, 300);
+        }
     }) : /*#__PURE__*/ React.createElement("div", {
         style: {
             height: 350,
@@ -104161,6 +104171,7 @@ export default function BuilderCRM() {
         const opt = skuCount(job.skus, "optional");
         return /*#__PURE__*/ React.createElement("div", {
             key: job.id,
+            id: `job-${job.id}`,
             onClick: ()=>setSelectedBuilderId(job.builderId),
             style: {
                 background: "white",
@@ -104238,7 +104249,7 @@ export default function BuilderCRM() {
                 gap: 14,
                 flexWrap: "wrap"
             }
-        }, /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", /*#__PURE__*/ React.createElement("strong", null, job.registrationNumber)), /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate))), /*#__PURE__*/ React.createElement("div", {
+        }, /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", /*#__PURE__*/ React.createElement("strong", null, job.registrationNumber)), /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), job.cabinetDesignerName && /*#__PURE__*/ React.createElement("span", null, "🖋 ", job.cabinetDesignerName), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate))), /*#__PURE__*/ React.createElement("div", {
             style: {
                 textAlign: "right",
                 flexShrink: 0
