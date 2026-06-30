@@ -100663,6 +100663,70 @@ const card = {
     borderRadius: 10,
     padding: 20
 };
+// ── Azure Blob Storage ─────────────────────────────────────────────────────────
+const BLOB_URL = "https://subzerocrmdata.blob.core.windows.net/crm-data/builders.json?sv=2026-02-06&ss=b&srt=co&sp=rwdlactfx&se=2031-01-01T01:23:08Z&st=2026-06-29T17:08:08Z&spr=https&sig=V%2FlnJScaJs2nhy3Nrc3Mrsz97Bo%2F8O3mEWAYsFfIV%2Bk%3D";
+const CONTAINER_URL = "https://subzerocrmdata.blob.core.windows.net/crm-data?restype=container&sv=2026-02-06&ss=b&srt=co&sp=rwdlactfx&se=2031-01-01T01:23:08Z&st=2026-06-29T17:08:08Z&spr=https&sig=V%2FlnJScaJs2nhy3Nrc3Mrsz97Bo%2F8O3mEWAYsFfIV%2Bk%3D";
+async function loadFromBlob() {
+    try {
+        const res = await fetch(BLOB_URL);
+        if (!res.ok) return null;
+        return await res.json();
+    } catch  {
+        return null;
+    }
+}
+async function saveToBlob(data) {
+    try {
+        // First ensure container exists
+        await fetch(CONTAINER_URL, {
+            method: "PUT"
+        });
+        // Save data
+        const res = await fetch(BLOB_URL, {
+            method: "PUT",
+            headers: {
+                "x-ms-blob-type": "BlockBlob",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+        return res.ok;
+    } catch  {
+        return false;
+    }
+}
+function useAzureStorage(builders, setBuilders, setLoading) {
+    const [syncing, setSyncing] = useState(false);
+    const [lastSaved, setLastSaved] = useState(null);
+    const saveTimer = useRef(null);
+    // Load from blob on mount
+    useEffect(()=>{
+        setLoading(true);
+        loadFromBlob().then((data)=>{
+            if (data && Array.isArray(data) && data.length > 0) {
+                setBuilders(data);
+            }
+            setLoading(false);
+        });
+    }, []);
+    // Auto-save to blob whenever builders change (debounced 3s)
+    useEffect(()=>{
+        if (saveTimer.current) clearTimeout(saveTimer.current);
+        saveTimer.current = setTimeout(async ()=>{
+            setSyncing(true);
+            await saveToBlob(builders);
+            setLastSaved(new Date());
+            setSyncing(false);
+        }, 3000);
+        return ()=>clearTimeout(saveTimer.current);
+    }, [
+        builders
+    ]);
+    return {
+        syncing,
+        lastSaved
+    };
+}
 // ── Duplicate address detection ───────────────────────────────────────────────
 function buildDupeSet(builders) {
     const addrCount = {};
@@ -100846,6 +100910,7 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
         onBuilderClick,
         onJobClick
     ]);
+    const hasAutoFit = useRef(false);
     useEffect(()=>{
         if (!window.L) return;
         if (!inst.current) {
@@ -100954,13 +101019,18 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
                 });
             }
         });
-        if (pts.length > 1) map.fitBounds(pts, {
-            padding: [
-                40,
-                40
-            ]
-        });
-        else if (pts.length === 1) map.setView(pts[0], 13);
+        if (!hasAutoFit.current && pts.length > 1) {
+            map.fitBounds(pts, {
+                padding: [
+                    40,
+                    40
+                ]
+            });
+            hasAutoFit.current = true;
+        } else if (!hasAutoFit.current && pts.length === 1) {
+            map.setView(pts[0], 13);
+            hasAutoFit.current = true;
+        }
     }, [
         builders,
         mapMode
@@ -103138,6 +103208,8 @@ export default function BuilderCRM() {
             });
         } catch  {}
     }, []);
+    const [appLoading, setAppLoading] = useState(true);
+    const { syncing, lastSaved } = useAzureStorage(builders, setBuilders, setAppLoading);
     const { progress: geoProgress, addToQueue } = useGeocoder(builders, setBuilders);
     const dupeSet = useMemo(()=>buildDupeSet(builders), [
         builders
