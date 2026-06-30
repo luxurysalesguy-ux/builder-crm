@@ -102078,7 +102078,32 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             }
         }, "*")), /*#__PURE__*/ React.createElement(StatusBadge, {
             status: job.status
-        })), job.community && /*#__PURE__*/ React.createElement("div", {
+        }), /*#__PURE__*/ React.createElement("div", {
+            style: {
+                display: "flex",
+                gap: 3
+            }
+        }, [
+            "Active",
+            "Won",
+            "Lost"
+        ].filter((s)=>s !== job.status).map((s)=>/*#__PURE__*/ React.createElement("button", {
+                key: s,
+                onClick: ()=>onSaveJob(builder.id, {
+                        ...job,
+                        status: s
+                    }),
+                style: {
+                    fontSize: 10,
+                    padding: "2px 8px",
+                    borderRadius: 4,
+                    border: "1px solid #D1D5DB",
+                    background: "white",
+                    color: "#6B7280",
+                    cursor: "pointer",
+                    fontWeight: 600
+                }
+            }, "→ ", s)))), job.community && /*#__PURE__*/ React.createElement("div", {
             style: {
                 fontSize: 12,
                 color: "#6B7280",
@@ -103188,6 +103213,7 @@ export default function BuilderCRM() {
     const [bSearch, setBSearch] = useState("");
     const [jFilterStatus, setJFilterStatus] = useState("Active");
     const [jFilterSalesperson, setJFilterSalesperson] = useState("all");
+    const [jFilterDupesOnly, setJFilterDupesOnly] = useState(false);
     const [jSearch, setJSearch] = useState("");
     const [toast, setToast] = useState("");
     useEffect(()=>{
@@ -103408,9 +103434,16 @@ export default function BuilderCRM() {
     const filteredJobs = allJobs.filter((j)=>{
         if (jFilterStatus !== "all" && j.status !== jFilterStatus) return false;
         if (jFilterSalesperson !== "all" && (j.salesperson || "").trim().toLowerCase() !== jFilterSalesperson.trim().toLowerCase()) return false;
+        if (jFilterDupesOnly && !dupeSet.has((j.address || "").trim().toLowerCase())) return false;
         if (jSearch && !j.projectName.toLowerCase().includes(jSearch.toLowerCase()) && !j.builderName.toLowerCase().includes(jSearch.toLowerCase()) && !j.registrationNumber.includes(jSearch)) return false;
         return true;
-    }).sort((a, b)=>(Number(b.registrationNumber) || 0) - (Number(a.registrationNumber) || 0));
+    }).sort((a, b)=>{
+        if (jFilterDupesOnly) {
+            const addrCompare = (a.address || "").trim().toLowerCase().localeCompare((b.address || "").trim().toLowerCase());
+            if (addrCompare !== 0) return addrCompare;
+        }
+        return (Number(b.registrationNumber) || 0) - (Number(a.registrationNumber) || 0);
+    });
     const jobTabBuilders = builders.map((b)=>({
             ...b,
             jobs: b.jobs.filter((j)=>filteredJobs.find((fj)=>fj.id === j.id))
@@ -104020,6 +104053,14 @@ export default function BuilderCRM() {
             key: s,
             value: s
         }, s))), /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setJFilterDupesOnly((d)=>!d),
+        style: {
+            ...btnG,
+            background: jFilterDupesOnly ? "#FEF3C7" : "white",
+            color: jFilterDupesOnly ? "#92400E" : "#374151",
+            border: jFilterDupesOnly ? "1px solid #F59E0B" : undefined
+        }
+    }, jFilterDupesOnly ? "★ Showing Duplicates Only" : "☆ Show Duplicates Only"), /*#__PURE__*/ React.createElement("button", {
         onClick: ()=>setShowMap(!showMap),
         style: {
             ...btnG,
@@ -104033,7 +104074,7 @@ export default function BuilderCRM() {
             color: "#6B7280",
             marginBottom: 12
         }
-    }, /*#__PURE__*/ React.createElement("strong", null, filteredJobs.length), " job", filteredJobs.length !== 1 ? "s" : "", ", sorted by Registration # (newest first)", /*#__PURE__*/ React.createElement("span", {
+    }, /*#__PURE__*/ React.createElement("strong", null, filteredJobs.length), " job", filteredJobs.length !== 1 ? "s" : "", ", sorted by ", jFilterDupesOnly ? "address (grouping matches)" : "Registration # (newest first)", /*#__PURE__*/ React.createElement("span", {
         style: {
             color: "#F59E0B",
             marginLeft: 12
