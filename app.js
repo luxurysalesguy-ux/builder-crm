@@ -103214,6 +103214,7 @@ export default function BuilderCRM() {
     const [jFilterStatus, setJFilterStatus] = useState("Active");
     const [jFilterSalesperson, setJFilterSalesperson] = useState("all");
     const [jFilterDupesOnly, setJFilterDupesOnly] = useState(false);
+    const [jFilterType, setJFilterType] = useState("all");
     const [jSearch, setJSearch] = useState("");
     const [toast, setToast] = useState("");
     useEffect(()=>{
@@ -103429,12 +103430,14 @@ export default function BuilderCRM() {
                 ...j,
                 builderName: b.name,
                 builderId: b.id,
-                builderTier: b.tier
+                builderTier: b.tier,
+                builderType: b.type
             })));
     const filteredJobs = allJobs.filter((j)=>{
         if (jFilterStatus !== "all" && j.status !== jFilterStatus) return false;
         if (jFilterSalesperson !== "all" && (j.salesperson || "").trim().toLowerCase() !== jFilterSalesperson.trim().toLowerCase()) return false;
         if (jFilterDupesOnly && !dupeSet.has((j.address || "").trim().toLowerCase())) return false;
+        if (jFilterType !== "all" && j.builderType !== jFilterType) return false;
         if (jSearch && !j.projectName.toLowerCase().includes(jSearch.toLowerCase()) && !j.builderName.toLowerCase().includes(jSearch.toLowerCase()) && !j.registrationNumber.includes(jSearch)) return false;
         return true;
     }).sort((a, b)=>{
@@ -104052,7 +104055,20 @@ export default function BuilderCRM() {
     }, "All Salespeople"), allSalespersons.map((s)=>/*#__PURE__*/ React.createElement("option", {
             key: s,
             value: s
-        }, s))), /*#__PURE__*/ React.createElement("button", {
+        }, s))), /*#__PURE__*/ React.createElement("select", {
+        style: {
+            ...inp,
+            width: 160
+        },
+        value: jFilterType,
+        onChange: (e)=>setJFilterType(e.target.value)
+    }, /*#__PURE__*/ React.createElement("option", {
+        value: "all"
+    }, "All Types"), /*#__PURE__*/ React.createElement("option", {
+        value: "Builder Quote"
+    }, "Builder Quote"), /*#__PURE__*/ React.createElement("option", {
+        value: "Cabinet Shop Quote"
+    }, "Cabinet Shop Quote")), /*#__PURE__*/ React.createElement("button", {
         onClick: ()=>setJFilterDupesOnly((d)=>!d),
         style: {
             ...btnG,
