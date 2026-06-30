@@ -100963,6 +100963,10 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
                         };
                     }, 50);
                 });
+                marker.on("dblclick", ()=>{
+                    map.closePopup();
+                    navRef.current.onBuilderClick?.(b.id);
+                });
                 marks.current.push(marker);
                 pts.push([
                     b.lat,
@@ -101010,6 +101014,10 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
                                 navRef.current.onJobClick?.(b.id, j.id);
                             };
                         }, 50);
+                    });
+                    marker.on("dblclick", ()=>{
+                        map.closePopup();
+                        navRef.current.onJobClick?.(b.id, j.id);
                     });
                     marks.current.push(marker);
                     pts.push([
@@ -103169,6 +103177,8 @@ export default function BuilderCRM() {
     const [builders, setBuilders] = useState(SEED_BUILDERS);
     const [mainTab, setMainTab] = useState("builders");
     const [toolTab, setToolTab] = useState(null);
+    const [isAdmin, setIsAdmin] = useState(false);
+    const ADMIN_PIN = "1207"; // Change this to whatever PIN you want
     const [selectedBuilderId, setSelectedBuilderId] = useState(null);
     const [addingBuilder, setAddingBuilder] = useState(false);
     const [mapMode, setMapMode] = useState("jobs");
@@ -103565,9 +103575,10 @@ export default function BuilderCRM() {
         }, label))), /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
-            gap: 6
+            gap: 6,
+            alignItems: "center"
         }
-    }, /*#__PURE__*/ React.createElement("button", {
+    }, isAdmin ? /*#__PURE__*/ React.createElement(React.Fragment, null, /*#__PURE__*/ React.createElement("button", {
         onClick: ()=>setToolTab(toolTab === "excel" ? null : "excel"),
         style: {
             ...btnP,
@@ -103592,20 +103603,41 @@ export default function BuilderCRM() {
             background: toolTab === "automation" ? "#EFF6FF" : "white",
             color: toolTab === "automation" ? "#1E40AF" : "#374151"
         }
-    }, "⚙️ Setup"))), /*#__PURE__*/ React.createElement("div", {
+    }, "⚙️ Setup"), /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setIsAdmin(false),
+        title: "Lock admin tools",
+        style: {
+            ...btnG,
+            fontSize: 12,
+            padding: "6px 10px"
+        }
+    }, "🔓")) : /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>{
+            const pin = prompt("Enter admin PIN:");
+            if (pin === ADMIN_PIN) setIsAdmin(true);
+            else if (pin !== null) alert("Incorrect PIN");
+        },
+        title: "Admin tools",
+        style: {
+            ...btnG,
+            fontSize: 12,
+            padding: "6px 10px",
+            opacity: 0.5
+        }
+    }, "🔒"))), /*#__PURE__*/ React.createElement("div", {
         style: {
             padding: "20px 24px",
             maxWidth: 1200,
             margin: "0 auto"
         }
-    }, toolTab === "excel" && /*#__PURE__*/ React.createElement("div", {
+    }, toolTab === "excel" && isAdmin && /*#__PURE__*/ React.createElement("div", {
         style: {
             marginBottom: 20
         }
     }, /*#__PURE__*/ React.createElement(ExcelImporter, {
         builders: builders,
         onImportApproved: handleExcelImport
-    })), toolTab === "parser" && /*#__PURE__*/ React.createElement("div", {
+    })), toolTab === "parser" && isAdmin && /*#__PURE__*/ React.createElement("div", {
         style: {
             marginBottom: 20
         }
@@ -103613,7 +103645,7 @@ export default function BuilderCRM() {
         builders: builders,
         onJobParsed: handleParsedJob,
         onNewBuilder: handleNewBuilder
-    })), toolTab === "automation" && /*#__PURE__*/ React.createElement("div", {
+    })), toolTab === "automation" && isAdmin && /*#__PURE__*/ React.createElement("div", {
         style: {
             marginBottom: 20
         }
