@@ -103209,6 +103209,29 @@ export default function BuilderCRM() {
         } catch  {}
     }, []);
     const [appLoading, setAppLoading] = useState(true);
+    const [accessDenied, setAccessDenied] = useState(false);
+    const [userEmail, setUserEmail] = useState("");
+    // Only these exact email addresses are allowed to access the CRM.
+    // Add or remove emails here as your team changes.
+    const ALLOWED_EMAILS = [
+        "derek.wozencraft@subzero.com",
+        "tony.couch@subzero.com",
+        "erin.johnson@subzero.com",
+        "nick.dipomazio@subzero.com",
+        "kelly.dobbins@subzero.com",
+        "james.oh@subzero.com",
+        "stephen.klassen@subzero.com"
+    ];
+    useEffect(()=>{
+        fetch("/.auth/me").then((r)=>r.json()).then((data)=>{
+            const principal = data?.clientPrincipal;
+            const email = (principal?.userDetails || "").toLowerCase().trim();
+            setUserEmail(email);
+            if (!ALLOWED_EMAILS.map((e)=>e.toLowerCase()).includes(email)) {
+                setAccessDenied(true);
+            }
+        }).catch(()=>setAccessDenied(true));
+    }, []);
     const { syncing, lastSaved } = useAzureStorage(builders, setBuilders, setAppLoading);
     const { progress: geoProgress, addToQueue } = useGeocoder(builders, setBuilders);
     const dupeSet = useMemo(()=>buildDupeSet(builders), [
@@ -103409,6 +103432,79 @@ export default function BuilderCRM() {
         bFilterType,
         bFilterTier
     ].filter((f)=>f !== "all").length + (bSearch ? 1 : 0);
+    if (accessDenied) return /*#__PURE__*/ React.createElement("div", {
+        style: {
+            minHeight: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "#F8FAFC",
+            flexDirection: "column",
+            gap: 16,
+            padding: 24,
+            textAlign: "center"
+        }
+    }, /*#__PURE__*/ React.createElement("div", {
+        style: {
+            fontSize: 48
+        }
+    }, "🔒"), /*#__PURE__*/ React.createElement("div", {
+        style: {
+            fontWeight: 800,
+            fontSize: 20,
+            color: "#1E3A5F"
+        }
+    }, "Access Restricted"), /*#__PURE__*/ React.createElement("div", {
+        style: {
+            fontSize: 14,
+            color: "#6B7280",
+            maxWidth: 400
+        }
+    }, "This application is only available to Sub-Zero Group Southwest team members.", userEmail && /*#__PURE__*/ React.createElement("div", {
+        style: {
+            marginTop: 8,
+            fontFamily: "monospace",
+            fontSize: 12
+        }
+    }, "Signed in as: ", userEmail)), /*#__PURE__*/ React.createElement("a", {
+        href: "/.auth/logout",
+        style: {
+            marginTop: 8,
+            padding: "8px 20px",
+            background: "#1E3A5F",
+            color: "white",
+            borderRadius: 6,
+            textDecoration: "none",
+            fontWeight: 700,
+            fontSize: 13
+        }
+    }, "Sign Out"));
+    if (appLoading) return /*#__PURE__*/ React.createElement("div", {
+        style: {
+            minHeight: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "#F8FAFC",
+            flexDirection: "column",
+            gap: 16
+        }
+    }, /*#__PURE__*/ React.createElement("div", {
+        style: {
+            fontSize: 48
+        }
+    }, "🏗"), /*#__PURE__*/ React.createElement("div", {
+        style: {
+            fontWeight: 800,
+            fontSize: 20,
+            color: "#1E3A5F"
+        }
+    }, "Sub-Zero Builder CRM"), /*#__PURE__*/ React.createElement("div", {
+        style: {
+            fontSize: 14,
+            color: "#6B7280"
+        }
+    }, "Loading your data from the cloud..."));
     return /*#__PURE__*/ React.createElement("div", {
         style: {
             fontFamily: "'Inter',system-ui,sans-serif",
