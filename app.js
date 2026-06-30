@@ -102174,59 +102174,17 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
         style: card
     }, /*#__PURE__*/ React.createElement("div", {
         style: {
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
+            fontSize: 12,
+            color: "#6B7280",
             marginBottom: 12
         }
-    }, /*#__PURE__*/ React.createElement("span", {
-        style: {
-            fontWeight: 700,
-            fontSize: 13,
-            color: "#374151"
-        }
-    }, "Show"), /*#__PURE__*/ React.createElement("div", {
-        style: {
-            display: "flex",
-            background: "#F3F4F6",
-            borderRadius: 6,
-            overflow: "hidden"
-        }
-    }, [
-        [
-            "jobs",
-            "Job Sites"
-        ],
-        [
-            "hq",
-            "Builder HQ"
-        ],
-        [
-            "both",
-            "Both"
-        ]
-    ].map(([m, label])=>/*#__PURE__*/ React.createElement("button", {
-            key: m,
-            onClick: ()=>setMapMode(m),
-            style: {
-                padding: "4px 12px",
-                border: "none",
-                background: mapMode === m ? "#1E3A5F" : "transparent",
-                color: mapMode === m ? "white" : "#374151",
-                cursor: "pointer",
-                fontWeight: 600,
-                fontSize: 11
-            }
-        }, label)))), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
+    }, "📍 Builder headquarters location"), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
         builders: [
             builder
         ],
-        mapMode: mapMode,
+        mapMode: "hq",
         onBuilderClick: ()=>{},
-        onJobClick: (bid, jid)=>{
-            setTab("jobs");
-            setExpandedJob(jid);
-        }
+        onJobClick: ()=>{}
     }) : /*#__PURE__*/ React.createElement("div", {
         style: {
             height: 400,
@@ -103206,7 +103164,8 @@ export default function BuilderCRM() {
     const ADMIN_PIN = "1207"; // Change this to whatever PIN you want
     const [selectedBuilderId, setSelectedBuilderId] = useState(null);
     const [addingBuilder, setAddingBuilder] = useState(false);
-    const [mapMode, setMapMode] = useState("jobs");
+    const [mapMode, setMapMode] = useState("hq");
+    const [jobsMapMode, setJobsMapMode] = useState("jobs");
     const [showMap, setShowMap] = useState(false);
     const [bFilterType, setBFilterType] = useState("all");
     const [bFilterTier, setBFilterTier] = useState("all");
@@ -104133,19 +104092,19 @@ export default function BuilderCRM() {
         ]
     ].map(([m, label])=>/*#__PURE__*/ React.createElement("button", {
             key: m,
-            onClick: ()=>setMapMode(m),
+            onClick: ()=>setJobsMapMode(m),
             style: {
                 padding: "4px 12px",
                 border: "none",
-                background: mapMode === m ? "#1E3A5F" : "transparent",
-                color: mapMode === m ? "white" : "#374151",
+                background: jobsMapMode === m ? "#1E3A5F" : "transparent",
+                color: jobsMapMode === m ? "white" : "#374151",
                 cursor: "pointer",
                 fontWeight: 600,
                 fontSize: 11
             }
         }, label)))), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
         builders: jobTabBuilders,
-        mapMode: mapMode,
+        mapMode: jobsMapMode,
         onBuilderClick: (id)=>setSelectedBuilderId(id),
         onJobClick: (bid, jid)=>setSelectedBuilderId(bid)
     }) : /*#__PURE__*/ React.createElement("div", {
