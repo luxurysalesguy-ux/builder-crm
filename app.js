@@ -101620,7 +101620,7 @@ function JobForm({ job, builderType, onSave, onCancel }) {
         type: "date",
         value: f.endDate,
         onChange: (e)=>s("endDate", e.target.value)
-    }))), builderType === "Cabinet Shop Quote" && /*#__PURE__*/ React.createElement("div", {
+    }))), (builderType === "Cabinet Shop Quote" || f.cabinetDesigner) && /*#__PURE__*/ React.createElement("div", {
         style: {
             marginTop: 12
         }
@@ -102199,7 +102199,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             skus: job.skus,
             onChange: ()=>{},
             readOnly: true
-        }), builder.type === "Cabinet Shop Quote" && job.cabinetDesigner && /*#__PURE__*/ React.createElement("div", {
+        }), job.cabinetDesigner && /*#__PURE__*/ React.createElement("div", {
             style: {
                 marginTop: 12,
                 fontSize: 12,
