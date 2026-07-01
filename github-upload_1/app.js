@@ -44,6 +44,7 @@ const TIER_CONFIG = {
         text: "#065F46"
     }
 };
+const getTier = (t)=>TIER_CONFIG[t] || null;
 const STATUS_CONFIG = {
     Active: {
         color: "#10B981",
@@ -52,6 +53,10 @@ const STATUS_CONFIG = {
     Won: {
         color: "#3B82F6",
         bg: "#DBEAFE"
+    },
+    Ordered: {
+        color: "#F59E0B",
+        bg: "#FEF3C7"
     },
     Lost: {
         color: "#DC2626",
@@ -71,9 +76,9 @@ const SEED_BUILDERS = [
         "tier": 2,
         "roc": "",
         "address": "322",
-        "contact": "",
+        "contact": "Travis Connell",
         "email": "",
-        "phone": "",
+        "phone": "520-722-8405",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -916,10 +921,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "9960 W CHEYENNE AVE, LAS VEGAS, NV, 89129",
+        "contact": "BEAU SCARLETT",
         "email": "",
-        "phone": "",
+        "phone": "702-779-3778",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -1498,10 +1503,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "310814",
-        "address": "",
-        "contact": "",
+        "address": "22318 E ALYSSA RD, QUEEN CREEK, AZ, 85142",
+        "contact": "COLYN MACDONALD",
         "email": "",
-        "phone": "",
+        "phone": "480-310-9395",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -1574,10 +1579,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "223278",
-        "address": "",
-        "contact": "",
+        "address": "8802 E Rimrock Dr, Scottsdale, AZ, 85255-9132",
+        "contact": "DANIEL ARDELEAN",
         "email": "",
-        "phone": "",
+        "phone": "602-330-3000",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -1880,10 +1885,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "8800 N Gainey Center Dr, Scottsdale, AZ, 85258-2118",
+        "contact": "Jodi Kish",
         "email": "",
-        "phone": "",
+        "phone": "480-348-6000",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -2036,10 +2041,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 2,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "7848 E Redfield Rd Ste 10, Scottsdale, AZ, 85260-6945",
+        "contact": "Kirsten Whipps",
         "email": "",
-        "phone": "",
+        "phone": "480-348-0088",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -2787,10 +2792,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "341558",
-        "address": "",
-        "contact": "",
+        "address": "1819 E MORTEN AVE, PHOENIX, AZ, 85280",
+        "contact": "Spencer Starks",
         "email": "",
-        "phone": "",
+        "phone": "480-404-8752",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -2873,10 +2878,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "8601 N Scottsdale Rd Ste 335, Paradise Valley, AZ, 85253-2746",
+        "contact": "Peter Burger",
         "email": "",
-        "phone": "",
+        "phone": "480-498-3300",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -2939,10 +2944,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "214815",
-        "address": "",
-        "contact": "",
+        "address": "1571 W LOS PALMARITAS DR, PHOENIX, AZ, 85021",
+        "contact": "DENNIS FOSE",
         "email": "",
-        "phone": "",
+        "phone": "602-796-9733",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -2975,8 +2980,8 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "333135",
-        "address": "",
-        "contact": "",
+        "address": "8502 E Desert Cove Ave, Scottsdale, AZ, 85260",
+        "contact": "Cyrus Afshari",
         "email": "",
         "phone": "",
         "lat": null,
@@ -3196,10 +3201,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "15125 N HAYDEN RD Ste 122, SCOTTSDALE, AZ, 85260",
+        "contact": "DAVID LAVI",
         "email": "",
-        "phone": "",
+        "phone": "623-324-1717",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -3398,9 +3403,9 @@ const SEED_BUILDERS = [
         "tier": 3,
         "roc": "349370",
         "address": "AZ",
-        "contact": "",
+        "contact": "Katherine Hunt",
         "email": "",
-        "phone": "",
+        "phone": "602-264-1912",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -4174,9 +4179,9 @@ const SEED_BUILDERS = [
         "tier": 5,
         "roc": "175750",
         "address": "1",
-        "contact": "",
+        "contact": "Michael Murphy",
         "email": "",
-        "phone": "",
+        "phone": "602-358-7127",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -4569,10 +4574,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "28826 N 91st ave, peoria, az, 85383",
+        "contact": "Adrian Ticarat",
         "email": "",
-        "phone": "",
+        "phone": "850-830-6778",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -4996,10 +5001,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "9170 E Bahia Dr Ste 106, Scottsdale, AZ, 85260-1530",
+        "contact": "Sara Wolf",
         "email": "",
-        "phone": "",
+        "phone": "414-759-6507",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -5272,10 +5277,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "7110 E McDonald Dr Ste A1, Paradise Valley, AZ, 85253-5426",
+        "contact": "JD Dwyer",
         "email": "",
-        "phone": "",
+        "phone": "602-524-5960",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -6123,10 +6128,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "17848 N 30th Pl, Phoenix, AZ, 85032",
+        "contact": "Tyler Hillukka",
         "email": "",
-        "phone": "",
+        "phone": "602-921-9903",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -6227,7 +6232,7 @@ const SEED_BUILDERS = [
         "address": "42302 N VISION WAY, 85086",
         "contact": "ROY BRET BUCKNER",
         "email": "",
-        "phone": "",
+        "phone": "602-434-2385",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -6283,7 +6288,7 @@ const SEED_BUILDERS = [
         "address": "PO BOX 215, 85902",
         "contact": "RAYNE RUSH",
         "email": "",
-        "phone": "",
+        "phone": "602-618-0124",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -6386,10 +6391,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "22095 N 181st Ave, Surprise, AZ, 85387",
+        "contact": "Alan White",
         "email": "",
-        "phone": "",
+        "phone": "602-510-7747",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -6522,10 +6527,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "1137 E PALMAIRE, PHOENIX, AZ, 85020",
+        "contact": "KEITH BROUS",
         "email": "",
-        "phone": "",
+        "phone": "602-618-6203",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -7108,10 +7113,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "3225 N Central Ave Ste 100, Phoenix, AZ, 85012-2452",
+        "contact": "STEVE WIGGINS",
         "email": "",
-        "phone": "",
+        "phone": "480-367-1959",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -7244,8 +7249,8 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "10001 HARPOON CIR, LAS VEGAS, NV, 89117",
+        "contact": "JOSE RENDON",
         "email": "",
         "phone": "",
         "lat": null,
@@ -7400,10 +7405,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "150894",
-        "address": "",
-        "contact": "",
+        "address": "35961 N Willow Cross Dr, Cave Creek, AZ, 85331-9330",
+        "contact": "CRAIG WALKER",
         "email": "",
-        "phone": "",
+        "phone": "602-359-3777",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -7486,10 +7491,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "213005",
-        "address": "",
-        "contact": "",
+        "address": "4810 E Ray Rd Ste 5, Phoenix, AZ, 85044-6404",
+        "contact": "KYLE WEEKS",
         "email": "",
-        "phone": "",
+        "phone": "480-961-8995",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -7532,10 +7537,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "360402",
-        "address": "",
-        "contact": "",
+        "address": "7501 E MCDOWELL RD, SCOTTSDALE, AZ, 85257",
+        "contact": "KYLE JOHNS",
         "email": "",
-        "phone": "",
+        "phone": "360-608-3629",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -7668,10 +7673,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "1422 E Briarwood Ter, Phoenix, AZ, 85048-8693",
+        "contact": "Bob Gawlik",
         "email": "",
-        "phone": "",
+        "phone": "480-703-2136",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -7849,10 +7854,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "36600 N Pima Rd Unit 304, Carefree, AZ, 85377-4310",
+        "contact": "Lisa Tate",
         "email": "",
-        "phone": "",
+        "phone": "480-212-2162",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -7963,7 +7968,7 @@ const SEED_BUILDERS = [
         "address": "10045  E DYNAMITE BLVD, 86262",
         "contact": "Geronimo Domingo Alvarado",
         "email": "",
-        "phone": "",
+        "phone": "480-626-1555",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -8031,10 +8036,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "332382",
-        "address": "",
-        "contact": "",
+        "address": "2153 E FAIRFEILD ST, MESA, AZ, 85213",
+        "contact": "TRAVIS NUZMAN",
         "email": "",
-        "phone": "",
+        "phone": "602-399-3014",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -8105,7 +8110,7 @@ const SEED_BUILDERS = [
         "address": "9300 E Raintree Drive, 85260",
         "contact": "Alana Mann",
         "email": "",
-        "phone": "",
+        "phone": "480-248-3300",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -8163,10 +8168,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "304255",
-        "address": "",
-        "contact": "",
+        "address": "2355 E CAMELBACK ROAD, PHOENIX, AZ, 85016",
+        "contact": "ANDREW GEIER",
         "email": "",
-        "phone": "",
+        "phone": "602-840-8655",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -8237,7 +8242,7 @@ const SEED_BUILDERS = [
         "address": "908 E SHELDON ST, 86301",
         "contact": "RIDGELINE BUILDERS",
         "email": "",
-        "phone": "",
+        "phone": "928-710-7194",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -8440,10 +8445,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "1806 N LINDSEY RD, MESA, AZ, 85213",
+        "contact": "INGRID MITCHELL",
         "email": "",
-        "phone": "",
+        "phone": "480-931-4630",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -8536,10 +8541,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "4844 E. TURQUOISE AVE, PARADISE VALLEY, AZ, 85253",
+        "contact": "MEGAN BEHRENS",
         "email": "",
-        "phone": "",
+        "phone": "480-708-5151",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -8678,10 +8683,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "323052",
-        "address": "",
-        "contact": "",
+        "address": "428 E Thunderbird Rd # 532, Phoenix, AZ, 85022-5229",
+        "contact": "Jennifer Arias",
         "email": "",
-        "phone": "",
+        "phone": "602-741-2809",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -8855,9 +8860,9 @@ const SEED_BUILDERS = [
         "tier": 3,
         "roc": "346031",
         "address": "1",
-        "contact": "",
+        "contact": "Gideon Zeidler",
         "email": "",
-        "phone": "",
+        "phone": "480-226-0904",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -8961,10 +8966,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "23910 N 19TH AVE, PHOENIX, AZ, 85085",
+        "contact": "RUTH PARKER",
         "email": "",
-        "phone": "",
+        "phone": "623-581-6100",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -9428,10 +9433,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "343988",
-        "address": "",
-        "contact": "",
+        "address": "23623 N SCOTTSDALE RD, SCOTTSDALE, AZ, 85255",
+        "contact": "SAM DOLEZAL",
         "email": "",
-        "phone": "",
+        "phone": "480-322-5755",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -9659,10 +9664,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "5802 N 81st St, Scottsdale, AZ, 85250-6208",
+        "contact": "Dan Corlenzoli",
         "email": "",
-        "phone": "",
+        "phone": "480-747-4034",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -9750,10 +9755,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "355894",
-        "address": "",
-        "contact": "",
+        "address": "5202 N 196TH AVE, LITCHFEILD PARK, AZ, 85340",
+        "contact": "WILLIAM GEORGE",
         "email": "",
-        "phone": "",
+        "phone": "602-309-1652",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -10166,10 +10171,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "323268",
-        "address": "",
-        "contact": "",
+        "address": "14125 E Ranch Rd, Scottsdale, AZ, 85262-4981",
+        "contact": "Michael Christensen",
         "email": "",
-        "phone": "",
+        "phone": "602-206-6957",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -10283,9 +10288,9 @@ const SEED_BUILDERS = [
         "tier": 3,
         "roc": "147994",
         "address": "1",
-        "contact": "",
+        "contact": "ARTHUR DLUHRS",
         "email": "",
-        "phone": "",
+        "phone": "480-991-1152",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -10603,10 +10608,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "9140 S Kyrene Rd, Tempe, AZ, 85284-2920",
+        "contact": "Dennis Webb",
         "email": "",
-        "phone": "",
+        "phone": "480-753-6789",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -10700,10 +10705,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "324580",
-        "address": "",
-        "contact": "",
+        "address": "2101 E RIM CLUB DR, PAYSON, AZ, 85541",
+        "contact": "ROBERT MYERS",
         "email": "",
-        "phone": "",
+        "phone": "888-484-3746",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -10877,10 +10882,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "1825 E ADAMS ST, PHOENIX, AZ, 85034",
+        "contact": "MARCOS VILLEGAS",
         "email": "",
-        "phone": "",
+        "phone": "480-559-5494",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -11053,10 +11058,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "6029 E LONG SHADOW TRAIL, SCOTTSDALE, AZ, 85266",
+        "contact": "RUSSELL BROWN",
         "email": "",
-        "phone": "",
+        "phone": "310-864-3442",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -11190,9 +11195,9 @@ const SEED_BUILDERS = [
         "tier": 5,
         "roc": "307489",
         "address": "224",
-        "contact": "",
+        "contact": "Dale Robinson",
         "email": "",
-        "phone": "",
+        "phone": "602-329-9995",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -11355,10 +11360,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "332160",
-        "address": "",
-        "contact": "",
+        "address": "11419 W PRICKLY PEAR TRL, PEORIA, AZ, 85383",
+        "contact": "Riley Crosby",
         "email": "",
-        "phone": "",
+        "phone": "623-565-3625",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -11668,10 +11673,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "3219 E. CAMELBACK RD, PHOENIX, AZ, 85012",
+        "contact": "BRADLEY BUHROW",
         "email": "",
-        "phone": "",
+        "phone": "602-291-6444",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -11794,10 +11799,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "21351 E WAVERLY DR, QUEEN CREEK, AZ, 85142",
+        "contact": "BRIAN MARTIN",
         "email": "",
-        "phone": "",
+        "phone": "480-353-1019",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -12152,10 +12157,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "240109",
-        "address": "",
-        "contact": "",
+        "address": "190 CORPORATE PL Ste 5, CHANDLER, AZ, 85225",
+        "contact": "JODY ESCHLIMAN",
         "email": "",
-        "phone": "",
+        "phone": "480-744-6469",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -12449,10 +12454,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "188086",
-        "address": "",
-        "contact": "",
+        "address": "7319 S Atwood, Mesa, AZ, 85212-5516",
+        "contact": "Daniel Johnson",
         "email": "",
-        "phone": "",
+        "phone": "480-404-3958",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -12671,10 +12676,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "329178",
-        "address": "",
-        "contact": "",
+        "address": "717 W 6th Dr, Mesa, AZ, 85210-2319",
+        "contact": "Jeremiah Burr",
         "email": "",
-        "phone": "",
+        "phone": "480-808-3000",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -12827,10 +12832,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "302135",
-        "address": "",
-        "contact": "",
+        "address": "6929 N HAYDEN RD, SCOTTSDALE, AZ, 85250",
+        "contact": "BOB NORTON",
         "email": "",
-        "phone": "",
+        "phone": "435-216-6698",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -13013,10 +13018,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "347577",
-        "address": "",
-        "contact": "",
+        "address": "8648 E. HACKAMORE DR, SCOTTSDALE, AZ, 85255",
+        "contact": "LAUREN LERNER",
         "email": "",
-        "phone": "",
+        "phone": "480-702-1189",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -13064,10 +13069,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "31446 N DESERT OASIS LANE, QUEEN CREEK, AZ, 85144",
+        "contact": "JORDAN CARDER",
         "email": "",
-        "phone": "",
+        "phone": "602-332-4250",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -13190,10 +13195,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "2215 W Parkside Ln, Phoenix, AZ, 85027-1243",
+        "contact": "David Wittine",
         "email": "",
-        "phone": "",
+        "phone": "623-879-6300",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -13336,10 +13341,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "336640",
-        "address": "",
-        "contact": "",
+        "address": "6339 E Calle Del Norte, Scottsdale, AZ, 85251",
+        "contact": "Jacques Leblanc",
         "email": "",
-        "phone": "",
+        "phone": "602-617-0300",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -13563,10 +13568,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "2990 E Northern Ave Ste B103, Phoenix, AZ, 85028-4838",
+        "contact": "Michel Hanchett",
         "email": "",
-        "phone": "",
+        "phone": "602-509-2069",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -13729,10 +13734,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "346076",
-        "address": "",
-        "contact": "",
+        "address": "12144 East Altadena Dr, Scottsdale, AZ, 85259",
+        "contact": "TOM DERRYBERRY",
         "email": "",
-        "phone": "",
+        "phone": "602-478-0755",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -13975,10 +13980,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 2,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "2972 S Rainbow Blvd Ste B, Las Vegas, NV, 89146-6203",
+        "contact": "Jeff Tobler",
         "email": "",
-        "phone": "",
+        "phone": "702-297-6680",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -14207,9 +14212,9 @@ const SEED_BUILDERS = [
         "tier": 1,
         "roc": "",
         "address": "AZ",
-        "contact": "",
+        "contact": "Kaitlyn Wolfe",
         "email": "",
-        "phone": "",
+        "phone": "480-490-9260",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -14392,10 +14397,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "343949",
-        "address": "",
-        "contact": "",
+        "address": "4320 E Brown Rd #106, Mesa, AZ, 85205",
+        "contact": "Heather Maldonado",
         "email": "",
-        "phone": "",
+        "phone": "602-290-8506",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -14434,9 +14439,9 @@ const SEED_BUILDERS = [
         "tier": 3,
         "roc": "",
         "address": "1",
-        "contact": "",
+        "contact": "Gary Fries",
         "email": "",
-        "phone": "",
+        "phone": "602-882-3660",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -14834,10 +14839,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "9075 W DIABLO, LAS VEGAS, NV, 89148",
+        "contact": "jeffery woods",
         "email": "",
-        "phone": "",
+        "phone": "925-998-4677",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -15200,10 +15205,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "82716",
-        "address": "",
-        "contact": "",
+        "address": "16340 E TOMBSTONE AVE, FOUNTAIN HILLS, AZ, 85268",
+        "contact": "MICHAEL PETERSON",
         "email": "",
-        "phone": "",
+        "phone": "480-773-5341",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -15406,10 +15411,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "323030",
-        "address": "",
-        "contact": "",
+        "address": "1 E DEER VALLEY RD, PHOENIX, AZ, 85024",
+        "contact": "JOHN GURLEY",
         "email": "",
-        "phone": "",
+        "phone": "602-377-3359",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -15723,10 +15728,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "339064",
-        "address": "",
-        "contact": "",
+        "address": "21001 N. TATUM BLVD, PHOENIX, AZ, 85018",
+        "contact": "DON NICHOLSON",
         "email": "",
-        "phone": "",
+        "phone": "480-859-5517",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -16540,9 +16545,9 @@ const SEED_BUILDERS = [
         "tier": 5,
         "roc": "",
         "address": "224",
-        "contact": "",
+        "contact": "Erin Miller",
         "email": "",
-        "phone": "",
+        "phone": "480-800-3544",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -16585,10 +16590,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "9653 Arbor Rose Ct, Las Vegas, NV, 89148-3908",
+        "contact": "Camille Charbonneau",
         "email": "",
-        "phone": "",
+        "phone": "702-267-7827",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -16811,10 +16816,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "20538 E Cloud Rd, Queen Creek, AZ, 85142-1296",
+        "contact": "Jason Check",
         "email": "",
-        "phone": "",
+        "phone": "602-570-2980",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -17043,10 +17048,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "3149 N 31st Ave, Phoenix, AZ, 85017-5410",
+        "contact": "James Trahan",
         "email": "",
-        "phone": "",
+        "phone": "602-288-0138",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -17079,10 +17084,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "325318",
-        "address": "",
-        "contact": "",
+        "address": "2200 E Camelback, Phoenix, AZ, 85014",
+        "contact": "Bryan Schlueter",
         "email": "",
-        "phone": "",
+        "phone": "480-620-9669",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -17275,10 +17280,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "4320 E Brown Rd Ste 109, Mesa, AZ, 85205-4083",
+        "contact": "JEFF ROGERS",
         "email": "",
-        "phone": "",
+        "phone": "480-844-2211",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -17746,10 +17751,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "5202 N 33rd St, Phoenix, AZ, 85018-1413",
+        "contact": "Colleen Langdon",
         "email": "",
-        "phone": "",
+        "phone": "602-318-3078",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -17862,10 +17867,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "10114 E Tierra Buena Ln, Scottsdale, AZ, 85255-8615",
+        "contact": "Scott Martison",
         "email": "",
-        "phone": "",
+        "phone": "480-276-6428",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -18239,10 +18244,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "155791",
-        "address": "",
-        "contact": "",
+        "address": "PO BOX 5597, SCOTTSDALE, AZ, 85261",
+        "contact": "EDWARD PEDERSON",
         "email": "",
-        "phone": "",
+        "phone": "207-832-7835",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -18315,10 +18320,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "7400 E McCormick Pkwy Ste C-102, Scottsdale, AZ, 85258-2906",
+        "contact": "Tom Carlson",
         "email": "",
-        "phone": "",
+        "phone": "480-315-6724",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -18351,10 +18356,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "1727 E Deer Valley Rd, Phoenix, AZ, 85024-5618",
+        "contact": "Ashley Reese",
         "email": "",
-        "phone": "",
+        "phone": "480-948-0756",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -18392,10 +18397,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "236 E Hatcher Rd, Phoenix, AZ, 85020-2817",
+        "contact": "Leigh Kohrs",
         "email": "",
-        "phone": "",
+        "phone": "602-373-0157",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -18589,10 +18594,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "315545",
-        "address": "",
-        "contact": "",
+        "address": "16424 N 91st St, Scottsdale, AZ, 85260-1563",
+        "contact": "RYAN PATTERSON",
         "email": "",
-        "phone": "",
+        "phone": "480-245-7614",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -20115,10 +20120,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "316 GARDENIA DR, PHOENIX, AZ, 85014",
+        "contact": "SPENCER DECKER",
         "email": "",
-        "phone": "",
+        "phone": "623-330-0363",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -20186,10 +20191,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "341356",
-        "address": "",
-        "contact": "",
+        "address": "24784 N 107th St, Scottsdale, AZ, 85255-8109",
+        "contact": "Paul Walker",
         "email": "",
-        "phone": "",
+        "phone": "480-242-5002",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -20282,10 +20287,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "515 E CAREFREE HWGHWAY, PHOENIX, AZ, 85085",
+        "contact": "DAX HAYES",
         "email": "",
-        "phone": "",
+        "phone": "602-999-7574",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -20579,10 +20584,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "95956",
-        "address": "",
-        "contact": "",
+        "address": "12684 E Turquoise Ave, Scottsdale, AZ, 85259-5227",
+        "contact": "Dina DeAcetis Francis",
         "email": "",
-        "phone": "",
+        "phone": "480-221-2400",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -20860,10 +20865,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "8924 E PINNACLE PEAK RD, Scottsdale, AZ, 85255",
+        "contact": "CHRIS KITCHEN",
         "email": "",
-        "phone": "",
+        "phone": "480-947-7028",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -21066,10 +21071,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "4242 N Craftsman Ct, Scottsdale, AZ, 85251-3202",
+        "contact": "Steve Johnson",
         "email": "",
-        "phone": "",
+        "phone": "480-424-7900",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -21113,9 +21118,9 @@ const SEED_BUILDERS = [
         "tier": 1,
         "roc": "287304",
         "address": "LOT 7",
-        "contact": "",
+        "contact": "John Smieszek",
         "email": "",
-        "phone": "",
+        "phone": "602-380-8787",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -21278,10 +21283,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "3451 W MARTIN AVE, LAS VEGAS, NV, 89118",
+        "contact": "JIM HOWARD",
         "email": "",
-        "phone": "",
+        "phone": "702-697-2000",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -21480,10 +21485,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "6625 W Badura Ave, Las Vegas, NV, 89113",
+        "contact": "Brett Davis",
         "email": "",
-        "phone": "",
+        "phone": "702-307-6393",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -21766,10 +21771,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "4340 E Indian School Road, Phoenix, AZ, 85018-5360",
+        "contact": "John Sebald",
         "email": "",
-        "phone": "",
+        "phone": "480-588-6142",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -21997,10 +22002,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "308706",
-        "address": "",
-        "contact": "",
+        "address": "PO BOX 2294, APACHE JUNCTION, AZ, 85117",
+        "contact": "REBECCA DIKES",
         "email": "",
-        "phone": "",
+        "phone": "602-819-2786",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -22078,8 +22083,8 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "616 WEST LAS LOMITAS ROAD, TUCSON, AZ, 85704",
+        "contact": "JOHN AGRESTI",
         "email": "",
         "phone": "",
         "lat": null,
@@ -22274,10 +22279,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "3477 E SILO LN, GILBERT, AZ, 85296",
+        "contact": "WILLIAM KNUTSON",
         "email": "",
-        "phone": "",
+        "phone": "602-838-4178",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -22420,10 +22425,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "2828 E. BALSAM DR., CHANDLER, AZ, 85286",
+        "contact": "JERROD JENSEN",
         "email": "",
-        "phone": "",
+        "phone": "480-388-4173",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -22576,10 +22581,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "284258",
-        "address": "",
-        "contact": "",
+        "address": "11493 N 109TH WAY, SCOTTSDALE, AZ, 85259",
+        "contact": "ANTHONY KURTH",
         "email": "",
-        "phone": "",
+        "phone": "480-330-6978",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -22627,10 +22632,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "3355 S LV BLVD, Las Vegas, NV, 89109",
+        "contact": "Kurt Frise",
         "email": "",
-        "phone": "",
+        "phone": "702-414-1000",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -22873,10 +22878,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "14666 N 74th St Suite 100, Scottsdale, AZ, 85260",
+        "contact": "Tina Nagel",
         "email": "",
-        "phone": "",
+        "phone": "855-315-4663",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -22924,10 +22929,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "83037",
-        "address": "",
-        "contact": "",
+        "address": "2275 E Sunset Rd, Las Vegas, NV, 89119-4915",
+        "contact": "TOMMIE TOWNSEND",
         "email": "",
-        "phone": "",
+        "phone": "702-289-6176",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -23396,10 +23401,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "8155 N 24th Ave, Phoenix, AZ, 85021-6882",
+        "contact": "Mark Kozlowski",
         "email": "",
-        "phone": "",
+        "phone": "480-900-7224",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -23493,10 +23498,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "336407",
-        "address": "",
-        "contact": "",
+        "address": "902 W STATE AVE, PHOENIX, AZ, 85021",
+        "contact": "MORIBA SUTULA DIALLO",
         "email": "",
-        "phone": "",
+        "phone": "312-451-0104",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -23605,9 +23610,9 @@ const SEED_BUILDERS = [
         "tier": 1,
         "roc": "276981",
         "address": "1",
-        "contact": "",
+        "contact": "RYAN PHILLIPS",
         "email": "",
-        "phone": "",
+        "phone": "480-688-0273",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -23765,10 +23770,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "8355 E Butherus Dr Ste 5, Scottsdale, AZ, 85260-2569",
+        "contact": "Kevin Mooney",
         "email": "",
-        "phone": "",
+        "phone": "480-367-8510",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -23977,10 +23982,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "295261",
-        "address": "",
-        "contact": "",
+        "address": "8203 N 75th St, Scottsdale, AZ, 85258-2782",
+        "contact": "robert hughes",
         "email": "",
-        "phone": "",
+        "phone": "602-615-4800",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -24619,10 +24624,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "85976",
-        "address": "",
-        "contact": "",
+        "address": "1212 E EASTERN, LAS VEGAS, NV, 89117",
+        "contact": "LANDON MILLER",
         "email": "",
-        "phone": "",
+        "phone": "949-212-7303",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -24731,9 +24736,9 @@ const SEED_BUILDERS = [
         "tier": 1,
         "roc": "",
         "address": "NV",
-        "contact": "",
+        "contact": "CHAD PETERSON",
         "email": "",
-        "phone": "",
+        "phone": "702-580-7662",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -24937,10 +24942,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "252911",
-        "address": "",
-        "contact": "",
+        "address": "10115 e bell rd, scottsdale, az, 85260",
+        "contact": "mike brown",
         "email": "",
-        "phone": "",
+        "phone": "480-213-0561",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -25018,10 +25023,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "745 W Baseline Rd, Mesa, AZ, 85210-6024",
+        "contact": "Bobby Barko",
         "email": "",
-        "phone": "",
+        "phone": "480-664-0343",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -25069,10 +25074,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "9237 E Via De Ventura, Scottsdale, AZ, 85258-3370",
+        "contact": "Todd Stevens",
         "email": "",
-        "phone": "",
+        "phone": "480-362-2300",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -25255,10 +25260,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "331727",
-        "address": "",
-        "contact": "",
+        "address": "15455 N Greenway Hayden Loop Ste  C19, Scottsdale, AZ, 85260",
+        "contact": "Reynaldo Villasenor",
         "email": "",
-        "phone": "",
+        "phone": "480-388-5339",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -25466,10 +25471,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "6950 E 1st St, Scottsdale, AZ, 85251-5316",
+        "contact": "Sheila Aungst",
         "email": "",
-        "phone": "",
+        "phone": "480-663-7894",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -25797,10 +25802,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "332544",
-        "address": "",
-        "contact": "",
+        "address": "1540 E Maryland Ave, Phoenix, AZ, 85014-1479",
+        "contact": "Evan Boxwell",
         "email": "",
-        "phone": "",
+        "phone": "480-390-9994",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -26208,10 +26213,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "245984",
-        "address": "",
-        "contact": "",
+        "address": "7500 E Pinnacle Peak Rd Ste A-103, Scottsdale, AZ, 85255-3407",
+        "contact": "Randy Arnett",
         "email": "",
-        "phone": "",
+        "phone": "480-515-2888",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -26504,10 +26509,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "289830",
-        "address": "",
-        "contact": "",
+        "address": "21424 N 7th Ave, Phoenix, AZ, 85027-2914",
+        "contact": "MIKE KARPINSKI",
         "email": "",
-        "phone": "",
+        "phone": "623-915-2152",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -26719,7 +26724,7 @@ const SEED_BUILDERS = [
         "address": "9044 E VIA MONTOYA, 85255",
         "contact": "PATRICIA & MARK CALLANAN",
         "email": "",
-        "phone": "",
+        "phone": "602-910-8257",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -26975,7 +26980,7 @@ const SEED_BUILDERS = [
         "address": "202 CANYON ROAD, 87501",
         "contact": "PAUL SIDEBOTTOM",
         "email": "",
-        "phone": "",
+        "phone": "505-303-9899",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -27173,10 +27178,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "10000 N. 31st Ave, Phoenix, AZ, 85051",
+        "contact": "MEL ALVA",
         "email": "",
-        "phone": "",
+        "phone": "480-812-5476",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -27324,10 +27329,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "215221",
-        "address": "",
-        "contact": "",
+        "address": "10345 E Desert Cove Ave, Scottsdale, AZ, 85260-6304",
+        "contact": "TYLER KESTNER",
         "email": "",
-        "phone": "",
+        "phone": "480-980-1156",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -27380,10 +27385,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 2,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "2030 W Pinnacle Peak Rd, Phoenix, AZ, 85027-1214",
+        "contact": "Mike Cook",
         "email": "",
-        "phone": "",
+        "phone": "623-414-4722",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -28301,10 +28306,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "540 West Rose Lane, PHOENIX, AZ, 85013",
+        "contact": "Stephan Mackos",
         "email": "",
-        "phone": "",
+        "phone": "602-909-7310",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -28523,10 +28528,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "13014 N SAGUARO BLVD, FOUNTAIN HILLS, AZ, 85268",
+        "contact": "EDGAR GARCIA",
         "email": "",
-        "phone": "",
+        "phone": "480-262-6883",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -28604,10 +28609,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "352501",
-        "address": "",
-        "contact": "",
+        "address": "10632 N SCOTTSDALE RD, SCOTTSDALE, AZ, 85254",
+        "contact": "BRYAN FIRTH",
         "email": "",
-        "phone": "",
+        "phone": "847-951-1233",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -28685,10 +28690,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "6041 N 77th Place, Scottsdale, AZ, 85250",
+        "contact": "THOMAS LOFY",
         "email": "",
-        "phone": "",
+        "phone": "480-734-1961",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -28766,10 +28771,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "349939",
-        "address": "",
-        "contact": "",
+        "address": "PO BOX 2086, FLAGSTAFF, AZ, 86003",
+        "contact": "KYLE MEREDITH",
         "email": "",
-        "phone": "",
+        "phone": "928-380-6769",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -28832,10 +28837,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "395615",
-        "address": "",
-        "contact": "",
+        "address": "8724 ALAMEDA PARK DR NE, ALBUQUERQUE, NM, 87113",
+        "contact": "CHRIS ROMERO",
         "email": "",
-        "phone": "",
+        "phone": "505-553-5045",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -28901,7 +28906,7 @@ const SEED_BUILDERS = [
         "address": "8625 TRIANON LANE, 89145",
         "contact": "RICHIE WU",
         "email": "",
-        "phone": "",
+        "phone": "702-561-5478",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -29064,10 +29069,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 2,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "8340 E Raintree Dr Ste D1, Scottsdale, AZ, 85260-2536",
+        "contact": "Tony Thomas",
         "email": "",
-        "phone": "",
+        "phone": "480-588-2213",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -29476,10 +29481,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "237286",
-        "address": "",
-        "contact": "",
+        "address": "687 6th St Ste 503, Prescott, AZ, 86301-2015",
+        "contact": "Marc Wormer",
         "email": "",
-        "phone": "",
+        "phone": "928-708-9877",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -29562,10 +29567,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "110581",
-        "address": "",
-        "contact": "",
+        "address": "4120 W Kitty Hawk Ste 1, Chandler, AZ, 85226-4754",
+        "contact": "CHAD FOREBUSH",
         "email": "",
-        "phone": "",
+        "phone": "480-777-5823",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -29718,10 +29723,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "2350 E Germann Rd, Chandler, AZ, 85286-1579",
+        "contact": "Josh Simonton",
         "email": "",
-        "phone": "",
+        "phone": "480-888-1907",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -29969,10 +29974,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "357442",
-        "address": "",
-        "contact": "",
+        "address": "4924 E APACHE RAIN RD, CAVE CREEK, AZ, 85331",
+        "contact": "DOLORES SONIA",
         "email": "",
-        "phone": "",
+        "phone": "201-906-8777",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -30120,10 +30125,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "264168",
-        "address": "",
-        "contact": "",
+        "address": "3605 N 44th St, Phoenix, AZ, 85018-6023",
+        "contact": "Scott Jung",
         "email": "",
-        "phone": "",
+        "phone": "602-796-9892",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -30221,10 +30226,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "1620 Raiders Way, Las Vegas, NV, 89052",
+        "contact": "RYAN CAVE",
         "email": "",
-        "phone": "",
+        "phone": "702-772-3745",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -30377,8 +30382,8 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "348932",
-        "address": "",
-        "contact": "",
+        "address": "12934 W MAUNA LOA LANE, EL MIRAGE, AZ, 85335",
+        "contact": "VIRGIL MARCHIS",
         "email": "",
         "phone": "",
         "lat": null,
@@ -30593,10 +30598,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "266043",
-        "address": "",
-        "contact": "",
+        "address": "8425 N 90th St Ste 2, Scottsdale, AZ, 85258-4414",
+        "contact": "James Audiss",
         "email": "",
-        "phone": "",
+        "phone": "480-905-1200",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -30814,10 +30819,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "8910 E Raintree Dr # 100, Scottsdale, AZ, 85260-7134",
+        "contact": "Tony Calvis",
         "email": "",
-        "phone": "",
+        "phone": "480-905-0200",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -31081,10 +31086,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "PO Box 69995, Oro Valley, AZ, 85737-0025",
+        "contact": "Ken Samson",
         "email": "",
-        "phone": "",
+        "phone": "520-360-4191",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -31232,10 +31237,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "356951",
-        "address": "",
-        "contact": "",
+        "address": "3333 ORANGE DRIVE, PHOENIX, AZ, 85018",
+        "contact": "Duane Weimer",
         "email": "",
-        "phone": "",
+        "phone": "480-399-3400",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -31748,10 +31753,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "3420 E SHEA BLVD, PHOENIX, AZ, 85028",
+        "contact": "BILL HANSEN",
         "email": "",
-        "phone": "",
+        "phone": "480-646-7625",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -31985,10 +31990,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "344481",
-        "address": "",
-        "contact": "",
+        "address": "20909 N 90th Pl, Scottsdale, AZ, 85255-9210",
+        "contact": "Anthony Salcito",
         "email": "",
-        "phone": "",
+        "phone": "480-585-5065",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -32416,10 +32421,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "287272",
-        "address": "",
-        "contact": "",
+        "address": "451 E JUANITA AVE, GILBERT, AZ, 85234",
+        "contact": "CHRIS LONG",
         "email": "",
-        "phone": "",
+        "phone": "480-725-7000",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -32457,10 +32462,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "9467 N. 114th Way, Scottsdale, AZ, 85259",
+        "contact": "Mark Steimer",
         "email": "",
-        "phone": "",
+        "phone": "602-469-8482",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -32523,10 +32528,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "16220 N Scottsdale Rd, Suite 300 #1031, Phoenix, AZ, 85254",
+        "contact": "Dejan Bosnjak",
         "email": "",
-        "phone": "",
+        "phone": "602-328-0248",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -32609,10 +32614,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "327822",
-        "address": "",
-        "contact": "",
+        "address": "10201 N 19th Ave, Phoenix, AZ, 85021-1909",
+        "contact": "Mike Tanner",
         "email": "",
-        "phone": "",
+        "phone": "602-943-9868",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -32680,10 +32685,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "7440 Coley Ave, Las Vegas, NV, 89117-3215",
+        "contact": "John Harmon",
         "email": "",
-        "phone": "",
+        "phone": "702-878-8595",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -32786,10 +32791,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "335404",
-        "address": "",
-        "contact": "",
+        "address": "11627 E CHESTNUT CT, CHANDLER, AZ, 85249",
+        "contact": "Wilson Langham Gaschler",
         "email": "",
-        "phone": "",
+        "phone": "816-786-3168",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -33022,10 +33027,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "1575 PLAZA WEST DRIVE, PRESCOTT, AZ, 86303",
+        "contact": "SCOTT NALDA",
         "email": "",
-        "phone": "",
+        "phone": "928-445-3200",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -33409,10 +33414,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "340033",
-        "address": "",
-        "contact": "",
+        "address": "20325 N 51ST AVENUE Ste 114, GLENDALE, AZ, 85308",
+        "contact": "Vince Morrow",
         "email": "",
-        "phone": "",
+        "phone": "480-353-1372",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -33616,10 +33621,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "284837",
-        "address": "",
-        "contact": "",
+        "address": "1211 W CANARY WAY, CHANDLER, AZ, 85286",
+        "contact": "ABDUL SLATEWALLA",
         "email": "",
-        "phone": "",
+        "phone": "602-620-1169",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -33819,10 +33824,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "321023",
-        "address": "",
-        "contact": "",
+        "address": "4110 E Woodstock Road, Cave Creek, AZ, 85331",
+        "contact": "Adam Holmes",
         "email": "",
-        "phone": "",
+        "phone": "480-440-3051",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -33855,10 +33860,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "81509",
-        "address": "",
-        "contact": "",
+        "address": "PO BOX 16097, LAS CRUCES, NM, 88004",
+        "contact": "JUDD SINGER",
         "email": "",
-        "phone": "",
+        "phone": "575-650-7377",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -33922,9 +33927,9 @@ const SEED_BUILDERS = [
         "tier": 3,
         "roc": "",
         "address": "LOT#2",
-        "contact": "",
+        "contact": "Timothy McCormac",
         "email": "",
-        "phone": "",
+        "phone": "480-220-1785",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -34502,10 +34507,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "349148",
-        "address": "",
-        "contact": "",
+        "address": "3410 N 45th Pl, Phoenix, AZ, 85018-6003",
+        "contact": "Richard Cardenas",
         "email": "",
-        "phone": "",
+        "phone": "602-451-8403",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -34728,10 +34733,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "347338",
-        "address": "",
-        "contact": "",
+        "address": "TBD, TEMPE, AZ, 85281",
+        "contact": "DEAN DOTY",
         "email": "",
-        "phone": "",
+        "phone": "602-402-6024",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -34950,10 +34955,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "261562",
-        "address": "",
-        "contact": "",
+        "address": "8822 E Chino Dr, Scottsdale, AZ, 85255-9131",
+        "contact": "David Rinehimer",
         "email": "",
-        "phone": "",
+        "phone": "602-432-6667",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -35388,10 +35393,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "7485 Woodland Creek Lane, Lake Worth, FL, 33467",
+        "contact": "Ed Stiefel",
         "email": "",
-        "phone": "",
+        "phone": "201-575-3946",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -35675,8 +35680,8 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "7025 EAST VIA SOLERI DRIVE, scottsdale, AZ, 85251",
+        "contact": "EDDIE LACK",
         "email": "",
         "phone": "",
         "lat": null,
@@ -35946,10 +35951,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "4329 Cottontail Ln, Las Vegas, NV, 89121-5133",
+        "contact": "Robert Jerome Loerwald",
         "email": "",
-        "phone": "",
+        "phone": "702-869-6088",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -36247,10 +36252,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "3605 S Flagstaff Ranch Rd, Flagstaff, AZ, 86001",
+        "contact": "Jana Robles",
         "email": "",
-        "phone": "",
+        "phone": "855-928-1100",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -36388,10 +36393,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 2,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "2915 E. Baseline Rd., GILBERT, AZ, 85234",
+        "contact": "josh hatch",
         "email": "",
-        "phone": "",
+        "phone": "480-544-9234",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -36634,10 +36639,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "8872 S. EASTERN AVE, LAS VEGAS, NV, 89123",
+        "contact": "ERIC FOX",
         "email": "",
-        "phone": "",
+        "phone": "702-280-4020",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -36670,10 +36675,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "335007",
-        "address": "",
-        "contact": "",
+        "address": "1214 E Kristal Way, Phoenix, AZ, 85024-2347",
+        "contact": "Brandon Holtzman",
         "email": "",
-        "phone": "",
+        "phone": "602-323-6574",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -36933,10 +36938,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "255634",
-        "address": "",
-        "contact": "",
+        "address": "4235 W OPPERTUNITYH DR Ste 102, PHOENIX, AZ, 85068",
+        "contact": "MARGE NEWHAM",
         "email": "",
-        "phone": "",
+        "phone": "480-433-1184",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -37089,10 +37094,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "32337",
-        "address": "",
-        "contact": "",
+        "address": "6615 S EASTERN AVE Ste 103, LAS VEGAS, NV, 89119",
+        "contact": "FRANK KOCVARA",
         "email": "",
-        "phone": "",
+        "phone": "702-798-2024",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -37210,10 +37215,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "7950 E Acoma Dr Ste 104, Scottsdale, AZ, 85260-6963",
+        "contact": "Jeri McGwin",
         "email": "",
-        "phone": "",
+        "phone": "480-585-8442",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -37246,10 +37251,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "4848 N Goldwater Blvd Unit 2122, Scottsdale, AZ, 85251-1057",
+        "contact": "Molly Loughney",
         "email": "",
-        "phone": "",
+        "phone": "480-522-4799",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -37392,10 +37397,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "4701 E VERNON AVE, PHOENIX, AZ, 85008",
+        "contact": "MORIBA SUTULA DIALLO",
         "email": "",
-        "phone": "",
+        "phone": "619-925-1000",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -37463,8 +37468,8 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "40970",
-        "address": "",
-        "contact": "",
+        "address": "149 EL CAMINO REAL, SEDONA, AZ, 86336",
+        "contact": "STEPHANIE LARSEN",
         "email": "",
         "phone": "",
         "lat": null,
@@ -37684,10 +37689,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "296807",
-        "address": "",
-        "contact": "",
+        "address": "5535 E Windstone Trail, Cave Creek, AZ, 85331",
+        "contact": "Scott Ryan",
         "email": "",
-        "phone": "",
+        "phone": "480-622-1132",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -37794,7 +37799,7 @@ const SEED_BUILDERS = [
         "address": "PO Box 11691, 85381",
         "contact": "VINCENT COPPOLA",
         "email": "",
-        "phone": "",
+        "phone": "602-770-8996",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -38143,7 +38148,7 @@ const SEED_BUILDERS = [
         "tier": 5,
         "roc": "359960",
         "address": "Unit 308",
-        "contact": "",
+        "contact": "Campton Curtis",
         "email": "",
         "phone": "",
         "lat": null,
@@ -38303,10 +38308,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "15855 N Greenway Hayden Loop, Scottsdale, AZ, 85260",
+        "contact": "Nan Strohmaier",
         "email": "",
-        "phone": "",
+        "phone": "480-282-6253",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -38559,10 +38564,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 2,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "3941 N Higley Rd, Mesa, AZ, 85215-1204",
+        "contact": "Cortny Murdock",
         "email": "",
-        "phone": "",
+        "phone": "480-830-8818",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -38730,10 +38735,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "323190",
-        "address": "",
-        "contact": "",
+        "address": "6423 E Thomas Rd, Scottsdale, AZ, 85251-6177",
+        "contact": "Francisco Palacios",
         "email": "",
-        "phone": "",
+        "phone": "602-614-8195",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -38771,10 +38776,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "299739",
-        "address": "",
-        "contact": "",
+        "address": "3605 N 44th Street, Phoenix, AZ, 85018-4607",
+        "contact": "Ben Hawkins",
         "email": "",
-        "phone": "",
+        "phone": "602-410-6388",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -39097,10 +39102,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "283024",
-        "address": "",
-        "contact": "",
+        "address": "4843 W Creedance Blvd, Glendale, AZ, 85310-3801",
+        "contact": "Thomas Joseph Farrier",
         "email": "",
-        "phone": "",
+        "phone": "602-402-6569",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -39168,10 +39173,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "285276",
-        "address": "",
-        "contact": "",
+        "address": "2531 E CORRINE DR, PHOENIX, AZ, 85032",
+        "contact": "TRAVIS BEVER",
         "email": "",
-        "phone": "",
+        "phone": "602-312-6568",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -39254,10 +39259,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "320706",
-        "address": "",
-        "contact": "",
+        "address": "4201 E. VOGEL AVE., PHOENIX, AZ, 85028",
+        "contact": "TIM TOWNSEND",
         "email": "",
-        "phone": "",
+        "phone": "602-616-3485",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -39320,10 +39325,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "335593",
-        "address": "",
-        "contact": "",
+        "address": "5740 W. SAN MIGUEL, GLENDALE, AZ, 85259",
+        "contact": "JASON COUSIN",
         "email": "",
-        "phone": "",
+        "phone": "602-300-6412",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -39376,10 +39381,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "184574",
-        "address": "",
-        "contact": "",
+        "address": "2158 N Gilbert Rd, Mesa, AZ, 85203-2109",
+        "contact": "Tom Fitzgerald",
         "email": "",
-        "phone": "",
+        "phone": "480-695-2462",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -39477,10 +39482,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "335633",
-        "address": "",
-        "contact": "",
+        "address": "2211 S 48TH ST, TEMPE, AZ, 85282",
+        "contact": "AZUCENA VIDAL LANGURET",
         "email": "",
-        "phone": "",
+        "phone": "480-466-4693",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -39583,10 +39588,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "355673",
-        "address": "",
-        "contact": "",
+        "address": "6380 E Thomas Rd, Scottsdale, AZ, 85251",
+        "contact": "BRIAN FESER",
         "email": "",
-        "phone": "",
+        "phone": "602-332-8393",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -39834,10 +39839,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "78644",
-        "address": "",
-        "contact": "",
+        "address": "5120 North Lisa Lane, Las Vegas, NV, 89149",
+        "contact": "TANYA CRAWFORD",
         "email": "",
-        "phone": "",
+        "phone": "702-863-6321",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -39940,10 +39945,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "311769",
-        "address": "",
-        "contact": "",
+        "address": "7400 E. PINNACLE PEAK RD, SCOTTSDALE, AZ, 85255",
+        "contact": "STEPHANIE FOX",
         "email": "",
-        "phone": "",
+        "phone": "480-585-5080",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -40151,10 +40156,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "327505",
-        "address": "",
-        "contact": "",
+        "address": "1414 E APPALOOSA CT, GILBERT, AZ, 85296",
+        "contact": "BRETT HUGHES",
         "email": "",
-        "phone": "",
+        "phone": "480-201-1725",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -40509,10 +40514,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "163112",
-        "address": "",
-        "contact": "",
+        "address": "2500 S POWER RD, MESA, AZ, 85209",
+        "contact": "Mike Larson",
         "email": "",
-        "phone": "",
+        "phone": "480-344-3000",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -40810,10 +40815,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "322127",
-        "address": "",
-        "contact": "",
+        "address": "9589 E CINTAROSA PASS, SCOTTSDALE, AZ, 85250",
+        "contact": "JUSTIN KILBANE",
         "email": "",
-        "phone": "",
+        "phone": "301-693-9937",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -42014,7 +42019,7 @@ const SEED_BUILDERS = [
         "address": "6718 W SUNSET RD, 89118",
         "contact": "ESTHER GUY",
         "email": "",
-        "phone": "",
+        "phone": "800-644-7798",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -42072,10 +42077,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "38712",
-        "address": "",
-        "contact": "",
+        "address": "7641 W POST ROAD, Las Vegas, NV, 89113",
+        "contact": "Jack Raftery",
         "email": "",
-        "phone": "",
+        "phone": "702-242-4475",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -42153,10 +42158,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "4455 E Camelback Rd Ste D275, Phoenix, AZ, 85018-2858",
+        "contact": "Nick Blue",
         "email": "",
-        "phone": "",
+        "phone": "480-688-8904",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -42349,10 +42354,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "309657",
-        "address": "",
-        "contact": "",
+        "address": "5305 N. 33rd St., Phoenix, AZ, 85018",
+        "contact": "Dan Mcintyre",
         "email": "",
-        "phone": "",
+        "phone": "602-486-8991",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -42730,10 +42735,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "232533",
-        "address": "",
-        "contact": "",
+        "address": "17767 N Scottsdale Rd, Scottsdale, AZ, 85255-6571",
+        "contact": "Scott Pfeiffer",
         "email": "",
-        "phone": "",
+        "phone": "602-667-3145",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -42766,10 +42771,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "349033",
-        "address": "",
-        "contact": "",
+        "address": "13835 N TATUM BLVD Ste 9, PHOENIX, AZ, 85032",
+        "contact": "BRYAN KUKLOVSKY",
         "email": "",
-        "phone": "",
+        "phone": "480-444-8908",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -43022,10 +43027,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "288825",
-        "address": "",
-        "contact": "",
+        "address": "5730 N 11th Way, Phoenix, AZ, 85014-2241",
+        "contact": "Danielle Bryant",
         "email": "",
-        "phone": "",
+        "phone": "602-715-3669",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -43098,10 +43103,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "346061",
-        "address": "",
-        "contact": "",
+        "address": "15608 N 38TH ST, PHOENIX, AZ, 85032",
+        "contact": "KEVIN KELLER",
         "email": "",
-        "phone": "",
+        "phone": "602-501-7977",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -43134,10 +43139,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "152029",
-        "address": "",
-        "contact": "",
+        "address": "4835 E Indigo, MESA, AZ, 85205",
+        "contact": "JEREMY FELSTEAD",
         "email": "",
-        "phone": "",
+        "phone": "480-289-2722",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -43470,10 +43475,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "89314",
-        "address": "",
-        "contact": "",
+        "address": "7890 E McClain Dr Ste 1, Scottsdale, AZ, 85260-1677",
+        "contact": "John Schultz",
         "email": "",
-        "phone": "",
+        "phone": "602-991-6054",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -44085,7 +44090,7 @@ const SEED_BUILDERS = [
         "address": "5020 CARTIER AVE, 89115",
         "contact": "BRANDON PARKINSON",
         "email": "",
-        "phone": "",
+        "phone": "702-355-1901",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -44186,7 +44191,7 @@ const SEED_BUILDERS = [
         "address": "9362 GATEWAY EAST BLVD, 79907",
         "contact": "CARLOS GARCIA",
         "email": "",
-        "phone": "",
+        "phone": "915-494-1782",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -44254,10 +44259,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "351850",
-        "address": "",
-        "contact": "",
+        "address": "7585 E REDFIELD RD, Scottsdale, AZ, 85260",
+        "contact": "MICHAEL LEIGHTON",
         "email": "",
-        "phone": "",
+        "phone": "480-818-0201",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -44305,10 +44310,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "1330 Crestview Dr SW, Los Lunas, NM, 87031-9109",
+        "contact": "ADAN CANDELARIA",
         "email": "",
-        "phone": "",
+        "phone": "505-917-2099",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -44451,10 +44456,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "90566",
-        "address": "",
-        "contact": "",
+        "address": "PO Box 3665, Carefree, AZ, 85377-3665",
+        "contact": "Jim Manship",
         "email": "",
-        "phone": "",
+        "phone": "480-488-9111",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -44805,7 +44810,7 @@ const SEED_BUILDERS = [
         "address": "11619 N 65TH AVE, 85304",
         "contact": "CRISTIAN CODREA",
         "email": "",
-        "phone": "",
+        "phone": "602-330-9456",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -45113,10 +45118,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "10645 N TATUM BLVD, PHOENIX, AZ, 85028",
+        "contact": "ANDREW RUBEN",
         "email": "",
-        "phone": "",
+        "phone": "480-600-4030",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -45199,10 +45204,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "411612",
-        "address": "",
-        "contact": "",
+        "address": "8100 WYOMING BLVD, ALBUQUERQUE, NM, 87113",
+        "contact": "JODY REINHARDT",
         "email": "",
-        "phone": "",
+        "phone": "505-270-9435",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -45265,10 +45270,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "82941",
-        "address": "",
-        "contact": "",
+        "address": "2831 SAINT ROSE PARKWAY, HENDERSON, NV, 89052",
+        "contact": "SIERRA ROSS",
         "email": "",
-        "phone": "",
+        "phone": "702-430-0057",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -45454,7 +45459,7 @@ const SEED_BUILDERS = [
         "address": "14155 N 83RD AVE, 85383",
         "contact": "MARK ABRAM",
         "email": "",
-        "phone": "",
+        "phone": "623-979-5995",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -45562,10 +45567,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "251644",
-        "address": "",
-        "contact": "",
+        "address": "2451 E. Desert Lane, Gilbert, AZ, 85234",
+        "contact": "Bobby Hubbard",
         "email": "",
-        "phone": "",
+        "phone": "480-275-2999",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -45663,10 +45668,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "87516",
-        "address": "",
-        "contact": "",
+        "address": "3512 Greystone Ridge SE, Rio Rancho, NM, 87124",
+        "contact": "Mike Sanchez",
         "email": "",
-        "phone": "",
+        "phone": "505-220-7507",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -45729,10 +45734,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "335231",
-        "address": "",
-        "contact": "",
+        "address": "4233 N 2nd Dr, Phoenix, AZ, 85013",
+        "contact": "JAMES WERHANOWICZ",
         "email": "",
-        "phone": "",
+        "phone": "602-717-1759",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -45845,10 +45850,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "359141",
-        "address": "",
-        "contact": "",
+        "address": "11279 E BECK LN, SCOTTSDALE, AZ, 85255",
+        "contact": "MIKE MASON",
         "email": "",
-        "phone": "",
+        "phone": "602-430-8333",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -45881,10 +45886,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "333036",
-        "address": "",
-        "contact": "",
+        "address": "16305 E Inca Ave, Fountain Hills, AZ, 85268-4552",
+        "contact": "Neville Katrak",
         "email": "",
-        "phone": "",
+        "phone": "480-452-4499",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -46038,10 +46043,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 2,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "7230 N La Canada Dr, Tucson, AZ, 85704-1901",
+        "contact": "Esthela Celaya",
         "email": "",
-        "phone": "",
+        "phone": "520-219-6302",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -46137,7 +46142,7 @@ const SEED_BUILDERS = [
         "address": "2812 N NORWALK, 85215",
         "contact": "JIM ADCOX",
         "email": "",
-        "phone": "",
+        "phone": "480-655-8012",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -46175,10 +46180,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "803 Sunland Park Dr Ste C, El Paso, TX, 79912",
+        "contact": "Denise Mathis",
         "email": "",
-        "phone": "",
+        "phone": "915-217-9233",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -46396,10 +46401,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "318941",
-        "address": "",
-        "contact": "",
+        "address": "11445 E VIA LINDA Ste 2, SCOTTSDALE, AZ, 85259",
+        "contact": "COLLIN IRWIN",
         "email": "",
-        "phone": "",
+        "phone": "480-433-4929",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -46570,7 +46575,7 @@ const SEED_BUILDERS = [
         "address": "6006 N Mesa, 79912",
         "contact": "Gaston Ollivier",
         "email": "",
-        "phone": "",
+        "phone": "915-231-6587",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -46636,7 +46641,7 @@ const SEED_BUILDERS = [
         "address": "5342 PRIDE MOUNTAIN ST, 89031",
         "contact": "OSCAR GUTIERREZ PADILLA",
         "email": "",
-        "phone": "",
+        "phone": "702-741-4735",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -46699,10 +46704,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "323378",
-        "address": "",
-        "contact": "",
+        "address": "15455 N Greenway Hayden Loop, Scottsdale, AZ, 85260-1611",
+        "contact": "Nick McCully",
         "email": "",
-        "phone": "",
+        "phone": "480-900-6900",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -46865,10 +46870,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "307672",
-        "address": "",
-        "contact": "",
+        "address": "3118 W Thomas Rd, Phoenix, AZ, 85017-5308",
+        "contact": "Bryan Firth",
         "email": "",
-        "phone": "",
+        "phone": "602-362-5900",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -46946,10 +46951,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "191029",
-        "address": "",
-        "contact": "",
+        "address": "8231 E Shetland Trl, Scottsdale, AZ, 85258-1315",
+        "contact": "BRADY ANDREWS",
         "email": "",
-        "phone": "",
+        "phone": "480-233-0680",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -47092,10 +47097,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "328024",
-        "address": "",
-        "contact": "",
+        "address": "8911 W Villa Chula, Peoria, AZ, 85383-1807",
+        "contact": "Alex Westwood",
         "email": "",
-        "phone": "",
+        "phone": "602-332-3331",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -47211,7 +47216,7 @@ const SEED_BUILDERS = [
         "address": "1940 E. Claredon Ave, 85016",
         "contact": "Jose Valdez",
         "email": "",
-        "phone": "",
+        "phone": "602-315-8999",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -47314,10 +47319,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "71942",
-        "address": "",
-        "contact": "",
+        "address": "181 E. WARM SPRINGS, LAS VEGAS, NV, 89119",
+        "contact": "JOHN CANTNITO",
         "email": "",
-        "phone": "",
+        "phone": "702-614-1678",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -47658,7 +47663,7 @@ const SEED_BUILDERS = [
         "address": "4202 E Wilshire Dr, 85008",
         "contact": "JOSHUA BOBBY GOLDBERG",
         "email": "",
-        "phone": "",
+        "phone": "602-214-1554",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -47756,10 +47761,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "356932",
-        "address": "",
-        "contact": "",
+        "address": "22400 N. 90th Street, Scottsdale, AZ, 85255",
+        "contact": "Joe Lloyd",
         "email": "",
-        "phone": "",
+        "phone": "480-797-2723",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -47948,10 +47953,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "351738",
-        "address": "",
-        "contact": "",
+        "address": "1159 N Greenfield Rd, Gilbert, AZ, 85234",
+        "contact": "Amber Lund",
         "email": "",
-        "phone": "",
+        "phone": "480-622-1951",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -48194,10 +48199,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "313970",
-        "address": "",
-        "contact": "",
+        "address": "4323 N 56th Pl, Phoenix, AZ, 85018-3208",
+        "contact": "Arash Hoss",
         "email": "",
-        "phone": "",
+        "phone": "770-241-7209",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -48650,10 +48655,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "314355",
-        "address": "",
-        "contact": "",
+        "address": "16301 N 36TH AVE, PHOENIX, AZ, 85053",
+        "contact": "DONALD TALBOT",
         "email": "",
-        "phone": "",
+        "phone": "602-999-3683",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -48689,7 +48694,7 @@ const SEED_BUILDERS = [
         "address": "2126 E BONANZA CT, 85298",
         "contact": "SCOTT FLEMING",
         "email": "",
-        "phone": "",
+        "phone": "480-789-9356",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -48752,10 +48757,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "214 W Saint John Rd, Phoenix, AZ, 85023-6518",
+        "contact": "Michael Grijalva",
         "email": "",
-        "phone": "",
+        "phone": "480-236-3726",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -49144,10 +49149,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "9531 N Technology Dr, Fountain Hills, AZ, 85268-6747",
+        "contact": "Jeff Lupien",
         "email": "",
-        "phone": "",
+        "phone": "480-205-1150",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -49254,7 +49259,7 @@ const SEED_BUILDERS = [
         "address": "8727 EAST GOLF LINKS ROAD, 85730",
         "contact": "JOSEPH SMITH",
         "email": "",
-        "phone": "",
+        "phone": "520-751-1200",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -49370,7 +49375,7 @@ const SEED_BUILDERS = [
         "address": "12121 E REMUDA LANE, 86333",
         "contact": "SARA ROSKOPF",
         "email": "",
-        "phone": "",
+        "phone": "928-925-4618",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -49466,7 +49471,7 @@ const SEED_BUILDERS = [
         "address": "465 N RESLER, 79912",
         "contact": "ROBERT BAEZA",
         "email": "",
-        "phone": "",
+        "phone": "915-857-1818",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -49522,7 +49527,7 @@ const SEED_BUILDERS = [
         "address": "3630 SHOSHONE, 86004",
         "contact": "MICHAEL DAY",
         "email": "",
-        "phone": "",
+        "phone": "928-853-9905",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -49654,7 +49659,7 @@ const SEED_BUILDERS = [
         "address": "3121 E ANDRE AVE, 85298",
         "contact": "KIM RICHINS",
         "email": "",
-        "phone": "",
+        "phone": "480-580-2293",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -49757,10 +49762,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "180400",
-        "address": "",
-        "contact": "",
+        "address": "5824 E Cheney Dr, Paradise Valley, AZ, 85253-3523",
+        "contact": "Todd Deniger",
         "email": "",
-        "phone": "",
+        "phone": "602-301-5615",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -49839,9 +49844,9 @@ const SEED_BUILDERS = [
         "tier": 3,
         "roc": "",
         "address": "7",
-        "contact": "",
+        "contact": "LOUIE CARR",
         "email": "",
-        "phone": "",
+        "phone": "480-556-1136",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -49989,10 +49994,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "343249",
-        "address": "",
-        "contact": "",
+        "address": "8201 s 48th st, phoenix, az, 85004",
+        "contact": "ERIC CAPARANICA",
         "email": "",
-        "phone": "",
+        "phone": "480-688-5883",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -50050,10 +50055,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "271236",
-        "address": "",
-        "contact": "",
+        "address": "2400 W Union Hills Dr, Phoenix, AZ, 85027",
+        "contact": "Todd Whittaker",
         "email": "",
-        "phone": "",
+        "phone": "623-544-1211",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -50086,10 +50091,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "306080",
-        "address": "",
-        "contact": "",
+        "address": "18870 E. PINE BARRENS AVE, QUEEN CREEK, AZ, 85142",
+        "contact": "BRAD FARNHAM",
         "email": "",
-        "phone": "",
+        "phone": "480-316-8589",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -50207,10 +50212,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "131795",
-        "address": "",
-        "contact": "",
+        "address": "14169 N. 90th Place, Scottsdale, AZ, 85260",
+        "contact": "Matthew Cuomo",
         "email": "",
-        "phone": "",
+        "phone": "602-501-0658",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -50243,10 +50248,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 2,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "6840 N Andrea Doria Dr, Tucson, AZ, 85704-6120",
+        "contact": "Susan Grimes",
         "email": "",
-        "phone": "",
+        "phone": "520-323-7190",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -50684,10 +50689,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "795 S Grand Central Pkwy, Las Vegas, NV, 89106",
+        "contact": "Stacie Young",
         "email": "",
-        "phone": "",
+        "phone": "702-575-2760",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -51071,10 +51076,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "175136",
-        "address": "",
-        "contact": "",
+        "address": "4727 E BELL ROAD, Phoenix, AZ, 85032",
+        "contact": "Shane Colvin",
         "email": "",
-        "phone": "",
+        "phone": "602-820-1017",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -51190,7 +51195,7 @@ const SEED_BUILDERS = [
         "address": "485 W VAUGHN ST, 85283",
         "contact": "LORRAINE BERGMAN/ERIC BERGMAN",
         "email": "",
-        "phone": "",
+        "phone": "602-648-1245",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -51276,7 +51281,7 @@ const SEED_BUILDERS = [
         "address": "20529 E CLOUD RD, 85142",
         "contact": "KIMBALL WHITMER",
         "email": "",
-        "phone": "",
+        "phone": "623-986-9502",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -51494,10 +51499,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "164772",
-        "address": "",
-        "contact": "",
+        "address": "6238 N VAa TRES PATOS, TUCSON, AZ, 85750",
+        "contact": "NICK MACCARONE",
         "email": "",
-        "phone": "",
+        "phone": "520-529-2186",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -51584,7 +51589,7 @@ const SEED_BUILDERS = [
         "address": "3691 S NEUMAN PLACE, 85286",
         "contact": "JOSE ROJAS",
         "email": "",
-        "phone": "",
+        "phone": "480-226-9423",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -51670,7 +51675,7 @@ const SEED_BUILDERS = [
         "address": "37801 N CAVE CREEK RD, 115, 85331",
         "contact": "AL MONTANO",
         "email": "",
-        "phone": "",
+        "phone": "480-201-4545",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -51766,7 +51771,7 @@ const SEED_BUILDERS = [
         "address": "23623 n scottsdale rd #, 85255",
         "contact": "Martin Holec",
         "email": "",
-        "phone": "",
+        "phone": "480-241-4406",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -51874,10 +51879,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "252377",
-        "address": "",
-        "contact": "",
+        "address": "2034 E MINTON ST, MESA, AZ, 85213",
+        "contact": "ROBERT LINBERG",
         "email": "",
-        "phone": "",
+        "phone": "602-361-6398",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -51948,7 +51953,7 @@ const SEED_BUILDERS = [
         "address": "8165 E INDIAN SCHOOL RD # 103, 85250",
         "contact": "BRAD BEEDY",
         "email": "",
-        "phone": "",
+        "phone": "480-231-6072",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -52029,7 +52034,7 @@ const SEED_BUILDERS = [
         "address": "1840 MCCULLOCH CT, 86406",
         "contact": "ROBERT (BOB) PERRY JR",
         "email": "",
-        "phone": "",
+        "phone": "602-763-2876",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -52102,10 +52107,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "3048 E BASELINE RD, MESA, AZ, 85204",
+        "contact": "EVELYN PETERSON",
         "email": "",
-        "phone": "",
+        "phone": "480-892-1654",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -52151,7 +52156,7 @@ const SEED_BUILDERS = [
         "address": "13250 W DESERT FOREST TRAIL, 85383",
         "contact": "EMIR LOPEZ",
         "email": "",
-        "phone": "",
+        "phone": "702-524-9322",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -52219,10 +52224,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "341233",
-        "address": "",
-        "contact": "",
+        "address": "21745 E ESCALANTE ROAD, QUEEN CREEK, AZ, 85142",
+        "contact": "MITCHEL SHEPHERD",
         "email": "",
-        "phone": "",
+        "phone": "480-818-1984",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -52326,9 +52331,9 @@ const SEED_BUILDERS = [
         "tier": 4,
         "roc": "249229",
         "address": "1201",
-        "contact": "",
+        "contact": "Mike Graham",
         "email": "",
-        "phone": "",
+        "phone": "801-971-8573",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -52594,7 +52599,7 @@ const SEED_BUILDERS = [
         "address": "9375 E SHEA BLVD., 85260",
         "contact": "SCOTT GUNGEL",
         "email": "",
-        "phone": "",
+        "phone": "480-530-0082",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -52813,10 +52818,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "334023",
-        "address": "",
-        "contact": "",
+        "address": "24 West Camelback Rd. Ste 419, Pheonix, AZ, 85013",
+        "contact": "WADE CLINE",
         "email": "",
-        "phone": "",
+        "phone": "602-620-9918",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -52860,9 +52865,9 @@ const SEED_BUILDERS = [
         "tier": 3,
         "roc": "342951",
         "address": "204",
-        "contact": "",
+        "contact": "Steve Sommer",
         "email": "",
-        "phone": "",
+        "phone": "602-818-2726",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -52985,10 +52990,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "314154",
-        "address": "",
-        "contact": "",
+        "address": "301 W Coronado Rd, Phoenix, AZ, 85003-1146",
+        "contact": "Nathan Anderson",
         "email": "",
-        "phone": "",
+        "phone": "925-640-2880",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -53061,10 +53066,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "9191 WHISPERING PINES, FLAGSTAFF, AZ, 86001",
+        "contact": "DANNY BREESE",
         "email": "",
-        "phone": "",
+        "phone": "928-661-3232",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -53122,10 +53127,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 2,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "2496 E River Rd 100, Tucson, AZ, 85718-6522",
+        "contact": "lori carroll",
         "email": "",
-        "phone": "",
+        "phone": "520-886-3443",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -53251,7 +53256,7 @@ const SEED_BUILDERS = [
         "address": "6029 S FORT APACHE, 89148",
         "contact": "TERESA NEIL",
         "email": "",
-        "phone": "",
+        "phone": "702-256-4006",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -53309,10 +53314,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "360264",
-        "address": "",
-        "contact": "",
+        "address": "4461 E CAMPBELL AVE, PHOENIX, AZ, 85018",
+        "contact": "KIM SELLA",
         "email": "",
-        "phone": "",
+        "phone": "602-350-4888",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -53712,10 +53717,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "329401",
-        "address": "",
-        "contact": "",
+        "address": "1829 W CREEK CANYON, Phoenix, AZ, 85086",
+        "contact": "Mark Reed",
         "email": "",
-        "phone": "",
+        "phone": "602-320-1510",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -54093,7 +54098,7 @@ const SEED_BUILDERS = [
         "address": "2153 E RANCH RD, 85284",
         "contact": "JOHN NIEMANN",
         "email": "",
-        "phone": "",
+        "phone": "602-316-9600",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -54151,10 +54156,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "291528",
-        "address": "",
-        "contact": "",
+        "address": "27440 N ALMA SCHOOL PKWY, Scottsdale, AZ, 85255",
+        "contact": "KEVIN HEYNINCK",
         "email": "",
-        "phone": "",
+        "phone": "480-889-8185",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -54190,7 +54195,7 @@ const SEED_BUILDERS = [
         "address": "1 SIMPLEX DR, 18504",
         "contact": "PATRICK FRICCHIONE",
         "email": "",
-        "phone": "",
+        "phone": "570-346-5113",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -54288,10 +54293,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "73997",
-        "address": "",
-        "contact": "",
+        "address": "7350 E DEAN MARTIN DR, LAS VEGAS, NV, 89139",
+        "contact": "TODD VOLF",
         "email": "",
-        "phone": "",
+        "phone": "702-483-1637",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -54495,10 +54500,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "316726",
-        "address": "",
-        "contact": "",
+        "address": "4827 E CALLE DE LOS AROBOLES, PHOENIX, AZ, 85331",
+        "contact": "CHUCK BAKER",
         "email": "",
-        "phone": "",
+        "phone": "602-803-8051",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -54631,10 +54636,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "4408 N. 12th  St, Phoenix, AZ, 85014",
+        "contact": "Avi Azoulay",
         "email": "",
-        "phone": "",
+        "phone": "602-502-1048",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -54817,10 +54822,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "73976",
-        "address": "",
-        "contact": "",
+        "address": "1120 SAN GABRIEL AVENUE, Henderson, NV, 89002",
+        "contact": "James Giberti",
         "email": "",
-        "phone": "",
+        "phone": "702-580-6064",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -55253,10 +55258,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "6350 W Cheyenne Ave, Las Vegas, NV, 89108",
+        "contact": "Steve Yanke",
         "email": "",
-        "phone": "",
+        "phone": "702-739-9033",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -55789,10 +55794,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "283985",
-        "address": "",
-        "contact": "",
+        "address": "2487 S GILBERT RD STE 106-449, GILBERT, AZ, 85295",
+        "contact": "MICHAEL MILLER",
         "email": "",
-        "phone": "",
+        "phone": "602-684-1079",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -56035,10 +56040,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "225236",
-        "address": "",
-        "contact": "",
+        "address": "3104 E Camelback Rd # 1001, Phoenix, AZ, 85016-4502",
+        "contact": "Bob Banovac",
         "email": "",
-        "phone": "",
+        "phone": "602-315-2888",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -56091,10 +56096,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "3343 E Huber St, Mesa, AZ, 85213-5578",
+        "contact": "Eric Choules",
         "email": "",
-        "phone": "",
+        "phone": "480-444-7300",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -56613,9 +56618,9 @@ const SEED_BUILDERS = [
         "tier": 5,
         "roc": "171739",
         "address": "LOT 4",
-        "contact": "",
+        "contact": "Gary Haarer",
         "email": "",
-        "phone": "",
+        "phone": "480-361-7700",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -56689,9 +56694,9 @@ const SEED_BUILDERS = [
         "tier": 4,
         "roc": "333410",
         "address": "25",
-        "contact": "",
+        "contact": "Shay Segev",
         "email": "",
-        "phone": "",
+        "phone": "480-938-4113",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -56909,10 +56914,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "81258",
-        "address": "",
-        "contact": "",
+        "address": "8261 E Evans Rd, Scottsdale, AZ, 85260-3611",
+        "contact": "DEBRA MALONE",
         "email": "",
-        "phone": "",
+        "phone": "480-443-0201",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -57060,10 +57065,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "7400 E McDonald Dr Ste 123, Scottsdale, AZ, 85250-6099",
+        "contact": "Renay Toronto McBride",
         "email": "",
-        "phone": "",
+        "phone": "480-443-3250",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -57226,10 +57231,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "319788",
-        "address": "",
-        "contact": "",
+        "address": "2123 W MAYA WAY, PHOENIX, AZ, 85085",
+        "contact": "MARIUS SMOCOT",
         "email": "",
-        "phone": "",
+        "phone": "623-628-9704",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -57297,10 +57302,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "299071",
-        "address": "",
-        "contact": "",
+        "address": "4309 N 66th St, Scottsdale, AZ, 85251-2301",
+        "contact": "Austin King",
         "email": "",
-        "phone": "",
+        "phone": "480-499-2683",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -57468,10 +57473,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "112048",
-        "address": "",
-        "contact": "",
+        "address": "15169 N SCOTTSDALE RD, SCOTTSDALE, AZ, 85260",
+        "contact": "HOWARD WEBER",
         "email": "",
-        "phone": "",
+        "phone": "480-492-4801",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -57664,10 +57669,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "332586",
-        "address": "",
-        "contact": "",
+        "address": "26007 N 19TH AVE, PHOENIX, AZ, 85085",
+        "contact": "MIHAELA NEGREANU",
         "email": "",
-        "phone": "",
+        "phone": "928-707-3370",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -57800,10 +57805,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "95949",
-        "address": "",
-        "contact": "",
+        "address": "8144 E Cactus Rd Ste 840, Scottsdale, AZ, 85260-5263",
+        "contact": "Jerry Meek",
         "email": "",
-        "phone": "",
+        "phone": "480-744-1372",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -58069,7 +58074,7 @@ const SEED_BUILDERS = [
         "address": "7245 E 2ND ST, 86314",
         "contact": "CHRISTOPHER TURCOTT HARTMAN",
         "email": "",
-        "phone": "",
+        "phone": "928-775-6178",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -58296,7 +58301,7 @@ const SEED_BUILDERS = [
         "address": "16618 N. 50TH WAY, GLEN MOORE #75, 85254",
         "contact": "LANCE NIKOLAUS",
         "email": "",
-        "phone": "",
+        "phone": "480-440-5341",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -58392,7 +58397,7 @@ const SEED_BUILDERS = [
         "address": "PO BOX 3432, 85377",
         "contact": "JAMES GEIST",
         "email": "",
-        "phone": "",
+        "phone": "480-416-6336",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -58500,10 +58505,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "302555",
-        "address": "",
-        "contact": "",
+        "address": "35237 N 7TH ST, PHX, AZ, 85086",
+        "contact": "CHRISTIAN WENCE",
         "email": "",
-        "phone": "",
+        "phone": "602-469-1720",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -58629,7 +58634,7 @@ const SEED_BUILDERS = [
         "address": "3203 LAKESIDE VILLAGE, 86301",
         "contact": "CHASE BEAZER",
         "email": "",
-        "phone": "",
+        "phone": "480-828-1194",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -58727,10 +58732,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "16816 E Parkview Ave, Fountain Hills, AZ, 85268-3809",
+        "contact": "Anthony Rotta",
         "email": "",
-        "phone": "",
+        "phone": "480-816-0100",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -58798,10 +58803,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
+        "address": "15125 N Hayden Rd Ste 119-121, Scottsdale, AZ, 85260-2570",
         "contact": "",
         "email": "",
-        "phone": "",
+        "phone": "904-923-1124",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -59150,10 +59155,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "10029 W Avenida Del Sol, Peoria, AZ, 85383",
+        "contact": "Duane Weimer",
         "email": "",
-        "phone": "",
+        "phone": "623-473-7400",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -59256,10 +59261,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "322097",
-        "address": "",
-        "contact": "",
+        "address": "7924 E SWEETWATER AVE, SCOTTSDALE, AZ, 85260",
+        "contact": "SAM MATACHE",
         "email": "",
-        "phone": "",
+        "phone": "602-790-8100",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -59553,10 +59558,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "95770",
-        "address": "",
-        "contact": "",
+        "address": "8303 S HOMESTEAD LANE, TEMPE, AZ, 85284",
+        "contact": "BRAD CURTIS",
         "email": "",
-        "phone": "",
+        "phone": "602-292-7200",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -59652,7 +59657,7 @@ const SEED_BUILDERS = [
         "address": "Sahuarita, AZ, 85629, 85629",
         "contact": "GEORGE CASS MORGAN",
         "email": "",
-        "phone": "",
+        "phone": "520-907-8024",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -59730,10 +59735,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "PO Box 1908, Flagstaff, AZ, 86002-1908",
+        "contact": "JON HOLDSWORTH",
         "email": "",
-        "phone": "",
+        "phone": "928-773-7737",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -60002,9 +60007,9 @@ const SEED_BUILDERS = [
         "tier": 5,
         "roc": "199908",
         "address": "AZ",
-        "contact": "",
+        "contact": "Bobby Hubbard",
         "email": "",
-        "phone": "",
+        "phone": "928-606-5331",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -60052,10 +60057,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "15475 N Greenway Hayden Loop, Scottsdale, AZ, 85260-1614",
+        "contact": "Karl Baumgart",
         "email": "",
-        "phone": "",
+        "phone": "480-991-3264",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -60138,10 +60143,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "167204",
-        "address": "",
-        "contact": "",
+        "address": "3521 E Indian School Rd, Phoenix, AZ, 85018-5147",
+        "contact": "LUKE WILSON",
         "email": "",
-        "phone": "",
+        "phone": "602-955-7070",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -60344,10 +60349,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "8350 E Evans Rd, Scottsdale, AZ, 85260-3636",
+        "contact": "Rebecca Lyss",
         "email": "",
-        "phone": "",
+        "phone": "480-550-8774",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -60510,10 +60515,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "221936",
-        "address": "",
-        "contact": "",
+        "address": "2487 S GILBERT RD, GILBERT, AZ, 85295",
+        "contact": "TIM NELSON",
         "email": "",
-        "phone": "",
+        "phone": "480-231-1171",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -60571,10 +60576,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "255213",
-        "address": "",
-        "contact": "",
+        "address": "5047 N 25th Pl, Phoenix, AZ, 85016-3610",
+        "contact": "Richard Stark",
         "email": "",
-        "phone": "",
+        "phone": "602-861-2247",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -60637,10 +60642,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "355673",
-        "address": "",
-        "contact": "",
+        "address": "28150 N ALMA SCHOOL PKWAY, SCOTTSDALE, AZ, 85262",
+        "contact": "MARK SEVER",
         "email": "",
-        "phone": "",
+        "phone": "480-596-5000",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -60721,7 +60726,7 @@ const SEED_BUILDERS = [
         "address": "727 W RAY RD, 85233",
         "contact": "KYLE ZIMMERMAN",
         "email": "",
-        "phone": "",
+        "phone": "480-430-1740",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -60794,10 +60799,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "1711 W Rose Garden Ln, Phoenix, AZ, 85027-2712",
+        "contact": "PATRICK MCGAULEY",
         "email": "",
-        "phone": "",
+        "phone": "623-580-0783",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -60855,10 +60860,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 5,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "5230 N Highway Dr, Tucson, AZ, 85705-1005",
+        "contact": "Jesus Rodriguez",
         "email": "",
-        "phone": "",
+        "phone": "520-784-1258",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -61251,10 +61256,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "245333",
-        "address": "",
-        "contact": "",
+        "address": "1708 E Bethany Home Rd, Phoenix, AZ, 85016-2536",
+        "contact": "Jason Smith",
         "email": "",
-        "phone": "",
+        "phone": "602-616-3484",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -61393,9 +61398,9 @@ const SEED_BUILDERS = [
         "tier": 1,
         "roc": "",
         "address": "916",
-        "contact": "",
+        "contact": "Jeremy King",
         "email": "",
-        "phone": "",
+        "phone": "602-405-8159",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -61631,7 +61636,7 @@ const SEED_BUILDERS = [
         "address": "1106 W Briles Rd, 85085",
         "contact": "Sean Bubeck",
         "email": "",
-        "phone": "",
+        "phone": "214-642-5872",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -61709,10 +61714,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "351969",
-        "address": "",
-        "contact": "",
+        "address": "4710 E FALCON DR, MESA, AZ, 85215",
+        "contact": "RANDY BREWER",
         "email": "",
-        "phone": "",
+        "phone": "480-364-7026",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -61848,7 +61853,7 @@ const SEED_BUILDERS = [
         "address": "2317 EAST RIVIERA DRIVE, 85282",
         "contact": "CHARLES A COOLEY",
         "email": "",
-        "phone": "",
+        "phone": "480-495-1929",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -61914,7 +61919,7 @@ const SEED_BUILDERS = [
         "address": "14915 N 97th Pl, 85260",
         "contact": "Gregory Kenneth Mortimer",
         "email": "",
-        "phone": "",
+        "phone": "602-620-3816",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -62060,7 +62065,7 @@ const SEED_BUILDERS = [
         "address": "28150 N Alma, 85262",
         "contact": "Paul Benscoter",
         "email": "",
-        "phone": "",
+        "phone": "480-861-5605",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -62136,7 +62141,7 @@ const SEED_BUILDERS = [
         "address": "209 E BASELINE RD, 85283",
         "contact": "JOHN GITTUS",
         "email": "",
-        "phone": "",
+        "phone": "480-329-1089",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -62219,10 +62224,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "52589",
-        "address": "",
-        "contact": "",
+        "address": "1512 Pacheco St, Santa Fe, NM, 87505-4911",
+        "contact": "Kurt Faust",
         "email": "",
-        "phone": "",
+        "phone": "561-802-0835",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -62300,8 +62305,8 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "317148",
-        "address": "",
-        "contact": "",
+        "address": "3309 W Catalina Dr, PHOENIX, AZ, 85017",
+        "contact": "Robert Lowell Withem",
         "email": "",
         "phone": "",
         "lat": null,
@@ -62446,10 +62451,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "162383",
-        "address": "",
-        "contact": "",
+        "address": "412 E Carefree Hwy, Phoenix, AZ, 85085-7476",
+        "contact": "Janeen",
         "email": "",
-        "phone": "",
+        "phone": "623-434-1916",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -62502,10 +62507,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "344357",
-        "address": "",
-        "contact": "",
+        "address": "2802 E CLOUD ROAD, CAVE CREEK, AZ, 85331",
+        "contact": "KYLER FANTIN",
         "email": "",
-        "phone": "",
+        "phone": "602-885-3798",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -62568,10 +62573,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "136384",
-        "address": "",
-        "contact": "",
+        "address": "15716 N. 76TH ST., SCOTTSDALE, AZ, 85260",
+        "contact": "EMILIO LOCASCIO",
         "email": "",
-        "phone": "",
+        "phone": "480-367-0324",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -62925,10 +62930,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "275722",
-        "address": "",
-        "contact": "",
+        "address": "15306 W PEAK VIEW RD, SURPRISE, AZ, 85387",
+        "contact": "MARK CHRISTIANSEN",
         "email": "",
-        "phone": "",
+        "phone": "623-546-8681",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -62997,9 +63002,9 @@ const SEED_BUILDERS = [
         "tier": 1,
         "roc": "216519",
         "address": "71",
-        "contact": "",
+        "contact": "Matt Sopeland",
         "email": "",
-        "phone": "",
+        "phone": "928-978-2856",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -63070,7 +63075,7 @@ const SEED_BUILDERS = [
         "address": "400 FINNIE FLAT RD, 86322",
         "contact": "PAM MILLER",
         "email": "",
-        "phone": "",
+        "phone": "928-533-9620",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -63133,10 +63138,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "342611",
-        "address": "",
-        "contact": "",
+        "address": "3216 S 92ND DR, TOLLESON, AZ, 85353",
+        "contact": "JOSE BECERRA",
         "email": "",
-        "phone": "",
+        "phone": "623-377-3458",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -63204,10 +63209,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "2305734003",
-        "address": "",
-        "contact": "",
+        "address": "4631 ORCHARD CT NW, ALBUQUERQUE, NM, 87107",
+        "contact": "DAVID WASZAK",
         "email": "",
-        "phone": "",
+        "phone": "505-250-7888",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -63263,7 +63268,7 @@ const SEED_BUILDERS = [
         "address": "I DONT HAVE THIS, 85331",
         "contact": "STEVE AUSI",
         "email": "",
-        "phone": "",
+        "phone": "602-363-7605",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -63311,10 +63316,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "135880",
-        "address": "",
-        "contact": "",
+        "address": "2450 S Arizona Ave Ste 8, Chandler, AZ, 85286-7709",
+        "contact": "David Love",
         "email": "",
-        "phone": "",
+        "phone": "602-377-4066",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -63387,10 +63392,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "153597",
-        "address": "",
-        "contact": "",
+        "address": "7633 E Acoma Dr, Scottsdale, AZ, 85260-3472",
+        "contact": "Jerry Nowell",
         "email": "",
-        "phone": "",
+        "phone": "480-657-0010",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -64063,10 +64068,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "323658",
-        "address": "",
-        "contact": "",
+        "address": "542 E UNIVERSITY DR, MESA, AZ, 85203",
+        "contact": "RYAN NELSON",
         "email": "",
-        "phone": "",
+        "phone": "801-369-9936",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -64129,10 +64134,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "335469",
-        "address": "",
-        "contact": "",
+        "address": "8194 W. DEER VALLEY RD, PEORIA, AZ, 85382",
+        "contact": "NATHAN SCHILTZ",
         "email": "",
-        "phone": "",
+        "phone": "480-689-6147",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -64280,10 +64285,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "59848",
-        "address": "",
-        "contact": "",
+        "address": "6408 Arville St, Las Vegas, NV, 89118-4322",
+        "contact": "Steve Jones",
         "email": "",
-        "phone": "",
+        "phone": "702-257-8102",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -64334,7 +64339,7 @@ const SEED_BUILDERS = [
         "address": "1529 S CLEARVIEW AVE, 85209",
         "contact": "BRIAN OLSEN",
         "email": "",
-        "phone": "",
+        "phone": "480-459-1079",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -64402,10 +64407,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "65195",
-        "address": "",
-        "contact": "",
+        "address": "8419 E Cortez St, Scottsdale, AZ, 85260-5740",
+        "contact": "Scott West",
         "email": "",
-        "phone": "",
+        "phone": "602-541-9444",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -64464,9 +64469,9 @@ const SEED_BUILDERS = [
         "tier": 1,
         "roc": "319307",
         "address": "Unit #246",
-        "contact": "",
+        "contact": "Mike Wuollet",
         "email": "",
-        "phone": "",
+        "phone": "602-571-0383",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -64580,10 +64585,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "290174",
-        "address": "",
-        "contact": "",
+        "address": "4340 E Indian School Rd, Phoenix, AZ, 85018-5360",
+        "contact": "Hofflux Homes",
         "email": "",
-        "phone": "",
+        "phone": "602-999-8911",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -64973,9 +64978,9 @@ const SEED_BUILDERS = [
         "tier": 3,
         "roc": "307513",
         "address": "UNIT 1078",
-        "contact": "",
+        "contact": "Ryan Patten",
         "email": "",
-        "phone": "",
+        "phone": "480-239-4546",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -65223,10 +65228,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "274205",
-        "address": "",
-        "contact": "",
+        "address": "9811 E Bell Rd, Scottsdale, AZ, 85260-2338",
+        "contact": "Josie Fratantoni",
         "email": "",
-        "phone": "",
+        "phone": "480-621-7878",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -65314,10 +65319,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "333605",
-        "address": "",
-        "contact": "",
+        "address": "2645 E Beekman Place, Phoenix, AZ, 85016",
+        "contact": "Judi Johnston",
         "email": "",
-        "phone": "",
+        "phone": "602-400-4857",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -65425,10 +65430,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "204915",
-        "address": "",
+        "address": "CUPHXALNCB, MISSING, AK, 99999",
         "contact": "",
         "email": "",
-        "phone": "",
+        "phone": "999-999-9999",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -65531,10 +65536,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "157238",
-        "address": "",
-        "contact": "",
+        "address": "PO BOX 3897, SEDONA, AZ, 86340",
+        "contact": "PAUL MILLAR",
         "email": "",
-        "phone": "",
+        "phone": "928-203-9192",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -65918,10 +65923,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "298709",
-        "address": "",
-        "contact": "",
+        "address": "3654 N. Power Rd, Mesa, AZ, 85215",
+        "contact": "JUSTIN HUGHES",
         "email": "",
-        "phone": "",
+        "phone": "480-444-6691",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -65997,7 +66002,7 @@ const SEED_BUILDERS = [
         "address": "560 N BULLARD AVE, 85338",
         "contact": "KAMERAN SCHAFFNER",
         "email": "",
-        "phone": "",
+        "phone": "623-826-0238",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -66060,10 +66065,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "158699",
-        "address": "",
-        "contact": "",
+        "address": "3620 E Campbell Ave Ste D, Phoenix, AZ, 85018-3581",
+        "contact": "ROB PANKOW",
         "email": "",
-        "phone": "",
+        "phone": "602-595-0799",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -66111,10 +66116,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "0",
-        "address": "",
-        "contact": "",
+        "address": "20645 N Pima Rd, Scottsdale, AZ, 85255-5594",
+        "contact": "Brian Rives",
         "email": "",
-        "phone": "",
+        "phone": "480-797-7307",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -66389,10 +66394,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "328394",
-        "address": "",
-        "contact": "",
+        "address": "2070 Shelby Dr, Sedona, AZ, 86336-5421",
+        "contact": "Steve Adams",
         "email": "",
-        "phone": "",
+        "phone": "928-204-2964",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -66460,10 +66465,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "239973",
-        "address": "",
-        "contact": "",
+        "address": "1641 W. GILA LANE, CHANDLER, AZ, 85224",
+        "contact": "BO RADOJEVIC",
         "email": "",
-        "phone": "",
+        "phone": "602-999-1015",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -66622,10 +66627,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "265958",
-        "address": "",
-        "contact": "",
+        "address": "23645 N 23rd St, Phoenix, AZ, 85024",
+        "contact": "JONATHAN PETERSON",
         "email": "",
-        "phone": "",
+        "phone": "480-695-2969",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -66698,10 +66703,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "357728",
-        "address": "",
-        "contact": "",
+        "address": "3009 112TH AVE NE, BELLEVUE, AZ, 98004",
+        "contact": "DEVON LEWIS",
         "email": "",
-        "phone": "",
+        "phone": "480-327-9467",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -67145,10 +67150,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "181671",
-        "address": "",
-        "contact": "",
+        "address": "4702 E. INDIAN SCHOOL RD, PHOENIX, AZ, 85108",
+        "contact": "ETHAN WESSEL",
         "email": "",
-        "phone": "",
+        "phone": "602-840-8625",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -67226,10 +67231,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "341924",
-        "address": "",
-        "contact": "",
+        "address": "6447 E INGLEWOOD, MESA, AZ, 85205",
+        "contact": "GARY CUTLIP",
         "email": "",
-        "phone": "",
+        "phone": "602-769-5661",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -67357,10 +67362,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 2,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "2560 E 10th St, Tucson, AZ, 85716-4746",
+        "contact": "Carlie Korinek",
         "email": "",
-        "phone": "",
+        "phone": "520-512-5115",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -67468,10 +67473,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "278594",
-        "address": "",
-        "contact": "",
+        "address": "4365 E Pecos Rd, Gilbert, AZ, 85295-7875",
+        "contact": "Nick Young",
         "email": "",
-        "phone": "",
+        "phone": "214-695-2549",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -67579,10 +67584,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "329670",
-        "address": "",
-        "contact": "",
+        "address": "13828 N 64th Pl, Scottsdale, AZ, 85254-3306",
+        "contact": "SAL MISTRY",
         "email": "",
-        "phone": "",
+        "phone": "602-885-5552",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -67845,10 +67850,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "0",
-        "address": "",
-        "contact": "",
+        "address": "2525 W Carefree Hwy, Phoenix, AZ, 85085-6093",
+        "contact": "Dan Boylan",
         "email": "",
-        "phone": "",
+        "phone": "480-396-8556",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -67961,10 +67966,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "92532",
-        "address": "",
-        "contact": "",
+        "address": "845A Don Cubero Ave, Santa Fe, NM, 87505-1658",
+        "contact": "Wendi Odai",
         "email": "",
-        "phone": "",
+        "phone": "505-699-8823",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -68012,10 +68017,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "161044",
-        "address": "",
-        "contact": "",
+        "address": "18224 N 2nd Pl, Phoenix, AZ, 85022-1010",
+        "contact": "Nathan Lunt",
         "email": "",
-        "phone": "",
+        "phone": "602-920-8520",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -68138,10 +68143,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "170682",
-        "address": "",
-        "contact": "",
+        "address": "4400 N SCOTTSDALE, SCOTTSDALE, AZ, 85253",
+        "contact": "CRAIG BANNER",
         "email": "",
-        "phone": "",
+        "phone": "602-989-6604",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -68399,7 +68404,7 @@ const SEED_BUILDERS = [
         "address": "Scottsdale, AZ 85267, 85267",
         "contact": "Keith & Lisa Wilson",
         "email": "",
-        "phone": "",
+        "phone": "602-558-1156",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -68565,7 +68570,7 @@ const SEED_BUILDERS = [
         "address": "2143 N CITRUS COVE, 85213",
         "contact": "JAMIE WEAVER",
         "email": "",
-        "phone": "",
+        "phone": "480-527-8858",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -68696,7 +68701,7 @@ const SEED_BUILDERS = [
         "address": "8312 HARBOR CIRCLE, 4606, 89128",
         "contact": "BRAD MIGNONE",
         "email": "",
-        "phone": "",
+        "phone": "702-275-8879",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -68809,10 +68814,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "322151",
-        "address": "",
+        "address": "505 N FAIRWAY DR, LITCHFEILD PARK, AZ, 85340",
         "contact": "",
         "email": "",
-        "phone": "",
+        "phone": "623-826-4550",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -68880,10 +68885,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "17314",
-        "address": "",
-        "contact": "",
+        "address": "302 Catron St, Santa Fe, NM, 87501-1806",
+        "contact": "Rob Woods",
         "email": "",
-        "phone": "",
+        "phone": "505-988-2413",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -68931,10 +68936,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "322238",
-        "address": "",
-        "contact": "",
+        "address": "2618 S. DEVONNA LN., TOLLESON, AZ, 85383",
+        "contact": "ALEX URIZAR",
         "email": "",
-        "phone": "",
+        "phone": "602-332-4992",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -69130,7 +69135,7 @@ const SEED_BUILDERS = [
         "address": "7322 S. RAINBOW BLVD, 89139",
         "contact": "BARRY BRADSHAW",
         "email": "",
-        "phone": "",
+        "phone": "702-755-2705",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -69208,10 +69213,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "249609",
-        "address": "",
-        "contact": "",
+        "address": "3219 E CAMELBACK RD Ste 189, PHOENIX, AZ, 85018",
+        "contact": "TOM DERRYBERRY",
         "email": "",
-        "phone": "",
+        "phone": "480-330-1515",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -69355,10 +69360,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "195543",
-        "address": "",
-        "contact": "",
+        "address": "5203 E Lincoln Dr, Paradise Valley, AZ, 85253-4101",
+        "contact": "Rich Brock",
         "email": "",
-        "phone": "",
+        "phone": "602-953-3232",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -69394,7 +69399,7 @@ const SEED_BUILDERS = [
         "address": "3260 N HAYDEN RD, 85251",
         "contact": "COREY SPEROS",
         "email": "",
-        "phone": "",
+        "phone": "949-547-4666",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -69738,10 +69743,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "157770",
-        "address": "",
-        "contact": "",
+        "address": "450 Jordan Rd, Sedona, AZ, 86336-4166",
+        "contact": "Randy Morris",
         "email": "",
-        "phone": "",
+        "phone": "928-203-0992",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -69934,10 +69939,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "23163",
-        "address": "",
-        "contact": "",
+        "address": "7170  Westwind Ste 101, El Paso, TX, 79912",
+        "contact": "John Culler",
         "email": "",
-        "phone": "",
+        "phone": "915-584-5600",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -69990,10 +69995,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 2,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "725 6th St, Prescott, AZ, 86301-2018",
+        "contact": "Michael Lough",
         "email": "",
-        "phone": "",
+        "phone": "928-445-0177",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -70089,7 +70094,7 @@ const SEED_BUILDERS = [
         "address": "8338 E CAMELBACK RD, 85251",
         "contact": "AUDREY THACKER",
         "email": "",
-        "phone": "",
+        "phone": "602-314-0323",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -70152,10 +70157,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "167744",
-        "address": "",
-        "contact": "",
+        "address": "12657 n 56th pl, Scottsdale, AZ, 85254",
+        "contact": "Scott Francis",
         "email": "",
-        "phone": "",
+        "phone": "602-717-7999",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -70278,10 +70283,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "211091",
-        "address": "",
-        "contact": "",
+        "address": "27330 N 69th St, Scottsdale, AZ, 85266-8800",
+        "contact": "JOHN LIBERATORE",
         "email": "",
-        "phone": "",
+        "phone": "480-415-1255",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -70314,10 +70319,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "243042",
-        "address": "",
-        "contact": "",
+        "address": "7720 E Gelding Dr, Scottsdale, AZ, 85260-6973",
+        "contact": "Oron Garabian",
         "email": "",
-        "phone": "",
+        "phone": "602-403-8666",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -70454,192 +70459,16 @@ const SEED_BUILDERS = [
         ]
     },
     {
-        "id": "j12ceoh",
-        "partnerCode": "CUPHXWOODPN",
-        "name": "WOOD PARTNERS",
-        "type": "Builder Quote",
-        "tier": 0,
-        "roc": "200547",
-        "address": "",
-        "contact": "",
-        "email": "",
-        "phone": "",
-        "lat": null,
-        "lng": null,
-        "jobs": [
-            {
-                "id": "esdkkj0",
-                "registrationNumber": "261107",
-                "projectName": "5TH AND GOLDWATER",
-                "community": "",
-                "address": "NWC INDIAN SCHOOL RD AND GOLDWATER BLVD, SCOTTSDALE, AZ, 85251",
-                "salesperson": "Chris Taddeo",
-                "status": "Active",
-                "startDate": "Mar 12, 2026",
-                "endDate": "Dec 31, 2026",
-                "skus": [
-                    {
-                        "brand": "",
-                        "model": "SRT304",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SRT366",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "COVE",
-                        "model": "DW2451",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SO3050TE/S/T",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "MDD3050TE/S/T",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "SUBZERO",
-                        "model": "DEU2450BG/R",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "SUBZERO",
-                        "model": "DET3650CIID/R",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "COVE",
-                        "model": "DW2451/ADA",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "MD30TE/S",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "SUBZERO",
-                        "model": "DEU2450BG/ADA/R",
-                        "stOpt": "S"
-                    }
-                ],
-                "lat": null,
-                "lng": null
-            },
-            {
-                "id": "ccxce4g",
-                "registrationNumber": "261096",
-                "projectName": "5TH AND GOLDWATER",
-                "community": "",
-                "address": "NWC INDIAN SCHOOL RD AND GOLDWATER BLVD, SCOTTSDALE, AZ, 85251",
-                "salesperson": "Chris Taddeo",
-                "status": "Active",
-                "startDate": "Mar 11, 2026",
-                "endDate": "Dec 31, 2026",
-                "skus": [
-                    {
-                        "brand": "",
-                        "model": "CL3650UFDID/O",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SRT304",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "BEST",
-                        "model": "HBN33096SS",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SO3050PE/S/P",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SPO3050PE/S/P",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "SUBZERO",
-                        "model": "DEU2450BG/R",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "COVE",
-                        "model": "DW2451",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SRT366",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "BEST",
-                        "model": "HBN33696SS",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "SUBZERO",
-                        "model": "DET3650CIID/R",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "SO3050TE/S/T",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "MDD3050TE/S/T",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "COVE",
-                        "model": "DW2451/ADA",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "SUBZERO",
-                        "model": "DEU2450BG/ADA/R",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "MD30TE/S",
-                        "stOpt": "S"
-                    },
-                    {
-                        "brand": "WOLF",
-                        "model": "MD24TE/S",
-                        "stOpt": "S"
-                    }
-                ],
-                "lat": null,
-                "lng": null
-            }
-        ]
-    },
-    {
         "id": "cgkljlz",
         "partnerCode": "CATUCAZDKT",
         "name": "ARIZONA DESIGNS KITCHENS AND BATHS",
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "2425 E Fort Lowell Rd, Tucson, AZ, 85719-2416",
+        "contact": "Sandra Nance",
         "email": "",
-        "phone": "",
+        "phone": "520-325-6050",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -70692,10 +70521,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "319393",
-        "address": "",
-        "contact": "",
+        "address": "137 S 29th pl, gilbert, az, 85296",
+        "contact": "waylon dana",
         "email": "",
-        "phone": "",
+        "phone": "480-747-1297",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -70808,10 +70637,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "87514",
-        "address": "",
-        "contact": "",
+        "address": "6338 W Desert Inn Rd Ste #1, Las Vegas, NV, 89146-6616",
+        "contact": "Dale Amos",
         "email": "",
-        "phone": "",
+        "phone": "702-604-7077",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -71024,10 +70853,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "300618",
-        "address": "",
-        "contact": "",
+        "address": "19204 N 93rd Way,, SCOTTSDALE, AZ, 85255",
+        "contact": "STEVE STANFORD",
         "email": "",
-        "phone": "",
+        "phone": "602-376-2161",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -71153,7 +70982,7 @@ const SEED_BUILDERS = [
         "address": "640 S CACTUS WREN ST, 85296",
         "contact": "JOHN VANDEBERG",
         "email": "",
-        "phone": "",
+        "phone": "602-716-1531",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -71387,10 +71216,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "332202",
-        "address": "",
-        "contact": "",
+        "address": "4340 E Indian School Rd, Phoenix, AZ, 85018-5360",
+        "contact": "Cal Detwiler",
         "email": "",
-        "phone": "",
+        "phone": "602-421-9699",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -71853,10 +71682,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "195967",
-        "address": "",
-        "contact": "",
+        "address": "2855 E. BROWN ROAD, MESA, AZ, 85213",
+        "contact": "Chad Adamski",
         "email": "",
-        "phone": "",
+        "phone": "480-390-1457",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -71924,10 +71753,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "327121",
-        "address": "",
-        "contact": "",
+        "address": "6760 N Oracle Rd Ste 130, Tucson, AZ, 85704-5608",
+        "contact": "NATE GROBSTEIN",
         "email": "",
-        "phone": "",
+        "phone": "520-307-5650",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -72010,10 +71839,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "392383",
-        "address": "",
-        "contact": "",
+        "address": "PO BOX 455, ARROYO SECO, NM, 87514",
+        "contact": "MAX EDELMAN",
         "email": "",
-        "phone": "",
+        "phone": "575-741-0025",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -72064,7 +71893,7 @@ const SEED_BUILDERS = [
         "address": "8050 N 19TH AVE, 85021",
         "contact": "VERONICA CARDENAS",
         "email": "",
-        "phone": "",
+        "phone": "602-422-0258",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -72127,10 +71956,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "304840",
-        "address": "",
-        "contact": "",
+        "address": "18236 N 75TH AVE, GLENDALE, AZ, 85308",
+        "contact": "MATT BOYD",
         "email": "",
-        "phone": "",
+        "phone": "602-330-2356",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -72430,10 +72259,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "358877",
-        "address": "",
-        "contact": "",
+        "address": "7845 E Gelding Dr, Scottsdale, AZ, 85260-2927",
+        "contact": "Shannon Carfield",
         "email": "",
-        "phone": "",
+        "phone": "480-696-3530",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -72501,10 +72330,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "151434",
-        "address": "",
-        "contact": "",
+        "address": "10025 E DYNAMITE BLVD, SCOTTSDALE, AZ, 85262",
+        "contact": "BRAD WOODRUFF",
         "email": "",
-        "phone": "",
+        "phone": "480-947-9253",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -72588,9 +72417,9 @@ const SEED_BUILDERS = [
         "tier": 1,
         "roc": "294457",
         "address": "AZ",
-        "contact": "",
+        "contact": "erik tinker",
         "email": "",
-        "phone": "",
+        "phone": "480-825-2667",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -72716,7 +72545,7 @@ const SEED_BUILDERS = [
         "address": "2000 Myrtle Ave., 79901",
         "contact": "Jaime Gonzalez",
         "email": "",
-        "phone": "",
+        "phone": "915-542-1502",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -72774,10 +72603,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "313480",
-        "address": "",
-        "contact": "",
+        "address": "2373 E Nolan Pl, Chandler, AZ, 85249-7098",
+        "contact": "DRAGOLJUB MIKALACKI",
         "email": "",
-        "phone": "",
+        "phone": "602-469-1855",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -72848,7 +72677,7 @@ const SEED_BUILDERS = [
         "address": "1155 S Power Rd, AZ, 85206",
         "contact": "ISAAC CURTIS",
         "email": "",
-        "phone": "",
+        "phone": "520-300-0048",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -72983,9 +72812,9 @@ const SEED_BUILDERS = [
         "tier": 1,
         "roc": "99194",
         "address": "AZ",
-        "contact": "",
+        "contact": "JOE COSTELLO",
         "email": "",
-        "phone": "",
+        "phone": "602-339-5828",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -73251,7 +73080,7 @@ const SEED_BUILDERS = [
         "address": "2222 W Parkside Ln #124, 85024",
         "contact": "KEVIN HUNTER",
         "email": "",
-        "phone": "",
+        "phone": "602-723-8199",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -73468,7 +73297,7 @@ const SEED_BUILDERS = [
         "address": "1010 E. JEFFERSON ST, 85034",
         "contact": "Loren Kretzschmar",
         "email": "",
-        "phone": "",
+        "phone": "928-592-3332",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -73557,9 +73386,9 @@ const SEED_BUILDERS = [
         "tier": 1,
         "roc": "350893",
         "address": "AZ",
-        "contact": "",
+        "contact": "SCOTT SIEGREST",
         "email": "",
-        "phone": "",
+        "phone": "480-540-9500",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -73693,10 +73522,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "244201",
-        "address": "",
-        "contact": "",
+        "address": "8340 E Raintree Dr, Scottsdale, AZ, 85260-2540",
+        "contact": "JAMES CARMICHAEL",
         "email": "",
-        "phone": "",
+        "phone": "602-439-8000",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -73810,9 +73639,9 @@ const SEED_BUILDERS = [
         "tier": 3,
         "roc": "339466",
         "address": "AZ",
-        "contact": "",
+        "contact": "BRYAN THOMPSON",
         "email": "",
-        "phone": "",
+        "phone": "312-731-7540",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -73916,9 +73745,9 @@ const SEED_BUILDERS = [
         "tier": 4,
         "roc": "339747",
         "address": "1051",
-        "contact": "",
+        "contact": "Duane Weimer",
         "email": "",
-        "phone": "",
+        "phone": "602-513-0443",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -73961,10 +73790,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "129526",
-        "address": "",
-        "contact": "",
+        "address": "4075 S Alisa Way, Flagstaff, AZ, 86005-8908",
+        "contact": "David Sweet",
         "email": "",
-        "phone": "",
+        "phone": "928-774-7539",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -74137,10 +73966,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "345021",
-        "address": "",
-        "contact": "",
+        "address": "2501 W BEHREND DR, PHOENIX, AZ, 85027",
+        "contact": "GERALD KILLIAN",
         "email": "",
-        "phone": "",
+        "phone": "480-329-8508",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -74238,10 +74067,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "355975",
-        "address": "",
-        "contact": "",
+        "address": "501 E Plaza Cir, Litchfield Park, AZ, 85340-4998",
+        "contact": "ROD & GARY FETTERS",
         "email": "",
-        "phone": "",
+        "phone": "623-935-5004",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -74312,7 +74141,7 @@ const SEED_BUILDERS = [
         "address": "2683 E CHANDLER HEIGHTS RD, 85298",
         "contact": "LESLIE KEENAN",
         "email": "",
-        "phone": "",
+        "phone": "602-721-2442",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -74446,10 +74275,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "294831",
-        "address": "",
-        "contact": "",
+        "address": "10454 E CORRINE DR, SCOTTSDALE, AZ, 85259",
+        "contact": "BLAINE SOULE",
         "email": "",
-        "phone": "",
+        "phone": "602-743-4050",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -74747,7 +74576,7 @@ const SEED_BUILDERS = [
         "address": "3240 E Union Hills Dr, AZ, 85050",
         "contact": "CARLOS GARCIA",
         "email": "",
-        "phone": "",
+        "phone": "602-880-0660",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -74977,9 +74806,9 @@ const SEED_BUILDERS = [
         "tier": 1,
         "roc": "321235",
         "address": "AZ",
-        "contact": "",
+        "contact": "Joe Courtney",
         "email": "",
-        "phone": "",
+        "phone": "480-296-5911",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -75397,7 +75226,7 @@ const SEED_BUILDERS = [
         "address": "6737 Morrill Road, 79932",
         "contact": "KRISTI EDDINGS",
         "email": "",
-        "phone": "",
+        "phone": "915-449-8570",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -75455,10 +75284,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "318271",
-        "address": "",
-        "contact": "",
+        "address": "1776 N Scottsdale Rd, Scottsdale, AZ, 85252",
+        "contact": "GUS RAMIREZ",
         "email": "",
-        "phone": "",
+        "phone": "480-766-0996",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -75526,10 +75355,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "207675",
-        "address": "",
-        "contact": "",
+        "address": "6 E PALO VERDE ST, GILBERT, AZ, 85296",
+        "contact": "ROGER DUANE",
         "email": "",
-        "phone": "",
+        "phone": "480-298-5354",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -75587,10 +75416,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "25405 S Tangelo Ave, Queen Creek, AZ, 85142-8069",
+        "contact": "Bruce Pearson",
         "email": "",
-        "phone": "",
+        "phone": "480-969-4700",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -75703,10 +75532,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
+        "address": "3635 S Val Vista Dr, Gilbert, AZ, 85297",
         "contact": "",
         "email": "",
-        "phone": "",
+        "phone": "480-590-1756",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -75779,10 +75608,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "324599",
-        "address": "",
-        "contact": "",
+        "address": "8414 W Northview, Glendale, AZ, 85305",
+        "contact": "MILTON FILGUERES YANEZ",
         "email": "",
-        "phone": "",
+        "phone": "480-772-1919",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -75860,10 +75689,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "310176",
-        "address": "",
-        "contact": "",
+        "address": "7505 E 6th Ave, Scottsdale, AZ, 85251-3599",
+        "contact": "Elliot Barkan",
         "email": "",
-        "phone": "",
+        "phone": "480-273-7138",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -75961,10 +75790,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "310613",
-        "address": "",
-        "contact": "",
+        "address": "1276 W High Plain Pl, Oro Valley, AZ, 85755-5797",
+        "contact": "Michael Grijalva",
         "email": "",
-        "phone": "",
+        "phone": "520-575-6007",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -76126,7 +75955,7 @@ const SEED_BUILDERS = [
         "address": "6344 E Broadway Rd, 85206",
         "contact": "Don Mellow",
         "email": "",
-        "phone": "",
+        "phone": "602-568-2696",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -76209,10 +76038,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "239705",
-        "address": "",
-        "contact": "",
+        "address": "3960 E Palm St Bldg 7, Mesa, AZ, 85215-1118",
+        "contact": "Scott Holt",
         "email": "",
-        "phone": "",
+        "phone": "480-277-4946",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -76278,7 +76107,7 @@ const SEED_BUILDERS = [
         "address": "32531 N SCOTTSDALE RD, 85266",
         "contact": "MATT SCHOENING",
         "email": "",
-        "phone": "",
+        "phone": "480-306-4900",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -76364,7 +76193,7 @@ const SEED_BUILDERS = [
         "address": "29068 N 108TH ST, 85262",
         "contact": "SVITLANA POPPER",
         "email": "",
-        "phone": "",
+        "phone": "480-338-3503",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -76465,7 +76294,7 @@ const SEED_BUILDERS = [
         "address": "1531 E Carriage Dr, 85086",
         "contact": "Terry Griffin",
         "email": "",
-        "phone": "",
+        "phone": "602-291-1418",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -76724,10 +76553,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "353780",
-        "address": "",
-        "contact": "",
+        "address": "9430 E MISSION LN Ste 201, SCOTTSDALE, AZ, 85258",
+        "contact": "MAX MOWZOON",
         "email": "",
-        "phone": "",
+        "phone": "786-580-2425",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -76780,10 +76609,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "83808",
-        "address": "",
-        "contact": "",
+        "address": "1110 E LAKE MEADE PARKWAY, LAS VEGAS, NV, 89015",
+        "contact": "JEREMY ROWLEY",
         "email": "",
-        "phone": "",
+        "phone": "602-793-6478",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -76846,10 +76675,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "55590",
-        "address": "",
-        "contact": "",
+        "address": "PO Box 020, Santa Fe, NM, 87502",
+        "contact": "Purce Genesis",
         "email": "",
-        "phone": "",
+        "phone": "505-474-4700",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -77049,10 +76878,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "331338",
-        "address": "",
-        "contact": "",
+        "address": "15051 W EDGEMONT AVE, GODDYEAR, AZ, 85395",
+        "contact": "ERNESTO RODRIGUEZ",
         "email": "",
-        "phone": "",
+        "phone": "602-430-4592",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -77140,10 +76969,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "293626",
-        "address": "",
-        "contact": "",
+        "address": "299 E 500 S, Bountiful, UT, 84010-4922",
+        "contact": "Lisa Johnson",
         "email": "",
-        "phone": "",
+        "phone": "801-927-3000",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -77229,7 +77058,7 @@ const SEED_BUILDERS = [
         "address": "2930 E CAMELBACK ROAD, 85016",
         "contact": "YOSSI DROR",
         "email": "",
-        "phone": "",
+        "phone": "480-740-6888",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -77305,7 +77134,7 @@ const SEED_BUILDERS = [
         "address": "643 e campbell ave, 85234",
         "contact": "CLINT REINESCH",
         "email": "",
-        "phone": "",
+        "phone": "480-567-2655",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -77463,10 +77292,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "170298",
-        "address": "",
-        "contact": "",
+        "address": "11260 N 92nd St, Scottsdale, AZ, 85260-6165",
+        "contact": "Todd Rutledge",
         "email": "",
-        "phone": "",
+        "phone": "602-228-1556",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -77512,7 +77341,7 @@ const SEED_BUILDERS = [
         "address": "4603 E COACHLIGHT LANE, 85718",
         "contact": "CHRISTOS  VLACHOPOULIOTIS",
         "email": "",
-        "phone": "",
+        "phone": "520-398-5042",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -77737,10 +77566,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "212751",
-        "address": "",
-        "contact": "",
+        "address": "20316 W. HESS AVE, BUCKEYE, AZ, 85326",
+        "contact": "ALLAN PROCTOR",
         "email": "",
-        "phone": "",
+        "phone": "623-521-4928",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -77818,10 +77647,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "274962",
-        "address": "",
-        "contact": "",
+        "address": "437 S Montezuma St, Prescott, AZ, 86303-4258",
+        "contact": "Troy Gallagher",
         "email": "",
-        "phone": "",
+        "phone": "928-778-3003",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -77904,10 +77733,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "1011 Red Rock Rd, Lake Havasu City, AZ, 86406",
+        "contact": "Kirk Daniels",
         "email": "",
-        "phone": "",
+        "phone": "928-978-3100",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -78032,9 +77861,9 @@ const SEED_BUILDERS = [
         "tier": 4,
         "roc": "299270",
         "address": "1-9",
-        "contact": "",
+        "contact": "Mark Bolte",
         "email": "",
-        "phone": "",
+        "phone": "480-990-7979",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -78112,10 +77941,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "59766",
-        "address": "",
-        "contact": "",
+        "address": "52 DE PSO, SANTA FE, NM, 87506",
+        "contact": "FRANK YARDMAN",
         "email": "",
-        "phone": "",
+        "phone": "505-471-3439",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -78173,10 +78002,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "293721",
-        "address": "",
-        "contact": "",
+        "address": "7320 N LA CANADA DRIVE, TUCSON, AZ, 85704",
+        "contact": "BRIAN LITZ",
         "email": "",
-        "phone": "",
+        "phone": "520-904-3883",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -78269,10 +78098,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 4,
         "roc": "347089",
-        "address": "",
-        "contact": "",
+        "address": "3014 N 53RD PL, PHOENIX, AZ, 85018",
+        "contact": "NICK WOJTYSIAK",
         "email": "",
-        "phone": "",
+        "phone": "480-751-8571",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -78526,9 +78355,9 @@ const SEED_BUILDERS = [
         "tier": 3,
         "roc": "110989",
         "address": "LOT 3620",
-        "contact": "",
+        "contact": "Phil Nichols",
         "email": "",
-        "phone": "",
+        "phone": "480-443-9500",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -78604,7 +78433,7 @@ const SEED_BUILDERS = [
         "address": "7236 E 1ST AVE, 85251",
         "contact": "REGEV T COHEN",
         "email": "",
-        "phone": "",
+        "phone": "602-888-0898",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -78677,10 +78506,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "6615 N Scottsdale Road, Scottsdale, AZ, 85250",
+        "contact": "Mike Ristich",
         "email": "",
-        "phone": "",
+        "phone": "602-769-4936",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -78896,7 +78725,7 @@ const SEED_BUILDERS = [
         "address": "7702 EAST DOUBLETREE RANCH RD, 85258",
         "contact": "TED HALLETT",
         "email": "",
-        "phone": "",
+        "phone": "480-973-6536",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -79104,10 +78933,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "3012 E Yandell Dr, El Paso, TX, 79903-4113",
+        "contact": "Sergio Villarreal",
         "email": "",
-        "phone": "",
+        "phone": "915-566-0095",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -79426,10 +79255,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "343245",
-        "address": "",
-        "contact": "",
+        "address": "149 El Camino Real, Sedona, AZ, 86336-5063",
+        "contact": "Paul Aguirre",
         "email": "",
-        "phone": "",
+        "phone": "949-275-6659",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -79507,10 +79336,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "277525",
-        "address": "",
-        "contact": "",
+        "address": "4300 N. PLACITA DEL RODAL, TUCSON, AZ, 85718",
+        "contact": "TIM BEER",
         "email": "",
-        "phone": "",
+        "phone": "520-412-9605",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -79556,7 +79385,7 @@ const SEED_BUILDERS = [
         "address": "PO BOX 2637, LOT 50, 86045",
         "contact": "BRANDONFREDENBURG",
         "email": "",
-        "phone": "",
+        "phone": "928-706-8000",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -79692,7 +79521,7 @@ const SEED_BUILDERS = [
         "address": "115 W PALM LANE, 85004",
         "contact": "DANIEL DRATH",
         "email": "",
-        "phone": "",
+        "phone": "602-818-0845",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -79768,7 +79597,7 @@ const SEED_BUILDERS = [
         "address": "1342 N PASADENA, 85201",
         "contact": "MATT",
         "email": "",
-        "phone": "",
+        "phone": "602-525-1020",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -79826,10 +79655,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "336578",
-        "address": "",
-        "contact": "",
+        "address": "9418 E MARK LANE, SCOTTSDALE, AZ, 85262",
+        "contact": "ALEX TAYLOR",
         "email": "",
-        "phone": "",
+        "phone": "520-312-2333",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -79902,10 +79731,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "341318",
-        "address": "",
-        "contact": "",
+        "address": "6214 E HORSESHOE RD, PARDISE VALLEY, AZ, 85253",
+        "contact": "DANIEL MOSCAL",
         "email": "",
-        "phone": "",
+        "phone": "470-875-4607",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80008,10 +79837,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "318111",
-        "address": "",
-        "contact": "",
+        "address": "12125 N 76TH CT, SCOTTSDALE, AZ, 85260",
+        "contact": "TED SCHOLLENBERGER",
         "email": "",
-        "phone": "",
+        "phone": "586-610-7591",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80054,10 +79883,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "331386",
-        "address": "",
-        "contact": "",
+        "address": "681 N Monterrey St Ste #1, Gilbert, AZ, 85233",
+        "contact": "Julie Payne",
         "email": "",
-        "phone": "",
+        "phone": "602-319-3850",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80105,10 +79934,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "8729 N 78th Ave, Peoria, AZ, 85345-7953",
+        "contact": "Ken Dewey",
         "email": "",
-        "phone": "",
+        "phone": "623-979-8555",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80171,10 +80000,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "350442",
-        "address": "",
-        "contact": "",
+        "address": "5425 E PERSHING AVE, PHOENIX, AZ, 85254",
+        "contact": "JERRY AUSTIN",
         "email": "",
-        "phone": "",
+        "phone": "831-251-4307",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80227,10 +80056,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "351022",
-        "address": "",
-        "contact": "",
+        "address": "NEW RIVER, NEW RIVER, AZ, 85087",
+        "contact": "ROBERT HARPER",
         "email": "",
-        "phone": "",
+        "phone": "480-521-8726",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80311,7 +80140,7 @@ const SEED_BUILDERS = [
         "address": "10605 SABLE OAKS CT, 89134",
         "contact": "MICHAEL SMOODY",
         "email": "",
-        "phone": "",
+        "phone": "702-645-8414",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80409,10 +80238,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "96788",
-        "address": "",
-        "contact": "",
+        "address": "9330 E Paraiso Dr # 18, Scottsdale, AZ, 85255-8313",
+        "contact": "Dick Lloyd",
         "email": "",
-        "phone": "",
+        "phone": "480-945-1898",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80463,7 +80292,7 @@ const SEED_BUILDERS = [
         "address": "2453 E PRESCOTT PLACE, 85249",
         "contact": "CHRISTINE COX",
         "email": "",
-        "phone": "",
+        "phone": "623-680-6567",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80561,10 +80390,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "349065",
-        "address": "",
-        "contact": "",
+        "address": "2047 E Loma Vista Dr., TEMPE, AZ, 85282",
+        "contact": "Jennifer Santini",
         "email": "",
-        "phone": "",
+        "phone": "480-200-6429",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80627,10 +80456,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "324433",
-        "address": "",
-        "contact": "",
+        "address": "2975 S Avenue B, Yuma, AZ, 85364-7703",
+        "contact": "CLINT HARRINGTON",
         "email": "",
-        "phone": "",
+        "phone": "928-503-1519",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80686,7 +80515,7 @@ const SEED_BUILDERS = [
         "address": "PO BOX 220113, 79912",
         "contact": "BRIAN DUNCAN",
         "email": "",
-        "phone": "",
+        "phone": "915-727-3380",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80759,10 +80588,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "143138",
-        "address": "",
+        "address": "10789 E TROON NORTH DR, SCOTTSDALE, AZ, 85262",
         "contact": "",
         "email": "",
-        "phone": "",
+        "phone": "480-538-0864",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -80805,10 +80634,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "260240",
-        "address": "",
-        "contact": "",
+        "address": "8350 E Evans Road, Scottsdale, AZ, 85260-3636",
+        "contact": "Keith Pickering",
         "email": "",
-        "phone": "",
+        "phone": "480-292-7574",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -81128,10 +80957,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "335513",
-        "address": "",
-        "contact": "",
+        "address": "3215 N Arizona Ave #10, Chandler, AZ, 85225",
+        "contact": "JOHN CHIONE",
         "email": "",
-        "phone": "",
+        "phone": "602-885-8189",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -81202,7 +81031,7 @@ const SEED_BUILDERS = [
         "address": "8940 W OLIVE AVE, 85345",
         "contact": "LAZARO CALDERON",
         "email": "",
-        "phone": "",
+        "phone": "480-828-0910",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -81381,10 +81210,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "344278",
-        "address": "",
-        "contact": "",
+        "address": "1230 Fryar Ave, 98390, WA, 98390",
+        "contact": "STEVE JENSEN",
         "email": "",
-        "phone": "",
+        "phone": "253-318-3738",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -81442,10 +81271,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "342498",
-        "address": "",
-        "contact": "",
+        "address": "20645 W CARLTON MANOR, BUCKEYE, AZ, 85396",
+        "contact": "PATRICIO ESPINO",
         "email": "",
-        "phone": "",
+        "phone": "623-229-8114",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -81539,10 +81368,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "343291",
-        "address": "",
-        "contact": "",
+        "address": "15455 N Greenway Hayden Loop Ste C19, SCOTTSDALE, AZ, 85260",
+        "contact": "SLADE GIBSON",
         "email": "",
-        "phone": "",
+        "phone": "602-708-6856",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -81590,10 +81419,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "278713",
-        "address": "",
-        "contact": "",
+        "address": "1716 W 4TH, TEMPE, AZ, 85281",
+        "contact": "SABRINA KAHN",
         "email": "",
-        "phone": "",
+        "phone": "480-696-5447",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -81674,7 +81503,7 @@ const SEED_BUILDERS = [
         "address": "11041 E. Rising Sun, 85262",
         "contact": "DAVE HAMMER",
         "email": "",
-        "phone": "",
+        "phone": "719-332-3578",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -82003,10 +81832,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "200754",
-        "address": "",
-        "contact": "",
+        "address": "4610 S 35th St Ste 1, Phoenix, AZ, 85040-2895",
+        "contact": "Mark Doerflein",
         "email": "",
-        "phone": "",
+        "phone": "480-368-0348",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -82089,10 +81918,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "329706",
-        "address": "",
-        "contact": "",
+        "address": "9446 E RIMROCK RD, SCOTTSDALE, AZ, 85255",
+        "contact": "JOSEPH TENISON",
         "email": "",
-        "phone": "",
+        "phone": "480-889-6365",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -82135,10 +81964,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "336972",
-        "address": "",
-        "contact": "",
+        "address": "10105 E Via Linda, Scottsdale, AZ, 85258-5311",
+        "contact": "Scott McPherson",
         "email": "",
-        "phone": "",
+        "phone": "480-288-5382",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -82311,10 +82140,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "0",
-        "address": "",
+        "address": "9081 W SAHARA AVE, LAS VEGAS, NV, 83919",
         "contact": "",
         "email": "",
-        "phone": "",
+        "phone": "702-400-9792",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -82584,9 +82413,9 @@ const SEED_BUILDERS = [
         "tier": 1,
         "roc": "0",
         "address": "6007",
-        "contact": "",
+        "contact": "cc Finishes",
         "email": "",
-        "phone": "",
+        "phone": "480-330-8975",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -82694,10 +82523,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "250565",
-        "address": "",
-        "contact": "",
+        "address": "1750 s los feliz Ste 107, tempe, AZ, 85281",
+        "contact": "jason ratke",
         "email": "",
-        "phone": "",
+        "phone": "602-999-0053",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -83043,10 +82872,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "90992",
-        "address": "",
-        "contact": "",
+        "address": "1338 W Forest Meadows St Ste 125, Flagstaff, AZ, 86001-7226",
+        "contact": "Dan Groth",
         "email": "",
-        "phone": "",
+        "phone": "928-556-0856",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -83245,10 +83074,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "326305",
-        "address": "",
-        "contact": "",
+        "address": "20235 N CAVE CREEK RD STE 104-447, CAVE CREEK, AZ, 85331",
+        "contact": "JOSH KATTAU",
         "email": "",
-        "phone": "",
+        "phone": "808-895-5094",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -83381,10 +83210,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "320907",
-        "address": "",
-        "contact": "",
+        "address": "20639 N. 16TH PL, PHOENIX, AZ, 85024",
+        "contact": "RYAN JACOBSON",
         "email": "",
-        "phone": "",
+        "phone": "602-399-3404",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -83450,7 +83279,7 @@ const SEED_BUILDERS = [
         "address": "131 ROBLEDO STREET, 89138",
         "contact": "YANCHAO FAN",
         "email": "",
-        "phone": "",
+        "phone": "702-686-8656",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -83597,7 +83426,7 @@ const SEED_BUILDERS = [
         "address": "925W BRALLIAR RD, 85390",
         "contact": "SAM CRISSMAN",
         "email": "",
-        "phone": "",
+        "phone": "602-339-1345",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -83655,10 +83484,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "285174",
-        "address": "",
-        "contact": "",
+        "address": "16036 N 108th St, Scottsdale, AZ, 85255-8825",
+        "contact": "John Ruyle",
         "email": "",
-        "phone": "",
+        "phone": "602-849-5032",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -83819,7 +83648,7 @@ const SEED_BUILDERS = [
         "address": "2552 N ALVERNON WAY, 85712",
         "contact": "MICHAEL FRANKS",
         "email": "",
-        "phone": "",
+        "phone": "520-591-9851",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -83897,10 +83726,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "348772",
-        "address": "",
-        "contact": "",
+        "address": "1615 E Echo Ln, Phoenix, AZ, 85020-3922",
+        "contact": "Bruce Tokely",
         "email": "",
-        "phone": "",
+        "phone": "602-918-8178",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -83961,7 +83790,7 @@ const SEED_BUILDERS = [
         "address": "5165 E HICKORY DRIVE, 86004",
         "contact": "Kip Daniel Holmes",
         "email": "",
-        "phone": "",
+        "phone": "928-607-9372",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -84064,10 +83893,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
-        "contact": "",
+        "address": "1482 W SCOTT AVE, GILBERT, AZ, 85233",
+        "contact": "ROBERT WOOLLEY WOOLLEY II",
         "email": "",
-        "phone": "",
+        "phone": "480-586-8217",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -84160,10 +83989,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "333088",
-        "address": "",
-        "contact": "",
+        "address": "19357 W JACKSON STREET, BUCKEYE, AZ, 85326",
+        "contact": "HUMPHERY ILEKHUE",
         "email": "",
-        "phone": "",
+        "phone": "480-307-5437",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -84488,10 +84317,10 @@ const SEED_BUILDERS = [
         "type": "Cabinet Shop Quote",
         "tier": 1,
         "roc": "",
-        "address": "",
+        "address": "425 W Guadalupe, Gilbert, AZ, 85253",
         "contact": "",
         "email": "",
-        "phone": "",
+        "phone": "480-360-1287",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -84569,10 +84398,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "64600",
-        "address": "",
-        "contact": "",
+        "address": "PO Box 4531, Scottsdale, AZ, 85261-4531",
+        "contact": "Russell Mason",
         "email": "",
-        "phone": "",
+        "phone": "480-948-3086",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -84734,7 +84563,7 @@ const SEED_BUILDERS = [
         "address": "13098 E Ramos St, 86327",
         "contact": "Matthew Dutton",
         "email": "",
-        "phone": "",
+        "phone": "928-458-4848",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -84822,10 +84651,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "316894",
-        "address": "",
-        "contact": "",
+        "address": "14385 N 99TH STREET, SCOTTSDALE, AZ, 85260",
+        "contact": "NADER ABDIN",
         "email": "",
-        "phone": "",
+        "phone": "480-329-9530",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -84893,10 +84722,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 3,
         "roc": "78005",
-        "address": "",
-        "contact": "",
+        "address": "8890 Spanish Ridge Ave, Las Vegas, NV, 89148-1303",
+        "contact": "Munira Mohamed",
         "email": "",
-        "phone": "",
+        "phone": "702-834-3918",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -84984,10 +84813,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "74769",
-        "address": "",
-        "contact": "",
+        "address": "PO BOX 530741, HENDERSON, NV, 89052",
+        "contact": "STEVE RAINS",
         "email": "",
-        "phone": "",
+        "phone": "702-355-8691",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -85066,10 +84895,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "134065",
-        "address": "",
-        "contact": "",
+        "address": "237 S Date, Mesa, AZ, 85210-1702",
+        "contact": "Robert Amarillas",
         "email": "",
-        "phone": "",
+        "phone": "480-984-2838",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -85337,7 +85166,7 @@ const SEED_BUILDERS = [
         "address": "16772 W BELL RD, 85374",
         "contact": "BRENT MONROE",
         "email": "",
-        "phone": "",
+        "phone": "623-810-4082",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -85405,10 +85234,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "335180",
-        "address": "",
-        "contact": "",
+        "address": "1725 W. Williams Dr. Ste.11, Phoenix, AZ, 85027",
+        "contact": "Rob Spragg",
         "email": "",
-        "phone": "",
+        "phone": "714-457-3764",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -85456,10 +85285,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "273092",
-        "address": "",
-        "contact": "",
+        "address": "7284 E SOFTWIND DR, SCOTTSDALE, AZ, 85255",
+        "contact": "ADRIAN WILSON",
         "email": "",
-        "phone": "",
+        "phone": "602-690-5940",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -85530,7 +85359,7 @@ const SEED_BUILDERS = [
         "address": "1170 N. GILBERT ROAD, 85234",
         "contact": "ERIC CAPRANICA",
         "email": "",
-        "phone": "",
+        "phone": "480-688-5883",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -85603,10 +85432,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "271569",
-        "address": "",
-        "contact": "",
+        "address": "3219 E Camelback Rd, Phoenix, AZ, 85018-2307",
+        "contact": "Kent Collins",
         "email": "",
-        "phone": "",
+        "phone": "480-201-0314",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -85669,10 +85498,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "334200",
-        "address": "",
-        "contact": "",
+        "address": "8280 E GELDING DRIVE, SCOTTSDALE, AZ, 85260",
+        "contact": "ZANDAR DIAMONT",
         "email": "",
-        "phone": "",
+        "phone": "310-617-1695",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -85770,10 +85599,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "195568",
-        "address": "",
-        "contact": "",
+        "address": "20165 N 67th ave Ste 122a-185, glendale, az, 85308",
+        "contact": "Denise Mathis",
         "email": "",
-        "phone": "",
+        "phone": "623-465-1266",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -85841,10 +85670,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "89586",
-        "address": "",
-        "contact": "",
+        "address": "1180 N TOWN CENTER, LAS VEGAS, NV, 89144",
+        "contact": "JIM HURTADO",
         "email": "",
-        "phone": "",
+        "phone": "702-743-7880",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -85972,10 +85801,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "278733",
-        "address": "",
-        "contact": "",
+        "address": "8711 E PINNACLE PEAK, SCOTTSDALE, AZ, 85255",
+        "contact": "JOE MIERAU",
         "email": "",
-        "phone": "",
+        "phone": "480-213-8522",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -86092,7 +85921,7 @@ const SEED_BUILDERS = [
         "address": "BOX 2882, 87505",
         "contact": "ALAN MANZANARES",
         "email": "",
-        "phone": "",
+        "phone": "505-690-7246",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -86216,10 +86045,10 @@ const SEED_BUILDERS = [
         "type": "Builder Quote",
         "tier": 1,
         "roc": "267516",
-        "address": "",
-        "contact": "",
+        "address": "8350 E Evans Rd, Scottsdale, AZ, 85260-3636",
+        "contact": "MICHAEL STARK",
         "email": "",
-        "phone": "",
+        "phone": "480-797-6707",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -86285,7 +86114,7 @@ const SEED_BUILDERS = [
         "address": "2309 W MESQUITE ST, 85086",
         "contact": "Scott King",
         "email": "",
-        "phone": "",
+        "phone": "505-917-2796",
         "lat": null,
         "lng": null,
         "jobs": [
@@ -86345,6 +86174,14361 @@ const SEED_BUILDERS = [
                 "lng": null
             }
         ]
+    },
+    {
+        "id": "jufuyl1",
+        "name": "007 CONTRACTING",
+        "partnerCode": "REPHXSCOT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "332545",
+        "address": "5202 E CHARTER OAK RD, Scottsdale, AZ, 85254",
+        "contact": "JOEL BORSENIK",
+        "phone": "602-413-0356",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "18afl8c",
+        "name": "1 HOME CONSTRUCTION",
+        "partnerCode": "RELASONEHM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "90486",
+        "address": "5875 S. RAINBOW BLVD, LAS VEGAS, NV, 89118",
+        "contact": "ISAAC ITZHAKI",
+        "phone": "702-377-1557",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "686uv4b",
+        "name": "12 WEST CUSTOM HOMES & REMODELING",
+        "partnerCode": "CUPHXTWCUH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "326032",
+        "address": "2855 E Michelle Way, Gilbert, AZ, 85234-1434",
+        "contact": "Nick Collier",
+        "phone": "480-600-1749",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "x4fdkvi",
+        "name": "1912 INDUSTRIES",
+        "partnerCode": "CUPHXNINTW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "286932",
+        "address": "4181 E MEDLOCK, PHOENIX, AZ, 85018",
+        "contact": "Aaron Magee",
+        "phone": "602-388-1610",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0bh7aih",
+        "name": "2ND VISION",
+        "partnerCode": "REABQNDVIS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "416385",
+        "address": "11740 TAYLORS WAY, AMARILLO, TX, 79118",
+        "contact": "CHRIS REED",
+        "phone": "806-517-3264",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9au49tc",
+        "name": "4 GEN HOMES",
+        "partnerCode": "CUPHXGENBLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "298199",
+        "address": "12251 N 32nd St, Phoenix, AZ, 85032-7189",
+        "contact": "David Mikes",
+        "phone": "602-694-7030",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yo5r13w",
+        "name": "4HIM REMODEL",
+        "partnerCode": "REPHXFORHM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "288883",
+        "address": "13595 W WATSON LN, SURPRISE, AZ, 85379",
+        "contact": "ROD GRANBERRY",
+        "phone": "602-668-6118",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fxglge2",
+        "name": "A & I REMODELING LLC",
+        "partnerCode": "REPHXAIRMD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "329563",
+        "address": "724 W. HAMPTON AVE, MESA, AZ, 85204",
+        "contact": "JESUS FLORES",
+        "phone": "480-232-3763",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2g2a4e1",
+        "name": "A-1 CONSTRUCTION",
+        "partnerCode": "CULASACNST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "87923",
+        "address": "3129 W. TOMKINS AVE, LAS VEGAS, NV, 89103",
+        "contact": "IFTKHAR AHMED",
+        "phone": "725-226-3330",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "uvlf7gz",
+        "name": "A-1 RANCHES",
+        "partnerCode": "CUFLGARNCHS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "6224 W TOUS LN, FLAGSTAFF, AZ, 85607",
+        "contact": "BRIAN PRITCHARD",
+        "phone": "505-214-6558",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "x1fmw3v",
+        "name": "A&A HOME BUILDERS",
+        "partnerCode": "RELASAHMB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "342504",
+        "address": "5010 S. HWY 95, FORT MOJAVE, AZ, 86426",
+        "contact": "CARL ALVIN",
+        "phone": "928-404-3272",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ppglwhh",
+        "name": "A4 BUILDERS",
+        "partnerCode": "CULASAFBLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "83995",
+        "address": "5588 SOUTH FORT APACHE, LAS VEGAS, NV, 89148",
+        "contact": "ROBERT HARPER",
+        "phone": "702-400-4782",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wt2vay4",
+        "name": "ACACIA BUILDERS",
+        "partnerCode": "CUABQACCBD",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "411511",
+        "address": "15 LEWIS LANE, SANTA FE, NM, 87508",
+        "contact": "SCOTT MUTZ",
+        "phone": "505-780-2234",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3zyetj1",
+        "name": "ACCESS SOLUTIONS",
+        "partnerCode": "RELASACCST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "84822",
+        "address": "12600 CHAPARRAL ROAD Ste 150, HENDERSON, NV, 89044",
+        "contact": "ROGER NGUYEN ROSE",
+        "phone": "702-338-4011",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "hm1emj3",
+        "name": "ACCOMPLISHED DESIGN",
+        "partnerCode": "CULASACCMP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "31662003",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "mdoh6e8",
+        "name": "ACE HANDYMAN",
+        "partnerCode": "RELASACHD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "86027",
+        "address": "6315 ELDORA AVE, Las Vegas, NV, 89146",
+        "contact": "KRISTINE LIU",
+        "phone": "702-374-2836",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rg7ts5e",
+        "name": "ACKLIN BROTHERS CONSTRUCTION",
+        "partnerCode": "CUPHXACKLN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "195929",
+        "address": "1965 coyote road, SCOTTSDALE, az, 86303",
+        "contact": "gary acklin",
+        "phone": "928-713-0508",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "y3u7qvt",
+        "name": "ACRET CONSTRUCTION",
+        "partnerCode": "CULASACRTC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "276574",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4uxe4xh",
+        "name": "ADAMARC CONSTRUCTION",
+        "partnerCode": "CUPHXADMRC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "325332",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rgqwaar",
+        "name": "ADAMS CRAIG ACQUISITION TECHNOLOGY",
+        "partnerCode": "REPHXADCGA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "316732",
+        "address": "7904 E Chaparral Rd # A, Scottsdale, AZ, 85250",
+        "contact": "KRISTINE LIU",
+        "phone": "480-244-2557",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "l6h5ykh",
+        "name": "ADI CONSTRUCTION",
+        "partnerCode": "CULASADCNT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "92530",
+        "address": "5888 TAYLOR VALLEY AVE, LAS VEGAS, NV, 89131",
+        "contact": "JIM POHOPIN",
+        "phone": "702-339-3742",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dp7whde",
+        "name": "ADOLFSON & PETERSON CONSTRUCTION",
+        "partnerCode": "REPHXADPTR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "234966",
+        "address": "5002 S. ASH ST, TEMPE, AZ, 85282",
+        "contact": "SCOTT WEICHT",
+        "phone": "952-417-8353",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ft0d05c",
+        "name": "ADVANCED HOMES",
+        "partnerCode": "CULASADVNC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "61942",
+        "address": "2609 Jamaica Blvd S, Lake Havasu City, AZ, 84606",
+        "contact": "JIM POHOPIN",
+        "phone": "928-846-2999",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "d4vm3cf",
+        "name": "AE CONSTRUCTION",
+        "partnerCode": "RELASACNST",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "92765",
+        "address": "2510 W HORIZON RIDGE, LAS VEGAS, NV, 89052",
+        "contact": "AMAAN HUSSAIN",
+        "phone": "702-806-7694",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3640x3u",
+        "name": "AF STERLING HOMEBUILDERS",
+        "partnerCode": "CUTUCAFSTR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "80734",
+        "address": "6340 N Campbell Ave Ste 240, Tucson, AZ, 85718-3183",
+        "contact": "Todd Glick",
+        "phone": "520-577-3600",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ic91l41",
+        "name": "AFT, A FINER TOUCH",
+        "partnerCode": "CUPHXAFINTH",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "284657",
+        "address": "15270 N 83rd Pl Ste 200, Scottsdale, AZ, 85260-2503",
+        "contact": "Brad Leavitt",
+        "phone": "480-550-0445",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fdy4oju",
+        "name": "AGAVE DEVELOPMENT",
+        "partnerCode": "CUPHXAGVDV",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "311888",
+        "address": "7272 E Indian Bend Rd Ste 529, Scottsdale, AZ, 85251",
+        "contact": "Allen Dzurny",
+        "phone": "480-305-3084",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gk3kl87",
+        "name": "AGAVE HOME SERVICES",
+        "partnerCode": "REPHXAGVHM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "345333",
+        "address": "328 W VERDE LN, GILBERT, AZ, 85295",
+        "contact": "JEANNE WILCOX",
+        "phone": "480-747-7925",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "35ro4lv",
+        "name": "AJB GENERAL CONTRACTOR",
+        "partnerCode": "RELASAJBGN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "29370",
+        "address": "102 E MAYFLOWER AVE, LAS VEGAS, NV, 89030",
+        "contact": "ALAN JESKY",
+        "phone": "702-876-6544",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rq8zoxg",
+        "name": "AJV INVESTMENT LLC",
+        "partnerCode": "CULASAJVNS",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "4759 Procyon St, Las Vegas, NV, 89103-5655",
+        "contact": "Steven Villalta",
+        "phone": "702-528-9479",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6yyrx1b",
+        "name": "ALAIR HOMES - ARIZONA",
+        "partnerCode": "REPHXALHGC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "329528",
+        "address": "7001 E US HWY 60, GOLD CANYON, AZ, 85118",
+        "contact": "STEVE WERNER",
+        "phone": "480-688-0767",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2hlafce",
+        "name": "ALBRECHT INTERIORS",
+        "partnerCode": "REPHXALBRT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "329784",
+        "address": "15424 E THISTLE FOUNTAIN HILLS, FOUNTAIN HILLS, AZ, 85268",
+        "contact": "NICOLE ALBRECHT",
+        "phone": "253-886-4822",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "t391v2z",
+        "name": "ALCORN CONSTRUCTION (SILVER LEAF)",
+        "partnerCode": "CUPHXSLVLF",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "337943",
+        "address": "2201 E CAMELBACK RD Ste 310, PHOENIX, AZ, 85016",
+        "contact": "CHRISTOPHER ALCORN",
+        "phone": "602-842-1184",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rcp93tv",
+        "name": "ALEXANDER ENTERPRISES",
+        "partnerCode": "CUPHXALXDRE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "109178",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rqz5r1k",
+        "name": "ALL ABOUT YOU CUSTOM CABINETRY COMPANY",
+        "partnerCode": "CALASALLBT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "4280 W Windmill Ln, Las Vegas, NV, 89139-5856",
+        "contact": "Molly O'Connell",
+        "phone": "702-703-9075",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "g50gb6g",
+        "name": "ALL AMERICAN BUILDERS",
+        "partnerCode": "CULASALMCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "85374",
+        "address": "61 Upper Juan Tomas Rd, Tijeras, NM, 87059-7975",
+        "contact": "Duane Weimer",
+        "phone": "505-286-2158",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6g2n5s4",
+        "name": "ALL PRO ARIZONA",
+        "partnerCode": "REPHXALPRZ",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "322267",
+        "address": "PO Box 1234, Mesa, AZ, 85205",
+        "contact": "Melvin Brett Randall",
+        "phone": "480-751-9046",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "cu1y78t",
+        "name": "ALLEN CONSTRUCTION",
+        "partnerCode": "CUPHXLLENC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "308283",
+        "address": "224 W. RIDGECREST RD, PHOENIX, AZ, 85086",
+        "contact": "STEVE ALLEN",
+        "phone": "602-515-9673",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "x915myj",
+        "name": "ALLSUP CUSTOM HOMES",
+        "partnerCode": "CUPHXALLSP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "27306",
+        "address": "5201 E PERSHING AVE, SCOTTSDALE, AZ, 85254",
+        "contact": "ANDY ALLSUP",
+        "phone": "602-859-0064",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5hrxv2w",
+        "name": "AMALFI/WOODS BUILDER",
+        "partnerCode": "CUPHXAMDEV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "202049",
+        "address": "3428 E Dartmouth St, Mesa, AZ, 85213-7005",
+        "contact": "Walt Wood",
+        "phone": "602-920-9258",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "frl74v0",
+        "name": "AMBER STONE CONSTRUCTION",
+        "partnerCode": "REPHXABERS",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "232591",
+        "address": "2820 S. Alma School Rd, CHANDLER, AZ, 85286",
+        "contact": "WALT MILLER",
+        "phone": "480-215-0688",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7horvw7",
+        "name": "AMBER TILE WORKS AND MORE",
+        "partnerCode": "CUELPAMBRT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "13916 Golden Mesa Ct, El Paso, TX, 79928-7144",
+        "contact": "Oscar Jaramillo",
+        "phone": "915-472-7702",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "hpjrrw4",
+        "name": "AMBERWOOD HOMES",
+        "partnerCode": "CUPHXAMBWD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "267740",
+        "address": "4320 EAST BROWN RD. Ste 101, Mesa, AZ, 85205",
+        "contact": "Billy Johnson",
+        "phone": "602-377-3128",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lksn8s6",
+        "name": "AMC CONSTRUCTION",
+        "partnerCode": "CUPHXAMCN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "342834/181941",
+        "address": "7671 E Sutton Dr, Scottsdale, AZ, 85260",
+        "contact": "LISA ALLEN",
+        "phone": "480-844-0000",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "prxd8i5",
+        "name": "AMERICAN HANDYMAN SERVICE",
+        "partnerCode": "RELASAMRH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "69190",
+        "address": "10040 CHEYENNE AVE, LAS VEGAS, NV, 89117",
+        "contact": "JSASON TAYLOR",
+        "phone": "702-768-2759",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5f73ept",
+        "name": "AMERIS CONSTRUCTION CO",
+        "partnerCode": "CUPHXAMRS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "204161",
+        "address": "6501 E Greenway Rd, Scottsdale, AZ, 85254",
+        "contact": "Brittany Hart",
+        "phone": "602-373-4625",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ukindwp",
+        "name": "AMIR HOME REMODELING",
+        "partnerCode": "REPHXAMRHR",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "123456",
+        "address": "21021 N. 56TH ST., PHOENIX, AZ, 85054",
+        "contact": "mirzaie niari",
+        "phone": "602-402-3552",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "aizdx1k",
+        "name": "AMS SPECIALTIES LLC",
+        "partnerCode": "CUPHXAMSSP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "341273",
+        "address": "430W Marconi Ave, Phoenix, AZ, 85023",
+        "contact": "Dan Norton",
+        "phone": "602-750-0546",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dkg8mda",
+        "name": "ANCO HOMES",
+        "partnerCode": "REPHXANCH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "323219",
+        "address": "30423 N 139TH ST, SCOTTSDALE, AZ, 85262",
+        "contact": "CHUCK NIBLEY",
+        "phone": "480-319-2901",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "skxmi42",
+        "name": "ANDRADE CONSTRUCTION LLC",
+        "partnerCode": "CUPHXANDRD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "335671",
+        "address": "24623 N 46TH AVE, GLENDALE, AZ, 85028",
+        "contact": "CHUCK NIBLEY",
+        "phone": "623-640-1264",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "w6eo2h2",
+        "name": "ANOZIRA COMPANIES",
+        "partnerCode": "REPHXANZR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "346178",
+        "address": "7028 CORRAL CT., PRESCOTT, AZ, 86305",
+        "contact": "DAVE HUBBS",
+        "phone": "928-642-0987",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ds5u3jq",
+        "name": "ANTHONY GHIZ DEVELOPMENT",
+        "partnerCode": "CUPHXTONYG",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "325070",
+        "address": "3818 N 41ST PK, PHOENIX, AZ, 85018",
+        "contact": "ANTHONY GHIZ",
+        "phone": "480-773-3607",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xlew7g9",
+        "name": "APEX BUILDERS",
+        "partnerCode": "REPHXAPEXB",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "350402",
+        "address": "11318 E Starflower Ct, CHANDLER, AZ, 85249",
+        "contact": "Jason Kohlscheen",
+        "phone": "480-392-1001",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lnwnzqm",
+        "name": "API GENERAL CONTRACTORS",
+        "partnerCode": "CUPHXAPGNL",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "352313",
+        "address": "875 E Salter Dr, Phoenix, AZ, 85024-5676",
+        "contact": "Sherry Durham",
+        "phone": "623-847-5602",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "uo9fg95",
+        "name": "APPLE CONSTRUCTION",
+        "partnerCode": "CUABQAPPCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "386454",
+        "address": "607 Cerrillos Rd, Santa Fe, NM, 87505-7700",
+        "contact": "CHUCK APPLE",
+        "phone": "505-983-6014",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lt9b72c",
+        "name": "APPLIED MINDS BUILDERS",
+        "partnerCode": "CUPHXAPPLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "323200",
+        "address": "8301 N 21st Dr, Phoenix, AZ, 85021-9338",
+        "contact": "Jason Kohlscheen",
+        "phone": "602-399-0368",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "39asudz",
+        "name": "ARC CONSTRUCTION",
+        "partnerCode": "CUPHXARCTN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3225 N Central Ave Ste 100, Phoenix, AZ, 85012-2452",
+        "contact": "Bill Borders",
+        "phone": "480-315-1108",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7q16ouw",
+        "name": "ARCADIA LAND & DEVELOPMENT",
+        "partnerCode": "CUPHXARCLN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "200581",
+        "address": "PO Box 2347, Scottsdale, AZ, 85252-2347",
+        "contact": "DAVE AZEVEDO",
+        "phone": "602-692-1066",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zdlwjmr",
+        "name": "ARCO CUSTOM HOMES",
+        "partnerCode": "CUPHXARCOHM",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "347 E Windmere Dr, Phoenix, AZ, 85048-1984",
+        "contact": "Allen Robinson",
+        "phone": "602-351-4394",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "v7kxvq1",
+        "name": "ARIA RESORT",
+        "partnerCode": "RELASARIC",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "3730 Las Vegas Blvd S, Las Vegas, NV, 89158-4300",
+        "contact": "Dave Hensley",
+        "phone": "866-359-7757",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gq0215d",
+        "name": "ARIZONA CONSTRUCTION PLUS",
+        "partnerCode": "CUPHXAZCON",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "301516",
+        "address": "8485 E McDonald Dr Ste 292, Scottsdale, AZ, 85250-6335",
+        "contact": "MARTIN BASTA",
+        "phone": "480-279-5654",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2z6szde",
+        "name": "ARIZONA ELITE BUILDERS",
+        "partnerCode": "CUPHXAZLTB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "312067",
+        "address": "4856 E BASELINEE RD Ste 106, MESA, AZ, 85206",
+        "contact": "JACOB GARRISON",
+        "phone": "480-232-5809",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "uu7y9h6",
+        "name": "ARIZONA FLOORING AND INTERIORS, AFI CONTRACTING",
+        "partnerCode": "REPHXAFICT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "6318 E Lone Mountain Rd, Cave Creek, AZ, 85331",
+        "contact": "Larry Summers",
+        "phone": "602-292-4334",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "j5vodvx",
+        "name": "ARIZONA HOMES & DEVELOPMENT",
+        "partnerCode": "REPHXAZHDV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "327034",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "e7vxv5h",
+        "name": "ARIZONA REMODELING CONSULTANTS",
+        "partnerCode": "REPHXAZRMD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "335413",
+        "address": "6901 E. CHAUNCEY LANE, PHOENIX, AZ, 85024",
+        "contact": "MARSHALL FIELD",
+        "phone": "602-359-5656",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "z5i0hq7",
+        "name": "ARLINGTON CUSTOM BUILDERS",
+        "partnerCode": "CUPHXARLNG",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "170110",
+        "address": "8214 E Voltaire Ave, Scottsdale, AZ, 85260-4922",
+        "contact": "Alan Anderson",
+        "phone": "480-998-9696",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gk2gtfq",
+        "name": "ARTFACTORY.COM LLC",
+        "partnerCode": "CAPHXARTFC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "CAPHXARTFC, MISSING, AK, 99999",
+        "contact": "",
+        "phone": "999-999-9999",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ixx1xs0",
+        "name": "ASHTIN HOMES INC.",
+        "partnerCode": "CUPHXAHTIN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "275660",
+        "address": "20185 E Ocotillo Rd STE 101, Queen Creek, AZ, 85142-7663",
+        "contact": "Justin Huhni",
+        "phone": "480-577-4593",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xsryy7q",
+        "name": "AT HOME REPAIR & REMODELING",
+        "partnerCode": "REELPHOMRR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "11829 Scott Simpson Dr, El Paso, TX, 79936",
+        "contact": "Glen Swanson",
+        "phone": "915-730-8992",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8prx36v",
+        "name": "ATHENA DEVELOPMENT",
+        "partnerCode": "CUPHXATHN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "352178",
+        "address": "402 E Southern Ave 85282, TEMPE, AZ, 85282",
+        "contact": "Wesley Davis",
+        "phone": "602-680-8131",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jkx2zu3",
+        "name": "AVALON DEVELOPMENT",
+        "partnerCode": "CUPHXAVLND",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "166083/66975",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "u80abh9",
+        "name": "AVM CONCRETE AND STUCCO",
+        "partnerCode": "CUPHXAVMCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "8650 N 35th Ave, Phoenix, AZ, 85051-3835",
+        "contact": "Lasaro Avila",
+        "phone": "602-723-3675",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ld6hl0p",
+        "name": "AVONTI KITCHEN & BATH",
+        "partnerCode": "CAPHXAVNKB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "271054",
+        "address": "941 W. DEER VALLEY ROAD, PHOENIX, AZ, 85027",
+        "contact": "GREG POPE",
+        "phone": "602-997-7330",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9uqqtx6",
+        "name": "AWARENESS RANCH",
+        "partnerCode": "REPHXAWRN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "339907",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gcq8kld",
+        "name": "AYRESHAWK CONSTRUCTION",
+        "partnerCode": "CUPHXAYRSH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "328539",
+        "address": "6940 W Sunnyslope Ln, PEORIA, AZ, 85345",
+        "contact": "FRANK GUERRRO",
+        "phone": "602-405-6388",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "oqr1un9",
+        "name": "B & B DEVELOPMENT AND CONSTRUCTION LLC",
+        "partnerCode": "CUPHXBBDC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1454 E Tonto Dr, Chandler, AZ, 85249-5464",
+        "contact": "Brad Pinter",
+        "phone": "602-317-7092",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xu2zfxo",
+        "name": "B DESIGNED LLC (BDESIGN)",
+        "partnerCode": "REPHXBDESGN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "340267",
+        "address": "3977 E Becker Lane, Phoenix, AZ, 85028",
+        "contact": "Brittany Ballish",
+        "phone": "440-487-7693",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6lypcpl",
+        "name": "B S C CONSTRUCTION",
+        "partnerCode": "CUPHXBSCCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "243737",
+        "address": "1515 N Aaron St, Mesa, AZ, 85207",
+        "contact": "Blake Clarkson",
+        "phone": "480-229-0504",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ibp36o9",
+        "name": "B. WILDE BUILDERS + DESIGN LLC",
+        "partnerCode": "REPHXBWILD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "342435",
+        "address": "1901 E CLARENDON AVE, PHOENIX, AZ, 85016",
+        "contact": "RYAN TYNER",
+        "phone": "602-402-9919",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pxg1j7d",
+        "name": "B2 BUILDER (B TWO)",
+        "partnerCode": "CUPHXBTWOB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "213604",
+        "address": "16625 S Mountain Stone Tr, Phoenxi, AZ, 85048",
+        "contact": "Glenn Balliet",
+        "phone": "602-708-3111",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "i669cvv",
+        "name": "BAYSIDE HOME IMPROVEMENT",
+        "partnerCode": "REPHXBAYSD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "353387",
+        "address": "1855 E NORTHERN AVE, PHOENIX, AZ, 4543",
+        "contact": "Ben Shoval",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "frax5dy",
+        "name": "BB DEVELOPMENT INC",
+        "partnerCode": "CUABQBBDEV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "4215 Camino Lindo Ct, Las Cruces, NM, 88011",
+        "contact": "Caleb Neskahi",
+        "phone": "575-640-1547",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "bwjsxxk",
+        "name": "BEAR GENERAL",
+        "partnerCode": "REPHXBERGN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "346882",
+        "address": "7363 E. Adobe Drive Ste 120, Scottsdale, AZ, 85255",
+        "contact": "MIKE KARPINSKI",
+        "phone": "480-848-5794",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5osuhh9",
+        "name": "BEARDED DAD CONSTRUCTION, THE",
+        "partnerCode": "REPHXBDADC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "346873",
+        "address": "123 N CENTRAL AVE, PHOENIX, AZ, 85020",
+        "contact": "PETER ZAFFOS",
+        "phone": "602-510-3814",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pdksqro",
+        "name": "BECKNER BUILDING CO",
+        "partnerCode": "REPHXBEKNR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "274765",
+        "address": "1002 E SWEET ACRES DR., PRESCOTT, AZ, 86303",
+        "contact": "DAVID BECKNER",
+        "phone": "928-710-0488",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fkat0t4",
+        "name": "BEL AIRE CONSTRUCTION",
+        "partnerCode": "CUPHXBELCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "240253",
+        "address": "29455 N Cave Creek Rd, Cave Creek, AZ, 85331-3245",
+        "contact": "Jeff Labriola",
+        "phone": "480-427-4760",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ejwnn3l",
+        "name": "BELGRAVIA GROUP",
+        "partnerCode": "CUPHXBELGRV",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "1101 w. monroe st, chicago, il, 60607",
+        "contact": "amanda roeder",
+        "phone": "312-561-5240",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "oh8cbmn",
+        "name": "BELL BUILDING GROUP",
+        "partnerCode": "REPHXBELLB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "325712",
+        "address": "7650 S. MCCLINTOCK DR, TEMPE, AZ, 85284",
+        "contact": "JAMES BELL",
+        "phone": "602-663-8239",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "od92oi6",
+        "name": "BELLA CONSTRUCTION",
+        "partnerCode": "CUPHXBELLCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "247686",
+        "address": "1570 BELLO MONTE DR, PRESCOTT, AZ, 86301",
+        "contact": "Marie Larson",
+        "phone": "928-713-4315",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "osmpy49",
+        "name": "BELLA CUSTOM HOMES",
+        "partnerCode": "CUABQLLAH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "8201 Lockeed Ste 203, El Paso, TX, 79925",
+        "contact": "Paul Musshorn",
+        "phone": "915-588-6896",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "h5zk54o",
+        "name": "BELLA VISTA CUSTOM HOMES",
+        "partnerCode": "CUABQBLLAH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "71257",
+        "address": "1404 N Zaragoza Rd, El Paso, TX, 79936-8054",
+        "contact": "Ed Garcia",
+        "phone": "915-491-2056",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zb5giim",
+        "name": "BELLAGO DEVELOPMENT",
+        "partnerCode": "REPHXBLLAG",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "251872",
+        "address": "1806 N. Lindsay Rd., MESA, AZ, 85213",
+        "contact": "WAYNE FUNK",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "i33btqf",
+        "name": "BELLAGO HOMES",
+        "partnerCode": "REPHXBLLAG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "251872",
+        "address": "1806 N. Lindsay Rd., MESA, AZ, 85213",
+        "contact": "WAYNE FUNK",
+        "phone": "480-845-0665",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "iwkccn7",
+        "name": "BENCHMARK BUILDERS",
+        "partnerCode": "RELASBENC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "54919",
+        "address": "4790 WEST UNIVERSITY AVE, NV, 89103",
+        "contact": "DENNIS WILEY",
+        "phone": "702-528-7555",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "sxmhu5w",
+        "name": "BENSON CONSTRUCTION",
+        "partnerCode": "CUPHXBENSN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "349944",
+        "address": "2065 e. obispo ave, gilbert, az, 85233",
+        "contact": "shawn benson",
+        "phone": "480-227-5654",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3ht9m2c",
+        "name": "BENT NAILS CONTRACTORS",
+        "partnerCode": "CUPHXBNTNL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "231162",
+        "address": "PO Box 97510, Phoenix, AZ, 86060",
+        "contact": "Howie Haynie",
+        "phone": "602-323-6373",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "l7eiui4",
+        "name": "BENTTREE CUSTOM HOMES",
+        "partnerCode": "CUPHXBENTT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "142247",
+        "address": "1575 PLAZA WEST DR, PRESCOTT, AZ, 86303",
+        "contact": "MICHAEL ENDERS",
+        "phone": "920-443-5484",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ywtxmhw",
+        "name": "BERTRAND HOMES",
+        "partnerCode": "CUPHXBRTND",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "263164",
+        "address": "13470 N 85th Pl, Scottsdale, AZ, 85260-4149",
+        "contact": "Dave Bertrand",
+        "phone": "602-989-2343",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "h1ipcwm",
+        "name": "BESPOKE HOMES 2",
+        "partnerCode": "CUPHXBSPOK",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "347962",
+        "address": "3101 N 46TH PLACE, PHOENIX, AZ, 85018",
+        "contact": "TAYLOR MCCAIN",
+        "phone": "602-284-9338",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gsleuuo",
+        "name": "BEYOND RESTORATION",
+        "partnerCode": "REPHXBEYND",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "330298",
+        "address": "5526 W YEARLING RD, PHOENIX, AZ, 85083",
+        "contact": "JEFF WAERING",
+        "phone": "480-840-5010",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kgzl7vn",
+        "name": "BH DEVELOPMENT",
+        "partnerCode": "REPHXBHDEV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "354073",
+        "address": "2771 Holiday Dr., LAKE HAVASU CITY, AZ, 86403",
+        "contact": "BRADY HAYEK",
+        "phone": "307-690-2918",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "j8pvkf1",
+        "name": "BIERMAN CONSTRUCTION AND DEVELOPMENT",
+        "partnerCode": "REPHXBIRMN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "202812",
+        "address": "155 Horse Ranch Rd, Sedona, AZ, 86351-8716",
+        "contact": "David Biermann",
+        "phone": "928-202-0339",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qbpokxm",
+        "name": "BIG SKY ENTERPRISES",
+        "partnerCode": "CUPHXBIGSK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "PO Box 25605, Scottsdale, AZ, 85255-0110",
+        "contact": "Shaun Robert",
+        "phone": "602-909-9535",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vu15kir",
+        "name": "BIGELOW CONTRACTING",
+        "partnerCode": "REPHXBIGLW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "297993",
+        "address": "4838 E. BASELINE RD, MESA, AZ, 85206",
+        "contact": "BRAD BIGELOW",
+        "phone": "480-634-0914",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0iif5to",
+        "name": "BIGELOW CUSTOM HOMES",
+        "partnerCode": "REPHXBGLOW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "326812",
+        "address": "147 W. VAUGHN AVE, GILBERT, AZ, 85233",
+        "contact": "JEFF BIGELOW",
+        "phone": "480-257-9024",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5hul299",
+        "name": "BILMAR CONTRACTING",
+        "partnerCode": "CULASBILMR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3885 S Decatur Blvd, Las Vegas, NV, 89103-5855",
+        "contact": "Peter Bilmar",
+        "phone": "702-596-1601",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8ugmhu9",
+        "name": "BILTMORE CUSTOM HOMES",
+        "partnerCode": "CUPHXBLTME",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "327226",
+        "address": "5428 W Cholla St, Glendale, AZ, 85304",
+        "contact": "Mike Luftman",
+        "phone": "602-320-2219",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gjmussl",
+        "name": "BILTMORE ESTATES (COMMUNITY)",
+        "partnerCode": "CUPHXBLTMC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wnjzexw",
+        "name": "BIRDDOG DEVELOPMENT",
+        "partnerCode": "REPHXBIDDG",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "278012",
+        "address": "4919 @ Whitton Ave, PHOENIX, AZ, 85018",
+        "contact": "Mike Maguire",
+        "phone": "602-373-9627",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1pbp8du",
+        "name": "BLACK STONE CONTRACTORS",
+        "partnerCode": "REPHXBKSTO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "344694",
+        "address": "8742 W DEERVALLEY RD, PEORIA, AZ, 85382",
+        "contact": "MATTHEW DELAPIEDRA",
+        "phone": "602-432-5946",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "n63gy12",
+        "name": "BLANKENSHIP",
+        "partnerCode": "CUABQBLANK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "383681",
+        "address": "690 GONZALES ROAD, SANTA FE, AZ, 87501",
+        "contact": "RUSKIN BLANKENSHIP",
+        "phone": "505-920-2637",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "k26j4tv",
+        "name": "BLASER CONSTRUCTION",
+        "partnerCode": "CULASBLASR",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "26131",
+        "address": "29 morning Glow, las vegas, nv, 89135",
+        "contact": "Scot Blaser",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xemg2nf",
+        "name": "BLUEHER ABODES",
+        "partnerCode": "CUABQBLHRA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "58501",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3onizqo",
+        "name": "BLUEHER ADOBES",
+        "partnerCode": "REABQBLUHR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "104284",
+        "address": "4009 ASPEN NE, ALBUQUERQUE, NM, 87110",
+        "contact": "JOHN BLUEHER",
+        "phone": "505-270-2450",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4mt56co",
+        "name": "BOOS GROUP (THE)",
+        "partnerCode": "CUPHXBOOSGP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "192485",
+        "address": "PO Box 28592, Scottsdale, AZ, 85255-0159",
+        "contact": "Tom Boos",
+        "phone": "480-204-0779",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pga3hw3",
+        "name": "BOTELLO BUILDERS",
+        "partnerCode": "CUPHXBOTLLB",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "348580",
+        "address": "1300 S. Watson Ste A- 114 #808, Buckeye, AZ, 85326",
+        "contact": "Steve Scano",
+        "phone": "623-400-2444",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jo1sbmz",
+        "name": "BOULDERS COMMUNITY",
+        "partnerCode": "CUPHXBOLDRS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "2565 N PINNACLE, CAVE CREEK, AZ, 85087",
+        "contact": "LASLO BACHER",
+        "phone": "480-652-8578",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "p6n4kus",
+        "name": "BOWMAN DESIGN",
+        "partnerCode": "REPHXBWMAN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "352776",
+        "address": "7150 E CAMELBACK RD, SCOTTSDALE, AZ, 85251",
+        "contact": "DAN BOWMAN",
+        "phone": "402-509-9689",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "e1wxcw7",
+        "name": "BOYD DEVELOPMENT",
+        "partnerCode": "REPHXBOYDD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "316026",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "sikw4aa",
+        "name": "BOYD MARTIN CONSTRUCTION",
+        "partnerCode": "CULASBOYDM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "78179",
+        "address": "5965 McLeod Dr, Las Vegas, NV, 89120-3404",
+        "contact": "Boyd Martin",
+        "phone": "702-454-9731",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5enid3b",
+        "name": "BOYER DESIGN BUILD",
+        "partnerCode": "CUPHXBYERD",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "333574",
+        "address": "4203 E. INDIAN SCHOOL, PHOENIX, AZ, 85018",
+        "contact": "Jason Boyer",
+        "phone": "602-689-0710",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "obvkewp",
+        "name": "BRADLEY BUILT CONSTRUCTION",
+        "partnerCode": "CUPHXBRADB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "216761",
+        "address": "4040 E Grove Cir, Mesa, AZ, 85206-3209",
+        "contact": "Brad White",
+        "phone": "602-421-4558",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "57o5eue",
+        "name": "BRAVIA HOMES",
+        "partnerCode": "CUPHXBRAVS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "356149/357923",
+        "address": "4921 E MICHIGAN AVE, SCOTTSDALE, AZ, 85254",
+        "contact": "Sabina Sutkovic",
+        "phone": "425-301-9254",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "oinpwbc",
+        "name": "BRAYDEN MANAGEMENT",
+        "partnerCode": "REPHXBRAYN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "331714",
+        "address": "21558 W. PALO BREA CIR, BUCKEYE, AZ, 85396",
+        "contact": "RON BARRETT",
+        "phone": "623-606-4456",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7rujj4x",
+        "name": "BREINHOLT DEVELOPMENT",
+        "partnerCode": "CUPHXBRENH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "247271",
+        "address": "2029 E Tiffany Ct, Gilbert, AZ, 85298-6126",
+        "contact": "Frankie Breinholt",
+        "phone": "480-268-0811",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0y4igqc",
+        "name": "BRI PROPERTIES",
+        "partnerCode": "CULASBRIPR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "2525 E Bighorn Ave, Chandler, AZ, 85286",
+        "contact": "Bob Dikes",
+        "phone": "602-315-9090",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9wy9geb",
+        "name": "BRICK ROAD DEVELOPMENT",
+        "partnerCode": "CUPHXBRICR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "351949",
+        "address": "3126 E POWELL WAY, GILBERT, AZ, 85298",
+        "contact": "DEAN STADLER",
+        "phone": "480-492-2811",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xa38xww",
+        "name": "BRIGHTLAND HOMES",
+        "partnerCode": "CUPHXBRITLN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1501 W Fountainhead Pkwy, Tempe, AZ, 85282",
+        "contact": "RICH POND",
+        "phone": "480-403-1087",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yyyq6et",
+        "name": "BRIMLEY DEVELOPMENT",
+        "partnerCode": "CUPHXBRMLY",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "256120",
+        "address": "4901 E INDIAN SCHOOOL RD, PHOENIX, AZ, 85018",
+        "contact": "BRET BRIMLEY",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xz9pa5f",
+        "name": "BROC CONSTRUCTION",
+        "partnerCode": "CUPHXBROCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "333756",
+        "address": "19230 N. 44th lane, glendale, AZ, 85308",
+        "contact": "Rocky Dinis",
+        "phone": "602-767-2644",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3dhjpl6",
+        "name": "BROOKSTAR HOMES",
+        "partnerCode": "CUPHXBROKH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "75010",
+        "address": "2287 MOHAWK STREET, LAS VEGAS, NV, 89146",
+        "contact": "LEONARD BROOKS",
+        "phone": "702-358-2777",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1a2hwff",
+        "name": "BROTHERS CUSTOM HOMES",
+        "partnerCode": "CUPHXBROCH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "6501 E Greenway Pkwy, Scottsdale, AZ, 85254-2025",
+        "contact": "Doug Kroudenier",
+        "phone": "602-980-4765",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ndqfj1t",
+        "name": "BROTHERS WOODWORKS",
+        "partnerCode": "CUPHXBRWOD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "942 E LIBRA DR, TEMPE, AZ, 85283",
+        "contact": "LEONARD BROOKS",
+        "phone": "602-505-9663",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "p4zj9uz",
+        "name": "BRUCE GRAVES DEVELOPMENT",
+        "partnerCode": "RELASBGRAV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "33523",
+        "address": "2270 SHAW CIRCLE, LAS VEGAS, NV, 89117",
+        "contact": "BRUCE GRAVES",
+        "phone": "702-255-0225",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "on202fc",
+        "name": "BRYAN CONSTRUCTION",
+        "partnerCode": "CULASBRYNC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "4485 W. SUNSET ROAD, LAS VEGAS, NV, 89118",
+        "contact": "Bryan Bojko",
+        "phone": "602-602-8165",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "r8vnx39",
+        "name": "BRYCOR BUILDERS",
+        "partnerCode": "CUPHXBRYCR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "259903",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "r3frowk",
+        "name": "BT BUILDERS",
+        "partnerCode": "CUPHXBTBULD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "339102",
+        "address": "8585 E Hartford Drive, Scottsdale, AZ, 85255",
+        "contact": "Tyler Holmes",
+        "phone": "928-863-1463",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "euynwq1",
+        "name": "BUILDER - RELASARIAC",
+        "partnerCode": "RELASARIAC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "RELASARIAC, MISSING, AK, 99999",
+        "contact": "",
+        "phone": "999-999-9999",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ugihm5s",
+        "name": "BUILDERS TRADEMARK",
+        "partnerCode": "REPHXBTRAM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "173023",
+        "address": "39509 N DAISY MOUNTAIN DR Ste 122-182, ANTHEM, AZ, 85086",
+        "contact": "Steve Bates",
+        "phone": "480-326-5992",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "d7hp0rc",
+        "name": "BUILDERS VISION",
+        "partnerCode": "REPHXBVISN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "362480",
+        "address": "3317 S HIGLEY RD, GILBERT, AZ, 85297",
+        "contact": "JAY WRIGHT/JAMES ANDERSON",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yyhrbta",
+        "name": "BUILDING BY DON FREDRICKS",
+        "partnerCode": "CUPHXBLDFR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "PO Box 4203, Cave Creek, AZ, 85327-4203",
+        "contact": "Don Fredricks",
+        "phone": "480-488-2437",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ibzww2q",
+        "name": "BUILDING BY RHODES",
+        "partnerCode": "CUPHXBLDRH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "152292",
+        "address": "PO Box 902, Cornville, AZ, 86325-0902",
+        "contact": "Thomas Rhodes",
+        "phone": "928-634-4186",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "umx76dv",
+        "name": "BUILDING DREAM HOMES",
+        "partnerCode": "CUPHXBDRE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "339841",
+        "address": "31626 N ROY ROGERS TRAIL, QUEEN CREEK, AZ, 85142",
+        "contact": "LILIANA BARRERA",
+        "phone": "602-576-2794",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7hwmj7y",
+        "name": "BUILT DIFFERENT CONSTRUCTION",
+        "partnerCode": "REPHXBLTD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "360161",
+        "address": "559 BEAVER FLAT RD, PAYSON, AZ, 85541",
+        "contact": "JAMES LUDKE",
+        "phone": "928-970-1856",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "q90f7yz",
+        "name": "BULTHAUP - SCOTTSDALE",
+        "partnerCode": "CAPHXBLTHP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "4175 N Goldwater Blvd, Scottsdale, AZ, 85251-3822",
+        "contact": "Robert Moric",
+        "phone": "480-945-5500",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6qu6m1u",
+        "name": "BURK BROTHERS",
+        "partnerCode": "CULASBUKBR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "87533",
+        "address": "1700 MONTE RIO CT, LAS VEGAS, NV, 89128",
+        "contact": "JOHN BURK",
+        "phone": "702-813-0629",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0pn784x",
+        "name": "BUSH CONSTRUCTION",
+        "partnerCode": "CULASBSCNT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "288212",
+        "address": "2546 Evansville Ave, Henderson, NV, 89052-6555",
+        "contact": "Robert D Bush",
+        "phone": "702-379-5974",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rtgphi1",
+        "name": "BWL CONSTRUCTION",
+        "partnerCode": "CUPHXBWLON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "289316",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0f4v6um",
+        "name": "BZK CUSTOM CONTRACTORS",
+        "partnerCode": "REPHXBZKCU",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "304113",
+        "address": "2850 E SIERRA ST, PHOENIX, AZ, 85028",
+        "contact": "BRYCE KARTLER",
+        "phone": "602-694-7858",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jcxhyk1",
+        "name": "C & M POOLS & CONSTRUCTION",
+        "partnerCode": "CUPHXCMPCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "731945",
+        "address": "10801 E Happy Valley Rd #86, Scottsdale, AZ, 85255",
+        "contact": "BRYCE KARTLER",
+        "phone": "805-428-5184",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "cjpykwv",
+        "name": "C A BUILDERS",
+        "partnerCode": "RELASCABLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "83711",
+        "address": "7871 RED ROCK RIDGE AVE, LAS VEGAS, NV, 89179",
+        "contact": "CARL AGBLEZE",
+        "phone": "702-351-6571",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0adtvh5",
+        "name": "CABINET TECHNOLOGIES",
+        "partnerCode": "CAPPHXCTECH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "8552 N Dysart Rd Ste 200D, El Mirage, AZ, 85335-9767",
+        "contact": "Pete Bruno",
+        "phone": "623-935-3434",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "f8pblu5",
+        "name": "CABINETS BY C & F",
+        "partnerCode": "CAPHXCFCAB",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "7001 N Scottsdale Rd Ste A107, Scottsdale, AZ, 85253-3659",
+        "contact": "Kas White",
+        "phone": "480-990-1012",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "nl165ct",
+        "name": "CACHET HOMES",
+        "partnerCode": "CUPHXCACHT",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "174282",
+        "address": "10446 N. 74th Street, Scottsdale, AZ, 85258",
+        "contact": "Cindy Green",
+        "phone": "480-556-7000",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2vae8mw",
+        "name": "CACTUS CREEK REMODELING",
+        "partnerCode": "REPHXCCTUS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "323440",
+        "address": "21159 E ORCHARD LN, QUEEN CREEK, AZ, 85142",
+        "contact": "DOUG BONNGARD",
+        "phone": "602-317-9370",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "cqobxqs",
+        "name": "CACTUS LUXE CONSTRUCTION",
+        "partnerCode": "CUPHXCATLX",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3616 W Thomas Rd Suite 2, Phoenix, AZ, 85019",
+        "contact": "brandon wendt",
+        "phone": "623-261-2122",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "f9m2fvp",
+        "name": "CAINE AND COMPANY (C + CO)",
+        "partnerCode": "CUPHXCANCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "277820",
+        "address": "8040 E Morgan Trl Ste 25, Scottsdale, AZ, 85258-1211",
+        "contact": "Suzzane Caine",
+        "phone": "480-304-9224",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "p93hzgm",
+        "name": "CALABASAS BLUE",
+        "partnerCode": "RELASCLAB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "89032",
+        "address": "4322 W CHEYENNE AVE, N LAS VEGAS, NV, 89032",
+        "contact": "ERIC HOFELE",
+        "phone": "702-303-5235",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kf8h84z",
+        "name": "CALIBER CONSTRUCTION",
+        "partnerCode": "CUPHXCALBR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "2410 E Osborn Rd, Phoenix, AZ, 85016-7434",
+        "contact": "Jim Rike",
+        "phone": "602-200-9775",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ycyoi2z",
+        "name": "CAMELDALE",
+        "partnerCode": "CUPHXCMLDL",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "6439 E Luke Ave, Paradise Valley, AZ, 85253-5219",
+        "contact": "DIRK BLOOM",
+        "phone": "480-244-8407",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "af5ieph",
+        "name": "CAMELOT HOMES, INC.",
+        "partnerCode": "SFPHXCMLTH",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "6607 N Scottsdale Rd Ste H100, Scottsdale, AZ, 85250-4400",
+        "contact": "Marci Farrel",
+        "phone": "480-367-4300",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xo5x45v",
+        "name": "CANTERRA CONSTRUCTION",
+        "partnerCode": "CUPHXCNTER",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "336802",
+        "address": "1525 S HIGLEY RD Ste 104, GILBERT, AZ, 85296",
+        "contact": "Katherine Barajaz",
+        "phone": "480-540-7175",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ojnxapc",
+        "name": "CANYON CREEK HOMES",
+        "partnerCode": "CULASCCNCK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "2840 N Norwalk, Mesa, AZ, 85215-1126",
+        "contact": "Thom Vehon",
+        "phone": "480-396-1180",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qqyyupz",
+        "name": "CAPISTRANO HOMES",
+        "partnerCode": "CUPHXCSTRA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "202820",
+        "address": "14680 N. Agave Meadow Dr, Prescott, AZ, 86305",
+        "contact": "Ceaser DelPrato",
+        "phone": "928-237-0152",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "x96q8rw",
+        "name": "CARLINA HOME REMODELING",
+        "partnerCode": "REPHXCRLIN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "335732",
+        "address": "12099 E BELAVISTA CIRCLE, SCOTTSDALE, AZ, 85259",
+        "contact": "CARLINA NORLUND",
+        "phone": "62382292788",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3yqan8p",
+        "name": "CARLO BROTHERS DEVELOPMENT",
+        "partnerCode": "CUPHXCARLB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "260474",
+        "address": "7793 E Sands Dr, Scottsdale, AZ, 85255-4021",
+        "contact": "Joe Carlo",
+        "phone": "480-348-1634",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "u4s56ek",
+        "name": "CARLOCK HOMES",
+        "partnerCode": "CUPHXCRLCK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "299125",
+        "address": "15827 E FIREROCK COUNTRY CLUB, FOUNTAIN HILLS, AZ, 85268",
+        "contact": "Wes Carlock",
+        "phone": "480-861-8434",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "96kiwbh",
+        "name": "CARMEL HOMES",
+        "partnerCode": "CUPHXCRMEL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "214294",
+        "address": "7702 E DOUBLETREE RANCH RD Ste 300-C, SCOTTSDALE, AZ, 85258",
+        "contact": "JAMIE VAUGHN",
+        "phone": "602-348-2430",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9cvinl7",
+        "name": "CARMICHAEL CONSTRUCTION",
+        "partnerCode": "CUPHXCARML",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "335514",
+        "address": "17817 N 75TH DR, GLENDALE, AZ, 85308",
+        "contact": "JAMES CARMICHAEL",
+        "phone": "623-521-7731",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fesehyj",
+        "name": "CASA BLANCA BUILDERS, AKA JORUCA HOLDINGS",
+        "partnerCode": "CUPHXCASBL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "6110 N Kachina Ln, Paradise Valley, AZ, 85253-5300",
+        "contact": "Ruth Arabia",
+        "phone": "480-216-1639",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "m5xpvb9",
+        "name": "CASA SOL TERRA",
+        "partnerCode": "CUABQCSSLT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "364358",
+        "address": "641 Garcia St, Santa Fe, NM, 87505-2857",
+        "contact": "Maika Wong",
+        "phone": "505-660-5080",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "waiof30",
+        "name": "CASA VISA PROPERTIES",
+        "partnerCode": "CUPHXCSAVS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "293995",
+        "address": "95 Biltmore States Dr, Phoenix, AZ, 85016",
+        "contact": "CHRIS JOHNSON",
+        "phone": "623-764-8990",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9nl7ead",
+        "name": "CASSIA BUILDERS INC.",
+        "partnerCode": "CUPHXCSSAB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "134004",
+        "address": "2658 E LOCUST DR, CHANDLER, AZ, 85286",
+        "contact": "STEVE DAVIS",
+        "phone": "602-290-2025",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "91feznk",
+        "name": "CATCLAR INVESTMENTS",
+        "partnerCode": "CUPHXCATINV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "16621 N 91st St, Scottsdale, AZ, 85260-1524",
+        "contact": "Irene Catsibris Clary",
+        "phone": "480-473-3700",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "93wxkcf",
+        "name": "CAVANAUGH CONSTRUCTION",
+        "partnerCode": "CUPHXCAVNG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "154907",
+        "address": "80 Bell Rock Plz, Sedona, AZ, 86351-8804",
+        "contact": "Ilene Berman",
+        "phone": "928-300-1777",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "g420s04",
+        "name": "CAVCON BUILDERS, LLC",
+        "partnerCode": "CUPHXCAVCN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "263186",
+        "address": "2340 E Beardsley Rd, Suite 115, Phoenix, AZ, 85024",
+        "contact": "hadlock miles",
+        "phone": "602-344-4333",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "oh2vr7u",
+        "name": "CBC LLC",
+        "partnerCode": "CUPHXCBCINC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "151962",
+        "address": "3554 S Ringtail Cir, Gold Canyon, AZ, 85118-2059",
+        "contact": "VINCE STARK",
+        "phone": "480-380-9400",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4bfreos",
+        "name": "CCH",
+        "partnerCode": "CUABQCCHON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "416698",
+        "address": "3294 FLORAS DEL SOL, SANTA FE, NM, 87507",
+        "contact": "MIKE SANCHEZ",
+        "phone": "505-913-1249",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "a6z10vg",
+        "name": "CD QUALITY INTERIORS",
+        "partnerCode": "CULASCDQUL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "82628",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7d7pev5",
+        "name": "CDJT BUILDERS",
+        "partnerCode": "RELASCDJTE",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "90621",
+        "address": "5305 SECLUDED BROOK CIRCLE, Las Vegas, NV, 89149",
+        "contact": "JILL TUCKER",
+        "phone": "702-334-1551",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8idnkx3",
+        "name": "CDK BUILDERS",
+        "partnerCode": "REPHXCDKBU",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "317342",
+        "address": "1515 N 25TH ST., MESA, AZ, 85213",
+        "contact": "DANNY RADCLIFF",
+        "phone": "505-879-4571",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "14xz8u3",
+        "name": "CEDCO",
+        "partnerCode": "RELASCEDC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "56541",
+        "address": "6720 W SERENE AVE, LAS VEGAS, NV, 89139",
+        "contact": "TED DAVIS",
+        "phone": "702-361-6550",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "34b19qo",
+        "name": "CENTURY CUSTOM HOMES",
+        "partnerCode": "CUPHXCENTRC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "338172",
+        "address": "7288 E Echo Ln, Scottsdale, AZ, 85258-2765",
+        "contact": "Jay Abramowitz",
+        "phone": "602-980-4321",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8a83m2e",
+        "name": "CHALLENGE CONSTRUCTION",
+        "partnerCode": "CUPHXCHALL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "334557",
+        "address": "1915 E ROSE LANE, PHOENIX, AZ, 85016",
+        "contact": "JORGE ADAN CENTENO",
+        "phone": "602-810-3360",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1lsbt5g",
+        "name": "CHAMBERLIN DEVELOPMENT",
+        "partnerCode": "CUPHXCHAMD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "278331",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "atwuf5r",
+        "name": "CHAMPION REMODEL",
+        "partnerCode": "REPHXCHAMP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "340430",
+        "address": "28000 N Valley Parkway, Phoenix, AZ, 85085",
+        "contact": "Lee David",
+        "phone": "480-745-4936",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6zz0hjo",
+        "name": "CHANDLER ENTERPRISES",
+        "partnerCode": "REABQCHADL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "414428",
+        "address": "PO BOX 1345, RUIDOSO, NM, 88345",
+        "contact": "ADAM ROGERS",
+        "phone": "575-937-0024",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pmce0r1",
+        "name": "CHAPMAN HOMES AND CONSTRUCTION",
+        "partnerCode": "CUPHXCHPMA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "330674",
+        "address": "42640 N 54TH ST, CAVE CREEK, AZ, 85331",
+        "contact": "LANE CHAPMAN",
+        "phone": "918-230-5601",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "mappsxv",
+        "name": "CHAPPARAL PINES",
+        "partnerCode": "CUFLGCHAPC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "2644 N ELK GROVE LN, PAYSON, AZ, 85541",
+        "contact": "BRIAN BURNS",
+        "phone": "928-472-9068",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ju73sry",
+        "name": "CHASING BIRDS",
+        "partnerCode": "CUPHXCHSE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "357865",
+        "address": "376 jORDAN rD, SEDONA, AZ, 86336",
+        "contact": "TRENT WILSON",
+        "phone": "928-301-2265",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lezwueg",
+        "name": "CHECK SIX PROPERTIES",
+        "partnerCode": "CUPHXCHSIX",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "345072",
+        "address": "8326 E. Weldon, Scottsdale, AZ, 85251",
+        "contact": "clifton burns",
+        "phone": "602-885-8490",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "drd3554",
+        "name": "CHIVINO SURFACES DBA AMERICAN KITCHEN & BATH",
+        "partnerCode": "REPHXAMKB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "351886",
+        "address": "1055 S Country Club Dr, Mesa, AZ, 85210",
+        "contact": "JASON BORDEN",
+        "phone": "480-557-0305",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "prugp7m",
+        "name": "CHOLLA MANAGING GROUP,",
+        "partnerCode": "REPHXCHOLL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "263874",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0e0zghf",
+        "name": "CHRISTIANSEN BUILDERS",
+        "partnerCode": "CUPHXCHRIN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "332419",
+        "address": "311 WEST ORCHID LANE, PHOENIX, AZ, 85021",
+        "contact": "JON CHRISTIANSEN",
+        "phone": "480-688-7541",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vpv4qwk",
+        "name": "CHRISTOPHER HOMES LLC",
+        "partnerCode": "CULASCHRST",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "10161 Park Run Dr, Las Vegas, NV, 89145-8871",
+        "contact": "Ken Sailey",
+        "phone": "702-360-3200",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1o0f8we",
+        "name": "CIELO VISTA CONSTRUCTION",
+        "partnerCode": "CUABQCLOVC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "389102",
+        "address": "PO BOX 2999, MESILLA PARK, NM, 88047",
+        "contact": "HENRY VIGIL",
+        "phone": "575-650-2211",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "srnp7lc",
+        "name": "CITADEL",
+        "partnerCode": "CUPHXCITL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "332462",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8jymgf6",
+        "name": "CITADEL CONSTRUCTION OF AZ",
+        "partnerCode": "CUPHXCITDL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "18434 W Van Buren St, Goodyear, AZ, 85338",
+        "contact": "Todd Thurman",
+        "phone": "602-361-7827",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "60bls5o",
+        "name": "CITADEL HOMES",
+        "partnerCode": "CUPHXCITHM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "248440",
+        "address": "11755 E TURQUOISE AVE, SCOTTSDALE, AZ, 85259",
+        "contact": "BRAD BOXBERGER",
+        "phone": "602-989-1313",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ajwpdq9",
+        "name": "CLASSY KITCHEN & BATH",
+        "partnerCode": "REPHXCLASY",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "320680",
+        "address": "4320 W Chandler Blvd, CHANDLER, AZ, 85226",
+        "contact": "TYLER WEBB STANDAGE",
+        "phone": "480-967-2200",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5tabggy",
+        "name": "CLINE'S NATURAL STONE",
+        "partnerCode": "REPHXSLPCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "21828 N 27th Ave, Phoenix, AZ, 85027",
+        "contact": "WADE CLINE",
+        "phone": "602-999-4010",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8sekkio",
+        "name": "CLOUD CREEK HOMES",
+        "partnerCode": "CUPHXCLODC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "283589",
+        "address": "18124 E SUNNYBROOK LN, GILBERT, AZ, 85298",
+        "contact": "EDWIN SCOTT COLE",
+        "phone": "480-213-6858",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "arx6byq",
+        "name": "CNK CONSTRUCTION",
+        "partnerCode": "CUPHXCNKDE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "219 W Lone Cactus, Cave Creek, AZ, 85331",
+        "contact": "Chris Matlock",
+        "phone": "602-581-8829",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "uwlt66m",
+        "name": "COBLE CONSTRUCTION",
+        "partnerCode": "CUPHXCBLE",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "248427",
+        "address": "2540 E Becker Lane, Phoenix, AZ, 85028",
+        "contact": "EDWIN SCOTT COLE",
+        "phone": "602-777-1862",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ns49v41",
+        "name": "COLLAZO CONSTRUCTION CO",
+        "partnerCode": "REPHXCOLLZ",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "350907",
+        "address": "16635 N. CUMBIE LN, SURPRISE, AZ, 85378",
+        "contact": "MIGUEL COLLAZO",
+        "phone": "623-224-4153",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vlo0w7p",
+        "name": "COMPASS INDUSTRIES",
+        "partnerCode": "RELASCMPAS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "331932",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "n26gxov",
+        "name": "CONCEPT COMMERCIAL CONSTRUCTION",
+        "partnerCode": "CUPHXCCCON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1324 N Farrell Court Suite 118, Gilbert, AZ, 85233",
+        "contact": "Matt Kallas",
+        "phone": "480-407-4888",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1tbjemr",
+        "name": "CONSTRUCTION DESIGN SERVICES",
+        "partnerCode": "CUELPCONZN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1606 Old Town Rd NW, Albuquerque, NM, 87104-1361",
+        "contact": "Richard Schalk",
+        "phone": "505-843-7227",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zzktltq",
+        "name": "CONSTRUCTION ZONE",
+        "partnerCode": "CUPHXCONZN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1729 E Osborn Raod, Phoenix, az, 85018",
+        "contact": "Andy Byrnes",
+        "phone": "602-230-0383",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "nyz2gaw",
+        "name": "COOK REMODELING",
+        "partnerCode": "CUPHXCOKRM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "178018",
+        "address": "100 W Hoover Ave #12, Mesa, AZ, 85210",
+        "contact": "ARMANDO PATINO",
+        "phone": "480-225-0949",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "l0dizle",
+        "name": "COONEY CARPENTRY",
+        "partnerCode": "REPHXCONYC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "204631",
+        "address": "812 North Kendrick Street, flagstaff, AZ, 86001",
+        "contact": "GREG COONEY",
+        "phone": "928-213-1471",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1dgp7y5",
+        "name": "COPELAND CONSTRUCTION VENTURES",
+        "partnerCode": "CUTUCCOPLND",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "201329",
+        "address": "208 S Stratford Dr, Tucson, AZ, 85716-5511",
+        "contact": "KELLY COPELAND",
+        "phone": "520-903-4099",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3vwh226",
+        "name": "COPPER KEY CONSTRUCTION",
+        "partnerCode": "CUPHXCOPSN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "211192",
+        "address": "2608 S Litchfield Rd, Goodyear, AZ, 85338-1500",
+        "contact": "Netanya Cormier",
+        "phone": "623-213-8634",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kaimu9a",
+        "name": "COPPERSTATE CABINET COMPANY",
+        "partnerCode": "CAPHXCOPPR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1932 W North Ln, Phoenix, AZ, 85021-1925",
+        "contact": "Tim Wing",
+        "phone": "602-997-6397",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vjfxdc2",
+        "name": "COR DOMUS BUILD",
+        "partnerCode": "REPHXCORDMS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "271055",
+        "address": "5301 E Paradise Canyon Rd, Paradise Valley, AZ, 85253",
+        "contact": "COLLIN IRWIN",
+        "phone": "602-620-1461",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "btv3i4t",
+        "name": "CORCOVA CONTRACTING & DEVELOPMENT",
+        "partnerCode": "REABQCRCOV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "85391",
+        "address": "7411 HANCOCK CT NE, ALBUQUERQUE, NM, 87109",
+        "contact": "MARK CORDOVA",
+        "phone": "505-480-1706",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gybclsh",
+        "name": "CORRAL CONSTRUCTION",
+        "partnerCode": "CUPHXCRRAL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "88257",
+        "address": "2925 E PATRICK LANE Ste K, LAS VEGAS, NV, 89120",
+        "contact": "ADAN CORRAL",
+        "phone": "702-333-4684",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0txsfou",
+        "name": "COUNTRY WIDE PROSERV",
+        "partnerCode": "RELASCWPRO",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "88380",
+        "address": "6117 FISHER AVE, LAS VEGAS, NV, 89130",
+        "contact": "INGRID MITCHELL",
+        "phone": "702-656-4500",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xro82ic",
+        "name": "CREATIVE BUILDER",
+        "partnerCode": "RELASCRTIV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "344677",
+        "address": "1655 MCCULLOCH BLVD. S, LAKE HAVASU CITY, AZ, 86406",
+        "contact": "ROD SHEEHAN",
+        "phone": "928-254-1602",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "g10mhw3",
+        "name": "CREATIVE EDGE RENOVATIONS",
+        "partnerCode": "CUPHXCRETV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1406 W JOY RANCH ROAD, PHOENIX, AZ, 85027",
+        "contact": "DINO ACEVEDO",
+        "phone": "602-502-8594",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "aw0jhs7",
+        "name": "CREATIVE INTERIORS OF NM",
+        "partnerCode": "REABQCRINT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "382871",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wikescc",
+        "name": "CREEKER CONSTRUCTION",
+        "partnerCode": "REPHXCREKR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "288272",
+        "address": "15100 N 78TH WAY, SCOTTSDALE, AZ, 85260",
+        "contact": "ROD SHEEHAN",
+        "phone": "602-481-3634",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "l0whaxj",
+        "name": "CREEKSIDE ENTERPRISES",
+        "partnerCode": "CUPHXCKSID",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "205785",
+        "address": "4305 N. LAKE VIEW DR., RIM ROCK, AZ, 86335",
+        "contact": "WILLIAM BRAN",
+        "phone": "928-301-6155",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "sedb8lx",
+        "name": "CROMBIE CONSTRUCTION",
+        "partnerCode": "CUABQCRMBE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "52318",
+        "address": "PO BOX 1545, CEDAR CREST, NM, 87008",
+        "contact": "RICHARD CROMBIE",
+        "phone": "505-991-0803",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fk0dxfo",
+        "name": "CROWN CUSTOM CONTRACTING",
+        "partnerCode": "RETUCCROW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "306291",
+        "address": "123 NEED TO GET ADDRESS, TUCSON, AZ, 85741",
+        "contact": "AUSTIN MCLAUGHIN",
+        "phone": "520-405-0684",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "e09imxp",
+        "name": "CRUZ DEVELOPMENT",
+        "partnerCode": "CUPHXCRUZD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "344914",
+        "address": "3278 W. YELLOW PEAK DRIVE, QUEEN CREEK, AZ, 85142",
+        "contact": "MATTHEW CRUZ",
+        "phone": "619-916-1611",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qu8g3ul",
+        "name": "CSE & ASSOCIATES",
+        "partnerCode": "CUPHXCSEAS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "116885",
+        "address": "10645 E Gold Dust Ave, Scottsdale, AZ, 85258-6003",
+        "contact": "Kirby Korth",
+        "phone": "602-315-9616",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "m91b74y",
+        "name": "CULLUM HOMES",
+        "partnerCode": "CUPHXCLLMH",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "349348",
+        "address": "14746 N 78th Way, Scottsdale, AZ, 85260-2969",
+        "contact": "Kim & Rod Cullum",
+        "phone": "480-949-2700",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fgfll6h",
+        "name": "CURLY HORN PARTNERS",
+        "partnerCode": "REPHXCRLYH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "338428",
+        "address": "6761 N Placita, Bella, Tucson, AZ, 85718",
+        "contact": "Michael GEORGE ANDERSON",
+        "phone": "520-977-1110",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zlf98bj",
+        "name": "CUSTOM HOMES UNLIMITED",
+        "partnerCode": "CUPHXCHUML",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "178446",
+        "address": "3383 E Baranca Ct, Gilbert, AZ, 85297-8258",
+        "contact": "TERRY ORGAN",
+        "phone": "602-622-2434",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kdwwlst",
+        "name": "CUSTOM US INC",
+        "partnerCode": "REPHXCSTMO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "314566",
+        "address": "640 E STATE RD 434, LONGWOOD, FL, 32750",
+        "contact": "ANDREW ZAVODNEY",
+        "phone": "407-965-1948",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jk04018",
+        "name": "CWM CONSTRUCTION",
+        "partnerCode": "REPHXCWMCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "326416",
+        "address": "11736 N 143RD AVE, SUNRISE, AZ, 85379",
+        "contact": "MIKE OLIVER",
+        "phone": "602-725-8800",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1txo3x2",
+        "name": "D & D HOMES",
+        "partnerCode": "CUPHXDNDHS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "126923",
+        "address": "27200 N 69th St, Scottsdale, AZ, 85266-8869",
+        "contact": "Donna Donati",
+        "phone": "480-704-1147",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "l49pcid",
+        "name": "DAHL CONSTRUCTION",
+        "partnerCode": "CULASDAHL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "265186",
+        "address": "PO 2045, LAKE HAVASU CITY, AZ, 86405",
+        "contact": "SCOTT DAHL",
+        "phone": "928-680-1233",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1e7c9yl",
+        "name": "DAHL LUXURY HOMES",
+        "partnerCode": "CUPHXDAHLH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "276021",
+        "address": "3864 N Stone Point Cir, Mesa, AZ, 85207-7182",
+        "contact": "Derek Dahl",
+        "phone": "480-299-9805",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "399m7x0",
+        "name": "DANE ISENMANN BUILDERS",
+        "partnerCode": "CULASDISNM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "7500 W LAKE MEAD, LAS VEGAS, NV, 89128",
+        "contact": "DANE ISENMANN",
+        "phone": "702-219-1783",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "y39aeo7",
+        "name": "DAVID WEEKLY HOMES",
+        "partnerCode": "SFPHXDVWKS",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "290837",
+        "address": "8058 South Priest Drive, Tempe, AZ, 85284",
+        "contact": "David WEEKLY",
+        "phone": "480-768-4900",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ezyo1vq",
+        "name": "DAVILA DEVELOPMENT LLC",
+        "partnerCode": "CUPHXDVILD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "332756",
+        "address": "20815 N 25th Pl, Phoenix, AZ, 85050",
+        "contact": "Troy Davila",
+        "phone": "480-262-7009",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tp3ijkm",
+        "name": "DCB DEVELOPMENT AND CONSTRUCTION SERVICES",
+        "partnerCode": "REPHXDCBCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "288634",
+        "address": "12042 N. 30TH PLACE, PHOENIX, AZ, 85028",
+        "contact": "KYLE BAILEY",
+        "phone": "602-327-9208",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2l2th8s",
+        "name": "DEFINITIVE CUSTOM HOMES LLC",
+        "partnerCode": "CUPHXDEFNT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "229883",
+        "address": "9966 E BANISTER DRIVE, TUCSON, AZ, 85730",
+        "contact": "RYAN PURCELL",
+        "phone": "520-444-9023",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "nmc4ff0",
+        "name": "DEHORTY CONTRACTING",
+        "partnerCode": "REPHXDEHRT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "166695",
+        "address": "8715 N 78TH AVE, PEORIA, AZ, 85345",
+        "contact": "JESSE DEHORTY",
+        "phone": "602-743-8973",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ava8g6l",
+        "name": "DESERK SKIES CONTRACTING",
+        "partnerCode": "CUPHXDSKYO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "345746",
+        "address": "5202 E OAKHURST WAY, SCOTTSDALE, AZ, 85254",
+        "contact": "COLE GIBSON",
+        "phone": "480-599-6742",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1vv9yqa",
+        "name": "DESERT ELITE HOMES & CONSTRUCTION",
+        "partnerCode": "REPHXDESLT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "353956",
+        "address": "4633 E DESERT FOREST TRAIL, CAVE CREEK, AZ, 85331",
+        "contact": "NICK MCKEE",
+        "phone": "602-686-0804",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "f3p5ls7",
+        "name": "DESERT HERITAGE CONSTRUCTION",
+        "partnerCode": "CUPHXDHER",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "241523",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "78db7db",
+        "name": "DESERT MOON",
+        "partnerCode": "REPHXDSMON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "359101",
+        "address": "21154 E Price Station Rd, Scottsdale, AZ, 85132",
+        "contact": "Rodney Joel Kent",
+        "phone": "602-397-0639",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wd6df7r",
+        "name": "DESERT MOUNTAIN LUXURY HOMES",
+        "partnerCode": "CUPHXDESMT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3317 S Higley Rd Ste 114-155, Gilbert, AZ, 85297-5442",
+        "contact": "kim Westberg",
+        "phone": "480-266-9976",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ecvskj2",
+        "name": "DESERT PEAK BUILDERS",
+        "partnerCode": "CUPHXDSPEK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "156046",
+        "address": "3120 W CAREFREE HWY Ste 1-726, PHOENIX, AZ, 85086",
+        "contact": "DON BERG",
+        "phone": "602-615-3316",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9vaqoj6",
+        "name": "DESERT PRESTIGE BUILDERS",
+        "partnerCode": "CUPHXDPRE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "329084",
+        "address": "4915 W Bell Rd Ste F102, GLENDALE, AZ, 85308",
+        "contact": "ERIC LINDER",
+        "phone": "602-295-0501",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "usr0po7",
+        "name": "DESERT ROSE QUALITY CONSTRUCTION",
+        "partnerCode": "REPHXDROSG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "356650",
+        "address": "4915 W Bell Rd #F102, Glendale, AZ, 85308",
+        "contact": "Denny Hunsaker",
+        "phone": "480-307-1033",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "av632n2",
+        "name": "DESERT SAGE CUSTOM HOMES",
+        "partnerCode": "CUABQDESSG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "PO Box 73, St George, UT, 84771-0073",
+        "contact": "STEVE NAKAMURA",
+        "phone": "505-792-4663",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "aewuctz",
+        "name": "DESERT SKY DEVELOPMENT",
+        "partnerCode": "CUPHXDSDCH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "96608",
+        "address": "12072 E Altadena Dr, Scottsdale, AZ, 85259-3329",
+        "contact": "Mike Fratantoni",
+        "phone": "602-339-3695",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "179c4l9",
+        "name": "DESERT STAR HOMES",
+        "partnerCode": "CUPHXSTARH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "278477",
+        "address": "4023 N Verrado Way, Buckeye, AZ, 85396",
+        "contact": "Joe Duncan",
+        "phone": "602-363-6313",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "cw5ci15",
+        "name": "DESERT VALLEY CONCEPTS",
+        "partnerCode": "REPHXDVCON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "290367",
+        "address": "9132 W CACTUS RD, PEORIA, AZ, 85381",
+        "contact": "JAKE GONZALES",
+        "phone": "602-339-1007",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tgxhg9h",
+        "name": "DESERT VIEW CONTRACTORS LLC",
+        "partnerCode": "CUPHXDSRTV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "5021 N 55th Ave Ste 10, Glendale, AZ, 85301-7535",
+        "contact": "ERIC LINDER",
+        "phone": "623-203-0593",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "k83mmmi",
+        "name": "DESIGN BUILD CUSTOM HOMES",
+        "partnerCode": "CUPHXDEBLD",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "342688",
+        "address": "12 W Dove Tree Ave, Queen Creek, AZ, 85140",
+        "contact": "CHRIS BRECHT",
+        "phone": "206-786-0824",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4vo9lu1",
+        "name": "DESIGN CONTRACTING",
+        "partnerCode": "REPHXDSIGN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "330872",
+        "address": "18125 W Montebello Court, Litchfield Park, AZ, 85340",
+        "contact": "TRAVIS VICHICH",
+        "phone": "623-738-8131",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6u91l0w",
+        "name": "DESIGNLINES",
+        "partnerCode": "RETUCDESGN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "176184",
+        "address": "2080 N Craycroft Rd, Tucson, Az, 85712",
+        "contact": "Patricia Mooney",
+        "phone": "520-885-9577",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "cmlm7vg",
+        "name": "DESIGNS BY MANROSS",
+        "partnerCode": "REPHXDSNMA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "290226",
+        "address": "12020 S WARNER ELLIOT LOOP RD Ste 122, PHOENIX, AZ, 85044",
+        "contact": "JOHN MANROSS",
+        "phone": "602-721-5103",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2pblsac",
+        "name": "DESZEN DEFFY HOMES",
+        "partnerCode": "CUPHXDESZN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "210 W Longhorn Rd Unit 101, Payson, AZ, 85541-4495",
+        "contact": "Gary Deszendeffy",
+        "phone": "928-978-7414",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lprdovn",
+        "name": "DETAR",
+        "partnerCode": "CUPHXDETAR",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "67183",
+        "address": "1966 BONITA DR, Scottsdale, AZ, 86326",
+        "contact": "JOEL DETAR",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fcc2vxs",
+        "name": "DETAR CONSTRUCTION",
+        "partnerCode": "CUPHXDETAR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3101 S Quail Run, Cottonwood, AZ, 86326-7124",
+        "contact": "Joel Detar",
+        "phone": "928-282-5379",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5ni8662",
+        "name": "DIACON",
+        "partnerCode": "RELASDICNN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "74665",
+        "address": "5052 S JONE BLVD Ste 165, LAS VEGAS, NV, 89118",
+        "contact": "darren petersen",
+        "phone": "702-734-9393",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "222990b",
+        "name": "DIAMOND CUSTOM HOMES",
+        "partnerCode": "CUPHXDIMD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "339377",
+        "address": "7730 E GREENWAY RD, SCOTTSDALE, AZ, 99999",
+        "contact": "STEVE MILLER",
+        "phone": "602-989-2741",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0gi9szt",
+        "name": "DIAMOND KITCHEN AND BATH",
+        "partnerCode": "CAPHXDIMKB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "66874",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "n06a4yf",
+        "name": "DIEGO HANDCRAFTED HOMES",
+        "partnerCode": "CUABQDEGHC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "8100 Wyoming Blvd NE, Albuquerque, NM, 87113-1946",
+        "contact": "Diego Ruiz",
+        "phone": "505-573-8888",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7761f7r",
+        "name": "DIFFENBAUGH DESIGN",
+        "partnerCode": "REPHXDIFFD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "267038",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dyzabnr",
+        "name": "DILANO CONSTRUCTION",
+        "partnerCode": "CUPHXDLANC",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "164709",
+        "address": "P.O Box 2432, Carefree, AZ, 85377-4200",
+        "contact": "Rob Spragg",
+        "phone": "480-495-1322",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "eiqwxea",
+        "name": "DINO LOPESIO",
+        "partnerCode": "REPHXDLOPS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "35789",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5vns2dw",
+        "name": "DISCOVERY LAND",
+        "partnerCode": "CULASDSCVY",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "14605 N 73rd St, Scottsdale, AZ, 85260-3105",
+        "contact": "Brent Carlson",
+        "phone": "480-624-5200",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "x0t34uw",
+        "name": "DISTINCTIVE BUILDER",
+        "partnerCode": "REPHXDSTBC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "243312",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ggd22rm",
+        "name": "DIVERSIFIED REMODELING",
+        "partnerCode": "CUPHXDRDDI",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "326292",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "y1yxd8b",
+        "name": "DIXON CONSTRUCTION",
+        "partnerCode": "CUPPHXDIXCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "2024 N 7th St, Phoenix, AZ, 85006-2515",
+        "contact": "Doug Edgelow",
+        "phone": "619-317-5285",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ujlg0w1",
+        "name": "DLLR",
+        "partnerCode": "CUP4XDRCON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "10930 N Tatum Blvd, Phoenix, AZ, 85028-6069",
+        "contact": "Steve Stanford",
+        "phone": "602-376-2161",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8qkv5wu",
+        "name": "DM STARK CONSTRUCTION",
+        "partnerCode": "CUPHXDMSTAR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "352196",
+        "address": "8626 E MONTECITO AVE, SCOTTSDALE, AZ, 85251",
+        "contact": "MICHAEL STARK",
+        "phone": "480-290-6270",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ewe7s8u",
+        "name": "DOMICILE DEVELOPMENT",
+        "partnerCode": "CUPHXDOMCL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1625 W Nido Ave, Mesa, AZ, 85202-7468",
+        "contact": "Clay Philips",
+        "phone": "602-910-1796",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "azl49b9",
+        "name": "DORADO DESIGNS",
+        "partnerCode": "CATUCDORDN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "8444 N Oracle Rd Ste 150, Tucson, AZ, 85704-6509",
+        "contact": "Leslie Young",
+        "phone": "520-618-2300",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "flnyp6y",
+        "name": "DORN HOMES",
+        "partnerCode": "CUPHXDORNC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "600 W Gurley St Ste 100, Prescott, AZ, 86305-3630",
+        "contact": "David Grounds",
+        "phone": "928-445-9427",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yvmbzuh",
+        "name": "DOUBLE E BUILDERS",
+        "partnerCode": "CUPHXDBLEB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "274245",
+        "address": "1400 E Woolford Rd, Show Low, AZ, 85901-7063",
+        "contact": "DAVID LLOYD LLOYD EDRANEY",
+        "phone": "520-334-0145",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xmc0y2p",
+        "name": "DOUBLE TREE HOMES",
+        "partnerCode": "CUPHXDBLTR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "194957",
+        "address": "4801 S 35th St, Phoenix, AZ, 85040-2821",
+        "contact": "Patricia Iacona",
+        "phone": "480-227-6072",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ral3vv1",
+        "name": "DOUG WATSON DEVELOPMENT",
+        "partnerCode": "CUPHXWATSN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "326596",
+        "address": "9028 E Jenan Dr, Scottsdale, AZ, 85260-6826",
+        "contact": "doug watson",
+        "phone": "602-460-7197",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0i37krr",
+        "name": "DOVE MOUNTAIN HOMES",
+        "partnerCode": "SFTUCRTZCT",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "13900 N Dove Mountain Blvd, Marana, AZ, 85658-4219",
+        "contact": "Renee Robinson",
+        "phone": "520-572-8000",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jnp44vz",
+        "name": "DREAM CONSTRUCTION",
+        "partnerCode": "CULASDREMC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "78378",
+        "address": "911 American Pacific Dr, Henderson, NV, 89014-7909",
+        "contact": "Cyndi Huff",
+        "phone": "702-353-5338",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dca6x84",
+        "name": "DREAMCATCHER HOMES",
+        "partnerCode": "CUPHXDREMC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "138480",
+        "address": "4605 S PONDEROSA PARK RD, PRESCOTT, AZ, 85303",
+        "contact": "STEVE ARMSTRONG",
+        "phone": "928-713-8848",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "eu25rjh",
+        "name": "DREAMSTONE INDUSTRIES",
+        "partnerCode": "REPHXDRMST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "149269",
+        "address": "16514 E. LEO DRIVE, FOUNTAIN HILLS, AZ, 85268",
+        "contact": "CHRISTOPHER GIERSZEWSKI",
+        "phone": "602-577-4952",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ytzr43m",
+        "name": "DREAMY DRAW KITCHEN DESIGN",
+        "partnerCode": "CAPHXDRMDK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "2439 E. MADISON ST, PHOENIX, AZ, 85034",
+        "contact": "JASON FITCH",
+        "phone": "602-370-9739",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gu9nksz",
+        "name": "DRESSEL CONSTRUCTION",
+        "partnerCode": "CUABQDRESSL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "54313",
+        "address": "3032 Monte Sereno Dr, Santa Fe, NM, 87506",
+        "contact": "Dressel Construction",
+        "phone": "505-995-8006",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kc32z41",
+        "name": "DRUID CONSTRUCTION",
+        "partnerCode": "REPHXDRUDC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "292572",
+        "address": "44017 N 44TH LN, NEW RIVER, AZ, 85087",
+        "contact": "ERIC GALLAGHER",
+        "phone": "623-680-7920",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "e2p9bpq",
+        "name": "DUCK STEEL",
+        "partnerCode": "REPHXDSTEL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "326423",
+        "address": "4733 E Windsor Ave, Phoenix, AZ, 85008-1519",
+        "contact": "FRANCIS DUCKWORTH",
+        "phone": "480-371-5234",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "102bmff",
+        "name": "DWELLING DESIGN LLC.",
+        "partnerCode": "CUPHXDWLLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "7655 E Redfield Rd Ste 9, Scottsdale, AZ, 85260-6480",
+        "contact": "Misty Cowan",
+        "phone": "480-483-1501",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dcp2jfc",
+        "name": "DYGGZ DEVELOPERS",
+        "partnerCode": "REPHXDYGE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "299849",
+        "address": "2628 E Cannon Dr, Scottsdale, AZ, 85028",
+        "contact": "Gregory Systeek",
+        "phone": "480-292-3898",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "hoo5jyi",
+        "name": "E AND S BUILDERS (E&S)",
+        "partnerCode": "CUPHXESBLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "314485",
+        "address": "8144 E Cactus Rd, Scottsdale, AZ, 85260-5266",
+        "contact": "",
+        "phone": "602-502-8605",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jbffly9",
+        "name": "E GARCIA GRANITE",
+        "partnerCode": "REPHXEGRC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "334922",
+        "address": "529 S CENTER ST, MESA, AZ, 85040",
+        "contact": "KEYLA Garcia",
+        "phone": "480-599-8837",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "v224e9i",
+        "name": "E1 CONSTRUCTION",
+        "partnerCode": "REABQECNS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "394897",
+        "address": "1612 Polomino Ct, Santa Fe, NM, 87505",
+        "contact": "Erasmo Estrada",
+        "phone": "505-660-2028",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ules4r9",
+        "name": "EASTON GRAY DEVELOPMENT",
+        "partnerCode": "REPHXESTON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "337090",
+        "address": "PO BOX 1696, QUEEN CREEK, AZ, 85142",
+        "contact": "MATT WALL",
+        "phone": "602-463-1249",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "uoknocz",
+        "name": "EBERSON CONSTRUCTION",
+        "partnerCode": "REPHXEBRSN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "331315",
+        "address": "12305 ROJO RD, FLAGSTAFF, AZ, 86004",
+        "contact": "BRYAN EBERSON",
+        "phone": "928-421-1177",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7e54yd8",
+        "name": "ECHELON FINE HOMEBUILDERS",
+        "partnerCode": "CUPHXECHLN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "144158",
+        "address": "9624 W Monterey Ste E, Tempe, AZ, 85288",
+        "contact": "Dennis Brown",
+        "phone": "480-816-1244",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9izsv6a",
+        "name": "ECW CONSTRUCTION AZ",
+        "partnerCode": "REPHXECWCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "344815",
+        "address": "3526 S TAMBOR, MESA, AZ, 85212",
+        "contact": "ERIC WALTERS",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vsf9586",
+        "name": "EDGE CONSTRUCTION",
+        "partnerCode": "CUPHXEDGC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "253740",
+        "address": "3801 E SUPERIOR AVE, Phoenix, AZ, 85040",
+        "contact": "SHERRY ANN ANN MISINA",
+        "phone": "602-633-1800",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "btwuwg3",
+        "name": "EGGERSMANN - SCOTTSDALE",
+        "partnerCode": "CAPHXEGGMN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "4161 N Marshall Way, Scottsdale, AZ, 85251-3851",
+        "contact": "Brent Hugus",
+        "phone": "330-259-5116",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "bu3067y",
+        "name": "EJK AND SONS CONSTRUCTION",
+        "partnerCode": "CUPHXEJKCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "8924 E Pinnacle Peak Rd, Scottsdale, AZ, 85255-3618",
+        "contact": "Edward Krolak",
+        "phone": "480-518-2405",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6me8uvn",
+        "name": "EL DORADO CUSTOM BUILDERS",
+        "partnerCode": "CUPHXLDORD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "303426",
+        "address": "428 e thunderbird rd #634, phoenix, az, 85022",
+        "contact": "chris johnson",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qfy94ck",
+        "name": "EL TERRO CONSTRUCTION",
+        "partnerCode": "CUABQELTRC",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "172527",
+        "address": "PO BOX 46185, Rio Rancho, NM, 87174",
+        "contact": "Fidencio VILLALOBOS",
+        "phone": "505-896-3864",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jrxj841",
+        "name": "ELDER CONTRACTING",
+        "partnerCode": "REPHXELDRC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "349755",
+        "address": "2305 s higley rd, gilbert, az, 85295",
+        "contact": "rj patino",
+        "phone": "480-468-8980",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "o610swg",
+        "name": "ELEGANT HOMES",
+        "partnerCode": "CULASELGNT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "36560",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4xfc1lx",
+        "name": "ELITE AZ CONTRACTING",
+        "partnerCode": "REPHXELTCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "358632",
+        "address": "892 E COCONINO PLACE, CHANDLER, AZ, 85249",
+        "contact": "DARREN LEDOUX",
+        "phone": "602-758-4258",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wgir0zf",
+        "name": "ELITE CONSTRUCTION SERVICES",
+        "partnerCode": "RELASELTC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "73389",
+        "address": "7285 DEAN MARTIN DR, LAS VEGAS, NV, 89118",
+        "contact": "RONALD CAMACHO",
+        "phone": "702-373-4845",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wfy2teb",
+        "name": "EMERALD BAY CONSTRUCTION",
+        "partnerCode": "CULASEMRLD",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "230666",
+        "address": "1010 PLAZA PALOMA, LAKE HAVASU CITY, AZ, 86406",
+        "contact": "JIM ATEN",
+        "phone": "928-303-0252",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "t4lmfoo",
+        "name": "EMERICK RENOVATIONS",
+        "partnerCode": "REPHXEMRK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "330625",
+        "address": "19043 N 23rd Plave, Phoenix, AZ, 85024",
+        "contact": "KYLE MEREDITH",
+        "phone": "480-823-8521",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "woxrk7n",
+        "name": "EMPIRE GENERAL CONTRACTING",
+        "partnerCode": "REPHXEMPRG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "327239",
+        "address": "25326 W. ILLINI ST, BUCKEYE, AZ, 85326",
+        "contact": "ERICK LEDEZMA",
+        "phone": "480-298-6867",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "76sy6lr",
+        "name": "EMPIRE GROUP",
+        "partnerCode": "CUPHXVENUE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "6617 N Scottsdale Rd Ste 101, Scottsdale, AZ, 85250-7803",
+        "contact": "Andy Smith",
+        "phone": "480-546-7907",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "458u27i",
+        "name": "EMPIREWORKS RECONSTRUCTION",
+        "partnerCode": "REPHXEMWRK",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "269463",
+        "address": "1803 W 3RD ST, TEMPE, AZ, 85281",
+        "contact": "ALAN LARRAZA",
+        "phone": "480-560-8525",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0j1bv92",
+        "name": "ENVY CONSTRUCTION",
+        "partnerCode": "CULASENVYC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "85216",
+        "address": "7223 Buttons Ridge Dr, Las Vegas, NV, 89131-2320",
+        "contact": "Brian Berrett",
+        "phone": "702-403-5217",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "s7797hk",
+        "name": "EPIC RENOVATIONS",
+        "partnerCode": "REPHXEPCRV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "290539",
+        "address": "854 N 26TH ST, MESA, AZ, 85213",
+        "contact": "Scott Wayne Miesel",
+        "phone": "480-440-4047",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "iotzpyy",
+        "name": "ERNEST THOMPSON FURNITURE CO.",
+        "partnerCode": "CAABQERNTH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "4531 Osuna Rd NE, Albuquerque, NM, 87109-4467",
+        "contact": "Chris Hanks",
+        "phone": "505-344-1994",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "o0nz50a",
+        "name": "ESPO BUILDERS",
+        "partnerCode": "REPHXESPBD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "304085",
+        "address": "17002 N 96th Ave, Sun City, AZ, 85373",
+        "contact": "Larry Esposito",
+        "phone": "602-363-0000",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "igfm9xz",
+        "name": "ESTANCIA",
+        "partnerCode": "CUPHXESTNCA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "9687 N TROON WAY, SCOTTSDALE, AZ, 85260",
+        "contact": "JON PARKER",
+        "phone": "480-621-2569",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lroz6do",
+        "name": "ESTEEM CUSTOM HOMES",
+        "partnerCode": "CUPHXESTMH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "315040",
+        "address": "3432 W LONG RIFLE ROAD, PHOENIX, AZ, 85086",
+        "contact": "JON PAWLING",
+        "phone": "602-399-3004",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zv40yy3",
+        "name": "ESTRELLA",
+        "partnerCode": "CUPHXESTRCM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "9326 W VOGEL, GOODYEAR, AZ, 85213",
+        "contact": "BRAD FRANK",
+        "phone": "623-555-8874",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "osckyrq",
+        "name": "ETHICALLY BUILT",
+        "partnerCode": "REPHXETHLL",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "250100",
+        "address": "4434 N 185TH  GOODYEAR, AZ 85395, SCOTTSDALE, AZ, 85395",
+        "contact": "MATTHEW SEGAL",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yc2o62t",
+        "name": "ETHICALLY BUILT LLC",
+        "partnerCode": "REPHXETHLL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "250100",
+        "address": "4434 N 185TH, GOODYEAR, AZ, 85395",
+        "contact": "MATTHEW SEGAL",
+        "phone": "602-768-7241",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tsmlxwo",
+        "name": "ETICO BUILDERS",
+        "partnerCode": "CUPHXETCBL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "325743",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8cc25z5",
+        "name": "ETICO CONSTRUCTION COMPANY",
+        "partnerCode": "CUPHXETCON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "12455 N 75th Ln 2 Suite C, Peoria, AZ, 85381-5209",
+        "contact": "Aileen Rau",
+        "phone": "623-412-4165",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "j6yadx2",
+        "name": "EVEREST CONSTRUCTION INC",
+        "partnerCode": "CUPHXEVRCT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "137946",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rzonnkw",
+        "name": "EVERWOOD CONSTRUCTION",
+        "partnerCode": "CULASEVRWD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "90339",
+        "address": "2984 MARCO ST, LAS VEGAS, NV, 89115",
+        "contact": "RAMONE TOPETE",
+        "phone": "702-210-8705",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "r3pkkuw",
+        "name": "F1 CABINETS AND FURNITURE",
+        "partnerCode": "CAPHXFCABS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "23010 N 17th Dr, Phoenix, AZ, 85027-6315",
+        "contact": "Gary Kiesler",
+        "phone": "480-306-4661",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ijzlf65",
+        "name": "FABER CONSTRUCTION",
+        "partnerCode": "CUABQFABRC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "25802",
+        "address": "PO Box 1686, Tijeras, NM, 87059-1686",
+        "contact": "Keven Faber",
+        "phone": "505-238-3902",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "plb31c8",
+        "name": "FAIRFIELD HOMES",
+        "partnerCode": "SFTUCFARFD",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "288355",
+        "address": "11125 N La Canada Dr Unit 161, Tucson, AZ, 85737-9404",
+        "contact": "Jim Peterson",
+        "phone": "520-219-2000",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "foppbg6",
+        "name": "FAIRLESS HOMES",
+        "partnerCode": "CULASFARLS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "71820",
+        "address": "11211 SOUTH EASTERN AVE Ste 120, HENDERSON, NV, 89052",
+        "contact": "RJ FAIRLESS",
+        "phone": "702-566-0181",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "abzqy15",
+        "name": "FAIRMOUNT DEVELOPMENT",
+        "partnerCode": "CUPHXFARMT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "305644",
+        "address": "7175 E Camelback Rd, Scottsdale, AZ, 85251-1201",
+        "contact": "Todd Sucher",
+        "phone": "602-697-0779",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4951t9m",
+        "name": "FAIRVIEW DEVELOPMENT",
+        "partnerCode": "CUPHXFRVEW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "11120 N Tatum Blvd, Phoenix, AZ, 85028",
+        "contact": "Christa Petracca",
+        "phone": "480-451-7808",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "57dspq6",
+        "name": "FALLONE BUILDING AND REMODELING",
+        "partnerCode": "REPHXFALLN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "180103",
+        "address": "8711 E Pinnacle Peak Rd, Scottsdale, AZ, 85255-3517",
+        "contact": "Gary Falone",
+        "phone": "480-473-2109",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2utpg9z",
+        "name": "FAMILIAN CONSTRUCTION PARTNERS",
+        "partnerCode": "CULASFAMLN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "520 E Sunset Rd, Henderson, NV, 89011-4320",
+        "contact": "RJ FAIRLESS",
+        "phone": "702-227-9267",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0kxrown",
+        "name": "FAMILY DEVELOPMENT",
+        "partnerCode": "SFPHSFMLYDV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "73081 Fred Waring Dr, Palm Desert, CA, 92260-2878",
+        "contact": "Vince Barbato",
+        "phone": "760-776-8300",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yc4ykbf",
+        "name": "FARRELLWOOD CONTRACTING & FRAMING",
+        "partnerCode": "REPHXFRLLW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "196483",
+        "address": "4490 E Moreno Ct, GILBERT, AZ, 85297",
+        "contact": "JASON FARRELL",
+        "phone": "480-330-1265",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "u0za01u",
+        "name": "FBF ENTERPRISES - SCOTTSDALE",
+        "partnerCode": "REABQFBFEN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "368207",
+        "address": "10800 E. CACTUS, SCOTTSDALE, AZ, 85259",
+        "contact": "SHANE WOODS",
+        "phone": "505-780-1482",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "v8ny511",
+        "name": "FEBAL CASA SCOTTSDALE",
+        "partnerCode": "CAPHXATELR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "7550 E Greenway Rd Ste B115, Scottsdale, AZ, 85260-1896",
+        "contact": "Bobby Banica",
+        "phone": "602-884-0108",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ipfhun1",
+        "name": "FHP BUILDERS LLC",
+        "partnerCode": "CUPHXFHPBLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "288806",
+        "address": "7465 E Osborn Rd, Scottsdale, AZ, 85251-6590",
+        "contact": "Casey Fromm",
+        "phone": "480-797-9678",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "z1z2fsn",
+        "name": "FIELD CONSTRUCTION",
+        "partnerCode": "CUPHXFLDCT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "205546",
+        "address": "110 W Orchid Ln, Phoenix, AZ, 85021-4539",
+        "contact": "James Field",
+        "phone": "602-565-4222",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gd92u47",
+        "name": "FINA CDM",
+        "partnerCode": "CUPHXFINC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "334899",
+        "address": "5665 N SCOTTSDALE RD, SCOTTSDALE, AZ, 85250",
+        "contact": "DAVID FINA",
+        "phone": "281-690-0137",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "us5peqe",
+        "name": "FINESSE CONSTRUCTION",
+        "partnerCode": "CUPHXFINSS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "268667",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "59xvcdg",
+        "name": "FISHER CUSTOM HOMES",
+        "partnerCode": "CUPHXFRERK",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "168379",
+        "address": "7500 E Pinnacle Peak Rd Bldg G-120, Scottsdale, AZ, 85255",
+        "contact": "Thomas Fisher",
+        "phone": "480-585-7350",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "w4ucpjv",
+        "name": "FITCH BUILDERS",
+        "partnerCode": "CUPHXFTHBI",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "343353",
+        "address": "6735 E Gelding Dr, Scottsdale, AZ, 85254-3494",
+        "contact": "MIKE FITCH",
+        "phone": "503-806-5773",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wc0hrw6",
+        "name": "FIVE STAR KITCHEN AND BATH",
+        "partnerCode": "SFPHXRTZSD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "95562",
+        "address": "4819 Spring Drive, Prescott, AZ, 86305",
+        "contact": "JEFF WAERING",
+        "phone": "480-840-5010",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "hr6mtgc",
+        "name": "FMC & CH",
+        "partnerCode": "CUPHXFMCCH",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "2896 S AVENUE B, YUMA, AZ, 85364",
+        "contact": "FOWLER MALONE",
+        "phone": "928-344-8386",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7psq6t7",
+        "name": "FONTAINE CONSTRUCTION",
+        "partnerCode": "CUPHXFONTN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "250668",
+        "address": "15202 N. Eagle Feather Ridge, FOUNTAIN HILLS, AZ, 85268",
+        "contact": "JOHN FONTAINE",
+        "phone": "480-695-1978",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tu3pahv",
+        "name": "FOOTHILLS HOMES",
+        "partnerCode": "CUPHXFOTHLS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "147945",
+        "address": "2134 W MISQUITE ST, CHANDLER, AZ, 85224",
+        "contact": "DAVID KING",
+        "phone": "602-722-7743",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "etust3q",
+        "name": "FOR ENERGY",
+        "partnerCode": "REPHXFENGR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "268127",
+        "address": "4630 E ELWOOD ST, PHOENIX, AZ, 85040",
+        "contact": "SEAN MCGRAW",
+        "phone": "248-330-3425",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "54f5710",
+        "name": "FORBUSH GENERAL CONTRACTING",
+        "partnerCode": "RELASFRBUH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "78276",
+        "address": "7336 APACHE MISSION CT, LAS VEGAS, NV, 89179",
+        "contact": "CHAD FOREBUSH",
+        "phone": "702-292-5097",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "iswvj0s",
+        "name": "FOUR SEASONS BUILDERS",
+        "partnerCode": "CUPHXFRSON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "218178",
+        "address": "PO Box 4028, Pinetop, AZ, 85935-4028",
+        "contact": "Kevin Fisk",
+        "phone": "928-205-0244",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "oq2no6f",
+        "name": "FOUR SEASONS CONSTRUCTION",
+        "partnerCode": "CUABQFORSN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "327358",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "g45a5tp",
+        "name": "FOX CUSTOM HOMES",
+        "partnerCode": "CUPHXFXHOM",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "342900",
+        "address": "33242 N 55TH STREET, CAVE CREEK, AZ, 85331",
+        "contact": "GREG FOX",
+        "phone": "480-575-0389",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kxixdb0",
+        "name": "FRAMEWORKS INC",
+        "partnerCode": "REPHXFRAM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "200429",
+        "address": "PO BOX 31483, PHOENIX, AZ, 85046",
+        "contact": "BLAINE WILLIAMSON",
+        "phone": "602-527-5133",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rrdexx0",
+        "name": "FREESTONE BUILT",
+        "partnerCode": "REPHXFREBT",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "328799",
+        "address": "1671 W LUCKY LANE, QUEEN CREEK, AZ, 85144",
+        "contact": "NICK YOUNG",
+        "phone": "480-599-7013",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "94nq0vy",
+        "name": "FRIEDMAN AND SHIELDS",
+        "partnerCode": "CUPHXFRISH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "296365",
+        "address": "350 E Evans Rd Ste A-2, Scottsdale, AZ, 85260",
+        "contact": "Traci Shields",
+        "phone": "480-922-4521",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2dvdo8z",
+        "name": "FRONTIER TOWN CONSTRUCTION",
+        "partnerCode": "CULASXFRONT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "73580",
+        "address": "6830 S RAINBOW BLVD Ste 130, LAS VEGAS, NV, 89118",
+        "contact": "ALIREZZA KAVEH",
+        "phone": "702-277-0194",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pu58ndt",
+        "name": "FURCINI CONSTRUCTION",
+        "partnerCode": "CUPHXFURCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "50086",
+        "address": "4300 N 54th St, Phoenix, AZ, 85018-3101",
+        "contact": "JIm Furcini",
+        "phone": "602-279-0200",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "r7rjpjf",
+        "name": "FUSE STAINLESS",
+        "partnerCode": "RELASFUSST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "81440",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "hn086j4",
+        "name": "G&T CUSTOM HOMES",
+        "partnerCode": "CUPHXGTCUS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "277893",
+        "address": "15029 N Thompson Peak Pkwy Ste B111, Scottsdale, AZ, 85260-2223",
+        "contact": "Darryl Jones",
+        "phone": "602-525-8848",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rf9fd2x",
+        "name": "GABLE FAMILY BUILDERS",
+        "partnerCode": "CUPHXGABLB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "324750",
+        "address": "11111 N Scottsdale Rd, Scottsdale, AZ, 85254-6701",
+        "contact": "Tim Gable",
+        "phone": "602-708-7613",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lizk00e",
+        "name": "GADDY CONSTRUCTION",
+        "partnerCode": "CUELPGADDY",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "2131 W. 22ND ST, DENVER, CO, 80207",
+        "contact": "ROB GADDY",
+        "phone": "303-887-6483",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "luoo5ts",
+        "name": "GALLERIA KITCHEN & BATH",
+        "partnerCode": "CAELPGALKB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "7500 N Mesa St, El Paso, TX, 79912",
+        "contact": "Maan Abdeljaber",
+        "phone": "915-300-0006",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ee0tpg0",
+        "name": "GAPCON",
+        "partnerCode": "REPHXGAPCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "322062",
+        "address": "4040 E CAMELBACK RD Ste 215, PHOENIX, AZ, 85018",
+        "contact": "GARRETT HANCOCK",
+        "phone": "480-993-9815",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5vf27di",
+        "name": "GARDNER CUSTOM HOMES",
+        "partnerCode": "CUPHXGRDER",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "298590",
+        "address": "144 N PLEASANT ST, PRESCOTT, AZ, 86301",
+        "contact": "JUSTIN GARDNER",
+        "phone": "928-237-6339",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dnylinn",
+        "name": "GARMAN BUILDERS",
+        "partnerCode": "CULASGARMN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "46059",
+        "address": "122 Cassia Way, Henderson, NV, 89014",
+        "contact": "JUSTIN GARDNER",
+        "phone": "702-583-6190",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xq2daqu",
+        "name": "GARRETT BRADY PROPERTIES",
+        "partnerCode": "REPHXGRRET",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "342085",
+        "address": "6343 W KAREN ST, GLENDALE, AZ, 85302",
+        "contact": "BRADY ANDREWS",
+        "phone": "602-384-8454",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zh1zq1h",
+        "name": "GATHER PROJECTS",
+        "partnerCode": "CUPHXGTHRS",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "323308",
+        "address": "5515 E Osborn Rd, Phoenix, AZ, 85018-6108",
+        "contact": "Chris Liles",
+        "phone": "602-318-6657",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "37le3n0",
+        "name": "GBC/GCM",
+        "partnerCode": "REPHXGBCG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "332930",
+        "address": "6825 W GALVESTON ST Ste 5, CHANDLER, AZ, 85226",
+        "contact": "LOUIE CARR",
+        "phone": "480-556-1136",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lfp860l",
+        "name": "GCW BUILDERS",
+        "partnerCode": "CUPHXGCWBD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "9393 E Palo Brea Bnd Apt 1048, Scottsdale, AZ, 85255-6508",
+        "contact": "Cody Weinberger",
+        "phone": "480-656-1442",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qzemqnn",
+        "name": "GDV CUSTOM HOMES",
+        "partnerCode": "CUTUCGDVHM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "6890 E Sunrise Dr Ste 120-235, Tucson, AZ, 85750",
+        "contact": "Gene De Vitis",
+        "phone": "520-296-0918",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "73nalu6",
+        "name": "GEF DEVELOPMENT",
+        "partnerCode": "CUPHXGEFDV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "321223",
+        "address": "15905, Scottsdale, AZ, 85260",
+        "contact": "Glenn Farner",
+        "phone": "480-585-3181",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kkraral",
+        "name": "GEITNER BROTHERS",
+        "partnerCode": "REPHXGETNR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "315740",
+        "address": "317 W CURRY ST, CHANDLER, AZ, 85225",
+        "contact": "ELLIOTT GEITNER",
+        "phone": "480-558-6338",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "d0o1q0s",
+        "name": "GENERATION CONSTRUCTION",
+        "partnerCode": "CUPHXGNRAT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "324668",
+        "address": "1219 E Nancy Ave, San Tan Valley, AZ, 85140",
+        "contact": "Jeromie Gerold",
+        "phone": "602-717-7514",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "mpx7odu",
+        "name": "GERMANIA CONSTRUCTION",
+        "partnerCode": "CUPHXGERMN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "6415 N Business Park Loop Rd Ste 1, Park City, UT, 84098",
+        "contact": "Craig Allen Mogel",
+        "phone": "435-575-0542",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qjsc85y",
+        "name": "GET A GRIP REMODELING",
+        "partnerCode": "REPHXGETGP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "320991",
+        "address": "165 N 159th St, Gilbert, AZ, 85234",
+        "contact": "BRYAN KUKLOVSKY",
+        "phone": "520-237-2224",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "libx1ta",
+        "name": "GLENN FORSTNER CONSTRUCTION",
+        "partnerCode": "CUPHXGLENF",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "66581",
+        "address": "18041 W GEORGIA COURT, LITCHFIELD PARK, AZ, 85340",
+        "contact": "GLENN FORSTNER",
+        "phone": "602-989-7803",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yy5rr50",
+        "name": "GLEZ GENERAL CONSTRUCTION",
+        "partnerCode": "REPHXGLEZG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "355419",
+        "address": "3001 W LINCOLN ST, PHOENIX, AZ, 85009",
+        "contact": "EDGAR GARCIA",
+        "phone": "520-424-8326",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zgvc4hj",
+        "name": "GMQ STONEWORKS",
+        "partnerCode": "CAPHXGMQSO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "27313 N 21st Ln, Phoenix, AZ, 85085",
+        "contact": "Will O'Fallon",
+        "phone": "480-469-9338",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8vigbow",
+        "name": "GOLD CANYON",
+        "partnerCode": "CUPHXGLDCC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "2658 W PROSPECTOR LN, APACHE JUNCTION, AZ, 85117",
+        "contact": "MIKE FRIAR",
+        "phone": "480-616-5858",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8xuwjxx",
+        "name": "GOLDEN STATE HOMES",
+        "partnerCode": "CUPHXGLDEN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "309808",
+        "address": "6220 N Casa Blanca Dr, Paradise Valley, AZ, 85253-5311",
+        "contact": "Tyler Schacter",
+        "phone": "602-799-5698",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3vmbj1u",
+        "name": "GRAY PROPERTIES INCORPORATED",
+        "partnerCode": "CUPHXGRAYS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "189490",
+        "address": "14269 N 87th St Ste 205, Scottsdale, AZ, 85260-3695",
+        "contact": "Benjamin Gray",
+        "phone": "602-339-4828",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "612j7uq",
+        "name": "GRE CONSTRUCTION",
+        "partnerCode": "CUPHXGRECN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "115134",
+        "address": "13429 N 59th Pl, Scottsdale, AZ, 85254-3704",
+        "contact": "Gary Earl",
+        "phone": "480-349-6310",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xydx800",
+        "name": "GREEN MOUNTAIN CONSTRUCTION",
+        "partnerCode": "CUFLGGREN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3819 S Ox Bow Loop, Flagstaff, AZ, 86005-7055",
+        "contact": "Ian Hublitz",
+        "phone": "928-600-0383",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tocyatt",
+        "name": "GREEN STREET COMMUNITIES, INC.",
+        "partnerCode": "CUPHXGRNST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3131 E Camelback Rd Ste 410, Phoenix, AZ, 85016-4539",
+        "contact": "Melanie Bartlett",
+        "phone": "602-459-9999",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "nqk2du6",
+        "name": "GREENBILT CONSULTING",
+        "partnerCode": "CUPHXGRNBLT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "39506 N Daisy Mountain Dr, Phoenix, AZ, 85086-1663",
+        "contact": "Hud Reiersgaard",
+        "phone": "480-710-8090",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9jfldpp",
+        "name": "GREENFIELD ENGINEERING & CONSTRUCTION",
+        "partnerCode": "REPHXGRNFI",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "331982",
+        "address": "2718 N Greenfield Rd, Phoenix, az, 85006",
+        "contact": "Michael Fischer",
+        "phone": "602-688-6802",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dr4k8kh",
+        "name": "GREENSO CONSTRUCTION",
+        "partnerCode": "RELASGRNSO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "89274",
+        "address": "3900 S HUALAPI WAY, LAS VEGAS, NV, 89147",
+        "contact": "JOSEPH SAFAN",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ach81cn",
+        "name": "GREG STEVES BUILDERS",
+        "partnerCode": "CUPHXGREGS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "266324",
+        "address": "PO Box 20579, Sedona, AZ, 86341-0579",
+        "contact": "Greg Steves",
+        "phone": "928-284-2260",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4wuyhzu",
+        "name": "GUERIN OPERATIONS",
+        "partnerCode": "REPHXGURNP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "196044",
+        "address": "9418 E Gamble Ln, Scottsdale, AZ, 85262-5160",
+        "contact": "Jeff Guerin",
+        "phone": "602-859-2255",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "f01ia76",
+        "name": "GURCZAK LUXURY DEVELOPMENT LLC",
+        "partnerCode": "CUPHXGURCZ",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "330589",
+        "address": "15436 E PALATIAL CIRCLE, FOUNTAIN HILLS, AZ, 85268",
+        "contact": "JOHN GURCZAK",
+        "phone": "480-272-1308",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ic2mycf",
+        "name": "GURR BROTHERS CONSTRUCTION",
+        "partnerCode": "CUPHXGURRN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "322089",
+        "address": "7125 E Southern #107, Mesa, AZ, 85209",
+        "contact": "David Gustafson",
+        "phone": "602-622-6787",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pxeh87c",
+        "name": "GUTHRIE GENERAL INC",
+        "partnerCode": "REPHXGUTH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "149462",
+        "address": "6677 W. THUNDERBIRD RD, GLENDALE, AZ, 85306",
+        "contact": "ROBIN GUTHRIE",
+        "phone": "623-487-0234",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "nlirz4g",
+        "name": "GYDS DESIGNS",
+        "partnerCode": "REPHXGYDSE",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "333936",
+        "address": "7014 E CAMELBACK RD Ste B100A, SCOTTSDALE, AZ, 85251",
+        "contact": "JOHNNY RAY",
+        "phone": "916-202-5655",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7xfed37",
+        "name": "H B R",
+        "partnerCode": "CULASHBRR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "41348",
+        "address": "4515 COPPER STREET, LAS VEGAS, NV, 89115",
+        "contact": "GUY BENNALLACK",
+        "phone": "702-234-9233",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "20ixnq3",
+        "name": "HALABU DEVELOPMENT AND CONSTRUCTION INC. - DBA ELI MORGAN DEVELOPMENT AND CONSTRUCT",
+        "partnerCode": "CUPHXHDELI",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "235389",
+        "address": "5132 E Fellars Dr, Scottsdale, AZ, 85254",
+        "contact": "JOHNNY RAY",
+        "phone": "480-626-8883",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9kjnk7t",
+        "name": "HALCYON HOMES OF NV",
+        "partnerCode": "CULASHALCY",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "91871",
+        "address": "3111 BEL AIR DR Ste 20G, Las Vegas, NV, 89109",
+        "contact": "EDWARD WEIGERT",
+        "phone": "702-444-1947",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xr5eqvm",
+        "name": "HAMILTON BUILDERS",
+        "partnerCode": "REPHXHAMLT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "333519",
+        "address": "31512 N 59TH ST, CAVE CREEK, AZ, 85331",
+        "contact": "TODD HAMILTON",
+        "phone": "602-999-6655",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "22o4z22",
+        "name": "HAMMER HOMES",
+        "partnerCode": "CUPHXHAMMR",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "267215",
+        "address": "5804 W Maryland Ave, Glendale, AZ, 85301-3909",
+        "contact": "Tiim Hammer",
+        "phone": "602-695-6100",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wannp6l",
+        "name": "HAMPTON CONSTRUCTION",
+        "partnerCode": "CUPHXHMTON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "343236",
+        "address": "410 N SCOTTSDALE RD Ste 1000, TEMPE, AZ, 85288",
+        "contact": "MARCUS HAMPTON",
+        "phone": "602-527-9914",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "owrdnct",
+        "name": "HAPPY FAMILY CONTRACTING",
+        "partnerCode": "REPHXHAPP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "252930",
+        "address": "28408 N 32ND AVE, PHOENIX, AZ, 85083",
+        "contact": "PETER SINKOVICH",
+        "phone": "602-505-3702",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5ionb8r",
+        "name": "HARMONY HOMES",
+        "partnerCode": "CULASHARMN",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "71458",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ggv73w5",
+        "name": "HARPER ONCEPTS",
+        "partnerCode": "REPHXHARPR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "308417",
+        "address": "1651 W HUDSON DR, TUCSON, AZ, 85704",
+        "contact": "TEREE HARPER",
+        "phone": "520-349-1656",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wrserlw",
+        "name": "HARTIGAN CONSTRUCTION",
+        "partnerCode": "CUPHXHRTIG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "335954",
+        "address": "18521 E QUEEN CREEK RD, QUEEN CREEK, AZ, 85142",
+        "contact": "JOESEPH HARTIGAN",
+        "phone": "916-320-8477",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tov6k7h",
+        "name": "HAYDON BUILDING COMPANY",
+        "partnerCode": "REPHXHAYDN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "108085",
+        "address": "4640 E COTTON GIN LOOP, PHOENIX, AZ, 85040",
+        "contact": "KATIE HAYDON",
+        "phone": "602-296-1496",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "c24w6f3",
+        "name": "HEARTMANN LLC",
+        "partnerCode": "CULASHRTMAN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "10 Fire Rock Ct, Las Vegas, NV, 89141-6041",
+        "contact": "DEAN DOTY",
+        "phone": "702-591-5624",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zil7mc1",
+        "name": "HELLO DESIGN & BUILD",
+        "partnerCode": "REPHXHLLOD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "330123",
+        "address": "9455 E DESERT COVE AVE, SCOTTSDALE, AZ, 85260",
+        "contact": "KYLE LYNCH",
+        "phone": "773-484-5036",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "c9yn3ta",
+        "name": "HENDRICKS CONSTRUCTION",
+        "partnerCode": "CUPHXHENDRI",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "PO Box 32006, Phoenix, AZ, 85064-2006",
+        "contact": "Joe Hendricks",
+        "phone": "602-505-1889",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "u7bjjtp",
+        "name": "HERITAGE DISTRIBUTORS (TEEPLES)",
+        "partnerCode": "RELASTEPLS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "72229",
+        "address": "4200 West Russell Road, Las Vegas, NV, 89118",
+        "contact": "Matthew Teeples",
+        "phone": "702-354-4016",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "n7opo7q",
+        "name": "HERITAGE HOMES OF NEVADA",
+        "partnerCode": "CULASHERTG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "80153",
+        "address": "357 E VIA SORRENTO, HENDERSON, NV, 89012",
+        "contact": "Matthew Teeples",
+        "phone": "402-689-7998",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5pwl9de",
+        "name": "HIGH COUNTRY PROPERTY",
+        "partnerCode": "REPHXHGHCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "338145",
+        "address": "1485 ROAD RUNNER ROAD NORTH, PRESCOTT, AZ, 86303",
+        "contact": "KEVIN BLANCHARD",
+        "phone": "480-882-0934",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lw6x4ak",
+        "name": "HIGHLANDER CONSTRUCTION",
+        "partnerCode": "CUABQHGHLN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "78900",
+        "address": "PO Box 2424, Alamogordo, NM, 88311-2424",
+        "contact": "PAUL SIDEBOTTOM",
+        "phone": "575-434-0008",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "bg40hak",
+        "name": "HILL CONSTRUCTION CO.",
+        "partnerCode": "CULASHILLN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "4626 ALBUQUERQUE ST, SAN DIEGO, CA, 92109",
+        "contact": "Ryan Hill",
+        "phone": "702-944-9594",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "in7j0q5",
+        "name": "HILLCREST HOMES",
+        "partnerCode": "CUTUCHICR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "122603",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "u5qkhss",
+        "name": "HILLIS BUILT",
+        "partnerCode": "CUPHXHLBLT",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "6136 N Quail Run Rd, Paradise Valley, AZ, 85253-5321",
+        "contact": "Jeff Hillis",
+        "phone": "480-454-8380",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "e6zp4pc",
+        "name": "HOLLANTI CUSTOM HOMES",
+        "partnerCode": "CUPHXHOLLCH",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "198538",
+        "address": "7464 E Tierra Buena Ln, Scottsdale, AZ, 85260-1643",
+        "contact": "Brent Hollanti",
+        "phone": "480-474-4102",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zs2pqd9",
+        "name": "HOME CREST CONTRACTING",
+        "partnerCode": "CUPHXHMECC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "308420",
+        "address": "4021 E Crimson Ter, Cave Creek, AZ, 85331-2115",
+        "contact": "Russell Stanulis",
+        "phone": "480-589-8164",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "c7u3f6t",
+        "name": "HOME IMPROVEMENTS BY R M S",
+        "partnerCode": "REPHXHIRMS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "195318",
+        "address": "15125 N Hayden Road Ste 117, PHOENIX, AZ, 85086",
+        "contact": "ROBERT MENOCINO",
+        "phone": "623-210-4899",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0ol2adw",
+        "name": "HOME MODIFICATION SOLUTIONS",
+        "partnerCode": "REAQBHMEMS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "382007",
+        "address": "8516 CALLE ALAMEDA NE, ALBUQUERQUE, NM, 87199",
+        "contact": "DUSTIN KOLLAR",
+        "phone": "505-252-6511",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kji322h",
+        "name": "HOMES BY MARIE",
+        "partnerCode": "CUABQHOMMR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "2179574006",
+        "address": "PO BOX 2777, CORRALES, NM, 87048",
+        "contact": "MARIE BLEA",
+        "phone": "505-342-1532",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9cey5z2",
+        "name": "HOMES BY STONE AND SUNSET",
+        "partnerCode": "CUPHXHSTON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "2400536",
+        "address": "13273 Emerald Isle, Horizon City, TX, 79928",
+        "contact": "CARLOS ROJAS",
+        "phone": "915-777-9965",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6p1yy4p",
+        "name": "HOMES BY TOWNE",
+        "partnerCode": "CUPHXHTOWN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "706 E Bell Rd, Phoenix, AZ, 85022-6640",
+        "contact": "Kevin Kiesl",
+        "phone": "602-309-0866",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6fuop4h",
+        "name": "HOMES BY WIESNER",
+        "partnerCode": "REPHXWESN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "151607",
+        "address": "1675 KIOWA, LAKE HAVASU, AZ, 86403",
+        "contact": "TERRANCE WIESNER",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rvj3xtl",
+        "name": "HTF REMODELING",
+        "partnerCode": "CUPHXHTFRE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "310413",
+        "address": "PO Box, Tonopah, AZ, 85354",
+        "contact": "ron jones",
+        "phone": "623-203-0244",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "r1z7pgl",
+        "name": "HUDS HOME REMODELING",
+        "partnerCode": "REPHXHUDSH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "306847",
+        "address": "16729 E PALISADES BLVD SUITE 100, FOUNTAIN HILLS, AZ, 85268",
+        "contact": "MADDIE MILLER",
+        "phone": "480-836-0663",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dato934",
+        "name": "HUGHES BUILDING COMPANY, HBC",
+        "partnerCode": "CUPHXHUGHES",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "306318",
+        "address": "1235 Willow Creek Rd, Prescott, AZ, 86301-1427",
+        "contact": "keith Hughes",
+        "phone": "928-717-0063",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "n0js72t",
+        "name": "HURLOCKER CONTRACTING",
+        "partnerCode": "CUABQHRCKR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "390889",
+        "address": "111 DAYBREAK, SANTA FE, NM, 87507",
+        "contact": "MICHAEL HURLOCKER",
+        "phone": "505-988-3783",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1x917jl",
+        "name": "HYRE CONSTRUCTION",
+        "partnerCode": "REPHXHYRE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "301684",
+        "address": "284 E CHILTON DRIVE, CHANDLER, AZ, 85255",
+        "contact": "TRAVIS HYER",
+        "phone": "602-703-0131",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "e5eig68",
+        "name": "HZ GLOBAL",
+        "partnerCode": "REPHXHZGLO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "342278",
+        "address": "33632 N 44TH WAY, CAVE CREEK, AZ, 85331",
+        "contact": "HAMID ZAHRANI",
+        "phone": "914-839-3531",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "iaxlhcl",
+        "name": "IDEAL CUSTOM HOMES, INC",
+        "partnerCode": "CUPHXIDLCH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "127749",
+        "address": "13257 N 78th St, Scottsdale, AZ, 85260-4009",
+        "contact": "Robert Boyer",
+        "phone": "602-524-0732",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gdmh2qs",
+        "name": "IGNITE HOMES/ FORBES CONSTUCTION",
+        "partnerCode": "REPHXIGNT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "352934",
+        "address": "12251 W BLACKSTONE CT, PEORIA, AZ, 85351",
+        "contact": "GLEN FORBES",
+        "phone": "480-226-5106",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zmzx0sh",
+        "name": "IMAGINE BUILDERS",
+        "partnerCode": "REPHXIMGN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "340892",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "b3klsek",
+        "name": "IMPACT BUILD",
+        "partnerCode": "REPHXIMPT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "360256",
+        "address": "PO BOX 452, Scottsdale, AZ, 85252",
+        "contact": "VICENTE TERAN",
+        "phone": "520-861-2818",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6jb4t82",
+        "name": "IMPAQ CABINETRY",
+        "partnerCode": "CAPHXIMPQC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1640 W MONTE AVE, MESA, AZ, 85202",
+        "contact": "DANIEL ROSE",
+        "phone": "480-212-6813",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ebsyjfk",
+        "name": "IMPERIAL CUSTOM BUILDERS",
+        "partnerCode": "CUPHXIMPRL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "282631",
+        "address": "11145 N ARROW RANCH RD, PRESCOTT, AZ, 86305",
+        "contact": "ANDREW CLARK",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gp8x7ut",
+        "name": "IMPRESSIONS INC",
+        "partnerCode": "CUPHXIMPRSS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "275900",
+        "address": "447 W JUDD RD, SAN TAN VALLEY, AZ, 85143",
+        "contact": "SCOTT WEST",
+        "phone": "602-469-0884",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0ha8jrh",
+        "name": "INCLINE LLC",
+        "partnerCode": "REPHXINCL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "150424",
+        "address": "10840 N 83RD STREET, SCOTTSDALE, AZ, 85260",
+        "contact": "KURT HOLLAND",
+        "phone": "602-881-7644",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zhlg3b3",
+        "name": "INTER TECH CONSTRUCTION",
+        "partnerCode": "CULASINTRTC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "311829",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7hlfb77",
+        "name": "INTERIOR TRENDS REMODEL & DESIGN",
+        "partnerCode": "CAPHXINTRD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3227 N Palo Verde Ave, Tucson, AZ, 85716-1310",
+        "contact": "Kathy Nieto",
+        "phone": "520-529-8459",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "17ai3le",
+        "name": "IRISH CONTRACTING GROUP",
+        "partnerCode": "REPHXIRSHC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "347287",
+        "address": "1010 E JEFFERSON ST, PHOENIX, AZ, 85034",
+        "contact": "JOHN MCCLEAN",
+        "phone": "480-553-3363",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "mieut91",
+        "name": "ISOMETRICA LLC",
+        "partnerCode": "CUELPASMDG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "12102 CITATION, EL PASO, TX, 79936",
+        "contact": "ANDY DODD",
+        "phone": "915-892-7098",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "b97rqaq",
+        "name": "ITSA CONTRACTING",
+        "partnerCode": "CUPHXITSCNG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "253124",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "z98a7xi",
+        "name": "J L ROWLEY CONTRACTING",
+        "partnerCode": "REPHXJLROW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "274467",
+        "address": "137 E ELLIOT RD, GILBERT, AZ, 85234",
+        "contact": "JEREMY ROWLEY",
+        "phone": "602-793-6478",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6a2u9le",
+        "name": "J P ADVANCED SOLUTIONS, (DBA-LUXURY REMODELS)",
+        "partnerCode": "REPHXJPADV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "304366",
+        "address": "15560 N. Frank  Lloyd Wright Blvd, Ste-B4-5154, Scottsdale, AZ, 85260",
+        "contact": "Jerzy Poprawa",
+        "phone": "480-550-8774",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4rdsedp",
+        "name": "J. M. EVANS CONSTRUCTION",
+        "partnerCode": "CUABQJMEVN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1532 E Paseo De Peralta, Santa Fe, NM, 87501-3722",
+        "contact": "Jim Evans",
+        "phone": "505-984-1638",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vkubll1",
+        "name": "JACOB AND COMPANY, DBA MONDRAGON",
+        "partnerCode": "CUPHXJACBM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "269493",
+        "address": "1113 W Culver St, Phoenix, AZ, 85007-1908",
+        "contact": "Landon Mondragon",
+        "phone": "480-330-5906",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "df1l2ml",
+        "name": "JADA HOMES",
+        "partnerCode": "CUPHXJADHM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "304993",
+        "address": "21071 W Mountain Cove Pl, BUCKEYE, AZ, 85396",
+        "contact": "JARRETT GORMAN",
+        "phone": "623-210-9825",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8e94vey",
+        "name": "JAG CONSTRUCTION",
+        "partnerCode": "CUABQJAGCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "90236",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0rk7om4",
+        "name": "JAQUE BETHKE DESIGN",
+        "partnerCode": "REPHXJBETH",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "356634",
+        "address": "37975 N 98TH PLACE, SCOTTSDALE, AZ, 85262",
+        "contact": "JAQUE BETHKE",
+        "phone": "736-464-6001",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fba8o4o",
+        "name": "JBR RESTORATION",
+        "partnerCode": "REPHXJBRON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "330648",
+        "address": "5815 S 36TH ST Ste 1, PHOENIX, AZ, 85040",
+        "contact": "NANCY GALLARDO",
+        "phone": "480-346-7653",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "02vmcbb",
+        "name": "JC WEST BUILDERS",
+        "partnerCode": "CUPHXJCWEST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "324181",
+        "address": "29606 N 144TH STREET, SCOTTSDALE, AZ, 85262",
+        "contact": "JACK LUFFY",
+        "phone": "602-448-1314",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xylmyve",
+        "name": "JCON CONSTRUCTION",
+        "partnerCode": "CUPHXJCONN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "315283",
+        "address": "PO BOX 315, PHOENIX, AZ, 85085",
+        "contact": "DANAIEL JOHNSON",
+        "phone": "602-206-9579",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "m06xm8k",
+        "name": "JD ROSS (UNIQUE CUSTOM HOMES)",
+        "partnerCode": "CULASJDRSS",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "91 SUNGLOW LANE, Las Vegas, NV, 89135",
+        "contact": "JIM ROSS",
+        "phone": "702-595-4069",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3xww506",
+        "name": "JEFF RAYMOND CUSTOM CABINETS",
+        "partnerCode": "REPHXJRAY",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "328325",
+        "address": "793 S. COLD WATER LN, DEWEY, AZ, 86287",
+        "contact": "JEFF RAYMOND",
+        "phone": "602-573-1413",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jvcixu2",
+        "name": "JFC COMPANY",
+        "partnerCode": "REPHXJFCCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "108080",
+        "address": "506 N SPUR CIRCLE, PAYSON, AZ, 85547",
+        "contact": "GARY JONES",
+        "phone": "928-970-0501",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "e0si9vf",
+        "name": "JIRSA CONSTRUCTION",
+        "partnerCode": "CUPHXJIRSC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "307597",
+        "address": "PO Box 23666, Flagstaff, AZ, 86002-3666",
+        "contact": "BRET JIRSA",
+        "phone": "928-380-3119",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8ydouja",
+        "name": "JKC",
+        "partnerCode": "CUFLGJKCIN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "213940",
+        "address": "1820 N Center St, Flagstaff, AZ, 86004-4123",
+        "contact": "Kerry Lynn Love",
+        "phone": "928-606-4378",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qhv81kf",
+        "name": "JKL DEVELOPMENT",
+        "partnerCode": "CULASJLKDE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "72243",
+        "address": "60 Tarragona Breeze Ave, Las Vegas, NV, 89138-4650",
+        "contact": "jeff lewis",
+        "phone": "702-803-9322",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2n2hq56",
+        "name": "JLS DEVELOPMENT",
+        "partnerCode": "RELASJLDV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "167786",
+        "address": "4727 E BELL RD Ste 4529-249, PHOENIX, AZ, 85032",
+        "contact": "JOHN SAMUEL",
+        "phone": "602-526-2299",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "sqes4zo",
+        "name": "JM WALL DEVELOPMENT INC.",
+        "partnerCode": "CUPHXJMLL",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "179587",
+        "address": "6712 N 58th Pl, Paradise Valley, AZ, 85253-3408",
+        "contact": "Jon Wall",
+        "phone": "602-527-0088",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "b21w0zu",
+        "name": "JMG CONTRACTING",
+        "partnerCode": "CUPHXJMGCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "308923",
+        "address": "9794 WEST PEORIA, PEORIA, AZ, 85345",
+        "contact": "Katelyn Yohe",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "g157229",
+        "name": "JMS CONTRACTORS",
+        "partnerCode": "RELASJMSCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "33816",
+        "address": "3908 EL CEDERAL AVE, LAS VEGAS, NV, 89102",
+        "contact": "SHAWN ELFBERG",
+        "phone": "702-731-9566",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "44wpm4p",
+        "name": "JN PEBLER",
+        "partnerCode": "CUPHXJNPEB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1121 S Ash Ave, Tempe, AZ, 85281-5629",
+        "contact": "Josh Pebbler",
+        "phone": "480-518-6463",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tserlye",
+        "name": "JOHN MARK CUSTOM HOMES",
+        "partnerCode": "CUABQJHNMK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "North Town Shopping Ctr 5901 Wyoming Blvd NE, Albuquerque, NM, 87109-3838",
+        "contact": "John Jones",
+        "phone": "505-480-4537",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "c1qtku5",
+        "name": "JOHN P KALTENBACH HOMES",
+        "partnerCode": "CUABQJPKAL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "52679",
+        "address": "PO BOX 21114, ALBUQUERQUE, nm, 87154",
+        "contact": "JOHN KALTENBACK",
+        "phone": "505-856-8553",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7vgg5ev",
+        "name": "JOHN THOMSON",
+        "partnerCode": "REPHXJNTHO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "323407",
+        "address": "7514 W ENCINAS LN, PHOENIX, AZ, 85043",
+        "contact": "JOHN THOMSON",
+        "phone": "602-903-0426",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dkwtv7q",
+        "name": "JOHNSON-MANLEY",
+        "partnerCode": "CULASJHNSN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "299030",
+        "address": "1501 N 15TH AVE, TUCSON, AZ, 85705",
+        "contact": "Tammy Lunsford",
+        "phone": "928-680-9000",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dzo9nd1",
+        "name": "JORDAN LUXURY HOMES",
+        "partnerCode": "CUPHXJRDON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "321318",
+        "address": "4910 E Poinsettia Dr, Scottsdale, AZ, 85254-4657",
+        "contact": "CONNIE JORDAN",
+        "phone": "480-622-2823",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4956e8o",
+        "name": "JOYCO CONSTRUCTION",
+        "partnerCode": "REPHXJOYCC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "314304",
+        "address": "1040 E RAWHIDE AVE, Scottsdale, AZ, 85296",
+        "contact": "Joel Frechette",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "f60imay",
+        "name": "JPM CONSTRUCTION",
+        "partnerCode": "CULASJPMCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "53977",
+        "address": "5085 S. ARVILLE ST., LAS VEGAS, NV, 89118",
+        "contact": "John Malony",
+        "phone": "702-797-0585",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "cush8tu",
+        "name": "JSF DESIGN INC",
+        "partnerCode": "CUPHXJSFDEV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "10465 E Pinnacle Peak Pkwy, Scottsdale, AZ, 85255",
+        "contact": "Jeffrey Florentine",
+        "phone": "480-590-4547",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "v4t1pj6",
+        "name": "JSN REMODELING & RESTORATION",
+        "partnerCode": "REPHXJSNRE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "301102",
+        "address": "5235 S KYRENE RD Ste 28, TEMPE, AZ, 85283",
+        "contact": "JEFF NICKELL",
+        "phone": "628-800-4191",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zzyo5uj",
+        "name": "JT THOMAS BUILDERS",
+        "partnerCode": "REPHXJTHOM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "215717",
+        "address": "PO BOX 31446, MESA, AZ, 85213",
+        "contact": "THOMAS MARKSE",
+        "phone": "480-353-6131",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "bib70sj",
+        "name": "JVR CONTRACTING",
+        "partnerCode": "CUPHXPIN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "7518 E Camino Santo, Scottsdale, AZ, 85260-3918",
+        "contact": "Rob Getzelman",
+        "phone": "480-998-9075",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4isniaw",
+        "name": "K HOVNANIAN HOMES - AZ",
+        "partnerCode": "CUPHXKHOVBC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "20830 N Tatum Blvd Ste 250, Phoenix, AZ, 85050-7263",
+        "contact": "Marisa Oseroff",
+        "phone": "480-824-4200",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zpjfmzl",
+        "name": "KASH KING PROPERTIES",
+        "partnerCode": "REPHXKKPRO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "340794",
+        "address": "31828 N 126TH AVE, PEORIA, AZ, 85383",
+        "contact": "LEO ZUNIGA",
+        "phone": "602-332-0420",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "z6liey0",
+        "name": "KELIKANA DEVELOPMENT",
+        "partnerCode": "REPHXKELKD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "197942",
+        "address": "2706 Cape Rock Pass, Prescott, AZ, 86301",
+        "contact": "Dennis Sheridan",
+        "phone": "928-710-1995",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pitxgk9",
+        "name": "KEN SIMONSEN CONSTRUCTION INC",
+        "partnerCode": "CUPHXKSIMN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "354311",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "v8bppdy",
+        "name": "KEVIN'S CABINETS",
+        "partnerCode": "CATUCKEVNC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "351860",
+        "address": "4042 GANNET WAY, FLAGSTAFF, AZ, 86004",
+        "contact": "KEVIN SCOTT PLUDE",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "26m6ban",
+        "name": "KEYSTONE HOMES",
+        "partnerCode": "CUPHXKEYSTN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "060147",
+        "address": "7550 E. MCDONALD, SCOTTSDALE, AZ, 85250",
+        "contact": "RICH ENEIM",
+        "phone": "480-428-1001",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rvbnmut",
+        "name": "KINCADE CONTRACTING",
+        "partnerCode": "REPHXKINCD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "329659",
+        "address": "138 N NEVADA WAY, GILBERT, AZ, 85233",
+        "contact": "DUSTIN KINCADE",
+        "phone": "480-415-1087",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kupnmac",
+        "name": "KINGDOM BUILDER LLC",
+        "partnerCode": "REPHXKNGDO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "273000",
+        "address": "7547 W LIBBY ST, GLENDALE, AZ, 85308",
+        "contact": "DAVID FONK",
+        "phone": "602-618-7322",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gbgllzz",
+        "name": "KINGDOM DEVELOPMENT (RLS DEV/MONARCH)",
+        "partnerCode": "REPHXKINGDM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "i4lp15e",
+        "name": "KINGDOM HOMES",
+        "partnerCode": "CULASKINGM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "z9xmj7v",
+        "name": "KITCEN WORKS RESTORATION",
+        "partnerCode": "REPHXKTCHE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "355718",
+        "address": "1826 W BROADWAY RD, MESA, AZ, 85202",
+        "contact": "LARRY PAGE",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "mvvkk67",
+        "name": "KITCHEN SOLVERS OF PHOENIX",
+        "partnerCode": "CAPHXKSOLV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "9999999, SCOTTSDALE, AZ, 85260",
+        "contact": "",
+        "phone": "602-661-6520",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xnhebxv",
+        "name": "KLB HOMECRAFTERS",
+        "partnerCode": "REPHXKLBHO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "316821",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fd8jymn",
+        "name": "KLMR HOMES",
+        "partnerCode": "CUPHXKLMRO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "335667",
+        "address": "28305 North 42nd Way, Cave Creek, AZ, 85331",
+        "contact": "GREG DAHL",
+        "phone": "602-317-9688",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "oph07zr",
+        "name": "KM SKELLY",
+        "partnerCode": "CUABQKMSKY",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "384120",
+        "address": "10 Calle Cantando, Santa Fe, NM, 87508-5972",
+        "contact": "KEVIN SKELLY",
+        "phone": "505-992-1459",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ggd03s3",
+        "name": "KNIGHTS BRIDGE DEVELOPMENT",
+        "partnerCode": "REPHXKNIGT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "350367",
+        "address": "15455 N Talking Rock Ranch Rd, Prescott, AZ, 86305-9762",
+        "contact": "GREG DAHL",
+        "phone": "310-800-0373",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9puadgb",
+        "name": "KOALA HOMES",
+        "partnerCode": "CUABQKOLHM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "90402",
+        "address": "2300 Calle Corta, Santa Fe, NM, 87507-7793",
+        "contact": "Martin Beltran",
+        "phone": "505-490-2007",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "m43nf6j",
+        "name": "KOPRAS HOMES",
+        "partnerCode": "REPHXKPRAS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "297120",
+        "address": "24212 N 86TH ST, SCOTTSDALE, AZ, 85255",
+        "contact": "JARRID KOPRAS",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "v90xh1t",
+        "name": "KOWALSKI CONSTRUCTION",
+        "partnerCode": "CUPHXKWAL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "057542",
+        "address": "2219 W MELINDA LN, PEORIA, AZ, 85027",
+        "contact": "JAMES KOWALSKI",
+        "phone": "602-944-2645",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vi9510j",
+        "name": "KRB DEVELOPMENT LLC",
+        "partnerCode": "CUPHXKRBDEV",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "206697",
+        "address": "6635 W Happy Valley Rd, Glendale, AZ, 85310-2609",
+        "contact": "REX BAILEY",
+        "phone": "623-581-5357",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3mrduji",
+        "name": "KREW CONTRACTING",
+        "partnerCode": "REPHXKREW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "323350",
+        "address": "3218 n. 42nd st., Phoenix, AZ, 85018",
+        "contact": "Alan Bottomley",
+        "phone": "602-828-3273",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0i5fbu6",
+        "name": "KROFCHEK QUALITY",
+        "partnerCode": "REPHXKROF",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "275935",
+        "address": "14050 W ROANOKE AVE, Tucson, AZ, 85395",
+        "contact": "JOE KROFCHEK",
+        "phone": "623-523-2025",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xxqzhg6",
+        "name": "KROUGH ENTERPRISES",
+        "partnerCode": "REPHXKRUG",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "359709",
+        "address": "5627 E MONTEROSA  ST, PHOENIX, AZ, 85018",
+        "contact": "KIM KROUGH",
+        "phone": "602-327-3861",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6c946ae",
+        "name": "KRUIDENIER CONSTRUCTION",
+        "partnerCode": "REPHXKRUD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "267016",
+        "address": "3500 E LINCOLN DR, SCOTTSDALE, AZ, 85260",
+        "contact": "SHAWN KRUIDENIER",
+        "phone": "480-688-4401",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jalkdm5",
+        "name": "KRYSTAL DEVELOPMENT",
+        "partnerCode": "CULASKRYSTL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "57614",
+        "address": "3317 Chesterbrock, Las Vegas, NV, 89131",
+        "contact": "Bobby Shomer",
+        "phone": "702-491-3167",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yimtgj0",
+        "name": "LA BLONDE DEVELOPMENT",
+        "partnerCode": "REPHXLABLN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "80218",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "aioxzuh",
+        "name": "LA CASA BUILDERS",
+        "partnerCode": "CUPHXLACBD",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "91247",
+        "address": "8260 E Gelding Dr Ste 104, Scottsdale, AZ, 85260-3620",
+        "contact": "Tim Larson",
+        "phone": "480-922-2101",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2sy2yj4",
+        "name": "LACQUEMENT CONSTRUCT",
+        "partnerCode": "REPHXLACQ",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "330435",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7f7it3j",
+        "name": "LAKE VIEW HOMES",
+        "partnerCode": "CUPHXLAKV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "24446",
+        "address": "12802 N 50TH PL, SCOTTSDALE, AZ, 85254",
+        "contact": "JASON ASCHE",
+        "phone": "602-404-7192",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "55mqg6r",
+        "name": "LAMBERT CUSTOM BUILDERS",
+        "partnerCode": "CUPHXLAMBRT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "228422",
+        "address": "54 Del Rio Ln, Lake Havasu City, AZ, 86403-5691",
+        "contact": "Wayne Lambert",
+        "phone": "928-855-8392",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7jxrg71",
+        "name": "LANDMARK BUILDERS",
+        "partnerCode": "CUABQLNDC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "56388",
+        "address": "5319 MENAUL BLVD, ALBUQUERQUE, NM, 87110",
+        "contact": "JAMES CHAVEZ",
+        "phone": "505-883-7333",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1nqw5s4",
+        "name": "LANDS WEST",
+        "partnerCode": "RELASLWEST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "19467",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "m9wn3v1",
+        "name": "LANTERN GROUP CONTRACTING, LLC",
+        "partnerCode": "REPHXLNTER",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "320824",
+        "address": "24909 N 87th Way, Scottsdale, AZ, 85255-5100",
+        "contact": "Barbara Clark",
+        "phone": "480-766-0873",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "e2cd30i",
+        "name": "LARS SOUTHWEST CONSTRUCTION",
+        "partnerCode": "CUPHXLARSW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "226017",
+        "address": "24654 N. LAKE PLEASENT PARKWAY, PEORIA, AZ, 85383",
+        "contact": "FREDRICK LARS PETERSON",
+        "phone": "623-202-6221",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "poymoe2",
+        "name": "LAS CAMPANAS",
+        "partnerCode": "CUABQLASCMP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "330 Garfield Street, Santa Fe, NM, 87501",
+        "contact": "Jim Hunter",
+        "phone": "505-477-4700",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5s6h03y",
+        "name": "LAS VEGAS CUSTOM COMMUNITY",
+        "partnerCode": "CULASVGSPU",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "CULASVGSPU, MISSING, AK, 99999",
+        "contact": "",
+        "phone": "999-999-9999",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "p97lm3n",
+        "name": "LAS VEGAS STRIP RESORTS",
+        "partnerCode": "RELASVREST",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "86753",
+        "address": "111 LAS VEGAS BLVD, LAS VEGAS, NV, 89139",
+        "contact": "BRAD HASSEY",
+        "phone": "702-585-2654",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "hadz0vm",
+        "name": "LAUER BESPOKE CONSTRUCTION",
+        "partnerCode": "CUABQBESPK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "4001 OFFICE CT DR., SANTA FE, NM, 87507",
+        "contact": "KURT LAUER",
+        "phone": "505-308-3572",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kynt89h",
+        "name": "LAWLER CONSTRUCTION",
+        "partnerCode": "CUFLGLAWLR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "160972",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "g1eczcy",
+        "name": "LAWRENCE HOMES",
+        "partnerCode": "CULASLAWRN",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "",
+        "address": "6640 S Tenaya Way Ste 210, Las Vegas, NV, 89113-1960",
+        "contact": "Cecilia Ventimiglia",
+        "phone": "702-871-9383",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "l07ltsh",
+        "name": "LAYNE SCOTTO CONSTRUCTION",
+        "partnerCode": "CUPHXLAYNSC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "316321",
+        "address": "7620 E McKellips Road, Scottsdale, AZ, 85257",
+        "contact": "Judy Scotto",
+        "phone": "602-492-9297",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "f8gpq8o",
+        "name": "LCH CONSTRUCTION",
+        "partnerCode": "REABQLCHCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "365309",
+        "address": "33 Estrellas Rd N, Santa Fe, NM, 87507",
+        "contact": "LUIS CHAVEZ",
+        "phone": "505-930-0084",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jd5ci5q",
+        "name": "LEGACY DESIGN BUILD REMODELING",
+        "partnerCode": "CUPHXLEGCH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "311886",
+        "address": "7750 E Gelding Dr Ste 4, Scottsdale, AZ, 85260-2900",
+        "contact": "Barb Friedman",
+        "phone": "480-645-9780",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pr9zn43",
+        "name": "LEGC",
+        "partnerCode": "REPHXLEGCC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "345630",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ethmo2v",
+        "name": "LEGENDARY HOMES INC.",
+        "partnerCode": "CUPHXLEGEN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "78528",
+        "address": "6501 E Greenway Pkwy Ste 103-408, Scottsdale, AZ, 85254",
+        "contact": "Greg Stanford",
+        "phone": "480-860-6690",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2l7strp",
+        "name": "LENNAR HOMES, ARIZONA",
+        "partnerCode": "SFPHXLENNR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1665 W Alameda Dr Ste 130, Tempe, AZ, 85282-3221",
+        "contact": "Melanie Allen",
+        "phone": "480-476-8415",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ajs383h",
+        "name": "LEVEL 5",
+        "partnerCode": "RELASLVLFI",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "86784",
+        "address": "1313 E PIPER AVE, North las vegas, nv, 89030",
+        "contact": "Chris Broderick",
+        "phone": "702-273-6124",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "c8npvip",
+        "name": "LEVEL DEVELOPMENT",
+        "partnerCode": "CULASLVDVG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "PO Box 91084, Henderson, NV, 89009-1084",
+        "contact": "phil kaffka",
+        "phone": "702-953-6427",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9a4f1zh",
+        "name": "LIA CONSTRUCTION",
+        "partnerCode": "REPHXLICN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "81510",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9qm8s6e",
+        "name": "LIBERTY BUILDERS",
+        "partnerCode": "CULASLIBR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "85591",
+        "address": "7473 W LAKE MEAD BLVD, LAS VEGAS, NV, 89128",
+        "contact": "JOE WHATLEY",
+        "phone": "702-524-4308",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gvrrs7g",
+        "name": "LIFESTYLE HOMES",
+        "partnerCode": "REPHXLFSTY",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "595358",
+        "address": "16009 N. 81st Street, Scottsdale, AZ, 85260",
+        "contact": "lance Keller",
+        "phone": "602-818-1797",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ejmqmgt",
+        "name": "LINEAGE HOMES, LLC",
+        "partnerCode": "CUPHXLINGH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "4009 E Desert Crest Dr, Paradise Valley, AZ, 85253-3942",
+        "contact": "John Deakin",
+        "phone": "602-654-9247",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gk8qjnu",
+        "name": "LITTLE DEVELOPMENT & CONSTRUCTION",
+        "partnerCode": "REPHXLTTDE",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "317694",
+        "address": "7030 E CHENEY DR, PARADISE VALLEY, AZ, 85253",
+        "contact": "MONICA LITLE",
+        "phone": "505-328-6690",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rbc5vz8",
+        "name": "LIVING CREATIONS",
+        "partnerCode": "CUPHXLIVNG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3548 W Hayward Ave, Phoenix, AZ, 85051-6440",
+        "contact": "Jenny Barajas",
+        "phone": "775-772-7200",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "novwrtt",
+        "name": "LIVING STONE BUILDERS",
+        "partnerCode": "CUPHXLVSTO",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "323675",
+        "address": "3219 E Camelback Rd, Phoenix, AZ, 85018-2307",
+        "contact": "NATE GOSSAGE",
+        "phone": "602-908-7130",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "mbpf74g",
+        "name": "LOBERG CONSTRUCTION",
+        "partnerCode": "NA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "33002 N 60th Way, Scottsdale, AZ, 85266-8232",
+        "contact": "Paul Loberg",
+        "phone": "480-262-4014",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "18qi65b",
+        "name": "LOGAN CONSTRUCTION",
+        "partnerCode": "CUPHXLGAN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "319074",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3tqd8cf",
+        "name": "LONE MOUNTAIN",
+        "partnerCode": "CUPHXLONMTN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "5625 N LONE PEAK DR, SCOTTSDALE, AZ, 85260",
+        "contact": "SALLY MAY",
+        "phone": "602-458-8544",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "acy7r8x",
+        "name": "LONGHORN SERVICES",
+        "partnerCode": "REPHXLNGHO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "350895",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tyzndot",
+        "name": "LORING ROBINS",
+        "partnerCode": "RELASLORNG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "2951 N Rancho Dr, Las Vegas, NV, 89130-3301",
+        "contact": "BRAD HAYES",
+        "phone": "702-768-1167",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6de66li",
+        "name": "LORTIE CONSTRUCTION",
+        "partnerCode": "REPHXLRTCN",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "331358",
+        "address": "1367 S. Country Club Dr. Ste 1276, Mesa, AZ, 85210",
+        "contact": "Cade Lortie",
+        "phone": "480-510-1512",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "deyusoc",
+        "name": "LOWE BO HOMES",
+        "partnerCode": "REABQLOWB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "3138700004",
+        "address": "PO  BOX 94385, ALBUQUERQUE, NM, 87199",
+        "contact": "TED LOWE",
+        "phone": "505-238-9447",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "m6uqx3y",
+        "name": "LTH CONTRACTING",
+        "partnerCode": "REPHXLTHCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "319972",
+        "address": "11811 N TATUM BLVD Ste 4055, PHOENIX, AZ, 85028",
+        "contact": "TOM SHAW",
+        "phone": "480-768-7369",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3vcu8ac",
+        "name": "LUCEO CUSTOM BUILDER",
+        "partnerCode": "CUPHXLUCB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "331976",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "l0h8455",
+        "name": "LUX CONSTRUCTION GROUP",
+        "partnerCode": "CUPHXLXCON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "337338",
+        "address": "7229 E AST AVE Ste 203, SCOTTSDALE, AZ, 85251",
+        "contact": "DAN DJURIC",
+        "phone": "630-333-5263",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "z5apby5",
+        "name": "LUX GROUP",
+        "partnerCode": "REPHXLXGRO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "295088",
+        "address": "1035 N MCQUEEN RD Ste 114, GILBERT, AZ, 85233",
+        "contact": "SEAN MOORE",
+        "phone": "480-244-7708",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "58yr2vz",
+        "name": "LUXURY  LIVING HOMES",
+        "partnerCode": "CUPHXLUXFH",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "302804",
+        "address": "7030 E Ingram St, Mesa, AZ, 85207-2990",
+        "contact": "Greg Kovacs",
+        "phone": "602-795-0414",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "k6vsyou",
+        "name": "LUXUS DESIGN BUILD",
+        "partnerCode": "CULASLUXDD",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "83151",
+        "address": "1879 Whitney Mesa Dr, Henderson, NV, 89014-2069",
+        "contact": "Michael Gardener",
+        "phone": "702-381-6112",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zvhya71",
+        "name": "M S DUDLEY DEVELOPMENT",
+        "partnerCode": "CUPHXMSDUDY",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "270544",
+        "address": "7411 E 6th Ave Ste 205, Scottsdale, AZ, 85251-3533",
+        "contact": "Michael Dudley",
+        "phone": "480-367-5490",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wiepbyk",
+        "name": "MAAS CONSTRUCTION",
+        "partnerCode": "CUPHXMASC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "121928",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6xtkkmw",
+        "name": "MACH 1 ENTERPRISES",
+        "partnerCode": "CUPHXMACHH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "344721",
+        "address": "3735 E Huber St, Mesa, AZ, 85205-3913",
+        "contact": "Marc Ballard",
+        "phone": "480-277-1672",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vk7dr9v",
+        "name": "MADERA BUILDERS",
+        "partnerCode": "CUABQMADRBL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "8 Deer Cir, Santa Fe, NM, 87506-5503",
+        "contact": "Garry Barber",
+        "phone": "505-412-0704",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "un0dhb3",
+        "name": "MAGNA CONSULTING INC",
+        "partnerCode": "REPHXMGNAC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "340803",
+        "address": "4816 E MOSSMAN RD, PHOENIX, AZ, 85054",
+        "contact": "ANTHONY LEMMA",
+        "phone": "503-706-4919",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zdyo9iw",
+        "name": "MAGNUS BUILDERS ARIZONA",
+        "partnerCode": "CUPHXMGNUS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "271409",
+        "address": "PO BOX 5328, CAREFREE, AZ, 85377",
+        "contact": "KRIS BJORNSON",
+        "phone": "490-695-4149",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yyqjgck",
+        "name": "MAPLE AVENUE CONSTRUCTION",
+        "partnerCode": "CUPHXMAPLC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "324725",
+        "address": "3702 E Roeser Rd Ste 14, Phoenix, AZ, 85040-9047",
+        "contact": "ANTHONY LEMMA",
+        "phone": "623-810-8122",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "mh1b9mt",
+        "name": "MARACAY HOMES",
+        "partnerCode": "SFPHXMARAC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "279852",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kzsizoe",
+        "name": "MARBELLA HOMES, INC.",
+        "partnerCode": "CUPHXMRBLA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "10196 E Phantom Way, Scottsdale, AZ, 85255-6695",
+        "contact": "Brian Hegardt",
+        "phone": "602-570-3957",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "i4bw455",
+        "name": "MARIANO & CO.",
+        "partnerCode": "CUPHXMARNO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "327540",
+        "address": "7125 E Southern Ave Ste 103, Mesa, AZ, 85209-2653",
+        "contact": "VIC MARIANO",
+        "phone": "480-287-4096",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "n9bss69",
+        "name": "MARINCKAS CONSTRUCTION",
+        "partnerCode": "REPHXMRINC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "198537",
+        "address": "7639 W LIBBY ST, GLENDALE, AZ, 85308",
+        "contact": "ALEXANDER MIRINCAS",
+        "phone": "602-743-9993",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ht2bhnq",
+        "name": "MARK BARBER CUSTOM HOMES",
+        "partnerCode": "CUTUCMBARB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "16824 E AVE OF THE FOUNTAINS Ste 14, FOUNTAIN HILLS, AZ, 85268",
+        "contact": "VAN NELSON",
+        "phone": "480-826-2424",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "d9sk2ex",
+        "name": "MARK BENZ CUSTOM BUILD",
+        "partnerCode": "CUPHXMBENZ",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "296616",
+        "address": "925 W Beck Ln, Phoenix, AZ, 85023-4448",
+        "contact": "MARC BENZ",
+        "phone": "480-261-4442",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ce7ao71",
+        "name": "MARK MICHAEL CONSTRUCTION",
+        "partnerCode": "CUPHXMMCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "277925",
+        "address": "1310 N Cliffside Dr, Gilbert, AZ, 85234-2657",
+        "contact": "",
+        "phone": "602-486-0300",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "nqjezv0",
+        "name": "MARK WINTON HOMES",
+        "partnerCode": "CUELPMARKW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "69i1dvd",
+        "name": "MARKHAM DESIGN",
+        "partnerCode": "REPHXMKHAM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "329234",
+        "address": "2304 W CALLE MARITA, PEORIA, AZ, 85085",
+        "contact": "PAUL MARKHAM",
+        "phone": "480-290-1392",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vrmfuhm",
+        "name": "MARTIN BUILDING",
+        "partnerCode": "CUPHXMRTIN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "319530",
+        "address": "PO Box 6407, Scottsdale, AZ, 85261",
+        "contact": "DENNIS FOSE",
+        "phone": "602-803-9709",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "opc31xn",
+        "name": "MASSIV LLC",
+        "partnerCode": "CUPHXMSSV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1353 N 107th Pl, Mesa, AZ, 85207-4541",
+        "contact": "Aaron Bair",
+        "phone": "480-427-6600",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7r5q12n",
+        "name": "MAST CUSTOM HOMES",
+        "partnerCode": "CUPHXMSTCU",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "345913",
+        "address": "7420 W PLANADA LN, GLENDALE, AZ, 85308",
+        "contact": "TRAVIS MAST",
+        "phone": "602-550-5185",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jcb7yky",
+        "name": "MATEO BUILDERS",
+        "partnerCode": "CUABQMTOB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "370802",
+        "address": "2500 Garfield SE Ste H, ALBUQUERQUE, NM, 87106",
+        "contact": "MATTHEW MULLET",
+        "phone": "505-980-8218",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "k4g5nij",
+        "name": "MATTSON CONSTRUCTION",
+        "partnerCode": "CULASMTSON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "82139",
+        "address": "175 HAMILTON PL, GILBERT, AZ, 85233",
+        "contact": "MIKE MATTSON",
+        "phone": "602-546-9157",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "hewy9sd",
+        "name": "MAV CONSTRUCTION",
+        "partnerCode": "REPHXMAVTN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "341073",
+        "address": "PO BOX  4343, Scottsdale, AZ, 85043",
+        "contact": "isabel ceron",
+        "phone": "602-791-8344",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yd8gnsa",
+        "name": "MAVIN DEVELOPMENT",
+        "partnerCode": "CUPHXMAVND",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "328509",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "m3z45lx",
+        "name": "MAVRICK TI CONSTRUCTION",
+        "partnerCode": "CUPHXMAVRK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "274434",
+        "address": "8405 E. VIADUCT DE ENCANTO, SCOTTSDALE, AZ, 85258",
+        "contact": "MICHAEL DIENES",
+        "phone": "480-993-3163",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "266zbk8",
+        "name": "MC DEVELOPMENT, LLC",
+        "partnerCode": "CUPHXMCDEV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "283428",
+        "address": "15029 N 74th St, Scottsdale, AZ, 85260-2406",
+        "contact": "DON BERG",
+        "phone": "623-694-8750",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0j6ojws",
+        "name": "MC NEELY CONSTRUCTION",
+        "partnerCode": "CUPHXMCNEL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "101526",
+        "address": "10035 E Corrine Dr, Scottsdale, AZ, 85260-4659",
+        "contact": "Jeff McNeely",
+        "phone": "480-330-3920",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "iyl7hsx",
+        "name": "MCCLURE STAINLESS STEEL LLC",
+        "partnerCode": "RELASMCCLU",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "6550 Hinson Street, Las Vegas, NV, 89118",
+        "contact": "Derek Wozencraft",
+        "phone": "702-735-7781",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3wlr91j",
+        "name": "MCDOWELL MOUNTAIN BUILDERS",
+        "partnerCode": "CUPHXMCDOW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "323080",
+        "address": "7750 E. GELDING DR., SCOTTSDALE, AZ, 85260",
+        "contact": "STEPHEN DILTZ",
+        "phone": "480-845-9621",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7zg597h",
+        "name": "MCHALLAM BUILDERS",
+        "partnerCode": "RETUCMCHAL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "239419",
+        "address": "1845 E INNOVATION PARK DR, ORO VALLEY, AZ, 85755",
+        "contact": "JOE McHALLAM",
+        "phone": "520-797-9988",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gsflbpu",
+        "name": "MCKENZIE BROTHERS",
+        "partnerCode": "REPHXMCKENZ",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "285618",
+        "address": "38424 N SPUR CROSS RD, CAVE CREEK, AZ, 85327",
+        "contact": "JAMES SHEAN",
+        "phone": "480-595-1148",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "actm0e3",
+        "name": "MDF DEVELOPMENT",
+        "partnerCode": "REPHXMDFDV",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "334928",
+        "address": "6929 N Hayden Rd Ste C224, Scottsdale, AZ, 85250",
+        "contact": "Frank DiMaggio",
+        "phone": "602-469-2554",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jb59801",
+        "name": "MDM HOME SERVICES",
+        "partnerCode": "CUPHXMDMHO",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "342910",
+        "address": "8358 W. OREGON AVE, GLENDALE, AZ, 85305",
+        "contact": "MANA HERNANDEZ",
+        "phone": "602-750-8095",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "29mhgsi",
+        "name": "MELLGREN HOMES LLC",
+        "partnerCode": "CUPHXMELGRN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "221104",
+        "address": "14878 E CIRCLE W RANCH PL, VAIL, AZ, 85641",
+        "contact": "DAVID MELLGREN",
+        "phone": "520-370-2853",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pna0lz5",
+        "name": "MERIDIAN CONSTRUCTION",
+        "partnerCode": "CULASMERDN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "12A sunset Way Suite 116, Las Vegas, NV, 89014",
+        "contact": "Tracy Trollier",
+        "phone": "702-498-4099",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "unxwic4",
+        "name": "METRO WORLDWIDE SERVICES",
+        "partnerCode": "REPHXMETRW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "150350",
+        "address": "7550 W. HAZELWOOD ST, PHOENIX, AZ, 85033",
+        "contact": "SAMMY COMBS JR",
+        "phone": "623-245-9033",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "nkj6naq",
+        "name": "MEYER DEVELOPMENT",
+        "partnerCode": "CUPHXMYRDC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "266670",
+        "address": "4148 N Arcadia Dr, Phoenix, AZ, 85018",
+        "contact": "Joseph Meyer",
+        "phone": "602-315-7400",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "stzyc3u",
+        "name": "MFC ENTERPRISES",
+        "partnerCode": "COPHXMFCE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "293713",
+        "address": "5742 E Paseo Dulce, Cave Creek, AZ, 85331-8558",
+        "contact": "Bill Monroe",
+        "phone": "480-861-1003",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "cwpwvgz",
+        "name": "MICAHEL E WHITE (GC)",
+        "partnerCode": "RELASMIWHT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "45010",
+        "address": "7442 EGG SHELL DRIVE, North Las Vegas, NV, 89044",
+        "contact": "Michael White",
+        "phone": "702-837-0548",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "r2u6uo3",
+        "name": "MICHAEL JAMES DESIGN BUILD",
+        "partnerCode": "REPHXMJDES",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "357907",
+        "address": "10830 N 71ST PLACE, SCOTTSDALE, AZ, 85254",
+        "contact": "KARI KOBLI",
+        "phone": "602-697-9049",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xlcwhs5",
+        "name": "MICHAEL OLIVER CONSTRUCTION / CWM",
+        "partnerCode": "CUPHXMOLVR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "8194 W Deer Valley Rd Ste 106-266, Peoria, AZ, 85382-2127",
+        "contact": "MICHAEL PETERSON",
+        "phone": "602-725-8800",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pjg7ofs",
+        "name": "MICKLE'S CUSTOM HOMES",
+        "partnerCode": "REPHXMICKL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "168322",
+        "address": "1337 S PALASADE DRIVE, COTTONWOOD, AZ, 86326",
+        "contact": "LES MICKLE",
+        "phone": "928-634-8483",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fzui29l",
+        "name": "MIGHTY MAX (PINE CANYON)",
+        "partnerCode": "CUPHXPNCY",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "287653",
+        "address": "105 abbott rd, sedona, az, 86336",
+        "contact": "bill maxwell",
+        "phone": "928-300-6791",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "al0nvi0",
+        "name": "MIKE FOSTER CUSTOM HOMES",
+        "partnerCode": "CUPHXFOSTR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3721 E Juniper Cir, Mesa, AZ, 85205-3826",
+        "contact": "Mike Foster",
+        "phone": "480-451-5540",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2kj63cf",
+        "name": "MIKEN CONTRACTING",
+        "partnerCode": "REPHXMIKNC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "325250",
+        "address": "4051 S PURPLE SAGE RD, CHANDLER, AZ, 85248",
+        "contact": "GEOFF ERBER",
+        "phone": "480-241-5206",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1y8wbgc",
+        "name": "MILESTONE CONSTRUCTION",
+        "partnerCode": "RELASMLSTO",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "67818",
+        "address": "6050 S FORT APACHE RD, LAS VEGAS, NV, 89148",
+        "contact": "RAJ DHALIWAL",
+        "phone": "702-429-7354",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jod0omm",
+        "name": "MILLENIUM DESIGNS INC",
+        "partnerCode": "CAPHXMLEND",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "7077 E Bell Rd, Scottsdale, AZ, 85254",
+        "contact": "aaron m",
+        "phone": "480-828-0086",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6psdl7a",
+        "name": "MILLENNIUM HOMES",
+        "partnerCode": "CUABQMILNM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "78908",
+        "address": "7100 Westwind Ste 160, El Paso, TX, 79912",
+        "contact": "Dan Ruth",
+        "phone": "915-274-8190",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4hjicsp",
+        "name": "MISSION HOMES",
+        "partnerCode": "REPHXMISS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "339626",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4pfkm39",
+        "name": "MLC LUXURY BUILD & REMODEL INC",
+        "partnerCode": "CUPHXMLCLUX",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "333114",
+        "address": "5642 N 105th Ln, Glendale, AZ, 85307-4029",
+        "contact": "Melvin Chinchilla",
+        "phone": "623-332-9147",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7he3hi9",
+        "name": "MODERN DWELLINGS INC",
+        "partnerCode": "CUABQMODND",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "365719",
+        "address": "P.O. Box 22058, Albuquerque, NM, 87154",
+        "contact": "TODD ERENSTIEN",
+        "phone": "505-459-2834",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yexfybv",
+        "name": "MODERN NEST  RENOVATION",
+        "partnerCode": "CUPHXMNREN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "7360 E Camino Santo, Scottsdale, AZ, 85260-3901",
+        "contact": "Branden Bader",
+        "phone": "602-670-5226",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lujber9",
+        "name": "MODERN SPLENDOR HOMES",
+        "partnerCode": "CUPHXMODSP",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "2301 S Stearman Dr, Chandler, AZ, 85286-2263",
+        "contact": "MATT SEGERSTROM",
+        "phone": "602-295-4358",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "alzs9fm",
+        "name": "MODERNO DESIGN DEVELOPMENT",
+        "partnerCode": "REPHXMDERN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "353421",
+        "address": "5109 E THOMAS RD, PHOENIX, AZ, 85018",
+        "contact": "CISCO MUNGIA",
+        "phone": "480-404-1613",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9hxf91o",
+        "name": "MOHOGANY CONSTRUCTION",
+        "partnerCode": "CUPHXMHOG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "344404",
+        "address": "8643 E. VIA DEL VALLE, SCOTTSDALE, AZ, 85258",
+        "contact": "DEVIN JOHNSON",
+        "phone": "480-714-1191",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8y9j3zx",
+        "name": "MONTARA CUSTOM HOMES",
+        "partnerCode": "CUPHXMTRCH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3044 S Primrose Ct, Gold Canyon, AZ, 85118-1754",
+        "contact": "Keneth Bielenberg",
+        "phone": "480-671-5888",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ddzoeor",
+        "name": "MOORE MARKETING AND DESIGN (AMCOR)",
+        "partnerCode": "CUPHXAMCOR",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "332156",
+        "address": "4208 E San Miguel Ave, Phoenix, AZ, 85018-1142",
+        "contact": "Stuart Moore",
+        "phone": "630-779-5080",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ce1e0ey",
+        "name": "MORAN AZ HOMES",
+        "partnerCode": "CULASMORNH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "288392",
+        "address": "2145 McCulloch Blvd N, LAKE HAVASU CITY, AZ, 86403",
+        "contact": "JOSE MORAN",
+        "phone": "928-733-6000",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xwxwik9",
+        "name": "MOUNTAIN DESERT DEVELOPMENT",
+        "partnerCode": "CUPHXMTNDD",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "PO Box 1077, Lake Havasu City, AZ, 86405-1077",
+        "contact": "Scott Smith",
+        "phone": "928-764-1157",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "in7axe8",
+        "name": "MOUNTAIN SHADOWS DESIGN BUILD",
+        "partnerCode": "CUPHXMTNSA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "12916 E Sahuaro Dr, Scottsdale, AZ, 85259",
+        "contact": "Richard Fisch",
+        "phone": "602-321-7850",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "mt5qlar",
+        "name": "MRA DBA DC CUSTOM HOMES",
+        "partnerCode": "CUPHXDCCSM",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "285306",
+        "address": "10559 N 119th Pl, Scottsdale, AZ, 85259-5036",
+        "contact": "Dominick Abatemarco",
+        "phone": "602-451-6645",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "bzxa9c4",
+        "name": "MSN GROUP",
+        "partnerCode": "REPHXMSNGO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "329197",
+        "address": "2701 E. CAMELBACK, PHOENIX, AZ, 85016",
+        "contact": "STEVEN NIKOV",
+        "phone": "480-589-0335",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "mory71k",
+        "name": "MTO CONSTRUCTION",
+        "partnerCode": "CUPHXMTOCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "801 E Monte Cristo Ave, Phoenix, AZ, 85022-3119",
+        "contact": "Mike O'Hair",
+        "phone": "602-376-0613",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ysikp8n",
+        "name": "MTV ENTERPRISES LLC",
+        "partnerCode": "CUABQMTVEN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "374946",
+        "address": "1301 Cuesta Arriba Ct NE Ste A, Albuquerque, NM, 87113-1395",
+        "contact": "MAX MOWZOON",
+        "phone": "505-433-5862",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "j1qwguv",
+        "name": "MVAN ENTERPRISES, INC",
+        "partnerCode": "CUPHXMVANT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "278947",
+        "address": "610 E Bell Rd, Phoenix, AZ, 85022-2393",
+        "contact": "MITCH VAN DE VEER",
+        "phone": "602-595-9225",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "moybbeq",
+        "name": "N & M CONSTRUCTION",
+        "partnerCode": "REPHXNMCON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "333613",
+        "address": "1224 E FAIRFIELD ST, MESA, AZ, 85203",
+        "contact": "NATE MONTALVO",
+        "phone": "480-356-7700",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "iiema6u",
+        "name": "NANKE SIGNATURE GROUP",
+        "partnerCode": "CUPHXTLKRR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "220 W Goodwin St Ste 7, Prescott, AZ, 86303-4794",
+        "contact": "Jeffrey Stalup",
+        "phone": "928-776-0668",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "eqeco25",
+        "name": "NAP CONSTRUCTION",
+        "partnerCode": "REPHXNAPCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "355791",
+        "address": "PO Box 25358, scottsdale, az, 85255",
+        "contact": "nathan pierce",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zm1t21x",
+        "name": "NASHA CONSTRUCTION",
+        "partnerCode": "CUPHXNASHC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "227 S Smith Rd, Tempe, AZ, 85288-2984",
+        "contact": "Nate Nasha",
+        "phone": "480-861-7311",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3gy3lg8",
+        "name": "NATIONAL FIRST RESPONSE",
+        "partnerCode": "REPHXNATNL",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "277885",
+        "address": "739 W 2ND AVE, MESA, AZ, 85210",
+        "contact": "SHANE ORLANDO",
+        "phone": "602-818-0858",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "k23efo2",
+        "name": "NATURAL AND BUILT",
+        "partnerCode": "REPHXNTUR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "5266 E RANCH MANANA BLVD, CAVE CREEK, AZ, 85087",
+        "contact": "ROBERT PANTLY",
+        "phone": "206-795-5660",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jkik5ri",
+        "name": "NATURAL EDGE CUSTOM HOMES",
+        "partnerCode": "CUPHXNATR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "298488",
+        "address": "1655 Purple Sage Dr, Chino Valley, AZ, 86303",
+        "contact": "Ronal Muenks",
+        "phone": "928-699-9423",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "e38p5nh",
+        "name": "NAYA'S REMODELING",
+        "partnerCode": "REPHXNAYRM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "324408",
+        "address": "12009 N 113th Dr, YOUNGTOWN, AZ, 86363",
+        "contact": "MILTON FILGUERES YANEZ",
+        "phone": "602-790-2099",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "td39azy",
+        "name": "NEOTERIC BUILDERS LLC",
+        "partnerCode": "CUPHXNETRC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "332939",
+        "address": "8146 N 23rd Ave Ste d, Phoenix, AZ, 85021",
+        "contact": "Paul Pfeifer",
+        "phone": "602-675-5070",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vqdyh09",
+        "name": "NEVADA AMERICAN CONSTRUCTION",
+        "partnerCode": "CULANVAMR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "4955 S Durango Dr Ste 218, Las Vegas, NV, 89113-0157",
+        "contact": "Bill Graves",
+        "phone": "702-655-3270",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5p9jv2i",
+        "name": "NEW WAVE DEVELOPERS",
+        "partnerCode": "REPHXNWDEV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "356440",
+        "address": "7042 W ROESER RD, PHOENIX, AZ, 85043",
+        "contact": "CHRIS MADEROS",
+        "phone": "623-282-6064",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2bbsscc",
+        "name": "NEWCO HOMES",
+        "partnerCode": "CUPHXNEWCH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "341288",
+        "address": "14452 West Wethersfield Road, Surprise, AZ, 85379",
+        "contact": "Nate Newman",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ac30u2v",
+        "name": "NEWCO HOMES DBA DESERT WIDE HOMES",
+        "partnerCode": "CUPHXNEWCH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "341288",
+        "address": "14452 W WETHERFIELD RD, SURPRISE, AZ, 85379",
+        "contact": "NATE NEWMAN",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fyn3i0b",
+        "name": "NEWLOOK CONSTRUCTION",
+        "partnerCode": "CUPHXNWLCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "171007",
+        "address": "6115 E. Duane Lane, CAVE CREEK, AZ, 85331",
+        "contact": "MARDY JOHNSON",
+        "phone": "602-570-9536",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "eb4mpb3",
+        "name": "NEWTON CONSTRUCTION",
+        "partnerCode": "RELASNEWTN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "83941",
+        "address": "4630 ARVILLE STREET, LAS VEGAS, NV, 89103",
+        "contact": "JOHN NEWTON",
+        "phone": "702-636-1160",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8fzx0he",
+        "name": "NEXT MOVE REALTY",
+        "partnerCode": "REABQNEXTM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "410473",
+        "address": "6715 ACADEMY RD NE, ALBUQUERQUE, NM, 87109",
+        "contact": "DUSTIN MESSEX",
+        "phone": "505-463-3680",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "u80jh0t",
+        "name": "NEXTGEN BUILDERS",
+        "partnerCode": "CUPHXNXTGEN",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "288128",
+        "address": "34406 N 27th Dr, Phoenix, AZ, 85085-6082",
+        "contact": "Kathrine Sheehan",
+        "phone": "602-686-0227",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "l3j7whf",
+        "name": "NICHOLAS DEVELOPMENT GROUP",
+        "partnerCode": "CUPHXNCHLS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "305725",
+        "address": "4727 E Bell Rd, Phoenix, AZ, 85032-2308",
+        "contact": "Nicholas Favia",
+        "phone": "602-568-5955",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "375ikjb",
+        "name": "NIDO CONSTRUCTION",
+        "partnerCode": "REPHXNIDN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "347604",
+        "address": "390 FAIRWAY OAKS DR, SEDONA, AZ, 86351",
+        "contact": "CALIXTO FLORES",
+        "phone": "928-554-5213",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pbwms5q",
+        "name": "NIGRO CONSTRUCTION",
+        "partnerCode": "CULASNGROC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "75516",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "r80qdbm",
+        "name": "NOBLE GENERAL CONTRACTING",
+        "partnerCode": "REPHXNOBLG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "326718",
+        "address": "2245 E HEATHERBRAE DR, PHOENIX, AZ, 85016",
+        "contact": "GEORGE",
+        "phone": "602-919-9555",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "bxh76dh",
+        "name": "NOBLE HERITAGE BUILDERS",
+        "partnerCode": "CUPHXNBLHR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "175517",
+        "address": "790 S 12TH STREED, SEDONA, AZ, 86326",
+        "contact": "GEORGE",
+        "phone": "928-639-4599",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "igzkqoy",
+        "name": "NOONAN DESIGN BUILD LLC",
+        "partnerCode": "CUPHXNONND",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "312235",
+        "address": "3517 E. Turquoise Ave, Phoenix, AZ, 85028",
+        "contact": "Dan Noonan",
+        "phone": "602-697-9790",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pt3ijcf",
+        "name": "NOWAK HOMES",
+        "partnerCode": "CULASNOWKH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "330166",
+        "address": "151 MONSOON LANE, LAKE HAVASU CITY, AZ, 86403",
+        "contact": "NICHOLAS NOWAK",
+        "phone": "928-706-2234",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qirlvut",
+        "name": "NRG BUILDING SPECIALISTS",
+        "partnerCode": "CUPHXNRGBS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "287 Schnebly Hill Rd, Sedona, AZ, 86336-4261",
+        "contact": "Pandora Harris",
+        "phone": "928-274-1975",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qlc3uov",
+        "name": "NSI CONSTRUCTION",
+        "partnerCode": "CUPHXNSICN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "347993",
+        "address": "101 W PINAL ST, COTTONWOOD, AZ, 86326",
+        "contact": "MICHAEL MOORE",
+        "phone": "928-821-9954",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "94z1wym",
+        "name": "O.F. BUILDS",
+        "partnerCode": "REPHXOFBUD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "341011",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "k8807br",
+        "name": "O'BRIEN LUXURY HOMES",
+        "partnerCode": "CUPPHXOBRNH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "515 E Carefree Hwy, Phoenix, AZ, 85085-8839",
+        "contact": "Patrick O'Brien",
+        "phone": "623-869-7160",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2gzn5xm",
+        "name": "OCOTILLO CONSTRUCTION",
+        "partnerCode": "CUPHXOCTLL",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "163740",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "bdk3wx2",
+        "name": "OCS CONSTRUCTION",
+        "partnerCode": "REPHXOCSTN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "199184",
+        "address": "14747 N NORTHSIGHT BLVD SUITE Ste 111-140, SCOTTSDALE, AZ, 85260",
+        "contact": "MICHELA MONN",
+        "phone": "480-250-4744",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lzf05tv",
+        "name": "OGDEN CONSTRUCTION",
+        "partnerCode": "CULASOGDNN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "9368 JEREMY BLAINE, LAS VEGAS, NV, 89139",
+        "contact": "MICHELA MONN",
+        "phone": "702-353-1232",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "p5fuj0q",
+        "name": "OHANA CONSTRUCTION MANAGEMENT",
+        "partnerCode": "REPHXOHNC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "325302",
+        "address": "366000 N PIMA RD, CAREFREE, AZ, 85377",
+        "contact": "DAVID BRADSHAW",
+        "phone": "602-757-3228",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "05k3grb",
+        "name": "OLSON AND SONS CONSTRUCTION",
+        "partnerCode": "CUPHXOLSNS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "254096",
+        "address": "8629 E Indianola Ave, Scottsdale, AZ, 85251-5056",
+        "contact": "",
+        "phone": "480-201-7176",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wcktqow",
+        "name": "OMNI BUILD",
+        "partnerCode": "CULASOMNBD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": ".",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "iabx3k7",
+        "name": "OPTIMA",
+        "partnerCode": "CUPHXOPTMA",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "7157 E RANCHO VISTA DRIVE, SCOTTSDALE, AZ, 85251",
+        "contact": "KARL SCHNEIDER",
+        "phone": "480-874-9900",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9dm20fk",
+        "name": "ORI CUSTOM HOMES",
+        "partnerCode": "CUPHXORCHM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "4235 E Ashler Hills Dr, Cave Creek, AZ, 85331-5410",
+        "contact": "RICK ORI",
+        "phone": "480-215-1750",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "c132x5a",
+        "name": "OX CONSTRUCTION",
+        "partnerCode": "CUPHXOXCNR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "303079",
+        "address": "402 E OREGAN AVE, PHOENIX, AZ, 85012",
+        "contact": "BRENT BESSINGER",
+        "phone": "480-697-1470",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ocwxq0k",
+        "name": "P M C BUILDING LLC",
+        "partnerCode": "RELASPMCBU",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "85660",
+        "address": "8452 BOSECK DR, LAS VEGAS, NV, 89145",
+        "contact": "BRENT PHILIP",
+        "phone": "714-474-5614",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dl1kf6k",
+        "name": "PADILLA SIGNATURE BUILDER",
+        "partnerCode": "CUPHXPDILL",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "111599",
+        "address": "8254  E SIERRA  PINTA DR, SCOTTSDALE, AZ, 85255",
+        "contact": "RICK PADILLA",
+        "phone": "480-695-7517",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "g3io9ef",
+        "name": "PALMIERE CONSTRUCTION INC",
+        "partnerCode": "CUPHXPALMR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "267794",
+        "address": "745 Kiowa Ave Suite 108, Lake Havasu City, AZ, 86403",
+        "contact": "RICK PADILLA",
+        "phone": "928-846-6169",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2flrh62",
+        "name": "PALMS VILLA CONSTRUCTION",
+        "partnerCode": "CULASPALMS",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "272345",
+        "address": "3400 S. AVE 7E, YUMA, AZ, 85365",
+        "contact": "MIGUEL ARROYO",
+        "phone": "918-289-9491",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vdnd7kv",
+        "name": "PAPOCK CONSTRUCTION",
+        "partnerCode": "CULASPAPCK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "6596 Treadway Ln, Las Vegas, NV, 89103-3149",
+        "contact": "Bob Papock",
+        "phone": "702-596-8050",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "z7nvgp0",
+        "name": "PARADISE HOMES OF HAVASU INC",
+        "partnerCode": "CULASPARHH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "110060",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0nnb3t2",
+        "name": "PARAGON HOMES",
+        "partnerCode": "CUPHXPRGO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "101838",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lsk1a0e",
+        "name": "PARCEL INTERIORS DEVELOPMENT",
+        "partnerCode": "REABQINTRR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "m5d10h9",
+        "name": "PATEL DEVELOPMENT COMPANY",
+        "partnerCode": "CUPHXPTLDV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "284513",
+        "address": "13395 E Sorrel Ln, Scottsdale, AZ, 85259-6315",
+        "contact": "Mitesh Patel",
+        "phone": "480-614-0434",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rrhosmv",
+        "name": "PATRICK BUILDER",
+        "partnerCode": "RETUCPRIC",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "352083",
+        "address": "3422 W BELL SONG PLACE, MARANA, AZ, 85658",
+        "contact": "DARYL PATRICK",
+        "phone": "541-610-7072",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "sxnfdhw",
+        "name": "PATTERSON ENTERPRISES CONSTRUCTION",
+        "partnerCode": "REPHXPTTER",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "332283",
+        "address": "3210 EAST CORALBELL AVE, MESA, AZ, 85204",
+        "contact": "EDWIN PATTERSON",
+        "phone": "480-271-5175",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "iunf1mp",
+        "name": "PDQ BUILDERS",
+        "partnerCode": "REPHXPDQBI",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "091948",
+        "address": "2244 E HOPE CIR, MESA, AZ, 85213",
+        "contact": "TIM THOMPSON",
+        "phone": "480-649-2769",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "90nxavp",
+        "name": "PEAK DESIGN AND REMODEL",
+        "partnerCode": "REPHXPKDES",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "347634",
+        "address": "2212 N LANTERN LN, FLAGSTAFF, AZ, 86004",
+        "contact": "JAIME TINKLE",
+        "phone": "480-323-6120",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kqyecry",
+        "name": "PECORARO FAMILY ENTERPRISES",
+        "partnerCode": "RELASPECR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "67126",
+        "address": "367 Purple Sandpiper Street, 89138, NV, 89138",
+        "contact": "Mark Pecoraro",
+        "phone": "702-277-9264",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3i9mkm1",
+        "name": "PERFECTION GRANITE",
+        "partnerCode": "REPHXPERGR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "347805",
+        "address": "3317 S HIGLEY, GILBERT, AZ, 85297",
+        "contact": "BLAKE JENSEN",
+        "phone": "480-233-2754",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "da0aw70",
+        "name": "PETER JACOBS HOMES INC",
+        "partnerCode": "CULASJPHOM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "799449",
+        "address": "1550 W Horizon Ridge Pkwy Ste R, Las Vegas, NV, 89012",
+        "contact": "Mark Pecoraro",
+        "phone": "760-880-1761",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "nhoq5j9",
+        "name": "PETERS CUSTOM (PINETOP)",
+        "partnerCode": "CUPHXPTOPC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "294776",
+        "address": "1849 HOMESTEAD ROAD, LAKESIDE, AZ, 85929",
+        "contact": "BRADY PETERS",
+        "phone": "928-521-7323",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ufn2eie",
+        "name": "PETERS CUSTOM CONCRETE AND BUILD",
+        "partnerCode": "REPHXPETRS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "294776",
+        "address": "1849 HOMESTEAD RD, LAKESIDE, AZ, 85929",
+        "contact": "BRADY PETERS",
+        "phone": "928-521-7323",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "i8c3ps9",
+        "name": "PHEIFFER CUSTOMS",
+        "partnerCode": "REPHXPHFFE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "150218",
+        "address": "3218 E BELL RD, PHOENIX, AZ, 85032",
+        "contact": "TIM PFEIFFER",
+        "phone": "602-788-3970",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "aordiye",
+        "name": "PHILLIPS HOOVER",
+        "partnerCode": "CUELPPHVR",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "nzlrlup",
+        "name": "PHOENIX ENVIROMENTAL GROUP",
+        "partnerCode": "REPHXENVR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "328721",
+        "address": "5501 E ROCKRIDGE RD, PHOENIX, AZ, 85018",
+        "contact": "CHAD VANMOORLEHEM",
+        "phone": "602-920-3067",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tyc9so0",
+        "name": "PHOENIX RESTORATIONS GROUP",
+        "partnerCode": "RELASPHXRE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "89206",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dilah7f",
+        "name": "PICASSO BUILDERS",
+        "partnerCode": "CUABQPCSSO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "90549",
+        "address": "9901 SAN VERBENA TRAIL, ALBUQUERQUE, NM, 87122",
+        "contact": "CHRIS MARTINEZ",
+        "phone": "505-720-0627",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xy8vpyi",
+        "name": "PICKETT HAGEN BUILDERS, INC.",
+        "partnerCode": "CUPHXPCKTT",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "315985",
+        "address": "4028 N 45th St, Phoenix, AZ, 85018-5406",
+        "contact": "Chris Hagen",
+        "phone": "602-402-4784",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lk1xobk",
+        "name": "PIMMEX CONTRACTING",
+        "partnerCode": "REPHXPIMMX",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "252346",
+        "address": "10 S ROOSEVELT ST, CHANDLER, AZ, 85226",
+        "contact": "CARLOS MUNOZ",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "bk8pxbl",
+        "name": "PIMMEX CONTRACTING CORP",
+        "partnerCode": "REPHXPIMMX",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "252346",
+        "address": "10 S ROOSEVELT ST, CHANDLER, AZ, 85226",
+        "contact": "CARLOS MUNOZ",
+        "phone": "480-788-8996",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "01u697k",
+        "name": "PINE CANYON HOMES DBA SYMMETRY",
+        "partnerCode": "CUPHXPINPE",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "1201 E Jw Powell Blvd, Flagstaff, AZ, 86005-6555",
+        "contact": "Tom Kershner",
+        "phone": "928-779-5700",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5de7pot",
+        "name": "PINNACLE BUILDERS",
+        "partnerCode": "CUPHXPINNCB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "312965",
+        "address": "12875 E Amble Way, Prescott Valley, AZ, 86315",
+        "contact": "CHAD VANMOORLEHEM",
+        "phone": "928-308-0852",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "osu0sxr",
+        "name": "PINNACLE HOMES INC, LV",
+        "partnerCode": "CULASPINHS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "9225 W Flamingo Rd, Las Vegas, NV, 89147-6468",
+        "contact": "Frank Wyatt",
+        "phone": "702-228-0720",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4euiovx",
+        "name": "PJ BECKER & SONS CONSTRUCTION",
+        "partnerCode": "RELASPJBEC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "71803",
+        "address": "6767 W. TROPICANA AVE, LAS VEGAS, NV, 89103",
+        "contact": "PETER BECKER",
+        "phone": "702-248-1027",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tabuvio",
+        "name": "PLANET DEVELOPMENT",
+        "partnerCode": "CUABQPLNTE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "93348",
+        "address": "P.O. BOX 598, FAIRACRES, NM, 88033",
+        "contact": "GARY ROGERS",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2vqipx2",
+        "name": "PLATEAU DEVELOPMENT",
+        "partnerCode": "CUPHXPLTED",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "350475",
+        "address": "7501 W DILLON WASH ROAD, PRESCOTT, AZ, 86305",
+        "contact": "JOE JONES",
+        "phone": "928-713-5650",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wpjx6co",
+        "name": "PLATINUM SKY CONSTRUCTION",
+        "partnerCode": "CUABQPLTNS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "354848",
+        "address": "755 Ridge Canyon Rd, Santa Fe, NM, 87506-8365",
+        "contact": "JOE JONES",
+        "phone": "928-713-5650",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gj8q12e",
+        "name": "PLAZA BUILDERS",
+        "partnerCode": "CUABQPLAZB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "414604",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "mp92kv2",
+        "name": "POPSON CONSTRUCTION",
+        "partnerCode": "CUPHXPOPSN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "10383 E Rising Sun Dr, Scottsdale, AZ, 85262-3074",
+        "contact": "Dan Popson",
+        "phone": "520-940-8900",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "s7dj72z",
+        "name": "PORTER BROS CONSTRUCTION",
+        "partnerCode": "REPHXPBRO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "67986",
+        "address": "1285 N FIEST BLVD, GILBERT, AZ, 85233",
+        "contact": "GARY PORTER",
+        "phone": "602-738-5830",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "04y0wj8",
+        "name": "PORTERBUILT CONTRACTING AND REMOLDELING",
+        "partnerCode": "CUPHXPRTRC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "317306",
+        "address": "27672 N 72nd Way, Scottsdale, AZ, 85266-4104",
+        "contact": "Elysia Porter",
+        "phone": "480-710-7491",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2n3ntsa",
+        "name": "PRAS CAPITAL",
+        "partnerCode": "CULASPRASCL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yh96ysd",
+        "name": "PREMIER PARADISE INC. - CUSTOM HOMES DIVISION",
+        "partnerCode": "CUPHXPPARD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "324459",
+        "address": "4100 S Lindsay Rd Ste 103, Gilbert, AZ, 85297-1507",
+        "contact": "JEROMEY RICHARD NAUGLE",
+        "phone": "602-320-7057",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2ib5e3f",
+        "name": "PREMIUM MILLWORK AZ",
+        "partnerCode": "CAPHXPRMMI",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "353538",
+        "address": "3650 N 40th Ave, Phoenix, AZ, 85009",
+        "contact": "JUANCARLOS ROJAS",
+        "phone": "602-836-9488",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "37995r3",
+        "name": "PRESCOTT BUILDERS OF AZ",
+        "partnerCode": "CUPHXPRSCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "246536",
+        "address": "305 N SUMMIT AVE B, PRESCOTT, AZ, 86301",
+        "contact": "CARL LUECK",
+        "phone": "928-717-0147",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8soizo9",
+        "name": "PRESTIGE BUILD CO",
+        "partnerCode": "REPHXPRET",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "360344",
+        "address": "8143 E STAGECOACH PASS, SCOTTSDALE, AZ, 85266",
+        "contact": "MATT JURIS",
+        "phone": "602-573-7414",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2gzvzfw",
+        "name": "PRESTIGIOUS HOMES",
+        "partnerCode": "CUABQPRSIG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "91898",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "b5agtr0",
+        "name": "PRH CONSTRUCTION",
+        "partnerCode": "REPHXPRHCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "256048",
+        "address": "4425 E. AGAVE RD Ste 136, PHOENIX, AZ, 85044",
+        "contact": "PHILLIP RUSSELL HARRIS",
+        "phone": "480-219-5247",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vo2nlkc",
+        "name": "PRIMARIS CONSTRUCTION",
+        "partnerCode": "CULASPRMAR",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "80845",
+        "address": "4775 W TECO AVE, LAS VEGAS, NV, 89118",
+        "contact": "GRANT MATESIC",
+        "phone": "702-202-9600",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "u0d2btu",
+        "name": "PRIMERA",
+        "partnerCode": "CAPHXPREMEA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "16681 N 84th Ave Ste 110, Peoria, AZ, 85382-4783",
+        "contact": "Cassie Brown",
+        "phone": "623-972-3665",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "y1f91sp",
+        "name": "PRISTINE CUSTOM HOMES",
+        "partnerCode": "CUPHXPRIST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "355625",
+        "address": "3897 S SUMMIT TRAIL, GOLD CANYON, AZ, 85118",
+        "contact": "MICHAEL PAHL",
+        "phone": "651-402-2357",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "di72yow",
+        "name": "PRO RENOVATIONS",
+        "partnerCode": "REPHXPROR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "321514",
+        "address": "35006 N 10TH STREET, DESERT HILLS, AZ, 85086",
+        "contact": "CODY SCHRODER",
+        "phone": "480-297-2103",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "78rumjj",
+        "name": "PROBUILD DESIGN AND CONSTRUCTION",
+        "partnerCode": "REPHXRPODC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "342466",
+        "address": "6424 E GREENWAY PKWY, SCOTTSDALE, AZ, 85254",
+        "contact": "FEI KORSHAK",
+        "phone": "480-376-6080",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "p4gweqj",
+        "name": "PROFESSIONAL REPS DEVELOPMENT",
+        "partnerCode": "CUPHXPRORD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "750 E Covey Ln #110, Phoenix, AZ, 85024",
+        "contact": "MARGE NEWHAM",
+        "phone": "602-697-0488",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "omloonm",
+        "name": "PROJECT MASTER INC.",
+        "partnerCode": "CUABQMODRN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1704 Llano Street #B186, Santa Fe, NM, 87505",
+        "contact": "BRIAN GIANARDI",
+        "phone": "505-920-3659",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "msygoy1",
+        "name": "PRULL CUSTOM BUILDERS",
+        "partnerCode": "CUABQPRLLA",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "3204 Calle Marie, Santa Fe, NM, 87507-7312",
+        "contact": "Jodi Vevoda",
+        "phone": "505-438-8005",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "88tkrj1",
+        "name": "PULTE GROUP - ALBUQUERQUE",
+        "partnerCode": "SFABQPULTE",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "7601 Jefferson St NE, Albuquerque, NM, 87109-4494",
+        "contact": "Ida Davis",
+        "phone": "505-761-9606",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ifbk5b5",
+        "name": "PULTE GROUP - ARIZONA",
+        "partnerCode": "SFPHXPULTE",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "16767 N Perimeter Dr, Scottsdale, AZ, 85260-1042",
+        "contact": "Lee Wymer",
+        "phone": "480-391-6000",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vdex24t",
+        "name": "PULTE GROUP LAS VEGAS",
+        "partnerCode": "SFLASPULTE",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "8345 W Sunset Rd, Las Vegas, NV, 89113-2176",
+        "contact": "Bryan Moore",
+        "phone": "702-437-7999",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jum3u1p",
+        "name": "PURECRAFT CONSTRUCTION",
+        "partnerCode": "CUPHXPURCC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "354967",
+        "address": "3650 E Indian Wells Ct, Queen Creek, AZ, 85142",
+        "contact": "Russell Mills",
+        "phone": "480-205-9855",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9eqx5b9",
+        "name": "PWI CONSTRUCTION (ANDAZ)",
+        "partnerCode": "CUPHXPWANZ",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "52898",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ylhxppx",
+        "name": "QMS CONSTRUCTION",
+        "partnerCode": "CULASQMSCON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "904 PONT CHARTRAIN DR, LAS VEGAS, NV, 89145",
+        "contact": "Russell Mills",
+        "phone": "702-635-2494",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "no4aq4d",
+        "name": "QUALITAS BUILDERS (LACY)",
+        "partnerCode": "CUPHXQULTS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "163658",
+        "address": "1620 W Wisteria Dr, Cahndler, AZ, 85248",
+        "contact": "Cliff Jones",
+        "phone": "602-526-2122",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "w1y3dyx",
+        "name": "R & G CUSTOM HOMES",
+        "partnerCode": "CUPHXRGHOM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "205985",
+        "address": "27818 N 45th WAY, Cave Creek, AZ, 85331",
+        "contact": "GREG WOOLF",
+        "phone": "480-540-1710",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xf706hc",
+        "name": "R & H REMODELING",
+        "partnerCode": "REPHXRAHDL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "179683",
+        "address": "1304 N Skyline Drive, Prescott, AZ, 86305",
+        "contact": "Ronald Meneou",
+        "phone": "928-910-2960",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ba1fr4e",
+        "name": "R & N CONSTRUCTION",
+        "partnerCode": "CUPHXRNCON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "286976",
+        "address": "3416 N 36TH ST, PHOENIX, AZ, 85018",
+        "contact": "KEN NICHOLSON",
+        "phone": "623-271-9337",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "n76xscn",
+        "name": "R HINES CONSTRUCTION",
+        "partnerCode": "CUABQRHNSC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "252563",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "c8jxwg8",
+        "name": "R J GURLEY CONSTRUCTION",
+        "partnerCode": "CUPHXRGJUR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "323030",
+        "address": "7279 E Adobe Dr Ste 101, Scottsdale, AZ, 85255-4041",
+        "contact": "Robert Gurley",
+        "phone": "480-473-7300",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kwp6gw2",
+        "name": "R. LOPES REMODELING",
+        "partnerCode": "REPHXRLOPS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "336481",
+        "address": "11636 N 22ND AVE, PHOENIX, AZ, 85029",
+        "contact": "RICARDO LOPES",
+        "phone": "602-885-4799",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kp47yu5",
+        "name": "RADIUS CONTRACTORS",
+        "partnerCode": "CUPHXRADCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "275286",
+        "address": "7835 E Redfield Rd, Scottsdale, AZ, 85260-6965",
+        "contact": "mike golec",
+        "phone": "480-284-7105",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "554s03o",
+        "name": "RAFAEL CONSTRUCTION",
+        "partnerCode": "CULASRFAL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "31955",
+        "address": "5870 CONSTRUCTION AVE., LAS VEGAS, NV, 89122",
+        "contact": "RAFAEL MEDINA",
+        "phone": "702-451-5511",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1c2f0eq",
+        "name": "RAHIMI",
+        "partnerCode": "CULASRAHMI",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "78442",
+        "address": "8110 W Warm Springs, Las Vegas, NV, 89113",
+        "contact": "PEDRAM RAHRMI",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "j4bmukt",
+        "name": "RAINDANCE BUILDERS",
+        "partnerCode": "CUPHXRNDAN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "294081",
+        "address": "12819 W. MISSOURI AVE, LITCHFEILD PARK, AZ, 85340",
+        "contact": "Kent Sheppard",
+        "phone": "623-764-0451",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "g2gqiy8",
+        "name": "RARE FORM BUILDER",
+        "partnerCode": "CUPHXRARF",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "326708",
+        "address": "818 W Oregon Ave, Phoenix, AZ, 85013",
+        "contact": "Patrick Rogers",
+        "phone": "602-399-1438",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ddl0dwz",
+        "name": "RAY LUXURY HOMES",
+        "partnerCode": "CUPHXRAYHS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3104 E Camelback Rd # 127, Phoenix, AZ, 85016-4502",
+        "contact": "Bill Ray",
+        "phone": "602-295-2909",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "h1b5krz",
+        "name": "RB CONSTRUCTION",
+        "partnerCode": "REPHXRBCON",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "351389",
+        "address": "PO BOC 32002, TUCSON, AZ, 85751",
+        "contact": "ROBERT LINBERG",
+        "phone": "520-240-9628",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ikm67gy",
+        "name": "RDH BUILDERS",
+        "partnerCode": "CUPHXRCHBLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "341724",
+        "address": "PO BOX 5711, SCOTTSDALE, AZ, 85261",
+        "contact": "RYAN DOUGLASS",
+        "phone": "480-269-6825",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "s4n3h62",
+        "name": "REAL EXQUISITE ESTATE",
+        "partnerCode": "CUTUCRELQS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "240880",
+        "address": "6450 N REGAL MANOR DR, TUCSON, AZ, 85750",
+        "contact": "MONTE BARTHOLOMEW",
+        "phone": "520-647-4958",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2g77a55",
+        "name": "REBORN PROPERTIES",
+        "partnerCode": "RETUCRBON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "320438",
+        "address": "4007 E PARADISE FALLS DR, TUCSON, AZ, 85712",
+        "contact": "JOSH EGGMAN",
+        "phone": "520-409-6705",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "nuaka0z",
+        "name": "RED RHINO CONSTRUCTION",
+        "partnerCode": "REPHXREDRH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "302082",
+        "address": "5241 E Ludlow Dr, Scottsdale, AZ, 85254",
+        "contact": "Fidel Chacon",
+        "phone": "602-214-9768",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7r1w672",
+        "name": "RED ROCK CONTRACTORS",
+        "partnerCode": "REPHXRROK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "137614",
+        "address": "2105 N NEVADA ST, CHANDLER, AZ, 85255",
+        "contact": "RICHARD CHAFFEY",
+        "phone": "480-539-0111",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2jzywft",
+        "name": "RED ROCK FIREPLACE & BBQ",
+        "partnerCode": "CAPHXRDROCK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "2855 W STATE RTE 89A, SEDONA, AZ, 86336",
+        "contact": "Fidel Chacon",
+        "phone": "928-203-0803",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "soua23m",
+        "name": "REEF CONSTRUCTION",
+        "partnerCode": "CUPHXREFB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "343669",
+        "address": "228 S Clark Dr, Tempe, AZ, 85288-3094",
+        "contact": "Brandon Millan",
+        "phone": "480-696-7622",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1r70zwq",
+        "name": "REFORMA CONSTRUCTION LLC",
+        "partnerCode": "RETUCRFOR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "319018",
+        "address": "4544 E. CAMP LOWELL, TUCSON, AZ, 85712",
+        "contact": "JOSE CEJA",
+        "phone": "520-440-4941",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jiqp6dd",
+        "name": "REGAL CONSTRUCTION",
+        "partnerCode": "RELASREGL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "78503",
+        "address": "6000 S. EASTERN, LAS VEGAS, NV, 89119",
+        "contact": "RICHARD ROBERTS",
+        "phone": "702-430-8810",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "chbhvvu",
+        "name": "RELIANCE INNOVATION",
+        "partnerCode": "RELASRLIN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "92799",
+        "address": "102 SCORPIOS ISLAND ST, HENDERSON, NV, 89012",
+        "contact": "RICHARDO GOMEZ",
+        "phone": "702-927-2031",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ye7od7o",
+        "name": "RENEW HOME IMPROVEMENTS",
+        "partnerCode": "REPHXRENWH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "231552",
+        "address": "6602 E CORRINE DRIVE, SCOTTSDALE, AZ, 85254",
+        "contact": "KAL SALEM",
+        "phone": "480-540-0636",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "m8s390w",
+        "name": "RENOVATIONS OF LAS VEGAS",
+        "partnerCode": "RELASRNOVT",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "72107",
+        "address": "9811 W Charleston Blvd, Las Vegas, NV, 89117-7528",
+        "contact": "KAL SALEM",
+        "phone": "702-467-8899",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "osmfzhe",
+        "name": "RENOVEX CONSTRUCTION",
+        "partnerCode": "RELASRENX",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "94258",
+        "address": "7854 W Sahara, Las Vegas, NV, 89117",
+        "contact": "Micky Schulman",
+        "phone": "702-503-5558",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "k2q72pf",
+        "name": "REPIC BUILDERS",
+        "partnerCode": "CUPHXREPCB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "323255",
+        "address": "3668 w Anthem Way Ste B158, Anthem, AZ, 85086",
+        "contact": "RICK MITCH",
+        "phone": "623-217-4958",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "azcrfl2",
+        "name": "REPLAY DESTINATIONS",
+        "partnerCode": "CUPHXREPLDS",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "4237 N Craftsman Court, Scottsdale, AZ, 85251",
+        "contact": "Jeremy Pfile",
+        "phone": "480-584-5795",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qlzg66b",
+        "name": "REPUBLIC WEST REMODELING",
+        "partnerCode": "REPHXRPUBLW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "350588",
+        "address": "2330 W UNIVERSITY DR, TEMPE, AZ, 85281",
+        "contact": "HANSON VAN",
+        "phone": "480-478-8700",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zses5ui",
+        "name": "RES CONTRACTING",
+        "partnerCode": "REPHXRESCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "201198",
+        "address": "PO Box 4198, Prescott, AZ, 86302-4198",
+        "contact": "MATT BOHANNON",
+        "phone": "928-776-0301",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "b7xm6oc",
+        "name": "RESERVE BUILDERS",
+        "partnerCode": "CUPHXRESRV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "3216 Lakeside Vlg, Prescott, AZ, 86301-7647",
+        "contact": "Carrie Anderson",
+        "phone": "928-771-8540",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "iitohka",
+        "name": "REVIVAL HOME RENOVATION",
+        "partnerCode": "CUPHXRVIVL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "1444 E Behrend Dr, Phoenix, AZ, 85024-3650",
+        "contact": "Kevin Keller",
+        "phone": "602-501-7977",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "72d1ekw",
+        "name": "REZCOM BUILDERS",
+        "partnerCode": "REPHXREXCM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "318078",
+        "address": "4079 E. Lexington Ave, Gilbert, AZ, 85234",
+        "contact": "Paul Soldo",
+        "phone": "480-289-0501",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "q227mey",
+        "name": "RICHARD LUKE ARCHITECS",
+        "partnerCode": "CULASLUKHM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "9061 W Sahara Ave Ste 105, Las Vegas, NV, 89117-5797",
+        "contact": "Richard Luke",
+        "phone": "702-838-8468",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fzxeno9",
+        "name": "RICHMOND AMERICAN HOMES - SCOTTSDALE",
+        "partnerCode": "SFPHXRAMH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "16427 N Scottsdale Rd Ste 175, Scottsdale, AZ, 85254-1583",
+        "contact": "David Viger",
+        "phone": "602-956-4100",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3u2jk9a",
+        "name": "RICHTER HOMES",
+        "partnerCode": "CUPHXRCHTR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "289353",
+        "address": "29418 N 145th Pl, Scottsdale, AZ, 85262-7071",
+        "contact": "Dave Reicher",
+        "phone": "602-319-8910",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5fzkuon",
+        "name": "RILEY CARKEEK CONSTRUCTION",
+        "partnerCode": "CULASRILYC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "58925",
+        "address": "2400 Viewpoint Drive, Henderson, NV, 89014",
+        "contact": "Riley Carkeek",
+        "phone": "702-279-8020",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "b672mgu",
+        "name": "RINCON BUILDING COMPANY",
+        "partnerCode": "REPHXRINCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "353465",
+        "address": "8204 W. WILLIAMS RD, PEORIA, AZ, 85383",
+        "contact": "SHANE TAYLOR",
+        "phone": "623-764-6474",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xd5ld5h",
+        "name": "RITZ CARLTON FIVE STAR DEVELOPMENT",
+        "partnerCode": "SFPHXFRTZSD",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "6720 N Scottsdale Rd Ste 130, Scottsdale, AZ, 85253-4423",
+        "contact": "Francesca Ayoub",
+        "phone": "480-657-7827",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ft5zzjo",
+        "name": "RIVER RIDGE BUILDERS",
+        "partnerCode": "CULASRIVRB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "500 LAKE HAVASU AVE N A-106, LAKE HAVASU CITY, AZ, 86403",
+        "contact": "ED NAVARO",
+        "phone": "928-486-8546",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qqusgpd",
+        "name": "RIVIERA HOMES",
+        "partnerCode": "CUTUCRVER",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "201345",
+        "address": "7723 E SABINO ENCLAVE PLACE, TUCSON, AZ, 85750",
+        "contact": "JOHN MATALONE",
+        "phone": "520-977-1029",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "suj7cuq",
+        "name": "RJS BUILD",
+        "partnerCode": "CUABQRJSBD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "Box 5766, Santa Fe, NM, 87502",
+        "contact": "JOHN MATALONE",
+        "phone": "505-913-9723",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "k02i8h0",
+        "name": "RJS DEVELOPMENT",
+        "partnerCode": "REPHXRJSEL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "210648",
+        "address": "7618 W VILLA THERESA DR, GLENDALE, AZ, 85308",
+        "contact": "JAMES CARMICHAEL",
+        "phone": "623-757-3323",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zl9ql73",
+        "name": "RJWC DEVELOPMENT",
+        "partnerCode": "REPHXJRJDEV",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "329533",
+        "address": "1865 W SR 89A Ste C, SEDONA, AZ, 86336",
+        "contact": "MAXWELL ADELSON",
+        "phone": "949-910-2167",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qw31lgr",
+        "name": "ROBBINS CONSTRUCTION INC",
+        "partnerCode": "CULASROBBN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "36591",
+        "address": "1540 Arabian Dr, Henderson, NV, 89002-3406",
+        "contact": "JIMMY ROBBINS",
+        "phone": "702-558-3199",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1ljwnk4",
+        "name": "ROBERTSON CONSTRUCTION",
+        "partnerCode": "CULASRBERT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "PO Box 982491, Park City, UT, 84098",
+        "contact": "Isamarie Lugo",
+        "phone": "970-409-6358",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "msgq46h",
+        "name": "ROBSON COMMUNITIES",
+        "partnerCode": "SFTUCROBCM",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "9532 E Riggs Rd, Sun Lakes, AZ, 85248-7463",
+        "contact": "Lynn Hays",
+        "phone": "480-895-4243",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fnm3n18",
+        "name": "ROCKMAN BUILDING CO",
+        "partnerCode": "CUPHXRCKMA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "310494",
+        "address": "4939 E CORDILLA LN, CAVE CREEK, AZ, 85331",
+        "contact": "JERRAMY ROCKMAN",
+        "phone": "602-722-8286",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "azcmwoz",
+        "name": "ROCKRIMMON CONSTRUCTION LLC",
+        "partnerCode": "CUPHXROCKRM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "310697",
+        "address": "7811 N 12th Street, Phoenix, AZ, 85020",
+        "contact": "JERRAMY ROCKMAN",
+        "phone": "602-820-6062",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9pwzhan",
+        "name": "ROMACK BUILDERS",
+        "partnerCode": "REPHXROMK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "054363",
+        "address": "1009 N VISTA VERDE, LITCHFEILD PARK, AZ, 85340",
+        "contact": "JOHN ROMACK",
+        "phone": "602-540-4940",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fw0ai6c",
+        "name": "ROSEWOOD HOMES CONSTRUCTION",
+        "partnerCode": "CUPHXROSEH",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "250901",
+        "address": "8601 N Scottsdale Rd Ste 320, Paradise Valley, AZ, 85253-2746",
+        "contact": "Nick McKee",
+        "phone": "480-922-6366",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fpmqtci",
+        "name": "ROSIE RIGHT DESIGN BUILD REMODEL",
+        "partnerCode": "REPHXRRDES",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "283758",
+        "address": "6949 E Shea Blvd Ste 120, Scottsdale, AZ, 85254",
+        "contact": "ROSAMOND C ROMERO C ROMERO JR",
+        "phone": "480-998-6961",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pvihppu",
+        "name": "RS BUILDERS",
+        "partnerCode": "REPHXRSBLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "303083",
+        "address": "21813 N 119TH DR, SUNCITY, AZ, 85373",
+        "contact": "SUKHWINDER PUREWAL",
+        "phone": "602-638-8620",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ubit55x",
+        "name": "RUIZ & NICHOLSON CONSTRUCTIONLLC",
+        "partnerCode": "REPHXRUZNC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "327552",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ay2ho1e",
+        "name": "RYSSO PETERS",
+        "partnerCode": "CAPHXRYSPT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "7101 E Stetson Dr, Scottsdale, AZ, 85251-3213",
+        "contact": "Lorna Blend",
+        "phone": "480-946-0088",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wsg1weu",
+        "name": "S BROTHERS CONST.",
+        "partnerCode": "CUPHXSBROTH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "20424 N 98th Ln, Peoria, AZ, 85382-5107",
+        "contact": "Silviu Stanciu",
+        "phone": "623-512-6783",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "l4pcj6g",
+        "name": "S H BUNTS CONSTRUCTION",
+        "partnerCode": "RELASBUNT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "41556",
+        "address": "10050 MAGNIFICENT SKY ST, LAS VEGAS, NV, 89178",
+        "contact": "HARRIS BUNGAY",
+        "phone": "702-538-6632",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "f5pm6vb",
+        "name": "SABITTIERI CONSTRUCTION",
+        "partnerCode": "CUPHXSABTT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "286667",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "mncia31",
+        "name": "SACHSE CONSTRUCTION",
+        "partnerCode": "REPHXSCHSE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "230260",
+        "address": "3663 WOODWARD AVE, DETROIT, MI, 48201",
+        "contact": "SACHSE CONSTRUCTION",
+        "phone": "313-498-5197",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wa5mitl",
+        "name": "SADDLEWOOD CONTRACTING",
+        "partnerCode": "CUPHXSDLEW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "350714",
+        "address": "121 E CAMELBACK RD, PHOENIX, AZ, 85260",
+        "contact": "MARCO LOPEZ",
+        "phone": "480-999-6100",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kpa10l7",
+        "name": "SAGE COMPANIES LLC",
+        "partnerCode": "CUPHXSAGCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "239099",
+        "address": "10180 E. Desert Cove, phoenix, az, 85258",
+        "contact": "Michael Mason",
+        "phone": "602-430-8333",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yepwtze",
+        "name": "SALAS HOMES",
+        "partnerCode": "CUABQSLASH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "402138",
+        "address": "5035 HAZEN CT, las cruces, NM, 88011",
+        "contact": "RALPH SALAS",
+        "phone": "575-650-5648",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wpbpx9u",
+        "name": "SAMA NL LLC",
+        "partnerCode": "CUPHXSAMLC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "503060136",
+        "address": "110431 E Summit Peak Way, Scottsdale, AZ, 85262",
+        "contact": "Kyle Baki",
+        "phone": "623-330-4740",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wnqt5tk",
+        "name": "SAMPLEY CONSTRUCTION",
+        "partnerCode": "CUPHXSMPLE",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "326697",
+        "address": "3200 S Dobson Rd, Chandler, AZ, 85248-4909",
+        "contact": "JAMES SAMPLEY",
+        "phone": "480-399-6635",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qw4h2qe",
+        "name": "SANTA BARBARA HOMES",
+        "partnerCode": "CUPHXSNTAB",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "326543",
+        "address": "SCOTTSDALE, SCOTTSDALE, AZ, 85262",
+        "contact": "BRAD ORLICH",
+        "phone": "480-800-9500",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8klkxps",
+        "name": "SANTA FE TRAIL BUILDERS",
+        "partnerCode": "REABQSANTR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "83439",
+        "address": "3209 MERCANTILE COURT, SANTA FE, NM, 87507",
+        "contact": "JOE LUJAN",
+        "phone": "505-449-8542",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jo7qi1j",
+        "name": "SANTOYO CONSTRUCTION",
+        "partnerCode": "CUPHXSANTY",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "305446",
+        "address": "7904 E Chaparral Rd Ste A110, Scottsdale, AZ, 85250",
+        "contact": "Gabriel Santoyo",
+        "phone": "480-703-5719",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "efqd8j4",
+        "name": "SAPANARO DEVELOPMENT",
+        "partnerCode": "CUPHXSPNDV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "254930",
+        "address": "6263 W Kent Dr, Chandler, AZ, 85226-1182",
+        "contact": "Anthony Ghiz",
+        "phone": "602-568-9445",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "26ouf1r",
+        "name": "SAVI CONSTRUCTION",
+        "partnerCode": "CULASSVITN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "418 S Maryland Pkwy, Las Vegas, NV, 89101-7244",
+        "contact": "Ernesto Savino",
+        "phone": "702-382-3177",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ukklng2",
+        "name": "SC BEST",
+        "partnerCode": "SCBEST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "SCBEST, MISSING, AK, 99999",
+        "contact": "",
+        "phone": "999-999-9999",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1g5tipz",
+        "name": "SCHMIT AND ASSOCIATES",
+        "partnerCode": "CUABQSCHMT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "80901",
+        "address": "14 Calle Nopalitos, Santa Fe, NM, 87507-8645",
+        "contact": "Dave Schmit",
+        "phone": "505-983-9746",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "r3elnn1",
+        "name": "SCHOTT DEVELOPMENT",
+        "partnerCode": "CUPHXSCHOT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "288886",
+        "address": "625 W. Deer Valley Rd Ste 103-437, PHOENIX, AZ, 85027",
+        "contact": "CHRIS SCHOTT",
+        "phone": "602-920-3930",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "sawcjd6",
+        "name": "SCHROEDER CONTRUCTION",
+        "partnerCode": "CUPHXSCHRD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "258585",
+        "address": "8213 E Montecito Ave, Scottsdale, AZ, 85251-2718",
+        "contact": "Cindy Schroeder",
+        "phone": "480-226-0006",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7uzes41",
+        "name": "SCORPION BUILDERS",
+        "partnerCode": "REPHXSCORP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "315716",
+        "address": "19155 N 83RD AVE, PEORIA, AZ, 85382",
+        "contact": "TERRY SCORPION",
+        "phone": "480-466-6000",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jncj8dd",
+        "name": "SCOTT RUBIN",
+        "partnerCode": "REPHXSCTRU",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "364546",
+        "address": "25624 N RANCH GATE ROAD, Scottsdale, AZ, 85255",
+        "contact": "SCOTT RUBIN",
+        "phone": "832-584-0593",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gbec2cy",
+        "name": "SCOTTSDALE & BEYOND CUSTOM  COMMUNITY",
+        "partnerCode": "CUPHXSCTDPU",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "CUPHXSCTDPU, MISSING, AK, 99999",
+        "contact": "",
+        "phone": "999-999-9999",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vbny2y0",
+        "name": "SCOTTSDALE MOUNTAIN",
+        "partnerCode": "CUPHXSCTMN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "2154 N PEAK DR, SCOTTSDALE, AZ, 85260",
+        "contact": "JIM SHINN",
+        "phone": "480-587-9632",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "t5l8210",
+        "name": "SERVPRO ( JDW )",
+        "partnerCode": "REPHXSERVR",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "309973",
+        "address": "4881 E LAFAYETTE BLVD, phoenix, AZ, 85018",
+        "contact": "JASON WOLFSWINKEL",
+        "phone": "602-425-6755",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dflxrf2",
+        "name": "SERVPRO JDW",
+        "partnerCode": "REPHXFIVP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "309973",
+        "address": "4881 E LAFAYETTE BLVD, PHOENIX, AZ, 85018",
+        "contact": "JASON WOLFSWINKLE",
+        "phone": "602-425-6755",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "b0ln9cc",
+        "name": "SETH ANDERSON STUDIO",
+        "partnerCode": "CUABQSTHAN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "366093",
+        "address": "PO Box 8241, Santa Fe, NM, 87504-8241",
+        "contact": "Seth Studio",
+        "phone": "505-670-8897",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lhudxin",
+        "name": "SHAVANO CONSTRUCTION",
+        "partnerCode": "CUABQSHAVNC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "3180259001",
+        "address": "7015 BORG RD NE, ALBUQUERQUE, NM, 87111",
+        "contact": "SCOTT PETTINGER",
+        "phone": "505-263-7818",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5nzarwq",
+        "name": "SHELTER ASSET MANAGEMENT (S.A.M)",
+        "partnerCode": "CUPHXSAMCG",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "365235",
+        "address": "7377 E Doubletree Ranch Rd Suite 200, Scottsdale, AZ, 85258",
+        "contact": "STUART HANSEN",
+        "phone": "520-635-4818",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wlcsymp",
+        "name": "SHENANDOAH HOMES",
+        "partnerCode": "CUPHXSHNAN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "351841",
+        "address": "931 N BLUE MARLIN DR, Gilbert, AZ, 85234",
+        "contact": "Steve Berg",
+        "phone": "480-656-6089",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6yb9rfw",
+        "name": "SHERWOOD CONSTRUCTION AKA DC LAND HOLDINGS",
+        "partnerCode": "CUPHXDCLXY",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "326263",
+        "address": "17718 E San Carlos Way, Gilbert, AZ, 85298-8960",
+        "contact": "Erika Sherwood",
+        "phone": "480-899-9097",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "61dbt5i",
+        "name": "SIGNATURE CUSTOM HOMES",
+        "partnerCode": "CUPHXSIGNT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "293711",
+        "address": "8348 GRANITE PASS RD, SCOTTSDALE, AZ, 85366",
+        "contact": "Brad Hardy",
+        "phone": "480-695-5222",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "phlow5d",
+        "name": "SILVER EAGLE CONSTRUCTION",
+        "partnerCode": "CUPHXSLVRE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "307901",
+        "address": "2146 S DUVAL, MESA, AZ, 85209",
+        "contact": "TIMOTHY CHRZANOWSKI",
+        "phone": "602-301-3096",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "l70w6j2",
+        "name": "SILVER ROCK BUILDERS",
+        "partnerCode": "CUPHXSROCK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "246683",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7jsdx5h",
+        "name": "SIMMS CONSTRUCTION LLC",
+        "partnerCode": "CUPHXSIMMSC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "261052",
+        "address": "4235 N 68th Pl, Scottsdale, AZ, 85251-2311",
+        "contact": "TIMOTHY CHRZANOWSKI",
+        "phone": "480-650-7746",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ab75a69",
+        "name": "SIMPLIFIED CONSTRUCTION",
+        "partnerCode": "CULASSIMPL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "339975",
+        "address": "6670 Green Turtle Ct, Las Vegas, NV, 89131-2304",
+        "contact": "Brett Hales",
+        "phone": "702-755-6404",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6jyjlz1",
+        "name": "SIVAGE COMMUNITY DEVELOPMENT",
+        "partnerCode": "REABQSVAGD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "90805",
+        "address": "4902 Alameda Blvd. NE, ALBUQUERQUE, NM, 87113",
+        "contact": "Michael Sivage",
+        "phone": "505-998-1800",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "egwv8kc",
+        "name": "SIVAGE HOMES",
+        "partnerCode": "SFABQSIVGE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "4902 Alameda Blvd NE, Albuquerque, NM, 87113",
+        "contact": "Michael Sivage",
+        "phone": "505-998-1800",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zy048fy",
+        "name": "SKYLINE DESIGN AND REMODEL",
+        "partnerCode": "RETUCSKYLI",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "350867",
+        "address": "2204 E HAWTHORNE ST, TUCSON, AZ, 85706",
+        "contact": "DEBRA MYERS",
+        "phone": "520-490-7754",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vr8fgpw",
+        "name": "SMART CHOICE CONSTRUCTION",
+        "partnerCode": "CUPHXSMARC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "311180",
+        "address": "8611 N Black Canyon Highway, Phoenix, AZ, 85021",
+        "contact": "Miguel Avila Castillo",
+        "phone": "602-281-6774",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "h82vy9r",
+        "name": "SMV ARCHITECTS BUILDERS",
+        "partnerCode": "CUABQSMVAR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "391918",
+        "address": "PO Box 1351, Santa Fe, NM, 87505",
+        "contact": "Salomon Velasquez",
+        "phone": "505-290-6152",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "q9hcd29",
+        "name": "SOCIAL DEVELOPMENT",
+        "partnerCode": "REPHXSOCLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "356230",
+        "address": "6538 E STALLION RD, PARADISE VALLEY, AZ, 85253",
+        "contact": "THOMAS ZUMMO",
+        "phone": "602-402-1841",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "l3z5piv",
+        "name": "SOCON BUILDERS LLC",
+        "partnerCode": "REPHXSOCNBD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "338101",
+        "address": "10869 N SCOTTSDALE RD Ste 103-297, SCOTTSDALE, AZ, 85254",
+        "contact": "BRYAN GRABOWY",
+        "phone": "480-440-4039",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5e9uguv",
+        "name": "SOLID BUILDERS",
+        "partnerCode": "CUPHXSOLDBR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "326745",
+        "address": "5737 E HORSESHOE RD, PARADISE VALLEY, AZ, 85253",
+        "contact": "BURT CAMPBELL",
+        "phone": "602-757-6776",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ntpqqq9",
+        "name": "SOMBRA RESIDENTIAL",
+        "partnerCode": "CUTUCSOMBR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "260509",
+        "address": "11125 N. La Canada Dr, Oro Valley, AZ, 85737",
+        "contact": "RISHI SANJAY MADHVANI",
+        "phone": "520-575-8976",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "65sk5bi",
+        "name": "SOMERS CONSTRUCTION",
+        "partnerCode": "CUASSOMCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "325993",
+        "address": "3131 LONGVIEW DRIVE, LAKE HAVASU, AZ, 86405",
+        "contact": "WAYNE SUMERS",
+        "phone": "928-486-7852",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "auwumgn",
+        "name": "SONORAN BUILT",
+        "partnerCode": "REPHXSNOR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "353616",
+        "address": "PO BOX   4050, GILBERT, AZ, 85296",
+        "contact": "Taylor John Farnsworth",
+        "phone": "928-499-2468",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tacky3g",
+        "name": "SONORAN VALLEY HOMES",
+        "partnerCode": "CUPHXSNORN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "214934",
+        "address": "24879 n. 85TH aVE, PEORIA, AZ, 85383",
+        "contact": "BRAD SZOLOWICZ",
+        "phone": "602-568-3261",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fnamrv3",
+        "name": "SOPHIC CONSTRUCTION",
+        "partnerCode": "REPHXSOLPHC",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "352732",
+        "address": "5541 N CAMELBACK CANYON DR, PHOENIX, AZ, 85018",
+        "contact": "RYAN KELLER",
+        "phone": "480-283-4999",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qhvxg01",
+        "name": "SOULE HOMES",
+        "partnerCode": "REPHXSOLHS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "87773",
+        "address": "1715 W AMERICAN AVE, ORACLE, AZ, 85623",
+        "contact": "BLAINE SOULE",
+        "phone": "520-429-1902",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6u4mu3x",
+        "name": "SOULITECTURE",
+        "partnerCode": "RELASSOLTCT",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "81504",
+        "address": "11035 LAVENDER HILL DRIVE, LAS VEGAS, NV, 89136",
+        "contact": "HEATH CHAPMAN",
+        "phone": "702-595-3596",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "is3oq6b",
+        "name": "SOUTH STAR CONSTRUCTION",
+        "partnerCode": "CUPHXSSTAR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "315966",
+        "address": "1240 BROOKHAVEN, PRESCOTT, AZ, 86301",
+        "contact": "JASON SCHWARTZ",
+        "phone": "928-925-1808",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zzv5ody",
+        "name": "SOUTHWEST BUILDER AND DESIGN",
+        "partnerCode": "CUPHXSWBID",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "344996",
+        "address": "22 E. VICTORY ST, PHOENIX, AZ, 85040",
+        "contact": "DOUG DEBOEF",
+        "phone": "602-595-6689",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3thv2d9",
+        "name": "SOUTHWEST KITCHEN AND BATH",
+        "partnerCode": "CATUCSWKITN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "7780 N Oracle Rd Suite 150, Tucson, AZ, 85704",
+        "contact": "Michael Chittock",
+        "phone": "520-531-9187",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "zdufeow",
+        "name": "SPECIALIZED BUILDERS",
+        "partnerCode": "CULASSPECZ",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "496 Puerto Vallarta Dr, Henderson, NV, 89011",
+        "contact": "JASON SCHWARTZ",
+        "phone": "208-695-9794",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kfprtg0",
+        "name": "SPECIALTY BUILDERS OF AZ",
+        "partnerCode": "REPHXSPCLY",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "346522",
+        "address": "2313 E POINSETTIA DR, PHOENIX, AZ, 85028",
+        "contact": "JASON OTTE",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1alfb12",
+        "name": "SPECTRUM BUILDERS LLC",
+        "partnerCode": "CUPHXSPECT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "331739",
+        "address": "8987 E Tanque Verde Rd, Tucson, AZ, 85749",
+        "contact": "Scott Koktavy",
+        "phone": "520-886-2467",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4t95835",
+        "name": "SPECTRUM REMODELING",
+        "partnerCode": "REPHXSPEC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "317898",
+        "address": "3446 E FAIRFEILD ST, MESA, AZ, 85213",
+        "contact": "RICK COMUS",
+        "phone": "480-233-8376",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dylt1pj",
+        "name": "SPEUR CONSTRUCTION",
+        "partnerCode": "REPHXSPER",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "331136",
+        "address": "2546 East Indian School Road, Phoenix, AZ, 85016",
+        "contact": "Nick Martineau",
+        "phone": "480-789-0899",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "u945r3o",
+        "name": "SPRINGBROOK",
+        "partnerCode": "REPHXSPRIN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "311720",
+        "address": "1150 E. VISTA DEL LAGO, TEMPE, AZ, 85281",
+        "contact": "ROB FRANSWAY",
+        "phone": "414-788-6125",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8gtu9an",
+        "name": "SQUARE ONE CONSTRUCTION",
+        "partnerCode": "CUPHXSQAR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "258063",
+        "address": "14747 N NORTHSIGHT, SCOTTSDALE, AZ, 85260",
+        "contact": "BOB KAPCI",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tnriuq5",
+        "name": "STAR ENERGY CONSTRUCTION",
+        "partnerCode": "CULASSTREN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "73676",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ykeke90",
+        "name": "STARMARK CONSTRUCTION",
+        "partnerCode": "CUPHXSTRMA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "243015",
+        "address": "1256 W CHANDLER BLVD Ste E, CHANDLER, AZ, 85224",
+        "contact": "MICHAEL A HICKEY",
+        "phone": "480-857-2424",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "j0v9oae",
+        "name": "STATE 48 CONTRACTING",
+        "partnerCode": "CUPHXSFRTY",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "312083",
+        "address": "10386 E Scopa Trl, Scottsdale, AZ, 85262-5128",
+        "contact": "JONATHAN BERRY",
+        "phone": "480-694-1442",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9cdqupw",
+        "name": "STEG CUSTOM HOMES",
+        "partnerCode": "CUPHXSTEGS",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "225805",
+        "address": "6868 N 7th Ave Ste 208, Phoenix, AZ, 85013-1150",
+        "contact": "James Steg",
+        "phone": "602-622-0193",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "aerlm6u",
+        "name": "STELLAR BUILDING AND DEVELOPMENT",
+        "partnerCode": "REPHXSTELB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "339770",
+        "address": "3002 N 50TH ST, PHOENIX, AZ, 85018",
+        "contact": "RICHARD MARSTELLA",
+        "phone": "602-448-8300",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gn256xf",
+        "name": "STELLAR CONTRACTING",
+        "partnerCode": "REPHXSTLAR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "321408",
+        "address": "515 E Carefree Hwy #904, Phoenix, AZ, 85086",
+        "contact": "LOU GRIENER",
+        "phone": "623-340-1880",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gw8itsu",
+        "name": "STERLING NORTH HOMES",
+        "partnerCode": "CUPHXSTERG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "269710",
+        "address": "1965 Commerce Center Cr, Ste B, Prescott, AZ, 86301-4484",
+        "contact": "Brian Wrick",
+        "phone": "928-777-1005",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5m6wwnd",
+        "name": "STEVENS LEINWEBER CONSTRUCTION",
+        "partnerCode": "CUPHXSTVNS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "70673",
+        "address": "5045 N. 12TH ST, PHOENIX, AZ, 85014",
+        "contact": "TRAVIS DANA",
+        "phone": "602-485-1950",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "8q66ytq",
+        "name": "STEWART BUILDERS",
+        "partnerCode": "CUPHXSTWAR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "286540",
+        "address": "1819 W DRAKE DRIVE Ste 101, TEMPE, AZ, 85283",
+        "contact": "Mason Stewart",
+        "phone": "480-620-0540",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ud3dvd6",
+        "name": "STINSON CONSTRUCTION",
+        "partnerCode": "CUPHXSTNSN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "299874",
+        "address": "2222 W Parkside Ln Ste 123, Phoenix, AZ, 85027-1260",
+        "contact": "ROBERT STINSON",
+        "phone": "623-869-8990",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "w4z302w",
+        "name": "STONE CREEK FURNITURE - CHANDLER",
+        "partnerCode": "CAPHXSTNCK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "200 S Kyrene Rd, Chandler, AZ, 85226-4456",
+        "contact": "Linda Van Nathan",
+        "phone": "602-458-9800",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "w6p1rdn",
+        "name": "STONE HOUSE CONSTRUCTION SERVICES",
+        "partnerCode": "REPHXSTONH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "324875",
+        "address": "PO BOX 73, SHOW LOW, AZ, 85902",
+        "contact": "RUSTY ALLEN",
+        "phone": "928-242-5595",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "adwbyhy",
+        "name": "STONERIDGE HOMEBUILDING",
+        "partnerCode": "CUPHXSTNER",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "350351",
+        "address": "1300 STONERIDGE DRIVE Ste 101, PRESCOTT VALLEY, AZ, 86314",
+        "contact": "MICHAEL RICHARDS",
+        "phone": "928-775-9111",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5ftm4uv",
+        "name": "STRAIGHTLINE BUILDERS",
+        "partnerCode": "REPHXSTRAT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "124280",
+        "address": "po box 1812, flagstaff, az, 86002",
+        "contact": "Pete Muscarella",
+        "phone": "928-779-5737",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "oitpvqn",
+        "name": "STRATFORD DEVELOPMENT",
+        "partnerCode": "REPHXSTATF",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "338881",
+        "address": "6628 E BASELINE RD, MESA, AZ, 85206",
+        "contact": "JOHN Stratford Poulsen",
+        "phone": "480-649-0543",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "nb3aw9v",
+        "name": "STUART LUXURY HOMES",
+        "partnerCode": "CUPHXSTUR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "175118",
+        "address": "905 S LOLA LANE #2, Tempe, AZ, 85281",
+        "contact": "JONATHAN STUART",
+        "phone": "480-797-1300",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1id8hqo",
+        "name": "STUDIO BUILD LLC",
+        "partnerCode": "CUPHXSTUBD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "322229",
+        "address": "3713 E Fruitvale Ave, Gilbert, AZ, 85297",
+        "contact": "Pete Muscarella",
+        "phone": "480-410-5658",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "57khd9y",
+        "name": "STUDIO DESIGN GROUP AKA PRIME CONSTRUCTION",
+        "partnerCode": "CUPHXPRME",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "339881",
+        "address": "8120 N HAYDEN RD, SCOTTSDALE, AZ, 85258",
+        "contact": "TOM REIMERS",
+        "phone": "602-399-7480",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "azksjj7",
+        "name": "STUDIO L",
+        "partnerCode": "REPHXSTUDL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "5650 N Echo Canyon Dr, Phoenix, AZ, 85018-1245",
+        "contact": "Jamie Lendrum",
+        "phone": "602-228-6883",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "vw5eng6",
+        "name": "SUMMIT TRADES",
+        "partnerCode": "REPHXSMMIT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "303465",
+        "address": "5258 E ESCONDIDO CIR, MESA, AZ, 85206",
+        "contact": "DAN MCKINNON",
+        "phone": "602-430-7382",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "j7ndnru",
+        "name": "SUN VALLEY BUILDING ENTERPRISES",
+        "partnerCode": "CUABQSNVALL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "363854",
+        "address": "PO Box 1070, Corrales, NM, 87048-1070",
+        "contact": "Wade Wingfield",
+        "phone": "505-321-0726",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9g2uzwh",
+        "name": "SUN VISTA ENTERPRISES",
+        "partnerCode": "CUABQSUNVT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "51004",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "r2hsy12",
+        "name": "SUN WEST CUSTOM HOMES",
+        "partnerCode": "CULASSUNWT",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "",
+        "address": "6675 S Cimarron Rd, Las Vegas, NV, 89113-2320",
+        "contact": "Daniel Coletti",
+        "phone": "702-498-6641",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xdb5fhu",
+        "name": "SUNSCAPE CONSTRUCTION",
+        "partnerCode": "CUPHXSUNSP",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "316443",
+        "address": "7726 E STAPLEY DR, SCOTTSDALE, AZ, 85255",
+        "contact": "PAUL SAUNDERS",
+        "phone": "480-200-9900",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0kwu7e6",
+        "name": "SUNWEST CONSTRUCTION",
+        "partnerCode": "REPHXSNWES",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "340429",
+        "address": "4659 E WARNER RD, GILBERT, AZ, 85296",
+        "contact": "JOSE BAUTISTA",
+        "phone": "602-501-5997",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5kutjp9",
+        "name": "SUPERIOR QUALITY HOMES",
+        "partnerCode": "REPHXSUPR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "86607",
+        "address": "2142 W COMSTOCK DR, CHANDLER, AZ, 85224",
+        "contact": "KERRY BARTON",
+        "phone": "602-377-5037",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7rpgblw",
+        "name": "SUPPLE HOMES",
+        "partnerCode": "CUABQSUPPL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "9550 Glendale Ave NE, Albuquerque, NM, 87122-3810",
+        "contact": "Woody Supple",
+        "phone": "505-934-8995",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0qdumc2",
+        "name": "T M CONSTRUCTION, INC (TM CONSTRUCTION)",
+        "partnerCode": "CUPHXTMCON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "339779",
+        "address": "6868 N 7th Ave, Phoenix, AZ, 85013-1199",
+        "contact": "TIM MANN",
+        "phone": "602-265-1010",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ijbi9zy",
+        "name": "T. PIERCE RHODES CONTRACTING",
+        "partnerCode": "REPHXTPRHO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "335312",
+        "address": "PO BOX 902, CORNVILLE, AZ, 86325",
+        "contact": "Thomas Pierce Rhodes Jr",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wr9ohhg",
+        "name": "T'S CONSTRUCTION AND DEVELOPMENT",
+        "partnerCode": "CUPHXTCONS",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "129348",
+        "address": "7406 E NANCHALANT, CAVE CREEK, AZ, 85377",
+        "contact": "JOE STOTT",
+        "phone": "480-227-8388",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "akmx66v",
+        "name": "T&C MULLOOLY REMODELING",
+        "partnerCode": "REPHXTCMRE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "267295",
+        "address": "1021 E DOLORES RD, ANTHEM, AZ, 85086",
+        "contact": "TIMOTHY MULLOOLY",
+        "phone": "602-291-6220",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ps42ipi",
+        "name": "T3 CONSTRUCTION",
+        "partnerCode": "REPHXTCON",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "300268",
+        "address": "1094 W Lil Ben Trl, Flagstaff, AZ, 86005",
+        "contact": "CODY THOMPSON",
+        "phone": "928-641-8293",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "mmdlih0",
+        "name": "TABER CUSTOM HOMES",
+        "partnerCode": "CUPHXTABRC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "206555",
+        "address": "22801 S 214TH WAY, QUEEN CREEK, AZ, 85142",
+        "contact": "TED TABER",
+        "phone": "480-603-5181",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2bx6aqe",
+        "name": "TALAVERA CUSTOM",
+        "partnerCode": "CUPHXTALVR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "297290",
+        "address": "5001 S CENTRAL AVE, PHOENIX, AZ, 85255",
+        "contact": "Larry Mack",
+        "phone": "480-393-6224",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "fv9x5fm",
+        "name": "TARVER CONSTRUCTION",
+        "partnerCode": "CUPHXTARVR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "68919",
+        "address": "37612 N 11th Ave, Phoenix, AZ, 85086-8734",
+        "contact": "Matthan Tarver",
+        "phone": "602-399-0586",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "r1jvelu",
+        "name": "TAYLOR MORRISON - SCOTTSDALE",
+        "partnerCode": "SFPHXTYLRM",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "348653",
+        "address": "9000 E Pima Center Pkwy Ste 350, Scottsdale, AZ, 85258-4472",
+        "contact": "Vince Morrow",
+        "phone": "480-344-7000",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xaddfz7",
+        "name": "TAZ A TO Z HOME SERVICES",
+        "partnerCode": "REPHXTAZZS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "340677",
+        "address": "106 W Glade Ln, Payson, AZ, 85541",
+        "contact": "Ron Frost",
+        "phone": "928-978-2827",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qy35p5a",
+        "name": "TC BLACK DESIGN BUILD",
+        "partnerCode": "CUPHXTCBLK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "PO Box 14032, Scottsdale, AZ, 85267-4032",
+        "contact": "TC BLACK",
+        "phone": "480-734-4125",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "uqdckkr",
+        "name": "TC BUILDING",
+        "partnerCode": "CUABQTCBLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "8100 Wyoming Blvd NE # 159, Albuquerque, NM, 87113",
+        "contact": "Tom Cardenas",
+        "phone": "505-823-4543",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "95v54y3",
+        "name": "TECTONICA CONSTRUCTION",
+        "partnerCode": "CUPHXTECTN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "319496",
+        "address": "3334 N 20th St, Phoenix, AZ, 85016-7244",
+        "contact": "EMIL ZECHILEMIL",
+        "phone": "623-533-7650",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "cvxu2qs",
+        "name": "TEMPLETON DEVELOPMENT",
+        "partnerCode": "CULASTEMPL",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "37598",
+        "address": "TVellinga@KTRI.BIZ, las vegas, nv, 89149",
+        "contact": "Kris Templeton",
+        "phone": "702-901-3687",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kwa2ecs",
+        "name": "TEMPLETON DEVELOPMENT CO.",
+        "partnerCode": "CULASTEMPL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "37598",
+        "address": "3235 S Rainbow Blvd, Las Vegas, NV, 89146-6238",
+        "contact": "Ken Templeton",
+        "phone": "702-873-6700",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "k19sv15",
+        "name": "TEPCON CONSTRUCTION",
+        "partnerCode": "CUPHXTEPCC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "266058",
+        "address": "2113 E RIO SALADO PKWY, TEMPE, AZ, 85281",
+        "contact": "THOMAS PRITSCHER",
+        "phone": "480-861-1963",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rek8zem",
+        "name": "TERRA FIRMA CONSTRUCTION",
+        "partnerCode": "CULASTRRAF",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "PO Box 60159, Reno, NV, 89506-0003",
+        "contact": "Nate Hutchinson",
+        "phone": "775-677-1008",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9in8hek",
+        "name": "TERRA VISTA CONSTRUCTION",
+        "partnerCode": "CUPHXTERRV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "335092",
+        "address": "1933 W Spur Dr, Phoenix, AZ, 85085",
+        "contact": "Lakshmi Anantharaman",
+        "phone": "480-601-8895",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jk96fe9",
+        "name": "TERRA WEST COMMUNITIES",
+        "partnerCode": "CUPHXTERRA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "To Capture Dps 20045 N 19th Ave Bldg 10, Phoenix, AZ, 85027-4264",
+        "contact": "NATHAN PILE",
+        "phone": "602-559-9627",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "7ff5ovs",
+        "name": "THE CONTRACTOR GUYS",
+        "partnerCode": "REPHXCNGUY",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "322553",
+        "address": "216 S ALMA SCHOOL RD, MESA, AZ, 85210",
+        "contact": "MICHAEL LUSKY",
+        "phone": "480-678-4345",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ugpciym",
+        "name": "THE NEW HOME CO., TNHC-AZ",
+        "partnerCode": "CUPHXNWHME",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "6730 N Scottsdale Rd Ste 290, Paradise Valley, AZ, 85253-4474",
+        "contact": "Chris Cady",
+        "phone": "480-634-6385",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "d0fjtdq",
+        "name": "THOMAS EARTHWORKS",
+        "partnerCode": "REPHXTHMER",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "351800",
+        "address": "977 W. HUDSON WAY, GILBERT, AZ, 85233",
+        "contact": "BOB THOMAS",
+        "phone": "480-489-1599",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xgbes8v",
+        "name": "THOMAS JAMES HOMES",
+        "partnerCode": "CUPHXTHMJA",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "338761",
+        "address": "7702 E DOUBLETREE RANCH ROAD, SCOTTSDALE, AZ, 85258",
+        "contact": "ANGELA HICKS",
+        "phone": "877-381-4092",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3kp4lhq",
+        "name": "THREE DIAMONDS CONSTRUCTION",
+        "partnerCode": "REPHXAFFGS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "300113",
+        "address": "2934 W WINDSOR AVE, PHOENIX, AZ, 85009",
+        "contact": "JOSE MARTINEZ",
+        "phone": "602-946-4151",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "v5i1pzk",
+        "name": "TIERRA VERDE BUILDERS",
+        "partnerCode": "CUPHXTRRAV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "400 W Finnie Flat Rd, Camp Verde, AZ, 86322-7362",
+        "contact": "Pam Miller",
+        "phone": "928-567-2477",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wnnup4w",
+        "name": "TIGNINI CUSTOM CONSTRUCTION",
+        "partnerCode": "REPHXTIGNN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "296563",
+        "address": "13627 N 97TH WAY, Scottsdale, AZ, 85260",
+        "contact": "TIGNINI",
+        "phone": "480-332-3003",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4g6xxo5",
+        "name": "TILS CONSTRUCTION",
+        "partnerCode": "CUPHXTILTN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "251318",
+        "address": "4365 E Pecos Rd, Gilbert, AZ, 85295",
+        "contact": "MARC SKOUSEN",
+        "phone": "480-980-0769",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pyuuimg",
+        "name": "TITAN BUILDERS",
+        "partnerCode": "CUPHXTIBLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "56329",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5qh19f8",
+        "name": "TITAN RESTORATION",
+        "partnerCode": "REPHXTTAN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "327191",
+        "address": "5515 E REDMONT CIR, MESA, AZ, 85215",
+        "contact": "RUSS PALMER",
+        "phone": "480-797-6326",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tpzmbsa",
+        "name": "TITAN VALLEY MASTER BUILDERS",
+        "partnerCode": "REPHXTNVAL",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "207612",
+        "address": "4833 E CLAIRE ST, SAN TAN VALLEY, AZ, 85140",
+        "contact": "MARK HANCOCK",
+        "phone": "480-797-7591",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rfz2iyh",
+        "name": "TJR GENERAL CONTRACTING",
+        "partnerCode": "CUPHXVSTCM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "8700 E Vista Bonita Dr, Scottsdale, AZ, 85255-4251",
+        "contact": "Tony Robinson",
+        "phone": "480-204-2618",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ufvy8vf",
+        "name": "TMG CONSTRUCTION LLC",
+        "partnerCode": "REPHXTMGUC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "304640",
+        "address": "4316 W Berridge Ln, Glendale, AZ, 85301-5457",
+        "contact": "Ulises Gonzalez",
+        "phone": "623-505-3957",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "n0qngos",
+        "name": "TODD CURTIS CUSTOM HOMES",
+        "partnerCode": "CUPHXTDDCH",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "168068",
+        "address": "6929 E Greenway Pkwy, Scottsdale, AZ, 85254",
+        "contact": "Todd Curtis",
+        "phone": "602-569-5697",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dufnud8",
+        "name": "TOLL BROTHERS - AZ DIVISION",
+        "partnerCode": "SFPHXTOLLB",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "113644",
+        "address": "8767 E Via De Ventura Ste 390, Scottsdale, AZ, 85258-3385",
+        "contact": "Larry Wandel",
+        "phone": "480-951-0782",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "haql9va",
+        "name": "TOLL BROTHERS - LAS VEGAS DIVISION",
+        "partnerCode": "SFLASTOLLB",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "1140 N Town Center Dr, Las Vegas, NV, 89144-6379",
+        "contact": "Jason Willoby",
+        "phone": "702-243-9800",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "x0ed1mo",
+        "name": "TOM ARCHER CUSTOM HOMES",
+        "partnerCode": "CUPHXTRCHR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "160716",
+        "address": "9820 E Thompson Peak Pkwy, Scottsdale, AZ, 85255-6615",
+        "contact": "Gail Archer",
+        "phone": "480-205-4811",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kl0f85f",
+        "name": "TONY ARNONE CONSTRUCTION",
+        "partnerCode": "RELASTARN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "339115",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "v8s9t9w",
+        "name": "TOP INVESTMENT CORPORATION",
+        "partnerCode": "REABQTOPNV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "83184",
+        "address": "5716 OSUNA RD, ALBUQUERQUE, NM, 87109",
+        "contact": "RON CAMPBELL",
+        "phone": "505-991-3124",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "1taus3s",
+        "name": "TOP NOTCH TILE & CONCRETE",
+        "partnerCode": "CULASTOPNC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "192396",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "4uaajx6",
+        "name": "TOTAL DESIGN HOMES",
+        "partnerCode": "CUPHXTOTLD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "347964",
+        "address": "7114 E Sahuaro Dr. No Suite B, Scottsdale, AZ, 85254",
+        "contact": "Cynthia Ghelfi",
+        "phone": "480-226-0343",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ewgot60",
+        "name": "TOTAL HOME REMODEL",
+        "partnerCode": "REPHXTOTLH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "13824 N 89th St, Scottsdale, AZ, 85260-7069",
+        "contact": "Brent Benjamin",
+        "phone": "480-510-1347",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "nff345w",
+        "name": "TRADEMARK CONSTRUCTION",
+        "partnerCode": "RELASTRADM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "86235",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "sngj7eo",
+        "name": "TRAVEK",
+        "partnerCode": "REPHXTRVEK",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "353472",
+        "address": "7661 E GRAY RD, SCOTTSDALE, AZ, 85260",
+        "contact": "DAVID TRAVEK",
+        "phone": "480-367-1171",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ipynqjy",
+        "name": "TRAVIS CUSTOM HOMES",
+        "partnerCode": "CUPHXTRAVIS",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "",
+        "address": "15957 N 81ST WAY, SCOTTSDALE, AZ, 85260",
+        "contact": "TRAVIS REID",
+        "phone": "480-389-3260",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "31qf0in",
+        "name": "TRAVIS YOUNG",
+        "partnerCode": "REABQTRAVY",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "867509",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "c4y48gv",
+        "name": "TRI POINTE HOMES",
+        "partnerCode": "CULASTRIPN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "3633",
+        "address": "4675 W Teco Ave Ste 115, Las Vegas, NV, 89118",
+        "contact": "Tom Wieme",
+        "phone": "702-932-9861",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "emm16my",
+        "name": "TRIBAR CONSTRUCTION",
+        "partnerCode": "REPHXTRIBR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "340214",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "017x9tc",
+        "name": "TRU BUILT CUSTOM HOMES",
+        "partnerCode": "CUPHXBULT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "333412",
+        "address": "2206 S ELLSWORTH RD, CHANDLER, AZ, 85286",
+        "contact": "KEVIN WICKS",
+        "phone": "480-586-8140",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "i60bg5s",
+        "name": "TRUBUILD CONSTRUCTION",
+        "partnerCode": "CUPHXTRUBD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "320897",
+        "address": "2222 W Parkside Ln, STE 113, Phoenix, AZ, 85027",
+        "contact": "MARK CHRISTIANSEN",
+        "phone": "480-341-7106",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ue9nljf",
+        "name": "TRUE DEVELOPMENT",
+        "partnerCode": "CUPHXTRUDV",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "2316 E SOLANO DRIVE, PHOENIX, AZ, 85016",
+        "contact": "MIKE CORDOVANA",
+        "phone": "602-525-1234",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lpsxkmk",
+        "name": "TRUE NORTH BUILDERS - NM",
+        "partnerCode": "CUABQTRUNB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "760 Paseo De La Cuma, Santa Fe, NM, 87501-1217",
+        "contact": "CODY NORTH",
+        "phone": "505-699-9858",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rgyfhpt",
+        "name": "TRULINE DEVELOPMENT",
+        "partnerCode": "CUPHXTRLIN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "320414",
+        "address": "15201 N 59th Pl, Scottsdale, AZ, 85254-2402",
+        "contact": "MITCHEL SHEPHERD",
+        "phone": "602-653-8300",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "w81nghf",
+        "name": "TRUST HOME BUILDERS IS A DBA OF IMC INDUSTRIES LLC",
+        "partnerCode": "CULASTRUST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "74233",
+        "address": "7181 N Hualapai Way Ste 135, Las Vegas, NV, 89166-1117",
+        "contact": "MICHAEL JOHNSON",
+        "phone": "702-786-4241",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "q81yojf",
+        "name": "TRUVISTA DEVELOPMENT",
+        "partnerCode": "CUPHXTRUVSD",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "300289",
+        "address": "7904 E CHAPARRAL RD Ste A110-603, SCOTTSDALE, AZ, 85250",
+        "contact": "JOHN LEVY",
+        "phone": "602-214-3011",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "aex5j90",
+        "name": "TRYLAND HOMES",
+        "partnerCode": "CUPHXTRYLN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "230246",
+        "address": "45505 N 20th St, New River, AZ, 85087",
+        "contact": "JOHN LEVY",
+        "phone": "602-686-4450",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qp9iq10",
+        "name": "TUNA GROUP",
+        "partnerCode": "CUPHXTUNGP",
+        "type": "Builder Quote",
+        "tier": 4,
+        "roc": "",
+        "address": "7150 E Camelback Rd, Scottsdale, AZ, 85251-1200",
+        "contact": "Joann Moreno",
+        "phone": "480-586-9098",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "53jffj8",
+        "name": "TUNCON",
+        "partnerCode": "REPHXTUNC",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "241136",
+        "address": "PO BOX 1086, FLAGSTAFF, AZ, 86002",
+        "contact": "ANTHONY GERARD",
+        "phone": "928-266-0167",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ut33ehm",
+        "name": "TWC CONSTRUCTION",
+        "partnerCode": "CULASTWCCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "46293",
+        "address": "431 EASTGATE ROAD, LAS VEGAS, NV, 89011",
+        "contact": "MARK WILMER",
+        "phone": "702-234-4546",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gbz9knb",
+        "name": "TYAGA & COMPANY",
+        "partnerCode": "CUABQTYGAC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "PO Box 1408, Santa Cruz, NM, 87567-1408",
+        "contact": "Tyaga Singh",
+        "phone": "505-920-4117",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ix94b2v",
+        "name": "TYSON DEVELOPMENT",
+        "partnerCode": "CUPHXTYSON",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "251455",
+        "address": "24 W. CAMELBACK RD, PHOENIX, AZ, 85013",
+        "contact": "PAUL SIEVERT",
+        "phone": "602-620-9918",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "kg9ykiv",
+        "name": "ULO",
+        "partnerCode": "REPHXULOL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "333598",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "t1b83af",
+        "name": "ULTIMA HOMES",
+        "partnerCode": "CUABQULTM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "22537",
+        "address": "6620 BRIARCLIFF NE, ALBUQUERQUE, NM, 87111",
+        "contact": "KEN HIGHTOWER",
+        "phone": "505-379-8625",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "19vp6rb",
+        "name": "UPTREND BUILDERS - 759939",
+        "partnerCode": "CUPHXUPTRN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "275527",
+        "address": "13028 N 60th St, Scottsdale, AZ, 85254-3802",
+        "contact": "CAL SCHLECHT",
+        "phone": "480-888-6600",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "qe2h3ab",
+        "name": "UR CONSTRUCTION",
+        "partnerCode": "REPHXUCNST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "340375",
+        "address": "21240 E NIGHTINGALE RD, QUEEN CREEK, AZ, 85142",
+        "contact": "JORDAN SMITH",
+        "phone": "480-327-8735",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "lo5zl6v",
+        "name": "UR INVESTMENTS",
+        "partnerCode": "CUPHXURVST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "6417 E Grant Rd, Tucson, AZ, 85715-3818",
+        "contact": "Angel Rivera",
+        "phone": "520-351-2457",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "idhib8o",
+        "name": "US VETERANS CONSTRUCTION",
+        "partnerCode": "CUPHXUSVETC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "318020",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0xittqq",
+        "name": "VAI RESORT",
+        "partnerCode": "CUPHXVIRST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "95055",
+        "address": "9505 N CARDINAL WAY, GLENDALE, AZ, 85305",
+        "contact": "VAI RESORT",
+        "phone": "623-265-5800",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "hi0fs83",
+        "name": "VALCON GENERAL",
+        "partnerCode": "REPHXVALCN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "244202",
+        "address": "18631 N 19TH AVE, PHOENIX, AZ, 85027",
+        "contact": "JAMWR PERRY VILLARREAL",
+        "phone": "602-518-5624",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "g6lv24t",
+        "name": "VALENTINE CONSTRUCTION",
+        "partnerCode": "CULASVALNT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "349806",
+        "address": "PO 2204, LAKE HAVASU CITY, AZ, 86405",
+        "contact": "MICHAEL DAVID VALENTINE",
+        "phone": "928-889-6545",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "2aed95t",
+        "name": "VALENZA DEVELOPMENT",
+        "partnerCode": "CUPHXVALNZ",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "7708 E Horizon Dr, Carefree, AZ, 85377-4422",
+        "contact": "Ronald Valenza",
+        "phone": "480-488-1178",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "5e3ijb4",
+        "name": "VALLEY OWNERS REP",
+        "partnerCode": "REPHXVALYR",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "9428 E Legacy Cove trial, SCOTTSDALE, AZ, 85255",
+        "contact": "LISA GIBBS",
+        "phone": "602-312-8515",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jbleyh5",
+        "name": "VANDEHEY BUILDERS",
+        "partnerCode": "CUPHXVAND",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "160188",
+        "address": "774 CROSSCREEK DR, PRESCOTT, AZ, 86304",
+        "contact": "DAVID VANDEHEY",
+        "phone": "928-710-0987",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yoe1lqr",
+        "name": "VEGAS REMODELS LLC",
+        "partnerCode": "CULASVGSREM",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "85839",
+        "address": "1620 Raiders Way, Henderson, NV, 89052-4629",
+        "contact": "RYAN CAVE",
+        "phone": "702-994-7011",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "hifuny3",
+        "name": "VEGAS VALLEY VIEWS",
+        "partnerCode": "CUPLASVGSVI",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "",
+        "address": "",
+        "contact": "",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0b86o51",
+        "name": "VELLAGIO HOMES LLC",
+        "partnerCode": "CUPHXVELLG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "237207",
+        "address": "4400 N Scottsdale Rd, Scottsdale, AZ, 85251-3331",
+        "contact": "ANTHONY CASTIGLIA",
+        "phone": "602-570-1896",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ctv7y27",
+        "name": "VENTANA CUSTOM HOMES",
+        "partnerCode": "CUPHXVENTH",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "116093",
+        "address": "10348 E. BECKER LANE, SCOTTSDALE, az, 85260",
+        "contact": "DENISE MCADAMS",
+        "phone": "480-322-6638",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3t0ycxc",
+        "name": "VENTURE WEST CONSTRUCTION",
+        "partnerCode": "RETUCVWEST",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "257211",
+        "address": "6007 E. Grant Road, tucson, az, 85712",
+        "contact": "Stan Spears",
+        "phone": "520-392-8834",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "v2wl3w6",
+        "name": "VM CONSTRUCTION & REMODELING",
+        "partnerCode": "REPHXVMCON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "350929",
+        "address": "5042 W CAMBRIDGE AVE, PHOENIX, AZ, 85035",
+        "contact": "FRANCISCO VALAZQUEZ",
+        "phone": "602-791-2464",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "9v39hfj",
+        "name": "VON'S CABINETS",
+        "partnerCode": "CAPHXVONSC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "5207 W White Mountain Blvd, Pinetop/Lakeside, AZ, 85935",
+        "contact": "FRANCISCO VALAZQUEZ",
+        "phone": "928-537-2474",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "dh58j1p",
+        "name": "WA RICHARDSON",
+        "partnerCode": "CULASWRICH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "0061245",
+        "address": "395 E SUNSET RD, LAS VEGAS, NV, 89119",
+        "contact": "WILLIAM RICHARDSON",
+        "phone": "702-830-3228",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "3kiaj01",
+        "name": "WA RICHARDSON BUILDERS",
+        "partnerCode": "CULASWRICH",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "61245",
+        "address": "395 E SUNSET RD, LAS VEGAS, NV, 89119",
+        "contact": "WILLIAM RICHARDSON",
+        "phone": "",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "315pq39",
+        "name": "WALLS TO FINISHES",
+        "partnerCode": "REPHXWALL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "347232",
+        "address": "8350 S KYRENE, TEMPE, AZ, 85284",
+        "contact": "CHICO VASQUEZ",
+        "phone": "602-689-6717",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "y9xke9b",
+        "name": "WATERS EDGE RENOVATION",
+        "partnerCode": "RELASWATRS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "85034",
+        "address": "483 CENTER GREEN DRIVE, LAS VEGAS, NV, 89148",
+        "contact": "BRIAN DISTASIO",
+        "phone": "702-348-4661",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "q2eukns",
+        "name": "WATT UNLIMITED",
+        "partnerCode": "RELASWATTL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "73473",
+        "address": "7500 W MEAD BLVD, LAS VEGAS, NV, 89128",
+        "contact": "LUIS GUTIERREZ",
+        "phone": "702-498-5305",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "yalad04",
+        "name": "WAY CONSTRUCTION & DEVELOPMENT",
+        "partnerCode": "REPHXWAYDV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "315255",
+        "address": "6913 E REMBRANDT AVE, Scottsdale, AZ, 85212",
+        "contact": "REAGAN WAY",
+        "phone": "480-399-7444",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "sxmecie",
+        "name": "WELL DONE CONSTRUCTION",
+        "partnerCode": "REPHXWDON",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "251476",
+        "address": "9038 E FLORIAN AVE, MESA, AZ, 85208",
+        "contact": "TERESA MOSHER",
+        "phone": "602-703-0327",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "d66untf",
+        "name": "WEST CRAFT",
+        "partnerCode": "RELASWSTCA",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "59327",
+        "address": "10417 SNOWDON FLAT CT, LAS VEGAS, NV, 89129",
+        "contact": "CHANLEE HALL",
+        "phone": "702-296-0118",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "544obz5",
+        "name": "WESTERN STATES CONTRACTING",
+        "partnerCode": "CULASWESTN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "334985",
+        "address": "4129 W. CHEYENNE AVE., LAS VEGAS, NV, 89032",
+        "contact": "WESTON ADAMS",
+        "phone": "702-644-1117",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "hhu3c5a",
+        "name": "WESTERN TRADES CONSTRUCTION",
+        "partnerCode": "CULASWESNT",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "73190",
+        "address": "4345 Corporate Center Dr #200, N Las Vegas, NV, 89030",
+        "contact": "JUDD SINGER",
+        "phone": "877-412-8453",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "wg49byi",
+        "name": "WHITE CONSTRUCTION GROUP",
+        "partnerCode": "CUPHXWHTEC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "254693",
+        "address": "1240 E Marshall Ave, Phoenix, AZ, 85014-2321",
+        "contact": "Ross White",
+        "phone": "480-250-9992",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ii13s3r",
+        "name": "WHITLOW CONSTRUCTION",
+        "partnerCode": "CUABQWHTLW",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "PO Box 2237, Ruidoso, NM, 88355-2237",
+        "contact": "Don Whitlow",
+        "phone": "505-681-8400",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "tck5itv",
+        "name": "WIDESPREAD CONSTRUCTION",
+        "partnerCode": "CULASWDCON",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "856088",
+        "address": "3125 W ALI BABA LN, LAS VEGAS, NV, 89118",
+        "contact": "Widespread Construction CUTLER",
+        "phone": "702-998-7696",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "gdr1tmv",
+        "name": "WILD DEVELOPMENT",
+        "partnerCode": "CUPHXWILDV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "224566",
+        "address": "10552 E Cannon Dr, Scottsdale, AZ, 85258-4932",
+        "contact": "Mary Wild",
+        "phone": "480-227-3815",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "xk7m04m",
+        "name": "WILLMENG CONSTRUCTION",
+        "partnerCode": "REPHXWILMG",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "082904",
+        "address": "1702 E HIGHLAND AVE, PHOENIX, AZ, 85016",
+        "contact": "ISAM GHANDOUR",
+        "phone": "480-968-4755",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "z2j5bsq",
+        "name": "WIND DANCER CONSTRUCTION",
+        "partnerCode": "CUPHXWINDNC",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "3222203",
+        "address": "15105 N DOUBTFUL CANYON DR, PRESCOTT, AZ, 86305",
+        "contact": "KIRK LEOPOLD",
+        "phone": "406-249-6522",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "azg8nxy",
+        "name": "WINGBROOK DEVELOPMENT",
+        "partnerCode": "CULASWINGB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "11 E Pacific Ave, Henderson, NV, 89015-7214",
+        "contact": "Cliff Diamond",
+        "phone": "702-277-7777",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "up60k9t",
+        "name": "WINTON FLAIR HOMES",
+        "partnerCode": "CUABQWTNFL",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "6300 Escondido Dr, El Paso, TX, 79912-2937",
+        "contact": "Emily Winton",
+        "phone": "915-584-8629",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "spb4ur2",
+        "name": "WISE CONSTRUCTION CO",
+        "partnerCode": "REPHXWISCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "352871",
+        "address": "10991 E FANFOL LN, CHANDLER, AZ, 85386",
+        "contact": "JAKEIMA ROBINSON",
+        "phone": "602-723-2243",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "c2l8j6o",
+        "name": "WOLF BROTHERS CONSTRUCTION",
+        "partnerCode": "CUPHXWOLFB",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "75131",
+        "address": "12031 E Colony Dr, Fountain Hills, AZ, 85268",
+        "contact": "Lawrence Wolf",
+        "phone": "602-531-4656",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "pom834l",
+        "name": "WOLFE BUILDING COMPANY",
+        "partnerCode": "REPHXWLFE",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "334662",
+        "address": "5654 E. HEDGEHOG PLACE, SCOTTSDALE, AZ, 85266",
+        "contact": "MATTHEW WOLFE",
+        "phone": "602-636-0823",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "6jqycqk",
+        "name": "WOOD PARTNERS",
+        "partnerCode": "CUPHXWOODPN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "200547",
+        "address": "8777 E VIA DE VENTURA, SCOTTSDALE, AZ, 85258",
+        "contact": "ADRIAN ALLATT",
+        "phone": "602-999-4910",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "jf5s9s3",
+        "name": "WOODS CONTRACTING",
+        "partnerCode": "REPHXWDSCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "74414",
+        "address": "21553 S 21ST ST., QUEEN CREEK, AZ, 85142",
+        "contact": "DENISE GUTHRIDGE",
+        "phone": "602-510-2184",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "a8q8goa",
+        "name": "WOOLLEY CONSTRUCTION",
+        "partnerCode": "CUPHXWOLYC",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "338951",
+        "address": "21210 N 80TH WAY, SCOTTSDALE, AZ, 85255",
+        "contact": "ROBERT WOOLLEY WOOLLEY II",
+        "phone": "720-619-1000",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "scx4woh",
+        "name": "WORKMAN BUILDERS",
+        "partnerCode": "CUPHXWOKMN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "193956",
+        "address": "11250 W Prospector Dr, Queen Creek, AZ, 85142-9596",
+        "contact": "Sherrie Workman",
+        "phone": "(602)541-2038",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "60b9r83",
+        "name": "WTD LV CONSTRUCTION & DEVELOPMENT",
+        "partnerCode": "CULASWTDCO",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "60359",
+        "address": "8845 W Flamingo Rd Unit 210, Las Vegas, NV, 89147",
+        "contact": "Carl Martinez",
+        "phone": "702-586-7215",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ko6h5in",
+        "name": "WTM CONSTRUCTION",
+        "partnerCode": "CUPHXWTMCN",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "182873",
+        "address": "PO Box 2339, Payson, AZ, 85547-2339",
+        "contact": "Bill Mitzel",
+        "phone": "480-649-3850",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "agce9qi",
+        "name": "WYATT BUILDERS",
+        "partnerCode": "CUPHXWYTTB",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "281297",
+        "address": "8776 E Shea Blvd, Scottsdale, AZ, 85260-6629",
+        "contact": "Ted DeVaul",
+        "phone": "602-821-2417",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "rx1itzv",
+        "name": "XO BUILDERS",
+        "partnerCode": "CUPHXXOBLDS",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "333007",
+        "address": "3104 E CAMELBACK RD, PHOENIX, AZ, 85016",
+        "contact": "JEFFERSON ROOSEN",
+        "phone": "623-734-7542",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "cwkxnts",
+        "name": "YOCHHEIM CONSTRUCTION",
+        "partnerCode": "CULASYOCHH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "26813",
+        "address": "PO BOX 1546, ZEPHYR COVE, NV, 89448",
+        "contact": "BARTT YOCHHEIM",
+        "phone": "530-600-3727",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "cuyt37t",
+        "name": "YONKER GROUP",
+        "partnerCode": "CUPHXYNKER",
+        "type": "Builder Quote",
+        "tier": 3,
+        "roc": "343207",
+        "address": "2633 E Indian School Rd Ste 240, Phoenix, AZ, 85016-0702",
+        "contact": "Dan Yonker",
+        "phone": "602-638-6813",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "19sklaa",
+        "name": "YOUR FIRST RESORT",
+        "partnerCode": "CUPHXYRRST",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "318501",
+        "address": "1766 E Country Ln, Gilbert, AZ, 85298-6165",
+        "contact": "Tom Monte",
+        "phone": "480-268-5959",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "ln0ukwu",
+        "name": "ZACHARY & SONS HOMES",
+        "partnerCode": "CUABQZCHRH",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "90264",
+        "address": "218 CAMINO LA TIERRA, SANTA FE, NM, 87506",
+        "contact": "Joshua Shultz",
+        "phone": "505-470-5717",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "l9y26j3",
+        "name": "ZAGROS CONSTRUCTION",
+        "partnerCode": "REPHXZAGRS",
+        "type": "Builder Quote",
+        "tier": 1,
+        "roc": "279114",
+        "address": "8228 N 19TH AVE, PHOENIX, AZ, 85021",
+        "contact": "Pouya Sardari",
+        "phone": "480-246-0518",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "bgl5ciz",
+        "name": "ZARIOS CONSTRUCTION",
+        "partnerCode": "RELASZARCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "84623",
+        "address": "9585 WILD VALLEY, LAS VEGAS, NV, 89148",
+        "contact": "ZIAD GHARIOS",
+        "phone": "702-793-6412",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "n9212c1",
+        "name": "ZM DEVELOPMENT",
+        "partnerCode": "CUPHXZMDEV",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "",
+        "address": "24009 N 23rd Way, Phoenix, AZ, 85024-8689",
+        "contact": "Zeljko Minic",
+        "phone": "602-214-5157",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
+    },
+    {
+        "id": "0zgd55l",
+        "name": "ZOBEC CONSTRUCTION",
+        "partnerCode": "CUPHXZOBCN",
+        "type": "Builder Quote",
+        "tier": 5,
+        "roc": "294548",
+        "address": "23233 N PIMA RD, SCOTTSDALE, AZ, 85255",
+        "contact": "CHRIS ZOBEC",
+        "phone": "480-797-2414",
+        "email": "",
+        "lat": null,
+        "lng": null,
+        "jobs": []
     }
 ];
 // ── Utilities ─────────────────────────────────────────────────────────────────
@@ -86356,9 +100540,19 @@ function skuCount(skus, type) {
     if (type === "optional") return skus.filter((s)=>s.stOpt === "O").length;
     return skus.length;
 }
+// Count standard SKUs deduped by job address (don't double-count same house)
+function skuCountDeduped(jobs) {
+    const seen = new Set();
+    return jobs.reduce((total, j)=>{
+        const key = (j.address || "").trim().toLowerCase();
+        if (key && seen.has(key)) return total;
+        if (key) seen.add(key);
+        return total + skuCount(j.skus, "standard");
+    }, 0);
+}
 // ── Badges ────────────────────────────────────────────────────────────────────
 function TierBadge({ tier, full }) {
-    const c = TIER_CONFIG[tier];
+    const c = getTier(tier);
     return /*#__PURE__*/ React.createElement("span", {
         style: {
             background: c.bg,
@@ -86473,6 +100667,70 @@ const card = {
     borderRadius: 10,
     padding: 20
 };
+// ── Azure Blob Storage ─────────────────────────────────────────────────────────
+const BLOB_URL = "https://subzerocrmdata.blob.core.windows.net/crm-data/builders.json?sv=2026-02-06&ss=b&srt=co&sp=rwdlactfx&se=2031-01-01T01:23:08Z&st=2026-06-29T17:08:08Z&spr=https&sig=V%2FlnJScaJs2nhy3Nrc3Mrsz97Bo%2F8O3mEWAYsFfIV%2Bk%3D";
+const CONTAINER_URL = "https://subzerocrmdata.blob.core.windows.net/crm-data?restype=container&sv=2026-02-06&ss=b&srt=co&sp=rwdlactfx&se=2031-01-01T01:23:08Z&st=2026-06-29T17:08:08Z&spr=https&sig=V%2FlnJScaJs2nhy3Nrc3Mrsz97Bo%2F8O3mEWAYsFfIV%2Bk%3D";
+async function loadFromBlob() {
+    try {
+        const res = await fetch(BLOB_URL);
+        if (!res.ok) return null;
+        return await res.json();
+    } catch  {
+        return null;
+    }
+}
+async function saveToBlob(data) {
+    try {
+        // First ensure container exists
+        await fetch(CONTAINER_URL, {
+            method: "PUT"
+        });
+        // Save data
+        const res = await fetch(BLOB_URL, {
+            method: "PUT",
+            headers: {
+                "x-ms-blob-type": "BlockBlob",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+        return res.ok;
+    } catch  {
+        return false;
+    }
+}
+function useAzureStorage(builders, setBuilders, setLoading) {
+    const [syncing, setSyncing] = useState(false);
+    const [lastSaved, setLastSaved] = useState(null);
+    const saveTimer = useRef(null);
+    // Load from blob on mount
+    useEffect(()=>{
+        setLoading(true);
+        loadFromBlob().then((data)=>{
+            if (data && Array.isArray(data) && data.length > 0) {
+                setBuilders(data);
+            }
+            setLoading(false);
+        });
+    }, []);
+    // Auto-save to blob whenever builders change (debounced 3s)
+    useEffect(()=>{
+        if (saveTimer.current) clearTimeout(saveTimer.current);
+        saveTimer.current = setTimeout(async ()=>{
+            setSyncing(true);
+            await saveToBlob(builders);
+            setLastSaved(new Date());
+            setSyncing(false);
+        }, 3000);
+        return ()=>clearTimeout(saveTimer.current);
+    }, [
+        builders
+    ]);
+    return {
+        syncing,
+        lastSaved
+    };
+}
 // ── Duplicate address detection ───────────────────────────────────────────────
 function buildDupeSet(builders) {
     const addrCount = {};
@@ -86636,7 +100894,7 @@ function useGeocoder(builders, setBuilders) {
     };
 }
 // ── Map ───────────────────────────────────────────────────────────────────────
-function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
+function MapView({ builders, mapMode, onBuilderClick, onJobClick, zoomToSingle = false }) {
     const ref = useRef(null);
     const inst = useRef(null);
     const marks = useRef([]);
@@ -86656,6 +100914,7 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
         onBuilderClick,
         onJobClick
     ]);
+    const hasAutoFit = useRef(false);
     useEffect(()=>{
         if (!window.L) return;
         if (!inst.current) {
@@ -86672,11 +100931,12 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
         marks.current = [];
         const pts = [];
         builders.forEach((b)=>{
-            const tc = TIER_CONFIG[b.tier];
+            const tc = getTier(b.tier);
             if ((mapMode === "hq" || mapMode === "both") && b.lat) {
+                const hqColor = b.type === "Cabinet Shop Quote" ? "#A855F7" : "#1E3A5F";
                 const icon = window.L.divIcon({
                     className: "",
-                    html: `<div style="width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:${tc.color};border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,.3)"></div>`,
+                    html: `<div style="width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:${hqColor};border:2px solid white;box-shadow:0 2px 6px rgba(0,0,0,.3)"></div>`,
                     iconSize: [
                         22,
                         22
@@ -86693,10 +100953,12 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
                     icon
                 }).addTo(map);
                 const popupId = `popup-hq-${b.id}`;
+                const typeLabel = b.type === "Cabinet Shop Quote" ? "Cabinet Shop" : "Builder";
                 marker.bindPopup(`
           <div style="min-width:160px">
             <strong style="font-size:13px">${b.name}</strong><br/>
-            <span style="font-size:11px;color:#6B7280">${tc.label} · ${b.partnerCode}</span><br/>
+            <span style="font-size:11px;color:${hqColor};font-weight:700">${typeLabel}</span>
+            <span style="font-size:11px;color:#6B7280"> · ${tc.label} · ${b.partnerCode}</span><br/>
             <button id="${popupId}" style="margin-top:8px;padding:4px 12px;background:#1E3A5F;color:white;border:none;border-radius:4px;cursor:pointer;font-size:12px;font-weight:700;width:100%">View Builder →</button>
           </div>`);
                 marker.on("popupopen", ()=>{
@@ -86707,6 +100969,10 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
                             navRef.current.onBuilderClick?.(b.id);
                         };
                     }, 50);
+                });
+                marker.on("dblclick", ()=>{
+                    map.closePopup();
+                    navRef.current.onBuilderClick?.(b.id);
                 });
                 marks.current.push(marker);
                 pts.push([
@@ -86756,6 +101022,10 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
                             };
                         }, 50);
                     });
+                    marker.on("dblclick", ()=>{
+                        map.closePopup();
+                        navRef.current.onJobClick?.(b.id, j.id);
+                    });
                     marks.current.push(marker);
                     pts.push([
                         j.lat,
@@ -86764,13 +101034,20 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
                 });
             }
         });
-        if (pts.length > 1) map.fitBounds(pts, {
-            padding: [
-                40,
-                40
-            ]
-        });
-        else if (pts.length === 1) map.setView(pts[0], 13);
+        // Default: stay centered on greater Phoenix (some pins are out-of-state).
+        // Exception: zoomToSingle lets a single-builder view (e.g. Builder Detail) zoom to its own pin.
+        if (zoomToSingle && !hasAutoFit.current && pts.length >= 1) {
+            if (pts.length === 1) map.setView(pts[0], 13);
+            else map.fitBounds(pts, {
+                padding: [
+                    40,
+                    40
+                ]
+            });
+            hasAutoFit.current = true;
+        } else {
+            hasAutoFit.current = true;
+        }
     }, [
         builders,
         mapMode
@@ -86891,9 +101168,9 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick }) {
                 width: 9,
                 height: 9,
                 borderRadius: "50%",
-                background: TIER_CONFIG[t].color
+                background: getTier(t).color
             }
-        }), /*#__PURE__*/ React.createElement("span", null, TIER_CONFIG[t].label))), locStatus === "found" && /*#__PURE__*/ React.createElement("div", {
+        }), /*#__PURE__*/ React.createElement("span", null, getTier(t).label))), locStatus === "found" && /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
             alignItems: "center",
@@ -87129,6 +101406,7 @@ function BuilderForm({ builder, onSave, onCancel }) {
         contact: "",
         email: "",
         phone: "",
+        market: "",
         lat: null,
         lng: null
     });
@@ -87206,7 +101484,7 @@ function BuilderForm({ builder, onSave, onCancel }) {
     }, TIER_ORDER.map((t)=>/*#__PURE__*/ React.createElement("option", {
             key: t,
             value: t
-        }, TIER_CONFIG[t].label, " · ", TIER_CONFIG[t].sublabel)))), /*#__PURE__*/ React.createElement("div", {
+        }, getTier(t).label, " · ", getTier(t).sublabel)))), /*#__PURE__*/ React.createElement("div", {
         style: {
             gridColumn: "1/-1"
         }
@@ -87235,6 +101513,12 @@ function BuilderForm({ builder, onSave, onCancel }) {
         style: inp,
         value: f.phone,
         onChange: (e)=>s("phone", e.target.value)
+    })), /*#__PURE__*/ React.createElement("div", null, /*#__PURE__*/ React.createElement("label", {
+        style: lbl
+    }, "Market"), /*#__PURE__*/ React.createElement("input", {
+        style: inp,
+        value: f.market || "",
+        onChange: (e)=>s("market", e.target.value)
     })), /*#__PURE__*/ React.createElement("div", {
         style: {
             gridColumn: "1/-1",
@@ -87255,7 +101539,7 @@ function BuilderForm({ builder, onSave, onCancel }) {
     }, "Cancel")));
 }
 // ── Job Form ──────────────────────────────────────────────────────────────────
-function JobForm({ job, onSave, onCancel }) {
+function JobForm({ job, builderType, onSave, onCancel }) {
     const [f, setF] = useState(job || {
         projectName: "",
         community: "",
@@ -87265,6 +101549,7 @@ function JobForm({ job, onSave, onCancel }) {
         status: "Active",
         startDate: "",
         endDate: "",
+        cabinetDesigner: "",
         skus: [],
         lat: null,
         lng: null
@@ -87335,7 +101620,17 @@ function JobForm({ job, onSave, onCancel }) {
         type: "date",
         value: f.endDate,
         onChange: (e)=>s("endDate", e.target.value)
-    }))), /*#__PURE__*/ React.createElement("div", {
+    }))), (builderType === "Cabinet Shop Quote" || f.cabinetDesigner) && /*#__PURE__*/ React.createElement("div", {
+        style: {
+            marginTop: 12
+        }
+    }, /*#__PURE__*/ React.createElement("label", {
+        style: lbl
+    }, "Cabinet Designer's Name"), /*#__PURE__*/ React.createElement("input", {
+        style: inp,
+        value: f.cabinetDesigner || "",
+        onChange: (e)=>s("cabinetDesigner", e.target.value)
+    })), /*#__PURE__*/ React.createElement("div", {
         style: {
             marginTop: 16
         }
@@ -87375,16 +101670,16 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
     const [editingJob, setEditingJob] = useState(null);
     const [expandedJob, setExpandedJob] = useState(null);
     const [mapMode, setMapMode] = useState("jobs");
-    const tc = TIER_CONFIG[builder.tier];
+    const tc = getTier(builder.tier) || getTier(5);
     const salespersons = [
-        ...new Set(builder.jobs.map((j)=>j.salesperson).filter(Boolean))
-    ];
+        ...new Set(builder.jobs.map((j)=>(j.salesperson || "").trim().toLowerCase()).filter(Boolean))
+    ].map((low)=>builder.jobs.find((j)=>(j.salesperson || "").trim().toLowerCase() === low).salesperson);
     const filteredJobs = builder.jobs.filter((j)=>{
         if (statusFilter !== "all" && j.status !== statusFilter) return false;
-        if (spFilter !== "all" && j.salesperson !== spFilter) return false;
+        if (spFilter !== "all" && (j.salesperson || "").trim().toLowerCase() !== spFilter.trim().toLowerCase()) return false;
         return true;
     });
-    const totalStd = builder.jobs.reduce((a, j)=>a + skuCount(j.skus, "standard"), 0);
+    const totalStd = skuCountDeduped(builder.jobs);
     return /*#__PURE__*/ React.createElement("div", null, /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
@@ -87453,36 +101748,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             if (confirm("Delete this builder and all jobs?")) onDeleteBuilder(builder.id);
         },
         style: btnD
-    }, "Delete Builder")), geoProgress.running && /*#__PURE__*/ React.createElement("div", {
-        style: {
-            background: "#1E40AF",
-            padding: "6px 24px",
-            display: "flex",
-            alignItems: "center",
-            gap: 12
-        }
-    }, /*#__PURE__*/ React.createElement("div", {
-        style: {
-            flex: 1,
-            background: "rgba(255,255,255,0.2)",
-            borderRadius: 4,
-            height: 6,
-            overflow: "hidden"
-        }
-    }, /*#__PURE__*/ React.createElement("div", {
-        style: {
-            background: "#34D399",
-            height: "100%",
-            width: `${Math.round(geoProgress.done / geoProgress.total * 100)}%`,
-            transition: "width 0.5s"
-        }
-    })), /*#__PURE__*/ React.createElement("span", {
-        style: {
-            color: "white",
-            fontSize: 11,
-            whiteSpace: "nowrap"
-        }
-    }, "📍 Geocoding ", geoProgress.done, " / ", geoProgress.total, " addresses...")), /*#__PURE__*/ React.createElement("div", {
+    }, "Delete Builder")), /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
             borderBottom: "2px solid #E5E7EB",
@@ -87491,11 +101757,15 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
     }, [
         [
             "details",
-            "📋 Builder Details"
+            "📋 Details"
         ],
         [
             "jobs",
             `💼 Jobs (${builder.jobs.length})`
+        ],
+        [
+            "map",
+            "🗺 Map"
         ]
     ].map(([id, label])=>/*#__PURE__*/ React.createElement("button", {
             key: id,
@@ -87571,7 +101841,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
         ] : null,
         [
             "Tier",
-            `${TIER_CONFIG[builder.tier].label} · ${TIER_CONFIG[builder.tier].sublabel}`
+            `${getTier(builder.tier).label} · ${getTier(builder.tier).sublabel}`
         ],
         [
             "Contact",
@@ -87628,7 +101898,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
         }
     }, Object.keys(STATUS_CONFIG).map((st)=>{
         const cnt = builder.jobs.filter((j)=>j.status === st).length;
-        const std = builder.jobs.filter((j)=>j.status === st).reduce((a, j)=>a + skuCount(j.skus, "standard"), 0);
+        const std = skuCountDeduped(builder.jobs.filter((j)=>j.status === st));
         const sc = STATUS_CONFIG[st];
         return /*#__PURE__*/ React.createElement("div", {
             key: st,
@@ -87680,153 +101950,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             color: "#1E3A5F",
             marginTop: 2
         }
-    }, totalStd))), !editing && /*#__PURE__*/ React.createElement("div", {
-        style: {
-            gridColumn: "1/-1"
-        }
-    }, /*#__PURE__*/ React.createElement("div", {
-        style: {
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-            marginBottom: 8
-        }
-    }, /*#__PURE__*/ React.createElement("span", {
-        style: {
-            fontWeight: 700,
-            fontSize: 14,
-            color: "#374151"
-        }
-    }, "Map"), /*#__PURE__*/ React.createElement("div", {
-        style: {
-            display: "flex",
-            background: "#F3F4F6",
-            borderRadius: 6,
-            overflow: "hidden"
-        }
-    }, [
-        [
-            "jobs",
-            "Job Sites"
-        ],
-        [
-            "hq",
-            "Builder HQ"
-        ],
-        [
-            "both",
-            "Both"
-        ]
-    ].map(([m, label])=>/*#__PURE__*/ React.createElement("button", {
-            key: m,
-            onClick: ()=>setMapMode(m),
-            style: {
-                padding: "4px 12px",
-                border: "none",
-                background: mapMode === m ? "#1E3A5F" : "transparent",
-                color: mapMode === m ? "white" : "#374151",
-                cursor: "pointer",
-                fontWeight: 600,
-                fontSize: 11
-            }
-        }, label)))), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
-        builders: [
-            builder
-        ],
-        mapMode: mapMode,
-        onBuilderClick: ()=>setTab("details"),
-        onJobClick: (bid, jid)=>{
-            setTab("jobs");
-            setExpandedJob(jid);
-        }
-    }) : /*#__PURE__*/ React.createElement("div", {
-        style: {
-            height: 350,
-            background: "#F3F4F6",
-            borderRadius: 10,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#9CA3AF"
-        }
-    }, "Loading map..."))), tab === "jobs" && /*#__PURE__*/ React.createElement("div", null, /*#__PURE__*/ React.createElement("div", {
-        style: {
-            marginBottom: 16
-        }
-    }, /*#__PURE__*/ React.createElement("div", {
-        style: {
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-            marginBottom: 8
-        }
-    }, /*#__PURE__*/ React.createElement("span", {
-        style: {
-            fontWeight: 700,
-            fontSize: 13,
-            color: "#374151"
-        }
-    }, "Job Map"), /*#__PURE__*/ React.createElement("div", {
-        style: {
-            display: "flex",
-            background: "#F3F4F6",
-            borderRadius: 6,
-            overflow: "hidden"
-        }
-    }, [
-        [
-            "jobs",
-            "Job Sites"
-        ],
-        [
-            "hq",
-            "Builder HQ"
-        ],
-        [
-            "both",
-            "Both"
-        ]
-    ].map(([m, label])=>/*#__PURE__*/ React.createElement("button", {
-            key: m,
-            onClick: ()=>setMapMode(m),
-            style: {
-                padding: "4px 12px",
-                border: "none",
-                background: mapMode === m ? "#1E3A5F" : "transparent",
-                color: mapMode === m ? "white" : "#374151",
-                cursor: "pointer",
-                fontWeight: 600,
-                fontSize: 11
-            }
-        }, label)))), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
-        builders: [
-            {
-                ...builder,
-                jobs: filteredJobs
-            }
-        ],
-        mapMode: mapMode,
-        onBuilderClick: ()=>setTab("details"),
-        onJobClick: (bid, jid)=>{
-            setExpandedJob(jid);
-            setTimeout(()=>{
-                document.getElementById(`job-${jid}`)?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
-            }, 100);
-        }
-    }) : /*#__PURE__*/ React.createElement("div", {
-        style: {
-            height: 350,
-            background: "#F3F4F6",
-            borderRadius: 10,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#9CA3AF"
-        }
-    }, "Loading map...")), /*#__PURE__*/ React.createElement("div", {
+    }, totalStd))), !editing && null), tab === "jobs" && /*#__PURE__*/ React.createElement("div", null, /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
             alignItems: "center",
@@ -87891,6 +102015,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             marginBottom: 14
         }
     }, "New Job"), /*#__PURE__*/ React.createElement(JobForm, {
+        builderType: builder.type,
         onSave: (j)=>{
             onSaveJob(builder.id, j);
             setAddingJob(false);
@@ -87943,6 +102068,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             }
         }, "Edit Job"), /*#__PURE__*/ React.createElement(JobForm, {
             job: editingJob,
+            builderType: builder.type,
             onSave: (j)=>{
                 onSaveJob(builder.id, j);
                 setEditingJob(null);
@@ -87981,7 +102107,33 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             }
         }, "*")), /*#__PURE__*/ React.createElement(StatusBadge, {
             status: job.status
-        })), job.community && /*#__PURE__*/ React.createElement("div", {
+        }), /*#__PURE__*/ React.createElement("div", {
+            style: {
+                display: "flex",
+                gap: 3
+            }
+        }, [
+            "Active",
+            "Won",
+            "Ordered",
+            "Lost"
+        ].filter((s)=>s !== job.status).map((s)=>/*#__PURE__*/ React.createElement("button", {
+                key: s,
+                onClick: ()=>onSaveJob(builder.id, {
+                        ...job,
+                        status: s
+                    }),
+                style: {
+                    fontSize: 10,
+                    padding: "2px 8px",
+                    borderRadius: 4,
+                    border: "1px solid #D1D5DB",
+                    background: "white",
+                    color: "#6B7280",
+                    cursor: "pointer",
+                    fontWeight: 600
+                }
+            }, "→ ", s)))), job.community && /*#__PURE__*/ React.createElement("div", {
             style: {
                 fontSize: 12,
                 color: "#6B7280",
@@ -88001,7 +102153,13 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
                 gap: 14,
                 flexWrap: "wrap"
             }
-        }, /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", job.registrationNumber), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate))), /*#__PURE__*/ React.createElement("div", {
+        }, /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", job.registrationNumber), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate)), job.cabinetDesigner && /*#__PURE__*/ React.createElement("div", {
+            style: {
+                fontSize: 12,
+                color: "#374151",
+                marginTop: 4
+            }
+        }, "🎨 ", job.cabinetDesigner)), /*#__PURE__*/ React.createElement("div", {
             style: {
                 textAlign: "right",
                 flexShrink: 0
@@ -88048,7 +102206,33 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             onChange: ()=>{},
             readOnly: true
         }))));
-    }))));
+    }))), tab === "map" && /*#__PURE__*/ React.createElement("div", {
+        style: card
+    }, /*#__PURE__*/ React.createElement("div", {
+        style: {
+            fontSize: 12,
+            color: "#6B7280",
+            marginBottom: 12
+        }
+    }, "📍 Builder headquarters location"), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
+        builders: [
+            builder
+        ],
+        mapMode: "hq",
+        onBuilderClick: ()=>{},
+        onJobClick: ()=>{},
+        zoomToSingle: true
+    }) : /*#__PURE__*/ React.createElement("div", {
+        style: {
+            height: 400,
+            background: "#F3F4F6",
+            borderRadius: 10,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#9CA3AF"
+        }
+    }, "Loading map...")));
 }
 // ── Quote Parser ──────────────────────────────────────────────────────────────
 function QuoteParser({ builders, onJobParsed, onNewBuilder }) {
@@ -88074,6 +102258,7 @@ function QuoteParser({ builders, onJobParsed, onNewBuilder }) {
             status: "Active",
             startDate: "2026-05-05",
             endDate: "2026-12-31",
+            cabinetDesigner: "",
             skus: [
                 {
                     brand: "SUB-ZERO",
@@ -88124,7 +102309,7 @@ function QuoteParser({ builders, onJobParsed, onNewBuilder }) {
                     messages: [
                         {
                             role: "user",
-                            content: `Extract this Sub-Zero quote to JSON only (no cost fields): {"isNewBuilder":false,"type":"","builderName":"","partnerCode":"","roc":"","contact":"","job":{"projectName":"","community":"","address":"","salesperson":"","registrationNumber":"","status":"Active","startDate":"","endDate":"","skus":[{"brand":"","model":"","stOpt":"S or O"}]}}\nQuote:\n${text}`
+                            content: `Extract this Sub-Zero quote to JSON only (no cost fields): {"isNewBuilder":false,"type":"","builderName":"","partnerCode":"","roc":"","contact":"","job":{"projectName":"","community":"","address":"","salesperson":"","registrationNumber":"","status":"Active","startDate":"","endDate":"","cabinetDesigner":"","skus":[{"brand":"","model":"","stOpt":"S or O"}]}}\nIf this is a Cabinet Shop Quote, extract the cabinet designer's name (person who designed the cabinets) into job.cabinetDesigner — name only, no email. Leave blank if not a cabinet shop quote or not found.\nQuote:\n${text}`
                         }
                     ]
                 })
@@ -88258,4086 +102443,13 @@ function ExcelImporter({ builders, onImportApproved }) {
     const [approved, setApproved] = useState({});
     const [importing, setImporting] = useState(false);
     const [done, setDone] = useState(false);
-    const TEST_DATA = [
-        {
-            "registrationNumber": "262201",
-            "builderName": "CABINET CO, DBA SURFACES OF SCOTTSDALE",
-            "partnerCode": "CAPHXTCABC",
-            "roc": "",
-            "builderAddress": "322",
-            "contact": "",
-            "type": "Cabinet Shop Quote",
-            "tier": 2,
-            "projectName": "LORI MCGREGOR",
-            "community": "",
-            "jobAddress": "9270 E THOMPSON PEAK PKWY, SCOTTSDALE, AZ, 85255",
-            "salesperson": "Phillip Dexler",
-            "dealer": "BEST HOME APPLIANCES",
-            "status": "Active",
-            "startDate": "Jun 28, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC2450R/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC2450FI/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "IR36550/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "IR36551/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN1366SS",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262200",
-            "builderName": "KINGDOM & COMPANY",
-            "partnerCode": "CULASKINGC",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "NELSON RESIDENCE",
-            "community": "",
-            "jobAddress": "3030 TRAVERSE CREEK LANE, LAS VEGAS, NV, 89135",
-            "salesperson": "Allan Baron",
-            "dealer": "APPLIANCE BY DESIGN",
-            "status": "Active",
-            "startDate": "Jun 26, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC2450R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC1850FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL4850S/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL4250S/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL4850UFD/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL4250UFD/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL3650UFD/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CI36560C/B",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CI36560T/S",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SRT366",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN53696SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN536912SS",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DO3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DO3050PM/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "WWD30",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262199",
-            "builderName": "TSG CONSTRUCTORS LLC",
-            "partnerCode": "",
-            "roc": "204114",
-            "builderAddress": "2340 W. PARKSIDE LANE H105, 85027",
-            "contact": "STAN SHOWALTER",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "BRIGHTLEAF LANE",
-            "community": "",
-            "jobAddress": "7455 N. BRIGHTLEAF LANE, FLAGSTAFF, AZ, 86001",
-            "salesperson": "Heather Ford",
-            "dealer": "ARIZONA APPLAINCE AND HOME",
-            "status": "Active",
-            "startDate": "Jun 26, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DF48650G/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650R/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262198",
-            "builderName": "KODIAK CONSTRUCTION",
-            "partnerCode": "CUPHXKODKC",
-            "roc": "310814",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "JULIE KOEPLIN",
-            "community": "9705 E PRESERVE WAY",
-            "jobAddress": "9705 E PRESEVE WAY, SCOTTSDALE, AZ, 85262",
-            "salesperson": "Dylan Pratt",
-            "dealer": "SPENCERS",
-            "status": "Active",
-            "startDate": "Jun 26, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48650G/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MDD3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262197",
-            "builderName": "SANCTUARY CUSTOM HOMES",
-            "partnerCode": "CUPHXSANCT",
-            "roc": "223278",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "ANIKO",
-            "community": "",
-            "jobAddress": "10071 E ANIKO DR, SCOTTSDALE, AZ, 85262",
-            "salesperson": "Garon McHone",
-            "dealer": "aah",
-            "status": "Active",
-            "startDate": "Jun 26, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "GR606DG-LP",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL581912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL582212",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "EC2450TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC2450W/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO2450TE/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650RID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/R",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262196",
-            "builderName": "SHEA HOMES - ARIZONA",
-            "partnerCode": "SFPHXSHEAH",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 4,
-            "projectName": "SERENCE PROJECVT",
-            "community": "SERENE",
-            "jobAddress": "DYNAMITE & ALMA SCHOOL, SCOTTSDALE, AZ, 85262",
-            "salesperson": "Kathy Chase",
-            "dealer": "ARIZONA APPLIANCE & HOME",
-            "status": "Active",
-            "startDate": "Jun 26, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "SRT486G",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MDD3050TE/S/T",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050TE/S/T",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050R/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC1850FI/L",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "GR486G",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MDD3050PE/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PE/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "EC3050TE/S",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRCP065A-1SU",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSO3050TE/S/T",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050TE/S/T",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSO3050PE/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050PE/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PE/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/L",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450W/L",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450W/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050W/L",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050W/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "WWD30",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-24R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRNP110A-1SU",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262195",
-            "builderName": "AFFINITY KITCHENS",
-            "partnerCode": "CAPHXAFNTY",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Cabinet Shop Quote",
-            "tier": 2,
-            "projectName": "Pickering",
-            "community": "",
-            "jobAddress": "5426 n 26th st, phoenix, AZ, 85016",
-            "salesperson": "Ryan Arthur",
-            "dealer": "spencers",
-            "status": "Active",
-            "startDate": "Jun 26, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3650RID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450W/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSO3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "IR36551/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL401912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-24R",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262194",
-            "builderName": "REGLAM SCOTTSDALE",
-            "partnerCode": "REPHXRGLAM",
-            "roc": "341558",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "Home",
-            "community": "",
-            "jobAddress": "8760 n 73rd way, scottsdale, AZ, 85258",
-            "salesperson": "Suriender Kumar",
-            "dealer": "Spencers Tv & Appliance",
-            "status": "Active",
-            "startDate": "Jun 26, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL4850UFDID/O",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DET3050WR/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262193",
-            "builderName": "SYMMETRY HOMES DBA PINE CANYON HOMES",
-            "partnerCode": "CUPHXTRULF",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 4,
-            "projectName": "HIPPEL",
-            "community": "",
-            "jobAddress": "4323 E UPPER RIDGE WAY, PARADISE VALLEY, AZ, 85253",
-            "salesperson": "ALEXIS PUENTE",
-            "dealer": "FERGUSON",
-            "status": "Active",
-            "startDate": "Jun 26, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3050RID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050CM/B/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050CM/B",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CI36560C/B",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DD36",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "EC2450TE/S",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262192",
-            "builderName": "GEMINI CONSTRUCTION",
-            "partnerCode": "CUPHXGEMCN",
-            "roc": "214815",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "112 KALER",
-            "community": "112 W KALER",
-            "jobAddress": "112 W KALER, PHOENIX, AZ, 85021",
-            "salesperson": "Dylan Pratt",
-            "dealer": "SPENCERS",
-            "status": "Active",
-            "startDate": "Jun 26, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL4850SD/O",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262191",
-            "builderName": "321 FLOORING & CONSTRUCTION",
-            "partnerCode": "REPHXTTOC",
-            "roc": "333135",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "MA",
-            "community": "",
-            "jobAddress": "8502 E DESERT COVE AVE, SCOTTSDALE, AZ, 85260",
-            "salesperson": "Ryan Spotleson",
-            "dealer": "FERGUSON",
-            "status": "Active",
-            "startDate": "Jun 26, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CI36560T/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL401912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSOP3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC2450FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050RID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262190",
-            "builderName": "123 REMODELING",
-            "partnerCode": "REPHXOTTRE",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "Browne Residence",
-            "community": "",
-            "jobAddress": "8409 E De La O Rd., Scottsdale, AZ, 85255",
-            "salesperson": "CHRIS LAMB",
-            "dealer": "ARIZONA  APPLIANCE AND HOME",
-            "status": "Active",
-            "startDate": "Jun 26, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "PL581912",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262189",
-            "builderName": "GM HUNT BUILDERS",
-            "partnerCode": "CUPHXGMHNT",
-            "roc": "349370",
-            "builderAddress": "AZ",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 3,
-            "projectName": "TUTON RESIDENCE",
-            "community": "",
-            "jobAddress": "5221 EAST ARROYO RD, PARADISE VALLEY, AZ, 85253",
-            "salesperson": "Chelsea Benevento",
-            "dealer": "FERGUSON",
-            "status": "Active",
-            "startDate": "Jun 25, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEU1550W/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550B/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/R",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262188",
-            "builderName": "TIARA SUN DEVELOPMENT",
-            "partnerCode": "CUPHXTRADW",
-            "roc": "175750",
-            "builderAddress": "1",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "STEVE URKE",
-            "community": "",
-            "jobAddress": "4501 N 61ST PLACE, SCOTTSDALE, AZ, 85251",
-            "salesperson": "Kent Greenhalgh",
-            "dealer": "ARIZONA APPLIANCES & HOME",
-            "status": "Active",
-            "startDate": "Jun 25, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DF60650DG/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL581912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "WWD30",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DET3050WR/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO2450TE/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSO3050TE/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450W/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-24F",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRNP110A-1SU",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262187",
-            "builderName": "ATLAS BUILDERS GROUP",
-            "partnerCode": "CUPHXATLS",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "94th lane",
-            "community": "",
-            "jobAddress": "38405 N 94th ln, Scottsdale, AZ, 85262",
-            "salesperson": "Ed Rodriguez",
-            "dealer": "Spencer's Tv & Appliance",
-            "status": "Active",
-            "startDate": "Jun 25, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3050R/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050FI/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48650G/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/R",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262186",
-            "builderName": "T B L Group Inc",
-            "partnerCode": "",
-            "roc": "220396",
-            "builderAddress": "7131 S STAR DR, 85298",
-            "contact": "Tracey Armstrong",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "Bartolomei Residence",
-            "community": "Seville",
-            "jobAddress": "4588 East Meadow View Drive, GILBERT, AZ, 85298",
-            "salesperson": "David Biederbeck",
-            "dealer": "SPENCERSTV.COM",
-            "status": "Active",
-            "startDate": "Jun 25, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC1850W/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650RID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48850/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL581912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451WS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSO3050PM/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "EC3050PM/S",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD30PE/S",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DO3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "WWD30",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451WS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450W/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-30R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DET3650CIID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CI243TF/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRNP110A-1SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "OG42",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "OG54",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262185",
-            "builderName": "LEICHT SCOTTSDALE",
-            "partnerCode": "CAPHXLICHT",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Cabinet Shop Quote",
-            "tier": 5,
-            "projectName": "HEBBAR",
-            "community": "",
-            "jobAddress": "17723  N 93RD  PL, SCOTTSDALE, AZ, 85255",
-            "salesperson": "Cassie Garrett",
-            "dealer": "AZ APPLIANCE AND HOME",
-            "status": "Active",
-            "startDate": "Jun 25, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC1850FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "GR486G",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "GR488",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN548212SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN554212SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC1850W/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC2450W/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-24R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN536912SS",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN560212SS",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL521912",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262184",
-            "builderName": "STICKS AND BRICKS DEVELOPMENT",
-            "partnerCode": "CUPHXSTBKS",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 3,
-            "projectName": "CARTHILL",
-            "community": "",
-            "jobAddress": "12733 E COCHISE DR, SCOTTSDALE, AZ, 85259",
-            "salesperson": "Aliy Gregory",
-            "dealer": "FERGUSON",
-            "status": "Active",
-            "startDate": "Jun 25, 2026",
-            "endDate": "Dec 31, 2027",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DF36450G/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DO3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC2450R/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC2450FI/L",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48650G/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL4850S/O",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262183",
-            "builderName": "AVID WOODWORKS",
-            "partnerCode": "CAPHXAVDW",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Cabinet Shop Quote",
-            "tier": 5,
-            "projectName": "Jim Lang",
-            "community": "",
-            "jobAddress": "24740 N 92nd st, Scottsdale, AZ, 85255",
-            "salesperson": "Nancy Hendley",
-            "dealer": "Spencers",
-            "status": "Active",
-            "startDate": "Jun 25, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEU1550IP/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PW482418",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262182",
-            "builderName": "RISE ABOVE REMODELING",
-            "partnerCode": "REPHXRSABV",
-            "roc": "346766",
-            "builderAddress": "42302 N VISION WAY, 85086",
-            "contact": "ROY BRET BUCKNER",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "MINA WATTERS",
-            "community": "",
-            "jobAddress": "6631 BENT TREE DRIVE, SCOTTSDALE, AZ, 85266",
-            "salesperson": "Terrence Donner",
-            "dealer": "Spencers",
-            "status": "Active",
-            "startDate": "Jul 15, 2026",
-            "endDate": "Oct 15, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL3650UFD/O",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "GR486G",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MS24",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262181",
-            "builderName": "TRIPLE R CONSTRUCTION",
-            "partnerCode": "CUPHXTRRRE",
-            "roc": "231284",
-            "builderAddress": "PO BOX 215, 85902",
-            "contact": "RAYNE RUSH",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "GOETTLE",
-            "community": "",
-            "jobAddress": "2994 WHITE OAK DR, PINETOP, AZ, 85935",
-            "salesperson": "Nathan White",
-            "dealer": "Spencer's TV & Appliance",
-            "status": "Active",
-            "startDate": "Nov 25, 2025",
-            "endDate": "Aug 28, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "SRT364G-LP",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-30C",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRNP110A-1SU",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450W/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL4250UFDID/O",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSO3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL462212",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262180",
-            "builderName": "321 FLOORING & CONSTRUCTION",
-            "partnerCode": "REPHXTTOC",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "Danny Ma",
-            "community": "",
-            "jobAddress": "8401 E De La O Rd, Scottsdale, AZ, 85255",
-            "salesperson": "CHRIS LAMB",
-            "dealer": "ARIZOAN APPLIANCE AND HOME",
-            "status": "Active",
-            "startDate": "Jun 25, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC2450FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050RID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL401912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CI36560T/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSOP3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN542912SS",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262179",
-            "builderName": "TIDAL ENTERPRISES",
-            "partnerCode": "REPHXTIDL",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "THORNTON",
-            "community": "",
-            "jobAddress": "1950 S BIRCH, SHOW LOW, AZ, 85901",
-            "salesperson": "JEFFREY FROST",
-            "dealer": "SPENCERS",
-            "status": "Active",
-            "startDate": "Jun 25, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL4850UFDID/O",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/L",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/R",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262178",
-            "builderName": "HAWK BUILDERS",
-            "partnerCode": "CUPHXHWKBI",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "GARY STREET",
-            "community": "N/A",
-            "jobAddress": "3121 E GARY STREET, MESA, AZ, 85213",
-            "salesperson": "Christopher Loera",
-            "dealer": "SPECNERTV & APPLIANCE",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Jul 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "GR364C",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL3650UFD/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN53696SS",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262177",
-            "builderName": "HAWK BUILDERS",
-            "partnerCode": "CUPHXHWKBI",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "Gary Street",
-            "community": "n/a",
-            "jobAddress": "3121 E Gary Street, Mesa, AZ, 85213",
-            "salesperson": "Christopher Loera",
-            "dealer": "Spencers Tv & Appliance",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Jul 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "GR364G",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL3650UFDID/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN53696SS",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262176",
-            "builderName": "REGENCY CUSTOM HOMES",
-            "partnerCode": "CUPHXREGCY",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "7020 E CHAPARALL RD",
-            "community": "",
-            "jobAddress": "7020 E CHAPARALL RD, PARADISE VALLEY, AZ, 85253",
-            "salesperson": "Brandon McCown",
-            "dealer": "SPENCERS TV AND APPLIANCE",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3050R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48650G/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN548912SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MS24",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DET3050CI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRNP110A-1SU",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262175",
-            "builderName": "REGENCY CUSTOM HOMES",
-            "partnerCode": "CUPHXREGCY",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "7020 E CHAPARALL RD",
-            "community": "",
-            "jobAddress": "7020 E CHAPARALL RD, PARADISE VALLEY, AZ, 85253",
-            "salesperson": "Brandon McCown",
-            "dealer": "SPENCERS",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3050R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48650G/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN548912SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MS24",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DET3050CI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRNP110A-1SU",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262174",
-            "builderName": "TIDAL ENTERPRISES",
-            "partnerCode": "REPHXTIDL",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "thornton",
-            "community": "",
-            "jobAddress": "1950 S BIRCH, SHOW LOW, AZ, 85901",
-            "salesperson": "JEFFREY FROST",
-            "dealer": "spencers",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL4850UFDID/O",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/L",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN548912SS",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48450CG/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262173",
-            "builderName": "MANNER  BUILDERS",
-            "partnerCode": "CULASMNNER",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 4,
-            "projectName": "MANNER BUILDER",
-            "community": "ASCAYA",
-            "jobAddress": "17 SANCTUARY PEAK CT, HENDERSON, NV, 89012",
-            "salesperson": "Craig Goleno",
-            "dealer": "RC WILLEY",
-            "status": "Active",
-            "startDate": "Aug 3, 2029",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC2450W/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SRT486G",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DO3050TE/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRNP110A-1SU",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "EC2450TE/S",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262172",
-            "builderName": "WALKER CUSTOM HOMES",
-            "partnerCode": "CUPHXWLKE",
-            "roc": "150894",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "CARROLL GU8332",
-            "community": "",
-            "jobAddress": "6401 E CARON DR, PARADISE VALLEY, AZ, 85253",
-            "salesperson": "David Kotila",
-            "dealer": "SPENCERS TV AND APPLIANCE",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Jul 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL3650UFDID/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF30450/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN33096SS",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262171",
-            "builderName": "WEEKS & MITCHELL CONSTRUCTION LLC",
-            "partnerCode": "CUPHXWEKSM",
-            "roc": "213005",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "RAJIV DEODHAR",
-            "community": "",
-            "jobAddress": "15026 S 20TH ST, PHOENIX, AZ, 85048",
-            "salesperson": "WALT MILLER",
-            "dealer": "SPENCERS TV APPLIANCE",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL4250UFDID/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050PM/S/P",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262170",
-            "builderName": "JOHNS BUILDERS",
-            "partnerCode": "REPHXJOHNB",
-            "roc": "360402",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "ORCHID DEVELOPMENT",
-            "community": "",
-            "jobAddress": "6302 E TURQUOISE AVE, PARADISE VALLEY, AZ, 85253",
-            "salesperson": "RICK EDWARDS",
-            "dealer": "SPENCERS APPLIANCE",
-            "status": "Active",
-            "startDate": "Sep 4, 2026",
-            "endDate": "Nov 27, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL3650F/O/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL3650R/O/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "IR48751/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSOP3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "EC3050PM/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "WWD30",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262169",
-            "builderName": "NEW CASTLE CONSTRUCTION",
-            "partnerCode": "CUPHXNWCAST",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 4,
-            "projectName": "SUNSHINE PLACE",
-            "community": "",
-            "jobAddress": "621 W. SUNSHINE PLACE, CHANDLER, AZ, 85248",
-            "salesperson": "Paige Snodgrass",
-            "dealer": "FERGUSON",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Mar 28, 2027",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3650RID/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL581912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSOP3050CM/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD30TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "WWD30",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-24R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "DRCP033A-1SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRCP065A-1SU",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "EC2450TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSOP3050CM/B",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF36650/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL401912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-36R",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262168",
-            "builderName": "FULL CIRCLE CUSTOM HOMES",
-            "partnerCode": "CUPHXFLCIR",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "Karen Ehrlich",
-            "community": "",
-            "jobAddress": "6525 E Cave Creek Rd #31, Cave Creek, AZ, 85331",
-            "salesperson": "Elly Krell",
-            "dealer": "Best Home Appliances",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL4850UFDID/O",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "IR48751/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450W/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD30TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450W/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262167",
-            "builderName": "MORGAN TAYLOR HOMES",
-            "partnerCode": "SFPHXMRGNT",
-            "roc": "320145",
-            "builderAddress": "10045  E DYNAMITE BLVD, 86262",
-            "contact": "Geronimo Domingo Alvarado",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "DEMORE",
-            "community": "",
-            "jobAddress": "9600 E HAPPY VALLEY RD, scottsdale, AZ, 85255",
-            "salesperson": "Cassie Garrett",
-            "dealer": "ARIZONA APPLIANCE  AND HOME",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL4850UFD/O",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48650G/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-24R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRNP110A-1SU",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/L",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262166",
-            "builderName": "AFFINITY KITCHENS",
-            "partnerCode": "CAPHXAFNTY",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Cabinet Shop Quote",
-            "tier": 2,
-            "projectName": "PICKERING RESIDENCE",
-            "community": "",
-            "jobAddress": "5426 2 26TH ST, PHOENIX, AZ, 85016",
-            "salesperson": "Jon Gage",
-            "dealer": "REECE",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Mar 31, 2027",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3650R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "IR36551/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL402212",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN542912SS",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSO3050PE/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PE/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450W/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-24R",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262165",
-            "builderName": "MILLENIA LUXURY HOMES",
-            "partnerCode": "CUPHXMNL",
-            "roc": "332382",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "ANDROS",
-            "community": "",
-            "jobAddress": "37932 N 104TH PL, SCOTTSDALE, AZ, 85255",
-            "salesperson": "Aliy Gregory",
-            "dealer": "FERGUSON",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 23, 2027",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DF48650G/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN548212SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC1850W/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MDD3050TM/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRNP110A-1SU",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262164",
-            "builderName": "CABINET CO, DBA SURFACES OF SCOTTSDALE",
-            "partnerCode": "CAPHXTCABC",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Cabinet Shop Quote",
-            "tier": 2,
-            "projectName": "CAMPBELL",
-            "community": "",
-            "jobAddress": "10040 e Happy Valley, SCOTTSDALE, AZ, 85255",
-            "salesperson": "CHRIS PARRADO",
-            "dealer": "FERGUSON",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DET3650CIID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DET3650CI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050W/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-36R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRCP035A-1SU",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SRT484W",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DO3050PM/S/P",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262163",
-            "builderName": "JOHNS BUILDERS",
-            "partnerCode": "REPHXJOHNB",
-            "roc": "360402",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "TURQUOISE AVE",
-            "community": "",
-            "jobAddress": "6302E Turquoise Ave, PARADISE VALLEY, AZ, 85253",
-            "salesperson": "CHRIS PARRADO",
-            "dealer": "FERGUSON",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "IR48751/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSOP3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "EC3050PM/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "WWD30",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL3650R/O/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL3650F/O/L",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262162",
-            "builderName": "STATESMAN",
-            "partnerCode": "CUPHXSTTSM",
-            "roc": "346034",
-            "builderAddress": "9300 E Raintree Drive, 85260",
-            "contact": "Alana Mann",
-            "type": "Builder Quote",
-            "tier": 4,
-            "projectName": "The Luxe of Desert Ridge BLDG 3A",
-            "community": "The Luxe of Desert Ridge",
-            "jobAddress": "5250 E Deer Valley DR, Phoenix, AZ, 85054",
-            "salesperson": "Derrick McWilliams",
-            "dealer": "Spencers TV & Appliance",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CG365T/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050TE/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050TE/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "VW36B",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL3650UFD/S/T",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262161",
-            "builderName": "LAYTON CONSTRUCTION",
-            "partnerCode": "CUPHXLYTON",
-            "roc": "304255",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "CAMEBACK SPEC SUITES",
-            "community": "",
-            "jobAddress": "4210 E CAMELBACK, PHOENIX, AZ, 85018",
-            "salesperson": "Dylan Pratt",
-            "dealer": "SPENCERS",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DET3650R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451/ADA",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450R/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/ADA/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450R/ADA/R",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262160",
-            "builderName": "RIDGELINE BUILDERS",
-            "partnerCode": "REPHXRDGE",
-            "roc": "212994",
-            "builderAddress": "908 E SHELDON ST, 86301",
-            "contact": "RIDGELINE BUILDERS",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "PRESCOTT REMODEL",
-            "community": "",
-            "jobAddress": "15305 N ESCALANTE WAY, PRESCOTT, AZ, 86305",
-            "salesperson": "Kevin Kalawsky",
-            "dealer": "SPENCERS",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3650R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "GR488-LP",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451WS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450CI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050R/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050FI/L",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN548212SS",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262159",
-            "builderName": "CRAFT DEVELOPMENT",
-            "partnerCode": "CUPHXCRAFT",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "Watson Residence",
-            "community": "",
-            "jobAddress": "3724 S PICO ST, GILBERT, AZ, 85297",
-            "salesperson": "Rick Biederbeck",
-            "dealer": "Spencer's TV & Appliance",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-30C",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRNP110A-1SU",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DO3050TE/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN560212SS",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262158",
-            "builderName": "BESPOKE DESIGN & BUILD",
-            "partnerCode": "CUPHXBESPK",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "Bespoke - Biltmore",
-            "community": "",
-            "jobAddress": "6308 N 31st St, Phoenix, AZ, 85106",
-            "salesperson": "CHRIS LAMB",
-            "dealer": "ARIZONA APPLIANCE AND HOME",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL4850SID/O",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450W/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550IP/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "IR36551/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN53696SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262157",
-            "builderName": "KITCHEN WORKS INC",
-            "partnerCode": "",
-            "roc": "",
-            "builderAddress": "MESA",
-            "contact": "",
-            "type": "Cabinet Shop Quote",
-            "tier": 5,
-            "projectName": "EBERLE",
-            "community": "",
-            "jobAddress": "19924 N 96TH WAY, SCOTTSDALE, AZ, 85255",
-            "salesperson": "CHRIS PARRADO",
-            "dealer": "FERGUSON",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DF36650/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF36450G/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "IR36551/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN536912SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL4250S/O",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL4250UFD/O",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DET3050WR/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262156",
-            "builderName": "JEN THE BUILDER",
-            "partnerCode": "CUPHXJENBLD",
-            "roc": "323052",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "ZADIK",
-            "community": "",
-            "jobAddress": "7618 E IRONWOOD DR, SCOTTSDALE, AZ, 85022",
-            "salesperson": "Cheyne Hallett",
-            "dealer": "Arizona Appliance",
-            "status": "Active",
-            "startDate": "Jun 24, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL3650F/S/P/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL3650R/S/P/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48850/S/P/LP",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL462212",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN348212SS",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262155",
-            "builderName": "PAROLO DEVELOPMENT BUILD",
-            "partnerCode": "CUPHXPARLB",
-            "roc": "346031",
-            "builderAddress": "1",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 3,
-            "projectName": "GIDEON",
-            "community": "LAS BRIAS",
-            "jobAddress": "9121 E CALLE DE LAS BRIAS, SCOTTSDALE, AZ, 85255",
-            "salesperson": "Kent Greenhalgh",
-            "dealer": "Arizona Appliance & Home",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "ID-24R",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262154",
-            "builderName": "LCL CONSTRUCTION",
-            "partnerCode": "",
-            "roc": "345321",
-            "builderAddress": "3960 E PALM STREET, 85215",
-            "contact": "LUIS A CEBALLOS",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "SDA CORP",
-            "community": "",
-            "jobAddress": "7020 E CHAPARRAL ROAD, PARADISE VALLEY, AZ, 85253",
-            "salesperson": "Allan Schoon",
-            "dealer": "BEST HOME APPLIANCES",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "GR486G",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DET3050CI/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MDD2450TE/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN348212SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRCP065A-1SU",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262153",
-            "builderName": "EPIC CUSTOM KITCHENS",
-            "partnerCode": "CAPHXEPICKT",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "BIDTOR",
-            "community": "",
-            "jobAddress": "27213 N 71ST PLACE, SCOTTSDALE, AZ, 85266",
-            "salesperson": "Terry Wilfong",
-            "dealer": "BEST HOME APPLIANCES",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3650R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DET3650CIID/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSOP3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF60650CG/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL582212",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "EC3050PM/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "EC2450TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRCP065A-1SU",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262152",
-            "builderName": "JB Construction and Landscape",
-            "partnerCode": "",
-            "roc": "346006",
-            "builderAddress": "9 W CHERRY AVE STREET, STE A, 86001",
-            "contact": "John Barajas",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "MANCINI RESIDENCE",
-            "community": "",
-            "jobAddress": "LOT 197 PINE CANYON, FLAGSTAFF, AZ, 86001",
-            "salesperson": "MISSY WEST",
-            "dealer": "Arizona Appliance and Home",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3050RID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650RID/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL4850UFD/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL4850SID/O",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/ADA/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/ADA/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRCP065A-1SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRCP065A-1SU",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF60650DG/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN560212SS",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262151",
-            "builderName": "ELEVATION DESIGN & BUILD",
-            "partnerCode": "REPHXLEVTN",
-            "roc": "343988",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "PEGGY & JASON BLACKWOOD",
-            "community": "",
-            "jobAddress": "3806 E SCORPIO PLACE, CHANDLER, AZ, 85249",
-            "salesperson": "Lisa Ross",
-            "dealer": "Central Arizona Supply",
-            "status": "Active",
-            "startDate": "Jul 1, 2026",
-            "endDate": "Aug 3, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DF48850/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD30TE/S",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262150",
-            "builderName": "CARLENZOLI AND ASSOCIATES",
-            "partnerCode": "CUPHXCARLNZ",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "RECTOR RESIDENCE - GW6772",
-            "community": "",
-            "jobAddress": "7718 E VISTA DR, SCOTTSDALE, AZ, 85250",
-            "salesperson": "David Kotila",
-            "dealer": "SPENCERS TV AND APPLIACE",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Sep 30, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL4250SID/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "GR364G",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050PE/S/P",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262149",
-            "builderName": "BG CUSTOM HOMES",
-            "partnerCode": "CUPHXBGCUS",
-            "roc": "355894",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "NATE SCHIERHOLTZ",
-            "community": "",
-            "jobAddress": "5249 E EMILE ZOLA AVE, SCOTTSDALE, AZ, 85254",
-            "salesperson": "Dawson Adix",
-            "dealer": "ARIZONA APPLIANCE AND HOME",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650RID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48650G/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "GR486G",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MDD3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "WWD30",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN348212SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450R/R",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262148",
-            "builderName": "BG CUSTOM HOMES",
-            "partnerCode": "CUPHXBGCUS",
-            "roc": "355894",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "NATE SCHIERHOLTZ",
-            "community": "",
-            "jobAddress": "5226 E VOLTAIRE AVE, SCOTTSDALE, AZ, 85254",
-            "salesperson": "Dawson Adix",
-            "dealer": "ARIZONA APPLIANCE AND HOME",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3650RID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48650G/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "GR486G",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MDD3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "WWD30",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN348212SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450R/R",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262147",
-            "builderName": "PEAK ONE BUILDERS & DEVELOPMENT, LLC",
-            "partnerCode": "CUPHXPEAKB",
-            "roc": "323268",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "Rose Residence",
-            "community": "",
-            "jobAddress": "5429 e morrison ln, paradise valley, AZ, 85253",
-            "salesperson": "Ryan Arthur",
-            "dealer": "spencers",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEU2450R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU1550W/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRCP065A-1SU",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450R/R",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262146",
-            "builderName": "BG CUSTOM HOMES",
-            "partnerCode": "CUPHXBGCUS",
-            "roc": "355894",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "NATE SCHIERHOLTZ",
-            "community": "",
-            "jobAddress": "4211 E STANFORD DR, PHOENIX, AZ, 85018",
-            "salesperson": "Dawson Adix",
-            "dealer": "ARIZONA APPLIANCE AND HOME",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3650RID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48650G/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "GR486G",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MDD3050PE/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "WWD30",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN348212SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450R/R",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262145",
-            "builderName": "STANDING ROCK",
-            "partnerCode": "CUPHXSTDRK",
-            "roc": "147994",
-            "builderAddress": "1",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 3,
-            "projectName": "36300 n 62nd street spec",
-            "community": "cave creek",
-            "jobAddress": "36300 N 62ND STTREET, CAVE CREEK, AZ, 85331",
-            "salesperson": "kent",
-            "dealer": "Arizona Appliance and Home",
-            "status": "Active",
-            "startDate": "Jun 23, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "MDD3050PM/S/P",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262144",
-            "builderName": "WEEKS AND MITCHELL",
-            "partnerCode": "",
-            "roc": "213005",
-            "builderAddress": "CHANDLER",
-            "contact": "",
-            "type": "Cabinet Shop Quote",
-            "tier": 5,
-            "projectName": "RAJIV DEODHAR",
-            "community": "",
-            "jobAddress": "15026 S 20TH ST, PHOENIX, AZ, 85048",
-            "salesperson": "WALT MILLER",
-            "dealer": "SPENCERS TV APPLIANCE",
-            "status": "Active",
-            "startDate": "Jul 22, 2026",
-            "endDate": "Sep 9, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL4250UFDID/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050PM/S/P",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262143",
-            "builderName": "FULTON HOMES",
-            "partnerCode": "SFPHXFULTN",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 4,
-            "projectName": "SEXTON",
-            "community": "BARNEY FIELDS",
-            "jobAddress": "1241 W WARNER, TEMPE, AZ, 85284",
-            "salesperson": "Cassie Garrett",
-            "dealer": "az appliance and home",
-            "status": "Active",
-            "startDate": "Jun 22, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "IR48751/S/P",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262142",
-            "builderName": "Diamond Kitchen and Bath",
-            "partnerCode": "",
-            "roc": "",
-            "builderAddress": "Phoenix",
-            "contact": "",
-            "type": "Cabinet Shop Quote",
-            "tier": 5,
-            "projectName": "GARY GILLILAND",
-            "community": "",
-            "jobAddress": "2104 E BARKWOOD RD, PHOENIX, AZ, 85048",
-            "salesperson": "WALT MILLER",
-            "dealer": "Spencers TV & Appliance",
-            "status": "Active",
-            "startDate": "Jul 21, 2026",
-            "endDate": "Sep 1, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL4250SID/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CI36560T/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DD36",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050TM/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SPO3050TM/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262141",
-            "builderName": "INTEGRA BUILDERS",
-            "partnerCode": "CUPHXNTEGR",
-            "roc": "324580",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "INTEGRA - WEBER",
-            "community": "",
-            "jobAddress": "1901 E HORIZON CIRCLE, PAYSON, AZ, 85541",
-            "salesperson": "STACEY STRICKLAND",
-            "dealer": "CENTRAL AZ SUPPLY",
-            "status": "Active",
-            "startDate": "Jun 22, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "EC2450TE/S",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262140",
-            "builderName": "Foundation E",
-            "partnerCode": "",
-            "roc": "331992",
-            "builderAddress": "6155 E INDIAN SCHOOL, 85251",
-            "contact": "KALEB EYOB",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "Camelback Ranchos",
-            "community": "",
-            "jobAddress": "6318 N 51st Pl, Paradise Valley, AZ, 85253",
-            "salesperson": "Brittain Osborne",
-            "dealer": "FERGUSON",
-            "status": "Active",
-            "startDate": "Jun 22, 2026",
-            "endDate": "Dec 31, 2027",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3050R/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451WS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "ID-24R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48450F/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DO3050TE/S/T",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "EC2450TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CG304P/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN1306SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRNP110A-1SU",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450BG/L",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262139",
-            "builderName": "TIARA SUN DEVELOPMENT",
-            "partnerCode": "CUPHXTRADW",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "BERNEIL LN",
-            "community": "",
-            "jobAddress": "8311 N 53RD ST, PV, AZ, 85253",
-            "salesperson": "Aliy Gregory",
-            "dealer": "FERGUSON",
-            "status": "Active",
-            "startDate": "Jun 22, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "CL3650UFD/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "IR48751/S/P",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262138",
-            "builderName": "MV DEVELOPMENT",
-            "partnerCode": "REPHXMVDEV",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "Mohammad",
-            "community": "",
-            "jobAddress": "9286 W Happy Valley Rd, Peoria, AZ, 85383",
-            "salesperson": "Madison Beckham",
-            "dealer": "Madison Spencer\u2019s Tv & Appliance",
-            "status": "Active",
-            "startDate": "Jun 22, 2026",
-            "endDate": "Oct 1, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DF48850/S/P/LP",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48450CG/S/P/LP",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SRT484CG-LP",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSO3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MDD3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DET3050CI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DET3050CI/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650R/R",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262137",
-            "builderName": "ARIZONA BUILDING GROUP - SCOTTSDALE",
-            "partnerCode": "REPHXAZBGP",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "WELSCH RESIDENCE",
-            "community": "",
-            "jobAddress": "9870 E PINACLE PEAK RD, SCOTTSDALE, AZ, 85255",
-            "salesperson": "Kathy Chase",
-            "dealer": "ARIZONA APPLIANCE & HOME",
-            "status": "Active",
-            "startDate": "Jun 22, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DF48650G/S/P/LP",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN348212SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "CL4850S/S/P",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262136",
-            "builderName": "ELEVATION DESIGN & BUILD",
-            "partnerCode": "REPHXLEVTN",
-            "roc": "343988",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "Paul",
-            "community": "",
-            "jobAddress": "7000 W Vermont Ave, paradise valley, AZ, 85253",
-            "salesperson": "JUSTIN DODSON",
-            "dealer": "SPENCERS APPLIANCES",
-            "status": "Active",
-            "startDate": "Jun 22, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "HBN548212SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "DF48650G/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650RID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DET3050WR/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SCOTSMAN",
-                    "model": "SRCP065A-1SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MD24TE/S",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CSOP3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "SO3050PM/S/P",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262135",
-            "builderName": "AFFINITY KITCHENS",
-            "partnerCode": "CAPHXAFNTY",
-            "roc": "",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Cabinet Shop Quote",
-            "tier": 2,
-            "projectName": "LAUFER",
-            "community": "",
-            "jobAddress": "25433 N BRONCO TRAIL, SCOTTSDALE, AZ, 85266",
-            "salesperson": "Mark Hanson",
-            "dealer": "REECE",
-            "status": "Active",
-            "startDate": "Jun 22, 2026",
-            "endDate": "Sep 4, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3050RID/R",
-                    "stOpt": "S"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262134",
-            "builderName": "RIDGELINE BUILDERS",
-            "partnerCode": "REPHXRDGE",
-            "roc": "212994",
-            "builderAddress": "",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 1,
-            "projectName": "Sweeney",
-            "community": "",
-            "jobAddress": "15305 n escalate way, Prescott, AZ, 86305",
-            "salesperson": "Ryan Arthur",
-            "dealer": "Spencers",
-            "status": "Active",
-            "startDate": "Jun 22, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DEC3650RID/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3650FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050RID/R",
-                    "stOpt": "O"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEC3050FI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "GR488-LP",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "MDD3050PM/S/P",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "BEST",
-                    "model": "HBN548912SS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "SUB-ZERO",
-                    "model": "DEU2450CI/L",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451WS",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "PL461912",
-                    "stOpt": "O"
-                }
-            ]
-        },
-        {
-            "registrationNumber": "262133",
-            "builderName": "RLS CAPITAL/MONARCH CONTRACTING",
-            "partnerCode": "CUPHXMNARC",
-            "roc": "307489",
-            "builderAddress": "224",
-            "contact": "",
-            "type": "Builder Quote",
-            "tier": 5,
-            "projectName": "5101 N Casa Blanca",
-            "community": "",
-            "jobAddress": "5101 N Casa Blanca Drive, paradise valley, AZ, 85253",
-            "salesperson": "Ryan Spotleson",
-            "dealer": "ferguson",
-            "status": "Active",
-            "startDate": "Jun 22, 2026",
-            "endDate": "Dec 31, 2026",
-            "skus": [
-                {
-                    "brand": "",
-                    "model": "DET3650CI/R",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "WOLF",
-                    "model": "CI30460C/B",
-                    "stOpt": "S"
-                },
-                {
-                    "brand": "COVE",
-                    "model": "DW2451/ADA",
-                    "stOpt": "S"
-                }
-            ]
-        }
-    ];
+    const [parseError, setParseError] = useState("");
+    const [loading, setLoading] = useState(false);
+    const fileRef = useRef();
     const analyzeItems = (rawItems)=>{
         const analyzed = rawItems.map((item)=>{
-            const existingBuilder = builders.find((b)=>b.partnerCode && b.partnerCode === item.partnerCode);
+            if (!getTier(item.tier)) return null;
+            const existingBuilder = builders.find((b)=>b.partnerCode && b.partnerCode === item.partnerCode) || !item.partnerCode && item.builderName && builders.find((b)=>b.name.trim().toLowerCase() === item.builderName.trim().toLowerCase());
             const existingJob = builders.flatMap((b)=>b.jobs).find((j)=>j.registrationNumber === item.registrationNumber);
             let status = "new_builder";
             const conflicts = [];
@@ -92357,7 +102469,7 @@ function ExcelImporter({ builders, onImportApproved }) {
                 if (conflicts.length > 0) status = "conflict";
                 else if (existingJob) status = "overwrite";
                 else status = "new_job";
-            } else if (!item.partnerCode) {
+            } else if (!item.partnerCode && !existingBuilder) {
                 status = "mismatch";
             }
             return {
@@ -92367,7 +102479,7 @@ function ExcelImporter({ builders, onImportApproved }) {
                 _existingBuilder: existingBuilder || null,
                 _existingJob: existingJob || null
             };
-        });
+        }).filter(Boolean);
         setItems(analyzed);
         const autoApproved = {};
         analyzed.forEach((item, i)=>{
@@ -92375,6 +102487,105 @@ function ExcelImporter({ builders, onImportApproved }) {
         });
         setApproved(autoApproved);
         setDone(false);
+    };
+    const parseExcel = async (file)=>{
+        setLoading(true);
+        setParseError("");
+        try {
+            const data = await file.arrayBuffer();
+            const XLSX = window.XLSX;
+            if (!XLSX) throw new Error("Excel parser not loaded. Please refresh the page and try again.");
+            const wb = XLSX.read(new Uint8Array(data), {
+                type: "array"
+            });
+            const ws = wb.Sheets[wb.SheetNames[0]];
+            const rows = XLSX.utils.sheet_to_json(ws, {
+                defval: ""
+            });
+            const norm = (s)=>String(s || "").replace(/\u00A0/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
+            const col = (row, ...keys)=>{
+                for (const k of keys){
+                    const nk = norm(k);
+                    const found = Object.keys(row).find((h)=>h && norm(h) === nk);
+                    if (found && row[found] !== undefined && norm(row[found]) !== "") return String(row[found]).replace(/\u00A0/g, " ").trim();
+                }
+                return "";
+            };
+            const results = rows.map((row)=>{
+                const regNum = col(row, "Registration Number");
+                if (!regNum) return null;
+                const typeReq = col(row, "Type of Request");
+                const isBuilder = typeReq.toLowerCase().includes("builder");
+                const builderName = isBuilder ? col(row, "Builder\'s Registered Name", "New Builder\'s Registered Name") : col(row, "Cabinet Partner Business Name", "Cabinet Partner Registered Business Name");
+                const tierRaw = col(row, "Tier");
+                const tierNum = tierRaw === "TA" ? 5 : parseInt(tierRaw.replace(/[^0-9]/g, "")) || 5;
+                const validTier = [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ].includes(tierNum) ? tierNum : null;
+                if (!validTier) return null;
+                const addrParts = [
+                    col(row, "Builder Address"),
+                    col(row, "Suite/Unit"),
+                    col(row, "City"),
+                    col(row, "State"),
+                    col(row, "Zip")
+                ];
+                const builderAddress = addrParts.filter(Boolean).join(", ");
+                const projAddr = col(row, "Project Address (Must be complete to quote)", "Street Address/Lot Number Development");
+                const jobAddress = [
+                    projAddr,
+                    col(row, "Project City"),
+                    col(row, "Project State"),
+                    col(row, "Project Zip")
+                ].filter(Boolean).join(", ");
+                const skus = [];
+                for(let n = 1; n <= 50; n++){
+                    const model = (row[`Model Number #${n}`] || "").toString().trim().toUpperCase();
+                    if (!model) continue;
+                    const soRaw = (row[`Standard (S) or Option (O) #${n}`] || "S").toString().trim().toUpperCase();
+                    const brandKey = n === 1 ? null : n === 29 ? ` Brand #${n}` : `Brand #${n}`;
+                    const brand = brandKey && row[brandKey] ? row[brandKey].toString().trim().toUpperCase() : "";
+                    skus.push({
+                        brand,
+                        model,
+                        stOpt: soRaw.startsWith("S") ? "S" : "O"
+                    });
+                }
+                return {
+                    registrationNumber: regNum,
+                    builderName,
+                    partnerCode: col(row, "Partner Code"),
+                    roc: col(row, "Builder ROC Number"),
+                    builderAddress,
+                    contact: col(row, "Builder Principal (Owner) Name"),
+                    type: isBuilder ? "Builder Quote" : "Cabinet Shop Quote",
+                    tier: validTier,
+                    market: col(row, "Market"),
+                    projectName: col(row, "Project Name/Customer Name"),
+                    community: col(row, "Development/Community"),
+                    jobAddress,
+                    salesperson: col(row, "Your Name"),
+                    dealer: col(row, "Your Dealer Name"),
+                    cabinetDesigner: col(row, "Cabinet Designer Name", "Cabinet Designer's Name", "Cabinet Designer", "Designer Name", "Designer's Name", "Designer"),
+                    status: "Active",
+                    startDate: col(row, "Estimated Start Date"),
+                    endDate: col(row, "Estimated Completion Date"),
+                    skus
+                };
+            }).filter(Boolean);
+            analyzeItems(results);
+        } catch (err) {
+            setParseError("Parse error: " + err.message);
+        } finally{
+            setLoading(false);
+        }
+    };
+    const handleFile = (file)=>{
+        if (file) parseExcel(file);
     };
     const importApproved = ()=>{
         setImporting(true);
@@ -92419,12 +102630,62 @@ function ExcelImporter({ builders, onImportApproved }) {
             icon: "🔴"
         }
     };
+    const [mismatchEdits, setMismatchEdits] = useState({});
+    // Re-analyze a single mismatch item after partner code edit
+    const applyMismatchEdit = (i, partnerCode)=>{
+        const newEdits = {
+            ...mismatchEdits,
+            [i]: partnerCode
+        };
+        setMismatchEdits(newEdits);
+        setItems((prev)=>prev.map((item, idx)=>{
+                if (idx !== i) return item;
+                const pc = partnerCode.trim().toUpperCase();
+                if (!pc) return {
+                    ...item,
+                    partnerCode: "",
+                    _status: "mismatch",
+                    _existingBuilder: null
+                };
+                const existingBuilder = builders.find((b)=>b.partnerCode === pc);
+                const existingJob = builders.flatMap((b)=>b.jobs).find((j)=>j.registrationNumber === item.registrationNumber);
+                let status = existingBuilder ? existingJob ? "overwrite" : "new_job" : "new_builder";
+                return {
+                    ...item,
+                    partnerCode: pc,
+                    _status: status,
+                    _existingBuilder: existingBuilder || null,
+                    _existingJob: existingJob || null,
+                    _conflicts: []
+                };
+            }));
+    };
+    const [showMismatch, setShowMismatch] = useState(false);
     const counts = items ? {
         clean: items.filter((i)=>i._status === "new_builder" || i._status === "new_job").length,
         overwrite: items.filter((i)=>i._status === "overwrite").length,
         conflict: items.filter((i)=>i._status === "conflict").length,
         mismatch: items.filter((i)=>i._status === "mismatch").length
     } : {};
+    const [expandedItem, setExpandedItem] = useState(null);
+    const [page, setPage] = useState(0);
+    const PAGE_SIZE = 50;
+    const visibleItems = items ? items.map((item, i)=>({
+            item,
+            i
+        })).filter(({ item })=>item._status !== "mismatch" || showMismatch) : [];
+    const pagedItems = visibleItems.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+    const totalPages = Math.ceil(visibleItems.length / PAGE_SIZE);
+    const selectAll = ()=>{
+        const next = {
+            ...approved
+        };
+        items.forEach((item, i)=>{
+            if (item._status !== "mismatch") next[i] = true;
+        });
+        setApproved(next);
+    };
+    const deselectAll = ()=>setApproved({});
     return /*#__PURE__*/ React.createElement("div", {
         style: card
     }, /*#__PURE__*/ React.createElement("div", {
@@ -92440,49 +102701,78 @@ function ExcelImporter({ builders, onImportApproved }) {
             color: "#6B7280",
             marginBottom: 16
         }
-    }, "Review and import quote data. When Excel upload is available, data will be parsed directly in your browser."), !items && /*#__PURE__*/ React.createElement("div", null, /*#__PURE__*/ React.createElement("div", {
+    }, "Upload your Sub-Zero quote export. Parsed locally in your browser — nothing is sent to a server."), !items && /*#__PURE__*/ React.createElement("div", null, /*#__PURE__*/ React.createElement("div", {
+        onClick: ()=>fileRef.current?.click(),
         style: {
-            padding: "24px 20px",
-            background: "#F9FAFB",
+            border: "2px dashed #D1D5DB",
             borderRadius: 10,
-            border: "1px solid #E5E7EB",
+            padding: "32px 20px",
             textAlign: "center",
-            marginBottom: 12
+            cursor: "pointer",
+            background: "#FAFAFA"
+        },
+        onDragOver: (e)=>{
+            e.preventDefault();
+            e.currentTarget.style.borderColor = "#1E3A5F";
+        },
+        onDragLeave: (e)=>{
+            e.currentTarget.style.borderColor = "#D1D5DB";
+        },
+        onDrop: (e)=>{
+            e.preventDefault();
+            e.currentTarget.style.borderColor = "#D1D5DB";
+            handleFile(e.dataTransfer.files[0]);
         }
-    }, /*#__PURE__*/ React.createElement("div", {
+    }, loading ? /*#__PURE__*/ React.createElement(React.Fragment, null, /*#__PURE__*/ React.createElement("div", {
         style: {
             fontSize: 28,
             marginBottom: 8
         }
-    }, "📋"), /*#__PURE__*/ React.createElement("div", {
+    }, "⏳"), /*#__PURE__*/ React.createElement("div", {
+        style: {
+            fontWeight: 700,
+            fontSize: 14,
+            color: "#374151"
+        }
+    }, "Parsing file...")) : /*#__PURE__*/ React.createElement(React.Fragment, null, /*#__PURE__*/ React.createElement("div", {
+        style: {
+            fontSize: 32,
+            marginBottom: 8
+        }
+    }, "📂"), /*#__PURE__*/ React.createElement("div", {
         style: {
             fontWeight: 700,
             fontSize: 14,
             color: "#374151",
             marginBottom: 4
         }
-    }, "Test Import — Jun 28, 2026 Export"), /*#__PURE__*/ React.createElement("div", {
+    }, "Drop Excel file here or click to browse"), /*#__PURE__*/ React.createElement("div", {
         style: {
             fontSize: 12,
-            color: "#9CA3AF",
-            marginBottom: 16
+            color: "#9CA3AF"
         }
-    }, "69 records from your uploaded file, pre-parsed and ready to review"), /*#__PURE__*/ React.createElement("button", {
-        onClick: ()=>analyzeItems(TEST_DATA),
+    }, ".xlsx · Weekly Sub-Zero quote export"))), /*#__PURE__*/ React.createElement("input", {
+        ref: fileRef,
+        type: "file",
+        accept: ".xlsx,.xls",
+        onChange: (e)=>{
+            handleFile(e.target.files[0]);
+            e.target.value = "";
+        },
         style: {
-            ...btnP,
-            fontSize: 14
+            display: "none"
         }
-    }, "Load Test Data →")), /*#__PURE__*/ React.createElement("div", {
+    }), parseError && /*#__PURE__*/ React.createElement("div", {
         style: {
-            padding: "12px 14px",
-            background: "#FFFBEB",
-            border: "1px solid #FDE68A",
+            marginTop: 10,
+            padding: 10,
+            background: "#FEF2F2",
+            border: "1px solid #FCA5A5",
             borderRadius: 8,
-            fontSize: 12,
-            color: "#92400E"
+            color: "#DC2626",
+            fontSize: 13
         }
-    }, "📌 ", /*#__PURE__*/ React.createElement("strong", null, "Note:"), " Direct Excel file upload is coming — requires hosting the app (the next step after this prototype). Once hosted, you drag and drop your weekly export directly."), done && /*#__PURE__*/ React.createElement("div", {
+    }, parseError), done && /*#__PURE__*/ React.createElement("div", {
         style: {
             marginTop: 12,
             padding: 10,
@@ -92498,8 +102788,9 @@ function ExcelImporter({ builders, onImportApproved }) {
         style: {
             display: "flex",
             gap: 10,
-            marginBottom: 16,
-            flexWrap: "wrap"
+            marginBottom: 12,
+            flexWrap: "wrap",
+            alignItems: "center"
         }
     }, /*#__PURE__*/ React.createElement("span", {
         style: {
@@ -92528,16 +102819,22 @@ function ExcelImporter({ builders, onImportApproved }) {
             fontWeight: 700,
             fontSize: 12
         }
-    }, "🟡 ", counts.conflict, " Conflict"), counts.mismatch > 0 && /*#__PURE__*/ React.createElement("span", {
+    }, "🟡 ", counts.conflict, " Conflict"), counts.mismatch > 0 && /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>{
+            setShowMismatch((s)=>!s);
+            setPage(0);
+        },
         style: {
             background: "#FEF2F2",
             color: "#DC2626",
             borderRadius: 6,
             padding: "4px 12px",
             fontWeight: 700,
-            fontSize: 12
+            fontSize: 12,
+            border: "1px solid #FCA5A5",
+            cursor: "pointer"
         }
-    }, "🔴 ", counts.mismatch, " No Partner Code"), /*#__PURE__*/ React.createElement("span", {
+    }, "🔴 ", counts.mismatch, " No Partner Code ", showMismatch ? "▲ Hide" : "▼ Show"), /*#__PURE__*/ React.createElement("span", {
         style: {
             background: "#F3F4F6",
             color: "#374151",
@@ -92546,33 +102843,45 @@ function ExcelImporter({ builders, onImportApproved }) {
             fontWeight: 700,
             fontSize: 12
         }
-    }, Object.values(approved).filter(Boolean).length, " / ", items.length, " approved")), /*#__PURE__*/ React.createElement("div", {
+    }, Object.values(approved).filter(Boolean).length, " / ", items.length - counts.mismatch, " approved"), /*#__PURE__*/ React.createElement("button", {
+        onClick: selectAll,
+        style: {
+            ...btnG,
+            fontSize: 11,
+            padding: "4px 10px"
+        }
+    }, "Select All"), /*#__PURE__*/ React.createElement("button", {
+        onClick: deselectAll,
+        style: {
+            ...btnG,
+            fontSize: 11,
+            padding: "4px 10px"
+        }
+    }, "Deselect All")), /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
             flexDirection: "column",
-            gap: 6,
-            marginBottom: 16,
-            maxHeight: 440,
-            overflowY: "auto"
+            gap: 4,
+            marginBottom: 12
         }
-    }, items.map((item, i)=>{
-        const sm = STATUS_META[item._status];
+    }, pagedItems.map(({ item, i })=>{
+        const sm = STATUS_META[item._status] || STATUS_META.mismatch;
         const isApproved = !!approved[i];
         const canApprove = item._status !== "mismatch";
+        const isExpanded = expandedItem === i;
         return /*#__PURE__*/ React.createElement("div", {
             key: i,
             style: {
                 border: `1px solid ${isApproved ? sm.color : "#E5E7EB"}`,
-                borderRadius: 8,
-                overflow: "hidden"
+                borderRadius: 6,
+                background: isApproved ? sm.bg : "white"
             }
         }, /*#__PURE__*/ React.createElement("div", {
             style: {
-                padding: "10px 14px",
-                background: isApproved ? sm.bg : "#FAFAFA",
+                padding: "8px 12px",
                 display: "flex",
-                alignItems: "flex-start",
-                gap: 10
+                alignItems: "center",
+                gap: 8
             }
         }, /*#__PURE__*/ React.createElement("div", {
             onClick: ()=>canApprove && setApproved((p)=>({
@@ -92580,112 +102889,206 @@ function ExcelImporter({ builders, onImportApproved }) {
                         [i]: !p[i]
                     })),
             style: {
-                width: 20,
-                height: 20,
-                borderRadius: 4,
+                width: 18,
+                height: 18,
+                borderRadius: 3,
                 border: `2px solid ${isApproved ? sm.color : "#D1D5DB"}`,
                 background: isApproved ? sm.color : "white",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 cursor: canApprove ? "pointer" : "not-allowed",
-                flexShrink: 0,
-                marginTop: 2
+                flexShrink: 0
             }
         }, isApproved && /*#__PURE__*/ React.createElement("span", {
             style: {
                 color: "white",
-                fontSize: 12,
+                fontSize: 10,
                 fontWeight: 900
             }
-        }, "✓")), /*#__PURE__*/ React.createElement("div", {
+        }, "✓")), /*#__PURE__*/ React.createElement("span", {
+            style: {
+                background: sm.bg,
+                color: sm.color,
+                border: `1px solid ${sm.color}`,
+                borderRadius: 4,
+                padding: "1px 6px",
+                fontSize: 10,
+                fontWeight: 700,
+                flexShrink: 0
+            }
+        }, sm.icon), /*#__PURE__*/ React.createElement("div", {
             style: {
                 flex: 1,
                 minWidth: 0
+            }
+        }, /*#__PURE__*/ React.createElement("span", {
+            style: {
+                fontWeight: 700,
+                fontSize: 12,
+                color: "#111827"
+            }
+        }, item.projectName || "Unnamed"), /*#__PURE__*/ React.createElement("span", {
+            style: {
+                fontSize: 11,
+                color: "#6B7280",
+                marginLeft: 8
+            }
+        }, item.builderName), /*#__PURE__*/ React.createElement("span", {
+            style: {
+                fontFamily: "monospace",
+                fontSize: 10,
+                color: "#9CA3AF",
+                marginLeft: 6
+            }
+        }, item.partnerCode)), (item._status === "conflict" || item._status === "mismatch") && /*#__PURE__*/ React.createElement("button", {
+            onClick: ()=>setExpandedItem(isExpanded ? null : i),
+            style: {
+                ...btnG,
+                fontSize: 10,
+                padding: "2px 8px",
+                flexShrink: 0
+            }
+        }, isExpanded ? "▲ Hide" : "▼ Review")), isExpanded && item._status === "conflict" && /*#__PURE__*/ React.createElement("div", {
+            style: {
+                padding: "8px 12px",
+                borderTop: "1px solid #FDE68A",
+                background: "#FFFBEB"
+            }
+        }, /*#__PURE__*/ React.createElement("div", {
+            style: {
+                fontSize: 11,
+                fontWeight: 700,
+                color: "#92400E",
+                marginBottom: 6
+            }
+        }, "⚠️ Approve to use incoming data:"), (item._conflicts || []).map((c)=>/*#__PURE__*/ React.createElement("div", {
+                key: c.field,
+                style: {
+                    fontSize: 11,
+                    marginBottom: 4,
+                    display: "flex",
+                    gap: 8,
+                    alignItems: "flex-start"
+                }
+            }, /*#__PURE__*/ React.createElement("strong", {
+                style: {
+                    minWidth: 60
+                }
+            }, c.field, ":"), /*#__PURE__*/ React.createElement("span", {
+                style: {
+                    color: "#DC2626",
+                    textDecoration: "line-through"
+                }
+            }, c.existing), /*#__PURE__*/ React.createElement("span", {
+                style: {
+                    color: "#374151"
+                }
+            }, "→"), /*#__PURE__*/ React.createElement("span", {
+                style: {
+                    color: "#059669"
+                }
+            }, c.incoming))), /*#__PURE__*/ React.createElement("div", {
+            style: {
+                fontSize: 11,
+                color: "#6B7280",
+                marginTop: 6
+            }
+        }, "📍 ", item.jobAddress, " · Reg# ", item.registrationNumber, " · ", (item.skus || []).length, " SKUs")), isExpanded && item._status === "mismatch" && /*#__PURE__*/ React.createElement("div", {
+            style: {
+                padding: "8px 12px",
+                borderTop: "1px solid #FCA5A5",
+                background: "#FEF2F2"
             }
         }, /*#__PURE__*/ React.createElement("div", {
             style: {
                 display: "flex",
                 alignItems: "center",
-                gap: 8,
-                flexWrap: "wrap",
-                marginBottom: 3
+                gap: 8
             }
-        }, /*#__PURE__*/ React.createElement("span", {
+        }, /*#__PURE__*/ React.createElement("label", {
             style: {
-                fontWeight: 800,
-                fontSize: 13
-            }
-        }, item.projectName || "Unnamed Project"), /*#__PURE__*/ React.createElement("span", {
-            style: {
-                background: sm.bg,
-                color: sm.color,
-                borderRadius: 4,
-                padding: "1px 8px",
                 fontSize: 11,
-                fontWeight: 700
+                fontWeight: 700,
+                color: "#DC2626",
+                whiteSpace: "nowrap"
             }
-        }, sm.icon, " ", sm.label)), /*#__PURE__*/ React.createElement("div", {
-            style: {
-                fontSize: 12,
-                color: "#374151",
-                marginBottom: 2
-            }
-        }, /*#__PURE__*/ React.createElement("strong", null, item.builderName), /*#__PURE__*/ React.createElement("span", {
+        }, "Partner Code:"), /*#__PURE__*/ React.createElement("input", {
+            value: mismatchEdits[i] !== undefined ? mismatchEdits[i] : "",
+            onChange: (e)=>applyMismatchEdit(i, e.target.value),
+            placeholder: "e.g. CUPHXLINGH",
             style: {
                 fontFamily: "monospace",
-                color: "#6B7280",
-                marginLeft: 8
-            }
-        }, item.partnerCode || "NO PARTNER CODE")), /*#__PURE__*/ React.createElement("div", {
-            style: {
-                fontSize: 11,
-                color: "#6B7280"
-            }
-        }, "📍 ", item.jobAddress, " · 👤 ", item.salesperson, " · ", item.skus.length, " SKUs (", item.skus.filter((s)=>s.stOpt === "S").length, " std) · Reg# ", item.registrationNumber), item._conflicts?.length > 0 && /*#__PURE__*/ React.createElement("div", {
-            style: {
-                marginTop: 6,
-                padding: "6px 10px",
-                background: "#FFFBEB",
-                border: "1px solid #FDE68A",
-                borderRadius: 6
-            }
-        }, /*#__PURE__*/ React.createElement("div", {
-            style: {
-                fontWeight: 700,
-                fontSize: 11,
-                color: "#92400E",
-                marginBottom: 3
-            }
-        }, "⚠️ Approve to use incoming data:"), item._conflicts.map((c)=>/*#__PURE__*/ React.createElement("div", {
-                key: c.field,
-                style: {
-                    fontSize: 11,
-                    marginBottom: 2
-                }
-            }, /*#__PURE__*/ React.createElement("strong", null, c.field, ":"), /*#__PURE__*/ React.createElement("span", {
-                style: {
-                    color: "#DC2626",
-                    marginLeft: 4,
-                    textDecoration: "line-through"
-                }
-            }, c.existing), /*#__PURE__*/ React.createElement("span", {
-                style: {
-                    color: "#059669",
-                    marginLeft: 6
-                }
-            }, "→ ", c.incoming)))), item._status === "overwrite" && item._existingJob && /*#__PURE__*/ React.createElement("div", {
-            style: {
-                marginTop: 4,
-                padding: "4px 8px",
-                background: "#EFF6FF",
-                border: "1px solid #BFDBFE",
+                fontSize: 12,
+                padding: "3px 8px",
+                border: "1px solid #FCA5A5",
                 borderRadius: 4,
-                fontSize: 11,
-                color: "#1E40AF"
+                width: 180
             }
-        }, "🔵 Replaces: ", /*#__PURE__*/ React.createElement("strong", null, item._existingJob.projectName)))));
-    })), /*#__PURE__*/ React.createElement("div", {
+        }), mismatchEdits[i] && builders.find((b)=>b.partnerCode === mismatchEdits[i].trim().toUpperCase()) && /*#__PURE__*/ React.createElement("span", {
+            style: {
+                fontSize: 11,
+                color: "#059669",
+                fontWeight: 700
+            }
+        }, "✓ ", builders.find((b)=>b.partnerCode === mismatchEdits[i].trim().toUpperCase()).name), mismatchEdits[i] && mismatchEdits[i].length > 4 && !builders.find((b)=>b.partnerCode === mismatchEdits[i].trim().toUpperCase()) && /*#__PURE__*/ React.createElement("span", {
+            style: {
+                fontSize: 11,
+                color: "#D97706",
+                fontWeight: 700
+            }
+        }, "⚠ Will create new builder")), /*#__PURE__*/ React.createElement("div", {
+            style: {
+                fontSize: 11,
+                color: "#6B7280",
+                marginTop: 6
+            }
+        }, "📍 ", item.jobAddress, " · 👤 ", item.salesperson, " · Reg# ", item.registrationNumber)));
+    })), totalPages > 1 && /*#__PURE__*/ React.createElement("div", {
+        style: {
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+            marginBottom: 12
+        }
+    }, /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setPage(0),
+        disabled: page === 0,
+        style: {
+            ...btnG,
+            padding: "4px 8px",
+            fontSize: 11
+        }
+    }, "«"), /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setPage((p)=>Math.max(0, p - 1)),
+        disabled: page === 0,
+        style: {
+            ...btnG,
+            padding: "4px 8px",
+            fontSize: 11
+        }
+    }, "‹"), /*#__PURE__*/ React.createElement("span", {
+        style: {
+            fontSize: 12,
+            color: "#374151"
+        }
+    }, "Page ", page + 1, " of ", totalPages, " · showing ", page * PAGE_SIZE + 1, "–", Math.min((page + 1) * PAGE_SIZE, visibleItems.length), " of ", visibleItems.length), /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setPage((p)=>Math.min(totalPages - 1, p + 1)),
+        disabled: page === totalPages - 1,
+        style: {
+            ...btnG,
+            padding: "4px 8px",
+            fontSize: 11
+        }
+    }, "›"), /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setPage(totalPages - 1),
+        disabled: page === totalPages - 1,
+        style: {
+            ...btnG,
+            padding: "4px 8px",
+            fontSize: 11
+        }
+    }, "»")), /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
             gap: 8,
@@ -92704,12 +103107,7 @@ function ExcelImporter({ builders, onImportApproved }) {
             setApproved({});
         },
         style: btnS
-    }, "Cancel"), counts.conflict > 0 && /*#__PURE__*/ React.createElement("span", {
-        style: {
-            fontSize: 12,
-            color: "#9CA3AF"
-        }
-    }, counts.conflict, " conflict", counts.conflict !== 1 ? "s" : "", " need review"))));
+    }, "Cancel"))));
 }
 function AutomationGuide() {
     return /*#__PURE__*/ React.createElement("div", {
@@ -92804,15 +103202,22 @@ export default function BuilderCRM() {
     const [builders, setBuilders] = useState(SEED_BUILDERS);
     const [mainTab, setMainTab] = useState("builders");
     const [toolTab, setToolTab] = useState(null);
+    const [isAdmin, setIsAdmin] = useState(false);
+    const ADMIN_PIN = "1207"; // Change this to whatever PIN you want
     const [selectedBuilderId, setSelectedBuilderId] = useState(null);
     const [addingBuilder, setAddingBuilder] = useState(false);
-    const [mapMode, setMapMode] = useState("jobs");
+    const [mapMode, setMapMode] = useState("hq");
+    const [jobsMapMode, setJobsMapMode] = useState("jobs");
     const [showMap, setShowMap] = useState(false);
     const [bFilterType, setBFilterType] = useState("all");
     const [bFilterTier, setBFilterTier] = useState("all");
+    const [bFilterMarket, setBFilterMarket] = useState("all");
     const [bSearch, setBSearch] = useState("");
     const [jFilterStatus, setJFilterStatus] = useState("Active");
     const [jFilterSalesperson, setJFilterSalesperson] = useState("all");
+    const [jFilterDupesOnly, setJFilterDupesOnly] = useState(false);
+    const [jFilterType, setJFilterType] = useState("all");
+    const [jFilterMarket, setJFilterMarket] = useState("all");
     const [jSearch, setJSearch] = useState("");
     const [toast, setToast] = useState("");
     useEffect(()=>{
@@ -92843,7 +103248,9 @@ export default function BuilderCRM() {
             });
         } catch  {}
     }, []);
-    const { progress: geoProgress1, addToQueue } = useGeocoder(builders, setBuilders);
+    const [appLoading, setAppLoading] = useState(true);
+    const { syncing, lastSaved } = useAzureStorage(builders, setBuilders, setAppLoading);
+    const { progress: geoProgress, addToQueue } = useGeocoder(builders, setBuilders);
     const dupeSet = useMemo(()=>buildDupeSet(builders), [
         builders
     ]);
@@ -92935,11 +103342,12 @@ export default function BuilderCRM() {
                     status: item.status || "Active",
                     startDate: item.startDate,
                     endDate: item.endDate,
+                    cabinetDesigner: item.cabinetDesigner || "",
                     skus: item.skus,
                     lat: null,
                     lng: null
                 };
-                const bIdx = updated.findIndex((b)=>b.partnerCode === item.partnerCode);
+                const bIdx = updated.findIndex((b)=>b.partnerCode && b.partnerCode === item.partnerCode || !item.partnerCode && item.builderName && b.name.trim().toLowerCase() === item.builderName.trim().toLowerCase());
                 if (bIdx >= 0) {
                     let b = {
                         ...updated[bIdx]
@@ -92955,6 +103363,7 @@ export default function BuilderCRM() {
                             });
                         }
                     }
+                    if (item.market) b.market = item.market;
                     if (!b.lat && b.address) newGeoItems.push({
                         type: "builder",
                         id: b.id,
@@ -92982,6 +103391,7 @@ export default function BuilderCRM() {
                         contact: item.contact || "",
                         email: "",
                         phone: "",
+                        market: item.market || "",
                         lat: null,
                         lng: null,
                         jobs: [
@@ -93009,7 +103419,10 @@ export default function BuilderCRM() {
         showToast(`✅ ${approvedItems.length} records imported — geocoding ${newGeoItems.length} addresses...`);
     };
     const allSalespersons = [
-        ...new Set(builders.flatMap((b)=>b.jobs.map((j)=>j.salesperson)).filter(Boolean))
+        ...new Set(builders.flatMap((b)=>b.jobs.map((j)=>(j.salesperson || "").trim().toLowerCase())).filter(Boolean))
+    ].sort().map((low)=>builders.flatMap((b)=>b.jobs).find((j)=>(j.salesperson || "").trim().toLowerCase() === low).salesperson);
+    const allMarkets = [
+        ...new Set(builders.map((b)=>(b.market || "").trim()).filter(Boolean))
     ].sort();
     const totalJobs = builders.reduce((a, b)=>a + b.jobs.length, 0);
     const activeJobs = builders.reduce((a, b)=>a + b.jobs.filter((j)=>j.status === "Active").length, 0);
@@ -93019,6 +103432,7 @@ export default function BuilderCRM() {
     ].filter((b)=>{
         if (bFilterType !== "all" && b.type !== bFilterType) return false;
         if (bFilterTier !== "all" && b.tier !== Number(bFilterTier)) return false;
+        if (bFilterMarket !== "all" && (b.market || "") !== bFilterMarket) return false;
         if (bSearch && !b.name.toLowerCase().includes(bSearch.toLowerCase()) && !b.partnerCode.toLowerCase().includes(bSearch.toLowerCase())) return false;
         return true;
     }).sort((a, b)=>a.name.localeCompare(b.name));
@@ -93026,22 +103440,60 @@ export default function BuilderCRM() {
                 ...j,
                 builderName: b.name,
                 builderId: b.id,
-                builderTier: b.tier
+                builderTier: b.tier,
+                builderType: b.type,
+                builderMarket: b.market
             })));
     const filteredJobs = allJobs.filter((j)=>{
         if (jFilterStatus !== "all" && j.status !== jFilterStatus) return false;
-        if (jFilterSalesperson !== "all" && j.salesperson !== jFilterSalesperson) return false;
+        if (jFilterSalesperson !== "all" && (j.salesperson || "").trim().toLowerCase() !== jFilterSalesperson.trim().toLowerCase()) return false;
+        if (jFilterDupesOnly && !dupeSet.has((j.address || "").trim().toLowerCase())) return false;
+        if (jFilterType !== "all" && j.builderType !== jFilterType) return false;
+        if (jFilterMarket !== "all" && (j.builderMarket || "") !== jFilterMarket) return false;
         if (jSearch && !j.projectName.toLowerCase().includes(jSearch.toLowerCase()) && !j.builderName.toLowerCase().includes(jSearch.toLowerCase()) && !j.registrationNumber.includes(jSearch)) return false;
         return true;
-    }).sort((a, b)=>(Number(b.registrationNumber) || 0) - (Number(a.registrationNumber) || 0));
+    }).sort((a, b)=>{
+        if (jFilterDupesOnly) {
+            const addrCompare = (a.address || "").trim().toLowerCase().localeCompare((b.address || "").trim().toLowerCase());
+            if (addrCompare !== 0) return addrCompare;
+        }
+        return (Number(b.registrationNumber) || 0) - (Number(a.registrationNumber) || 0);
+    });
     const jobTabBuilders = builders.map((b)=>({
             ...b,
             jobs: b.jobs.filter((j)=>filteredJobs.find((fj)=>fj.id === j.id))
         })).filter((b)=>b.jobs.length > 0);
     const bActiveFilters = [
         bFilterType,
-        bFilterTier
+        bFilterTier,
+        bFilterMarket
     ].filter((f)=>f !== "all").length + (bSearch ? 1 : 0);
+    if (appLoading) return /*#__PURE__*/ React.createElement("div", {
+        style: {
+            minHeight: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "#F8FAFC",
+            flexDirection: "column",
+            gap: 16
+        }
+    }, /*#__PURE__*/ React.createElement("div", {
+        style: {
+            fontSize: 48
+        }
+    }, "🏗"), /*#__PURE__*/ React.createElement("div", {
+        style: {
+            fontWeight: 800,
+            fontSize: 20,
+            color: "#1E3A5F"
+        }
+    }, "Sub-Zero Builder CRM"), /*#__PURE__*/ React.createElement("div", {
+        style: {
+            fontSize: 14,
+            color: "#6B7280"
+        }
+    }, "Loading your data from the cloud..."));
     return /*#__PURE__*/ React.createElement("div", {
         style: {
             fontFamily: "'Inter',system-ui,sans-serif",
@@ -93093,7 +103545,7 @@ export default function BuilderCRM() {
             fontSize: 11,
             marginTop: 1
         }
-    }, "Sub-Zero Group Southwest · Phoenix/Scottsdale · subzerosw@gmail.com")), /*#__PURE__*/ React.createElement("div", {
+    }, "Sub-Zero Group Southwest")), /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
             gap: 18
@@ -93172,9 +103624,10 @@ export default function BuilderCRM() {
         }, label))), /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
-            gap: 6
+            gap: 6,
+            alignItems: "center"
         }
-    }, /*#__PURE__*/ React.createElement("button", {
+    }, isAdmin ? /*#__PURE__*/ React.createElement(React.Fragment, null, /*#__PURE__*/ React.createElement("button", {
         onClick: ()=>setToolTab(toolTab === "excel" ? null : "excel"),
         style: {
             ...btnP,
@@ -93199,20 +103652,41 @@ export default function BuilderCRM() {
             background: toolTab === "automation" ? "#EFF6FF" : "white",
             color: toolTab === "automation" ? "#1E40AF" : "#374151"
         }
-    }, "⚙️ Setup"))), /*#__PURE__*/ React.createElement("div", {
+    }, "⚙️ Setup"), /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setIsAdmin(false),
+        title: "Lock admin tools",
+        style: {
+            ...btnG,
+            fontSize: 12,
+            padding: "6px 10px"
+        }
+    }, "🔓")) : /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>{
+            const pin = prompt("Enter admin PIN:");
+            if (pin === ADMIN_PIN) setIsAdmin(true);
+            else if (pin !== null) alert("Incorrect PIN");
+        },
+        title: "Admin tools",
+        style: {
+            ...btnG,
+            fontSize: 12,
+            padding: "6px 10px",
+            opacity: 0.5
+        }
+    }, "🔒"))), /*#__PURE__*/ React.createElement("div", {
         style: {
             padding: "20px 24px",
             maxWidth: 1200,
             margin: "0 auto"
         }
-    }, toolTab === "excel" && /*#__PURE__*/ React.createElement("div", {
+    }, toolTab === "excel" && isAdmin && /*#__PURE__*/ React.createElement("div", {
         style: {
             marginBottom: 20
         }
     }, /*#__PURE__*/ React.createElement(ExcelImporter, {
         builders: builders,
         onImportApproved: handleExcelImport
-    })), toolTab === "parser" && /*#__PURE__*/ React.createElement("div", {
+    })), toolTab === "parser" && isAdmin && /*#__PURE__*/ React.createElement("div", {
         style: {
             marginBottom: 20
         }
@@ -93220,7 +103694,7 @@ export default function BuilderCRM() {
         builders: builders,
         onJobParsed: handleParsedJob,
         onNewBuilder: handleNewBuilder
-    })), toolTab === "automation" && /*#__PURE__*/ React.createElement("div", {
+    })), toolTab === "automation" && isAdmin && /*#__PURE__*/ React.createElement("div", {
         style: {
             marginBottom: 20
         }
@@ -93274,10 +103748,23 @@ export default function BuilderCRM() {
     }, "All Tiers"), TIER_ORDER.map((t)=>/*#__PURE__*/ React.createElement("option", {
             key: t,
             value: t
-        }, TIER_CONFIG[t].label, " · ", TIER_CONFIG[t].sublabel))), bActiveFilters > 0 && /*#__PURE__*/ React.createElement("button", {
+        }, getTier(t).label, " · ", getTier(t).sublabel))), /*#__PURE__*/ React.createElement("select", {
+        style: {
+            ...inp,
+            width: 160
+        },
+        value: bFilterMarket,
+        onChange: (e)=>setBFilterMarket(e.target.value)
+    }, /*#__PURE__*/ React.createElement("option", {
+        value: "all"
+    }, "All Markets"), allMarkets.map((m)=>/*#__PURE__*/ React.createElement("option", {
+            key: m,
+            value: m
+        }, m))), bActiveFilters > 0 && /*#__PURE__*/ React.createElement("button", {
         onClick: ()=>{
             setBFilterType("all");
             setBFilterTier("all");
+            setBFilterMarket("all");
             setBSearch("");
         },
         style: {
@@ -93317,7 +103804,8 @@ export default function BuilderCRM() {
             display: "flex",
             alignItems: "center",
             gap: 8,
-            marginBottom: 8
+            marginBottom: 8,
+            flexWrap: "wrap"
         }
     }, /*#__PURE__*/ React.createElement("span", {
         style: {
@@ -93356,7 +103844,32 @@ export default function BuilderCRM() {
                 fontWeight: 600,
                 fontSize: 11
             }
-        }, label)))), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
+        }, label))), (mapMode === "hq" || mapMode === "both") && /*#__PURE__*/ React.createElement("div", {
+        style: {
+            display: "flex",
+            gap: 12,
+            fontSize: 11,
+            color: "#6B7280"
+        }
+    }, /*#__PURE__*/ React.createElement("span", null, /*#__PURE__*/ React.createElement("span", {
+        style: {
+            display: "inline-block",
+            width: 10,
+            height: 10,
+            borderRadius: "50%",
+            background: "#1E3A5F",
+            marginRight: 4
+        }
+    }), "Builder"), /*#__PURE__*/ React.createElement("span", null, /*#__PURE__*/ React.createElement("span", {
+        style: {
+            display: "inline-block",
+            width: 10,
+            height: 10,
+            borderRadius: "50%",
+            background: "#A855F7",
+            marginRight: 4
+        }
+    }), "Cabinet Shop"))), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
         builders: filteredBuilders,
         mapMode: mapMode,
         onBuilderClick: (id)=>setSelectedBuilderId(id),
@@ -93395,9 +103908,9 @@ export default function BuilderCRM() {
             gap: 4
         }
     }, filteredBuilders.map((builder)=>{
-        const tc = TIER_CONFIG[builder.tier];
+        const tc = getTier(builder.tier);
         const ac = builder.jobs.filter((j)=>j.status === "Active").length;
-        const totalStd = builder.jobs.reduce((a, j)=>a + skuCount(j.skus, "standard"), 0);
+        const totalStd = skuCountDeduped(builder.jobs);
         return /*#__PURE__*/ React.createElement("div", {
             key: builder.id,
             onClick: ()=>setSelectedBuilderId(builder.id),
@@ -93594,7 +104107,40 @@ export default function BuilderCRM() {
     }, "All Salespeople"), allSalespersons.map((s)=>/*#__PURE__*/ React.createElement("option", {
             key: s,
             value: s
-        }, s))), /*#__PURE__*/ React.createElement("button", {
+        }, s))), /*#__PURE__*/ React.createElement("select", {
+        style: {
+            ...inp,
+            width: 160
+        },
+        value: jFilterType,
+        onChange: (e)=>setJFilterType(e.target.value)
+    }, /*#__PURE__*/ React.createElement("option", {
+        value: "all"
+    }, "All Types"), /*#__PURE__*/ React.createElement("option", {
+        value: "Builder Quote"
+    }, "Builder Quote"), /*#__PURE__*/ React.createElement("option", {
+        value: "Cabinet Shop Quote"
+    }, "Cabinet Shop Quote")), /*#__PURE__*/ React.createElement("select", {
+        style: {
+            ...inp,
+            width: 160
+        },
+        value: jFilterMarket,
+        onChange: (e)=>setJFilterMarket(e.target.value)
+    }, /*#__PURE__*/ React.createElement("option", {
+        value: "all"
+    }, "All Markets"), allMarkets.map((m)=>/*#__PURE__*/ React.createElement("option", {
+            key: m,
+            value: m
+        }, m))), /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>setJFilterDupesOnly((d)=>!d),
+        style: {
+            ...btnG,
+            background: jFilterDupesOnly ? "#FEF3C7" : "white",
+            color: jFilterDupesOnly ? "#92400E" : "#374151",
+            border: jFilterDupesOnly ? "1px solid #F59E0B" : undefined
+        }
+    }, jFilterDupesOnly ? "★ Showing Duplicates Only" : "☆ Show Duplicates Only"), /*#__PURE__*/ React.createElement("button", {
         onClick: ()=>setShowMap(!showMap),
         style: {
             ...btnG,
@@ -93608,7 +104154,7 @@ export default function BuilderCRM() {
             color: "#6B7280",
             marginBottom: 12
         }
-    }, /*#__PURE__*/ React.createElement("strong", null, filteredJobs.length), " job", filteredJobs.length !== 1 ? "s" : "", ", sorted by Registration # (newest first)", /*#__PURE__*/ React.createElement("span", {
+    }, /*#__PURE__*/ React.createElement("strong", null, filteredJobs.length), " job", filteredJobs.length !== 1 ? "s" : "", ", sorted by ", jFilterDupesOnly ? "address (grouping matches)" : "Registration # (newest first)", /*#__PURE__*/ React.createElement("span", {
         style: {
             color: "#F59E0B",
             marginLeft: 12
@@ -93651,19 +104197,19 @@ export default function BuilderCRM() {
         ]
     ].map(([m, label])=>/*#__PURE__*/ React.createElement("button", {
             key: m,
-            onClick: ()=>setMapMode(m),
+            onClick: ()=>setJobsMapMode(m),
             style: {
                 padding: "4px 12px",
                 border: "none",
-                background: mapMode === m ? "#1E3A5F" : "transparent",
-                color: mapMode === m ? "white" : "#374151",
+                background: jobsMapMode === m ? "#1E3A5F" : "transparent",
+                color: jobsMapMode === m ? "white" : "#374151",
                 cursor: "pointer",
                 fontWeight: 600,
                 fontSize: 11
             }
         }, label)))), leafletLoaded ? /*#__PURE__*/ React.createElement(MapView, {
         builders: jobTabBuilders,
-        mapMode: mapMode,
+        mapMode: jobsMapMode,
         onBuilderClick: (id)=>setSelectedBuilderId(id),
         onJobClick: (bid, jid)=>setSelectedBuilderId(bid)
     }) : /*#__PURE__*/ React.createElement("div", {
@@ -93683,7 +104229,7 @@ export default function BuilderCRM() {
             gap: 8
         }
     }, filteredJobs.map((job)=>{
-        const tc = TIER_CONFIG[job.builderTier];
+        const tc = getTier(job.builderTier);
         const std = skuCount(job.skus, "standard");
         const opt = skuCount(job.skus, "optional");
         return /*#__PURE__*/ React.createElement("div", {
@@ -93765,7 +104311,13 @@ export default function BuilderCRM() {
                 gap: 14,
                 flexWrap: "wrap"
             }
-        }, /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", /*#__PURE__*/ React.createElement("strong", null, job.registrationNumber)), /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate))), /*#__PURE__*/ React.createElement("div", {
+        }, /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", /*#__PURE__*/ React.createElement("strong", null, job.registrationNumber)), /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate)), job.cabinetDesigner && /*#__PURE__*/ React.createElement("div", {
+            style: {
+                fontSize: 12,
+                color: "#374151",
+                marginTop: 4
+            }
+        }, "🎨 ", job.cabinetDesigner)), /*#__PURE__*/ React.createElement("div", {
             style: {
                 textAlign: "right",
                 flexShrink: 0
