@@ -101665,6 +101665,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
     const [tab, setTab] = useState("details");
     const [statusFilter, setStatusFilter] = useState("all");
     const [spFilter, setSpFilter] = useState("all");
+    const [dgFilter, setDgFilter] = useState("all");
     const [editing, setEditing] = useState(false);
     const [addingJob, setAddingJob] = useState(false);
     const [editingJob, setEditingJob] = useState(null);
@@ -101674,9 +101675,13 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
     const salespersons = [
         ...new Set(builder.jobs.map((j)=>(j.salesperson || "").trim().toLowerCase()).filter(Boolean))
     ].map((low)=>builder.jobs.find((j)=>(j.salesperson || "").trim().toLowerCase() === low).salesperson);
+    const designers = [
+        ...new Set(builder.jobs.map((j)=>(j.cabinetDesigner || "").trim().toLowerCase()).filter(Boolean))
+    ].map((low)=>builder.jobs.find((j)=>(j.cabinetDesigner || "").trim().toLowerCase() === low).cabinetDesigner);
     const filteredJobs = builder.jobs.filter((j)=>{
         if (statusFilter !== "all" && j.status !== statusFilter) return false;
         if (spFilter !== "all" && (j.salesperson || "").trim().toLowerCase() !== spFilter.trim().toLowerCase()) return false;
+        if (dgFilter !== "all" && (j.cabinetDesigner || "").trim().toLowerCase() !== dgFilter.trim().toLowerCase()) return false;
         return true;
     });
     const totalStd = skuCountDeduped(builder.jobs);
@@ -101997,7 +102002,19 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
     }, "All Salespeople"), salespersons.map((s)=>/*#__PURE__*/ React.createElement("option", {
             key: s,
             value: s
-        }, s))), /*#__PURE__*/ React.createElement("button", {
+        }, s))), designers.length > 0 && /*#__PURE__*/ React.createElement("select", {
+        style: {
+            ...inp,
+            width: 170
+        },
+        value: dgFilter,
+        onChange: (e)=>setDgFilter(e.target.value)
+    }, /*#__PURE__*/ React.createElement("option", {
+        value: "all"
+    }, "All Designers"), designers.map((d)=>/*#__PURE__*/ React.createElement("option", {
+            key: d,
+            value: d
+        }, d))), /*#__PURE__*/ React.createElement("button", {
         onClick: ()=>setAddingJob(true),
         style: {
             ...btnP,
@@ -102153,7 +102170,13 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
                 gap: 14,
                 flexWrap: "wrap"
             }
-        }, /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", job.registrationNumber), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate))), /*#__PURE__*/ React.createElement("div", {
+        }, /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", job.registrationNumber), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate)), job.cabinetDesigner && /*#__PURE__*/ React.createElement("div", {
+            style: {
+                fontSize: 12,
+                color: "#374151",
+                marginTop: 4
+            }
+        }, "🎨 ", job.cabinetDesigner)), /*#__PURE__*/ React.createElement("div", {
             style: {
                 textAlign: "right",
                 flexShrink: 0
@@ -102199,13 +102222,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             skus: job.skus,
             onChange: ()=>{},
             readOnly: true
-        }), job.cabinetDesigner && /*#__PURE__*/ React.createElement("div", {
-            style: {
-                marginTop: 12,
-                fontSize: 12,
-                color: "#374151"
-            }
-        }, "🎨 Cabinet Designer: ", /*#__PURE__*/ React.createElement("strong", null, job.cabinetDesigner)))));
+        }))));
     }))), tab === "map" && /*#__PURE__*/ React.createElement("div", {
         style: card
     }, /*#__PURE__*/ React.createElement("div", {
@@ -104311,7 +104328,13 @@ export default function BuilderCRM() {
                 gap: 14,
                 flexWrap: "wrap"
             }
-        }, /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", /*#__PURE__*/ React.createElement("strong", null, job.registrationNumber)), /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate))), /*#__PURE__*/ React.createElement("div", {
+        }, /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", /*#__PURE__*/ React.createElement("strong", null, job.registrationNumber)), /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate)), job.cabinetDesigner && /*#__PURE__*/ React.createElement("div", {
+            style: {
+                fontSize: 12,
+                color: "#374151",
+                marginTop: 4
+            }
+        }, "🎨 ", job.cabinetDesigner)), /*#__PURE__*/ React.createElement("div", {
             style: {
                 textAlign: "right",
                 flexShrink: 0
