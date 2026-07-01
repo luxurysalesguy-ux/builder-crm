@@ -102495,10 +102495,12 @@ function ExcelImporter({ builders, onImportApproved }) {
             const rows = XLSX.utils.sheet_to_json(ws, {
                 defval: ""
             });
+            const norm = (s)=>String(s || "").replace(/\u00A0/g, " ").replace(/\s+/g, " ").trim().toLowerCase();
             const col = (row, ...keys)=>{
                 for (const k of keys){
-                    const found = Object.keys(row).find((h)=>h && h.trim().toLowerCase() === k.trim().toLowerCase());
-                    if (found && row[found] !== undefined && String(row[found]).trim() !== "") return String(row[found]).trim();
+                    const nk = norm(k);
+                    const found = Object.keys(row).find((h)=>h && norm(h) === nk);
+                    if (found && row[found] !== undefined && norm(row[found]) !== "") return String(row[found]).replace(/\u00A0/g, " ").trim();
                 }
                 return "";
             };
@@ -102560,7 +102562,7 @@ function ExcelImporter({ builders, onImportApproved }) {
                     jobAddress,
                     salesperson: col(row, "Your Name"),
                     dealer: col(row, "Your Dealer Name"),
-                    cabinetDesigner: col(row, "Cabinet Designer Name", "Cabinet Designer", "Designer Name"),
+                    cabinetDesigner: col(row, "Cabinet Designer Name", "Cabinet Designer's Name", "Cabinet Designer", "Designer Name", "Designer's Name", "Designer"),
                     status: "Active",
                     startDate: col(row, "Estimated Start Date"),
                     endDate: col(row, "Estimated Completion Date"),
