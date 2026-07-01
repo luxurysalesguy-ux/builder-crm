@@ -101406,6 +101406,7 @@ function BuilderForm({ builder, onSave, onCancel }) {
         contact: "",
         email: "",
         phone: "",
+        market: "",
         lat: null,
         lng: null
     });
@@ -101512,6 +101513,12 @@ function BuilderForm({ builder, onSave, onCancel }) {
         style: inp,
         value: f.phone,
         onChange: (e)=>s("phone", e.target.value)
+    })), /*#__PURE__*/ React.createElement("div", null, /*#__PURE__*/ React.createElement("label", {
+        style: lbl
+    }, "Market"), /*#__PURE__*/ React.createElement("input", {
+        style: inp,
+        value: f.market || "",
+        onChange: (e)=>s("market", e.target.value)
     })), /*#__PURE__*/ React.createElement("div", {
         style: {
             gridColumn: "1/-1",
@@ -102557,6 +102564,7 @@ function ExcelImporter({ builders, onImportApproved }) {
                     contact: col(row, "Builder Principal (Owner) Name"),
                     type: isBuilder ? "Builder Quote" : "Cabinet Shop Quote",
                     tier: validTier,
+                    market: col(row, "Market"),
                     projectName: col(row, "Project Name/Customer Name"),
                     community: col(row, "Development/Community"),
                     jobAddress,
@@ -103203,11 +103211,13 @@ export default function BuilderCRM() {
     const [showMap, setShowMap] = useState(false);
     const [bFilterType, setBFilterType] = useState("all");
     const [bFilterTier, setBFilterTier] = useState("all");
+    const [bFilterMarket, setBFilterMarket] = useState("all");
     const [bSearch, setBSearch] = useState("");
     const [jFilterStatus, setJFilterStatus] = useState("Active");
     const [jFilterSalesperson, setJFilterSalesperson] = useState("all");
     const [jFilterDupesOnly, setJFilterDupesOnly] = useState(false);
     const [jFilterType, setJFilterType] = useState("all");
+    const [jFilterMarket, setJFilterMarket] = useState("all");
     const [jSearch, setJSearch] = useState("");
     const [toast, setToast] = useState("");
     useEffect(()=>{
@@ -103353,6 +103363,7 @@ export default function BuilderCRM() {
                             });
                         }
                     }
+                    if (item.market) b.market = item.market;
                     if (!b.lat && b.address) newGeoItems.push({
                         type: "builder",
                         id: b.id,
@@ -103380,6 +103391,7 @@ export default function BuilderCRM() {
                         contact: item.contact || "",
                         email: "",
                         phone: "",
+                        market: item.market || "",
                         lat: null,
                         lng: null,
                         jobs: [
@@ -103409,6 +103421,9 @@ export default function BuilderCRM() {
     const allSalespersons = [
         ...new Set(builders.flatMap((b)=>b.jobs.map((j)=>(j.salesperson || "").trim().toLowerCase())).filter(Boolean))
     ].sort().map((low)=>builders.flatMap((b)=>b.jobs).find((j)=>(j.salesperson || "").trim().toLowerCase() === low).salesperson);
+    const allMarkets = [
+        ...new Set(builders.map((b)=>(b.market || "").trim()).filter(Boolean))
+    ].sort();
     const totalJobs = builders.reduce((a, b)=>a + b.jobs.length, 0);
     const activeJobs = builders.reduce((a, b)=>a + b.jobs.filter((j)=>j.status === "Active").length, 0);
     const selectedBuilder = builders.find((b)=>b.id === selectedBuilderId);
@@ -103417,6 +103432,7 @@ export default function BuilderCRM() {
     ].filter((b)=>{
         if (bFilterType !== "all" && b.type !== bFilterType) return false;
         if (bFilterTier !== "all" && b.tier !== Number(bFilterTier)) return false;
+        if (bFilterMarket !== "all" && (b.market || "") !== bFilterMarket) return false;
         if (bSearch && !b.name.toLowerCase().includes(bSearch.toLowerCase()) && !b.partnerCode.toLowerCase().includes(bSearch.toLowerCase())) return false;
         return true;
     }).sort((a, b)=>a.name.localeCompare(b.name));
@@ -103425,13 +103441,15 @@ export default function BuilderCRM() {
                 builderName: b.name,
                 builderId: b.id,
                 builderTier: b.tier,
-                builderType: b.type
+                builderType: b.type,
+                builderMarket: b.market
             })));
     const filteredJobs = allJobs.filter((j)=>{
         if (jFilterStatus !== "all" && j.status !== jFilterStatus) return false;
         if (jFilterSalesperson !== "all" && (j.salesperson || "").trim().toLowerCase() !== jFilterSalesperson.trim().toLowerCase()) return false;
         if (jFilterDupesOnly && !dupeSet.has((j.address || "").trim().toLowerCase())) return false;
         if (jFilterType !== "all" && j.builderType !== jFilterType) return false;
+        if (jFilterMarket !== "all" && (j.builderMarket || "") !== jFilterMarket) return false;
         if (jSearch && !j.projectName.toLowerCase().includes(jSearch.toLowerCase()) && !j.builderName.toLowerCase().includes(jSearch.toLowerCase()) && !j.registrationNumber.includes(jSearch)) return false;
         return true;
     }).sort((a, b)=>{
@@ -103447,7 +103465,8 @@ export default function BuilderCRM() {
         })).filter((b)=>b.jobs.length > 0);
     const bActiveFilters = [
         bFilterType,
-        bFilterTier
+        bFilterTier,
+        bFilterMarket
     ].filter((f)=>f !== "all").length + (bSearch ? 1 : 0);
     if (appLoading) return /*#__PURE__*/ React.createElement("div", {
         style: {
@@ -103729,10 +103748,23 @@ export default function BuilderCRM() {
     }, "All Tiers"), TIER_ORDER.map((t)=>/*#__PURE__*/ React.createElement("option", {
             key: t,
             value: t
-        }, getTier(t).label, " · ", getTier(t).sublabel))), bActiveFilters > 0 && /*#__PURE__*/ React.createElement("button", {
+        }, getTier(t).label, " · ", getTier(t).sublabel))), /*#__PURE__*/ React.createElement("select", {
+        style: {
+            ...inp,
+            width: 160
+        },
+        value: bFilterMarket,
+        onChange: (e)=>setBFilterMarket(e.target.value)
+    }, /*#__PURE__*/ React.createElement("option", {
+        value: "all"
+    }, "All Markets"), allMarkets.map((m)=>/*#__PURE__*/ React.createElement("option", {
+            key: m,
+            value: m
+        }, m))), bActiveFilters > 0 && /*#__PURE__*/ React.createElement("button", {
         onClick: ()=>{
             setBFilterType("all");
             setBFilterTier("all");
+            setBFilterMarket("all");
             setBSearch("");
         },
         style: {
@@ -104088,7 +104120,19 @@ export default function BuilderCRM() {
         value: "Builder Quote"
     }, "Builder Quote"), /*#__PURE__*/ React.createElement("option", {
         value: "Cabinet Shop Quote"
-    }, "Cabinet Shop Quote")), /*#__PURE__*/ React.createElement("button", {
+    }, "Cabinet Shop Quote")), /*#__PURE__*/ React.createElement("select", {
+        style: {
+            ...inp,
+            width: 160
+        },
+        value: jFilterMarket,
+        onChange: (e)=>setJFilterMarket(e.target.value)
+    }, /*#__PURE__*/ React.createElement("option", {
+        value: "all"
+    }, "All Markets"), allMarkets.map((m)=>/*#__PURE__*/ React.createElement("option", {
+            key: m,
+            value: m
+        }, m))), /*#__PURE__*/ React.createElement("button", {
         onClick: ()=>setJFilterDupesOnly((d)=>!d),
         style: {
             ...btnG,
