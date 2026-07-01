@@ -102153,7 +102153,13 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
                 gap: 14,
                 flexWrap: "wrap"
             }
-        }, /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", job.registrationNumber), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate))), /*#__PURE__*/ React.createElement("div", {
+        }, /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", job.registrationNumber), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate)), job.cabinetDesigner && /*#__PURE__*/ React.createElement("div", {
+            style: {
+                fontSize: 12,
+                color: "#374151",
+                marginTop: 4
+            }
+        }, "🎨 ", job.cabinetDesigner)), /*#__PURE__*/ React.createElement("div", {
             style: {
                 textAlign: "right",
                 flexShrink: 0
@@ -102199,13 +102205,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             skus: job.skus,
             onChange: ()=>{},
             readOnly: true
-        }), job.cabinetDesigner && /*#__PURE__*/ React.createElement("div", {
-            style: {
-                marginTop: 12,
-                fontSize: 12,
-                color: "#374151"
-            }
-        }, "🎨 Cabinet Designer: ", /*#__PURE__*/ React.createElement("strong", null, job.cabinetDesigner)))));
+        })));
     }))), tab === "map" && /*#__PURE__*/ React.createElement("div", {
         style: card
     }, /*#__PURE__*/ React.createElement("div", {
@@ -104311,7 +104311,13 @@ export default function BuilderCRM() {
                 gap: 14,
                 flexWrap: "wrap"
             }
-        }, /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", /*#__PURE__*/ React.createElement("strong", null, job.registrationNumber)), /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate))), /*#__PURE__*/ React.createElement("div", {
+        }, /*#__PURE__*/ React.createElement("span", null, "🔢 Reg# ", /*#__PURE__*/ React.createElement("strong", null, job.registrationNumber)), /*#__PURE__*/ React.createElement("span", null, "👤 ", job.salesperson), job.startDate && /*#__PURE__*/ React.createElement("span", null, "📅 ", job.startDate, " → ", job.endDate)), job.cabinetDesigner && /*#__PURE__*/ React.createElement("div", {
+            style: {
+                fontSize: 12,
+                color: "#374151",
+                marginTop: 4
+            }
+        }, "🎨 ", job.cabinetDesigner)), /*#__PURE__*/ React.createElement("div", {
             style: {
                 textAlign: "right",
                 flexShrink: 0
