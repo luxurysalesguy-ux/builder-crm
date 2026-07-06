@@ -100673,10 +100673,24 @@ const CONTAINER_URL = "https://subzerocrmdata.blob.core.windows.net/crm-data?res
 async function loadFromBlob() {
     try {
         const res = await fetch(BLOB_URL);
-        if (!res.ok) return null;
-        return await res.json();
-    } catch  {
-        return null;
+        if (res.status === 404) return {
+            data: null,
+            error: null
+        }; // blob genuinely doesn't exist yet — safe, new setup
+        if (!res.ok) return {
+            data: null,
+            error: `HTTP ${res.status}`
+        };
+        const data = await res.json();
+        return {
+            data,
+            error: null
+        };
+    } catch (err) {
+        return {
+            data: null,
+            error: (err && err.message) || "network error"
+        };
     }
 }
 async function saveToBlob(data) {
@@ -100702,19 +100716,31 @@ async function saveToBlob(data) {
 function useAzureStorage(builders, setBuilders, setLoading) {
     const [syncing, setSyncing] = useState(false);
     const [lastSaved, setLastSaved] = useState(null);
+    const [loadError, setLoadError] = useState(null);
+    const loadedRef = useRef(false);
     const saveTimer = useRef(null);
     // Load from blob on mount
     useEffect(()=>{
         setLoading(true);
-        loadFromBlob().then((data)=>{
-            if (data && Array.isArray(data) && data.length > 0) {
-                setBuilders(data);
+        loadFromBlob().then(({ data, error })=>{
+            if (error) {
+                // Load failed — do NOT allow autosave to run, or it could overwrite
+                // real cloud data with local seed/default data. Surface the error instead.
+                setLoadError(error);
+                loadedRef.current = false;
+            } else {
+                if (data && Array.isArray(data) && data.length > 0) {
+                    setBuilders(data);
+                }
+                loadedRef.current = true;
             }
             setLoading(false);
         });
     }, []);
     // Auto-save to blob whenever builders change (debounced 3s)
+    // Gated on loadedRef so a failed initial load can never trigger an overwrite.
     useEffect(()=>{
+        if (!loadedRef.current) return;
         if (saveTimer.current) clearTimeout(saveTimer.current);
         saveTimer.current = setTimeout(async ()=>{
             setSyncing(true);
@@ -100728,7 +100754,8 @@ function useAzureStorage(builders, setBuilders, setLoading) {
     ]);
     return {
         syncing,
-        lastSaved
+        lastSaved,
+        loadError
     };
 }
 // ── Duplicate address detection ───────────────────────────────────────────────
@@ -103266,7 +103293,7 @@ export default function BuilderCRM() {
         } catch  {}
     }, []);
     const [appLoading, setAppLoading] = useState(true);
-    const { syncing, lastSaved } = useAzureStorage(builders, setBuilders, setAppLoading);
+    const { syncing, lastSaved, loadError } = useAzureStorage(builders, setBuilders, setAppLoading);
     const { progress: geoProgress, addToQueue } = useGeocoder(builders, setBuilders);
     const dupeSet = useMemo(()=>buildDupeSet(builders), [
         builders
@@ -103518,7 +103545,19 @@ export default function BuilderCRM() {
             minHeight: "100vh",
             color: "#111827"
         }
-    }, toast && /*#__PURE__*/ React.createElement("div", {
+    }, loadError && /*#__PURE__*/ React.createElement("div", {
+        style: {
+            position: "sticky",
+            top: 0,
+            zIndex: 10000,
+            background: "#DC2626",
+            color: "white",
+            padding: "10px 16px",
+            fontWeight: 700,
+            fontSize: 13,
+            textAlign: "center"
+        }
+    }, "⚠️ Could not load saved data from the cloud (", loadError, "). Showing local/seed data only — changes will NOT be saved until this is resolved. Reload the page or check your connection before making edits."), toast && /*#__PURE__*/ React.createElement("div", {
         style: {
             position: "fixed",
             top: 20,
