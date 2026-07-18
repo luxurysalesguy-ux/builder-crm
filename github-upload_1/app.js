@@ -100672,9 +100672,53 @@ const BLOB_URL = "https://subzerocrmdata.blob.core.windows.net/crm-data/builders
 const CONTAINER_URL = "https://subzerocrmdata.blob.core.windows.net/crm-data?restype=container&sv=2026-02-06&ss=b&srt=co&sp=rwdlactfx&se=2031-01-01T01:23:08Z&st=2026-06-29T17:08:08Z&spr=https&sig=V%2FlnJScaJs2nhy3Nrc3Mrsz97Bo%2F8O3mEWAYsFfIV%2Bk%3D";
 async function loadFromBlob() {
     try {
-        const res = await fetch(BLOB_URL);
+        const res = await fetch(BLOB_URL, {
+            cache: "no-store"
+        });
+        if (res.status === 404) return {
+            data: null,
+            error: null,
+            raw: ""
+        }; // blob genuinely doesn't exist yet — safe, new setup
+        if (!res.ok) return {
+            data: null,
+            error: `HTTP ${res.status}`,
+            raw: null
+        };
+        const raw = await res.text();
+        let data = null;
+        try {
+            data = raw ? JSON.parse(raw) : null;
+        } catch  {
+            return {
+                data: null,
+                error: "corrupt data on server",
+                raw: null
+            };
+        }
+        return {
+            data,
+            error: null,
+            raw
+        };
+    } catch (err) {
+        return {
+            data: null,
+            error: (err && err.message) || "network error",
+            raw: null
+        };
+    }
+}
+// Fetch the raw current blob text, used right before saving to check nobody else has written since we last synced.
+// Returns null to mean "couldn't verify" (caller should treat this as unsafe to save).
+async function fetchRawBlob() {
+    try {
+        const res = await fetch(BLOB_URL, {
+            cache: "no-store"
+        });
+        if (res.status === 404) return "";
         if (!res.ok) return null;
-        return await res.json();
+        return await res.text();
     } catch  {
         return null;
     }
@@ -100702,24 +100746,61 @@ async function saveToBlob(data) {
 function useAzureStorage(builders, setBuilders, setLoading) {
     const [syncing, setSyncing] = useState(false);
     const [lastSaved, setLastSaved] = useState(null);
+    const [loadError, setLoadError] = useState(null);
+    const [conflict, setConflict] = useState(false);
+    const loadedRef = useRef(false);
+    // Raw JSON text of the last version of the data we know is on the server
+    // (from our own load, or our own last successful save). Used to detect
+    // whether another tab/session has written to the blob since then.
+    const lastSyncedRawRef = useRef(null);
     const saveTimer = useRef(null);
     // Load from blob on mount
     useEffect(()=>{
         setLoading(true);
-        loadFromBlob().then((data)=>{
-            if (data && Array.isArray(data) && data.length > 0) {
-                setBuilders(data);
+        loadFromBlob().then(({ data, error, raw })=>{
+            if (error) {
+                // Load failed — do NOT allow autosave to run, or it could overwrite
+                // real cloud data with local seed/default data. Surface the error instead.
+                setLoadError(error);
+                loadedRef.current = false;
+            } else {
+                if (data && Array.isArray(data) && data.length > 0) {
+                    setBuilders(data);
+                }
+                lastSyncedRawRef.current = raw;
+                loadedRef.current = true;
             }
             setLoading(false);
         });
     }, []);
-    // Auto-save to blob whenever builders change (debounced 3s)
+    // Auto-save to blob whenever builders change (debounced 3s).
+    // Gated on loadedRef so a failed initial load can never trigger an overwrite.
+    // Before writing, re-checks the server copy against what we last knew — if it
+    // changed (another tab/session saved since), we refuse to blindly overwrite it
+    // and instead flag a conflict for the user to resolve by reloading.
     useEffect(()=>{
+        if (!loadedRef.current || conflict) return;
         if (saveTimer.current) clearTimeout(saveTimer.current);
         saveTimer.current = setTimeout(async ()=>{
             setSyncing(true);
-            await saveToBlob(builders);
-            setLastSaved(new Date());
+            const currentRemoteRaw = await fetchRawBlob();
+            if (currentRemoteRaw === null) {
+                // Couldn't verify current server state — safer to skip this save than risk clobbering.
+                setSyncing(false);
+                return;
+            }
+            if (lastSyncedRawRef.current !== null && currentRemoteRaw !== lastSyncedRawRef.current) {
+                // Someone else changed the data since we last synced. Do not overwrite.
+                setConflict(true);
+                setSyncing(false);
+                return;
+            }
+            const newRaw = JSON.stringify(builders);
+            const ok = await saveToBlob(builders);
+            if (ok) {
+                lastSyncedRawRef.current = newRaw;
+                setLastSaved(new Date());
+            }
             setSyncing(false);
         }, 3000);
         return ()=>clearTimeout(saveTimer.current);
@@ -100728,7 +100809,9 @@ function useAzureStorage(builders, setBuilders, setLoading) {
     ]);
     return {
         syncing,
-        lastSaved
+        lastSaved,
+        loadError,
+        conflict
     };
 }
 // ── Duplicate address detection ───────────────────────────────────────────────
@@ -101665,6 +101748,7 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
     const [tab, setTab] = useState("details");
     const [statusFilter, setStatusFilter] = useState("all");
     const [spFilter, setSpFilter] = useState("all");
+    const [dgFilter, setDgFilter] = useState("all");
     const [editing, setEditing] = useState(false);
     const [addingJob, setAddingJob] = useState(false);
     const [editingJob, setEditingJob] = useState(null);
@@ -101674,9 +101758,13 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
     const salespersons = [
         ...new Set(builder.jobs.map((j)=>(j.salesperson || "").trim().toLowerCase()).filter(Boolean))
     ].map((low)=>builder.jobs.find((j)=>(j.salesperson || "").trim().toLowerCase() === low).salesperson);
+    const designers = [
+        ...new Set(builder.jobs.map((j)=>(j.cabinetDesigner || "").trim().toLowerCase()).filter(Boolean))
+    ].map((low)=>builder.jobs.find((j)=>(j.cabinetDesigner || "").trim().toLowerCase() === low).cabinetDesigner);
     const filteredJobs = builder.jobs.filter((j)=>{
         if (statusFilter !== "all" && j.status !== statusFilter) return false;
         if (spFilter !== "all" && (j.salesperson || "").trim().toLowerCase() !== spFilter.trim().toLowerCase()) return false;
+        if (dgFilter !== "all" && (j.cabinetDesigner || "").trim().toLowerCase() !== dgFilter.trim().toLowerCase()) return false;
         return true;
     });
     const totalStd = skuCountDeduped(builder.jobs);
@@ -101997,7 +102085,19 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
     }, "All Salespeople"), salespersons.map((s)=>/*#__PURE__*/ React.createElement("option", {
             key: s,
             value: s
-        }, s))), /*#__PURE__*/ React.createElement("button", {
+        }, s))), designers.length > 0 && /*#__PURE__*/ React.createElement("select", {
+        style: {
+            ...inp,
+            width: 170
+        },
+        value: dgFilter,
+        onChange: (e)=>setDgFilter(e.target.value)
+    }, /*#__PURE__*/ React.createElement("option", {
+        value: "all"
+    }, "All Designers"), designers.map((d)=>/*#__PURE__*/ React.createElement("option", {
+            key: d,
+            value: d
+        }, d))), /*#__PURE__*/ React.createElement("button", {
         onClick: ()=>setAddingJob(true),
         style: {
             ...btnP,
@@ -103249,7 +103349,7 @@ export default function BuilderCRM() {
         } catch  {}
     }, []);
     const [appLoading, setAppLoading] = useState(true);
-    const { syncing, lastSaved } = useAzureStorage(builders, setBuilders, setAppLoading);
+    const { syncing, lastSaved, loadError, conflict } = useAzureStorage(builders, setBuilders, setAppLoading);
     const { progress: geoProgress, addToQueue } = useGeocoder(builders, setBuilders);
     const dupeSet = useMemo(()=>buildDupeSet(builders), [
         builders
@@ -103501,7 +103601,58 @@ export default function BuilderCRM() {
             minHeight: "100vh",
             color: "#111827"
         }
-    }, toast && /*#__PURE__*/ React.createElement("div", {
+    }, loadError && /*#__PURE__*/ React.createElement("div", {
+        style: {
+            position: "sticky",
+            top: 0,
+            zIndex: 10000,
+            background: "#DC2626",
+            color: "white",
+            padding: "10px 16px",
+            fontWeight: 700,
+            fontSize: 13,
+            textAlign: "center"
+        }
+    }, "⚠️ Could not load saved data from the cloud (", loadError, "). Showing local/seed data only — changes will NOT be saved until this is resolved. Reload the page or check your connection before making edits."), conflict && /*#__PURE__*/ React.createElement("div", {
+        style: {
+            position: "sticky",
+            top: 0,
+            zIndex: 10000,
+            background: "#B45309",
+            color: "white",
+            padding: "10px 16px",
+            fontWeight: 700,
+            fontSize: 13,
+            textAlign: "center",
+            display: "flex",
+            gap: 12,
+            justifyContent: "center",
+            alignItems: "center"
+        }
+    }, "⚠️ This data was updated elsewhere (another tab, device, or teammate) since this page loaded. Auto-save has been paused so nothing gets overwritten.", /*#__PURE__*/ React.createElement("button", {
+        onClick: ()=>window.location.reload(),
+        style: {
+            background: "white",
+            color: "#B45309",
+            border: "none",
+            padding: "4px 12px",
+            borderRadius: 6,
+            fontWeight: 800,
+            cursor: "pointer"
+        }
+    }, "Reload Now")), geoProgress.running && /*#__PURE__*/ React.createElement("div", {
+        style: {
+            position: "sticky",
+            top: 0,
+            zIndex: 9998,
+            background: "#1E3A5F",
+            color: "white",
+            padding: "8px 16px",
+            fontWeight: 700,
+            fontSize: 12,
+            textAlign: "center"
+        }
+    }, "📍 Geocoding addresses: ", geoProgress.done, " / ", geoProgress.total, " done — keep this tab open until finished (do not close or navigate away)."), toast && /*#__PURE__*/ React.createElement("div", {
         style: {
             position: "fixed",
             top: 20,
