@@ -101745,7 +101745,7 @@ function JobForm({ job, builderType, onSave, onCancel }) {
     }, "Cancel")));
 }
 // ── Builder Detail ────────────────────────────────────────────────────────────
-function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob, onDeleteBuilder, leafletLoaded, dupeSet = new Set() }) {
+function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob, onDeleteBuilder, leafletLoaded, dupeSet = new Set(), jumpToJobId = null, onJumpHandled = ()=>{} }) {
     const [tab, setTab] = useState("details");
     const [statusFilter, setStatusFilter] = useState("all");
     const [spFilter, setSpFilter] = useState("all");
@@ -101769,6 +101769,25 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
         return true;
     });
     const totalStd = skuCountDeduped(builder.jobs);
+    useEffect(()=>{
+        if (!jumpToJobId) return;
+        if (!builder.jobs.some((j)=>j.id === jumpToJobId)) return;
+        setTab("jobs");
+        setStatusFilter("all");
+        setSpFilter("all");
+        setDgFilter("all");
+        setExpandedJob(jumpToJobId);
+        setTimeout(()=>{
+            document.getElementById(`job-${jumpToJobId}`)?.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }, 100);
+        onJumpHandled();
+    }, [
+        jumpToJobId,
+        builder.id
+    ]);
     return /*#__PURE__*/ React.createElement("div", null, /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
@@ -103319,6 +103338,7 @@ export default function BuilderCRM() {
     const [jFilterDupesOnly, setJFilterDupesOnly] = useState(false);
     const [jFilterType, setJFilterType] = useState("all");
     const [jFilterMarket, setJFilterMarket] = useState("all");
+    const [jumpToJobId, setJumpToJobId] = useState(null);
     const [jSearch, setJSearch] = useState("");
     const [toast, setToast] = useState("");
     useEffect(()=>{
@@ -103861,7 +103881,9 @@ export default function BuilderCRM() {
         onDeleteJob: deleteJob,
         onDeleteBuilder: deleteBuilder,
         leafletLoaded: leafletLoaded,
-        dupeSet: dupeSet
+        dupeSet: dupeSet,
+        jumpToJobId: jumpToJobId,
+        onJumpHandled: ()=>setJumpToJobId(null)
     }) : /*#__PURE__*/ React.createElement(React.Fragment, null, mainTab === "builders" && /*#__PURE__*/ React.createElement(React.Fragment, null, /*#__PURE__*/ React.createElement("div", {
         style: {
             display: "flex",
@@ -104028,7 +104050,7 @@ export default function BuilderCRM() {
         builders: filteredBuilders,
         mapMode: mapMode,
         onBuilderClick: (id)=>setSelectedBuilderId(id),
-        onJobClick: (bid, jid)=>setSelectedBuilderId(bid)
+        onJobClick: (bid, jid)=>{ setSelectedBuilderId(bid); setJumpToJobId(jid); }
     }) : /*#__PURE__*/ React.createElement("div", {
         style: {
             height: 350,
@@ -104366,7 +104388,7 @@ export default function BuilderCRM() {
         builders: jobTabBuilders,
         mapMode: jobsMapMode,
         onBuilderClick: (id)=>setSelectedBuilderId(id),
-        onJobClick: (bid, jid)=>setSelectedBuilderId(bid)
+        onJobClick: (bid, jid)=>{ setSelectedBuilderId(bid); setJumpToJobId(jid); }
     }) : /*#__PURE__*/ React.createElement("div", {
         style: {
             height: 350,
