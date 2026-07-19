@@ -100845,7 +100845,6 @@ async function geocodeAddress(address) {
     return null;
 }
 function useGeocoder(builders, setBuilders) {
-    const [queue, setQueue] = useState([]);
     const [progress, setProgress] = useState({
         total: 0,
         done: 0,
@@ -100853,6 +100852,14 @@ function useGeocoder(builders, setBuilders) {
     });
     const runningRef = useRef(false);
     const cacheRef = useRef({});
+    // The queue itself lives in a ref, not React state. This is the single
+    // source of truth for what's pending — addToQueue pushes directly into it,
+    // and the processing loop always reads/shifts from this same live array.
+    // (Previously the queue was React state and the processing loop closed
+    // over a snapshot of it — if a new batch was added mid-run, the loop would
+    // finish based on its stale snapshot and then reset the queue to [],
+    // silently discarding whatever had just been added.)
+    const queueRef = useRef([]);
     // Load cache from storage on mount
     useEffect(()=>{
         try {
@@ -100861,67 +100868,44 @@ function useGeocoder(builders, setBuilders) {
             });
         } catch  {}
     }, []);
-    // Build queue whenever builders change — find anything missing lat/lng
-    useEffect(()=>{
-        const needed = [];
-        builders.forEach((b)=>{
-            if (!b.lat && b.address) needed.push({
-                type: "builder",
-                id: b.id,
-                address: b.address
-            });
-            b.jobs.forEach((j)=>{
-                if (!j.lat && j.address) needed.push({
-                    type: "job",
-                    builderId: b.id,
-                    id: j.id,
-                    address: j.address
-                });
-            });
-        });
-        // Filter out ones already in cache
-        const toFetch = needed.filter((n)=>!cacheRef.current[n.address]);
-        if (toFetch.length > 0) {
-            setQueue(toFetch);
-            setProgress((p)=>({
-                    ...p,
-                    total: toFetch.length,
-                    done: 0
-                }));
-        }
-    }, []); // Only on mount — new items added via addToQueue
-    const addToQueue = (newItems)=>{
-        const toFetch = newItems.filter((n)=>!cacheRef.current[n.address]);
-        if (toFetch.length === 0) return;
-        setQueue((q)=>[
-                ...q,
-                ...toFetch
-            ]);
-        setProgress((p)=>({
-                ...p,
-                total: p.total + toFetch.length
+    const applyCoords = (item, lat, lng)=>{
+        setBuilders((prev)=>prev.map((b)=>{
+                if (item.type === "builder" && b.id === item.id) return {
+                    ...b,
+                    lat,
+                    lng
+                };
+                if (item.type === "job" && b.id === item.builderId) {
+                    return {
+                        ...b,
+                        jobs: b.jobs.map((j)=>j.id === item.id ? {
+                                ...j,
+                                lat,
+                                lng
+                            } : j)
+                    };
+                }
+                return b;
             }));
     };
-    // Process queue 1 per second
-    useEffect(()=>{
-        if (queue.length === 0 || runningRef.current) return;
+    const processQueue = ()=>{
+        if (runningRef.current) return; // already running — the live queueRef will be picked up as it goes
+        if (queueRef.current.length === 0) return;
         runningRef.current = true;
         setProgress((p)=>({
                 ...p,
                 running: true
             }));
-        let idx = 0;
         const processNext = async ()=>{
-            if (idx >= queue.length) {
+            if (queueRef.current.length === 0) {
                 runningRef.current = false;
                 setProgress((p)=>({
                         ...p,
                         running: false
                     }));
-                setQueue([]);
                 return;
             }
-            const item = queue[idx++];
+            const item = queueRef.current.shift();
             // Check cache first
             if (cacheRef.current[item.address]) {
                 const { lat, lng } = cacheRef.current[item.address];
@@ -100948,28 +100932,45 @@ function useGeocoder(builders, setBuilders) {
             setTimeout(processNext, 1100); // 1.1s to stay under Nominatim rate limit
         };
         processNext();
-    }, [
-        queue
-    ]);
-    const applyCoords = (item, lat, lng)=>{
-        setBuilders((prev)=>prev.map((b)=>{
-                if (item.type === "builder" && b.id === item.id) return {
-                    ...b,
-                    lat,
-                    lng
-                };
-                if (item.type === "job" && b.id === item.builderId) {
-                    return {
-                        ...b,
-                        jobs: b.jobs.map((j)=>j.id === item.id ? {
-                                ...j,
-                                lat,
-                                lng
-                            } : j)
-                    };
-                }
-                return b;
+    };
+    // Build queue on mount — find anything missing lat/lng
+    useEffect(()=>{
+        const needed = [];
+        builders.forEach((b)=>{
+            if (!b.lat && b.address) needed.push({
+                type: "builder",
+                id: b.id,
+                address: b.address
+            });
+            b.jobs.forEach((j)=>{
+                if (!j.lat && j.address) needed.push({
+                    type: "job",
+                    builderId: b.id,
+                    id: j.id,
+                    address: j.address
+                });
+            });
+        });
+        // Filter out ones already in cache
+        const toFetch = needed.filter((n)=>!cacheRef.current[n.address]);
+        if (toFetch.length > 0) {
+            queueRef.current.push(...toFetch);
+            setProgress((p)=>({
+                    ...p,
+                    total: p.total + toFetch.length
+                }));
+            processQueue();
+        }
+    }, []); // Only on mount — new items added via addToQueue
+    const addToQueue = (newItems)=>{
+        const toFetch = newItems.filter((n)=>!cacheRef.current[n.address]);
+        if (toFetch.length === 0) return;
+        queueRef.current.push(...toFetch);
+        setProgress((p)=>({
+                ...p,
+                total: p.total + toFetch.length
             }));
+        processQueue();
     };
     return {
         progress,
@@ -103448,10 +103449,12 @@ export default function BuilderCRM() {
                     lng: null
                 };
                 const bIdx = updated.findIndex((b)=>b.partnerCode && b.partnerCode === item.partnerCode || !item.partnerCode && item.builderName && b.name.trim().toLowerCase() === item.builderName.trim().toLowerCase());
+                let builderId;
                 if (bIdx >= 0) {
                     let b = {
                         ...updated[bIdx]
                     };
+                    builderId = b.id;
                     if (item._conflicts?.length > 0) {
                         if (item.builderName) b.name = item.builderName;
                         if (item.builderAddress) {
@@ -103498,6 +103501,7 @@ export default function BuilderCRM() {
                             job
                         ]
                     };
+                    builderId = nb.id;
                     updated.push(nb);
                     if (nb.address) newGeoItems.push({
                         type: "builder",
@@ -103507,7 +103511,7 @@ export default function BuilderCRM() {
                 }
                 if (item.jobAddress) newGeoItems.push({
                     type: "job",
-                    builderId: updated.find((b)=>b.partnerCode === item.partnerCode)?.id || "",
+                    builderId,
                     id: jobId,
                     address: item.jobAddress
                 });
@@ -103516,7 +103520,7 @@ export default function BuilderCRM() {
         });
         setTimeout(()=>addToQueue(newGeoItems), 800);
         setToolTab(null);
-        showToast(`✅ ${approvedItems.length} records imported — geocoding ${newGeoItems.length} addresses...`);
+        showToast(`✅ ${approvedItems.length} records imported — geocoding queued, watch for the progress banner above`);
     };
     const allSalespersons = [
         ...new Set(builders.flatMap((b)=>b.jobs.map((j)=>(j.salesperson || "").trim().toLowerCase())).filter(Boolean))
