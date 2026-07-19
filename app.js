@@ -103494,8 +103494,10 @@ export default function BuilderCRM() {
                     });
                     const jIdx = b.jobs.findIndex((j)=>j.registrationNumber === item.registrationNumber);
                     if (jIdx >= 0) b.jobs = b.jobs.map((j, i)=>i === jIdx ? {
-                            ...job,
-                            id: j.id
+                            ...j,
+                            startDate: job.startDate,
+                            endDate: job.endDate,
+                            skus: job.skus
                         } : j);
                     else b.jobs = [
                         ...b.jobs,
