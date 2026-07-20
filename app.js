@@ -100748,6 +100748,7 @@ function useAzureStorage(builders, setBuilders, setLoading) {
     const [lastSaved, setLastSaved] = useState(null);
     const [loadError, setLoadError] = useState(null);
     const [conflict, setConflict] = useState(false);
+    const [saveError, setSaveError] = useState(null);
     const loadedRef = useRef(false);
     // Raw JSON text of the last version of the data we know is on the server
     // (from our own load, or our own last successful save). Used to detect
@@ -100778,30 +100779,50 @@ function useAzureStorage(builders, setBuilders, setLoading) {
     // Before writing, re-checks the server copy against what we last knew — if it
     // changed (another tab/session saved since), we refuse to blindly overwrite it
     // and instead flag a conflict for the user to resolve by reloading.
+    // If the verification check or the save itself fails (transient network blip —
+    // common during a long geocoding session), we retry with backoff instead of
+    // silently giving up, so a long session's progress doesn't quietly vanish.
+    const saveGenerationRef = useRef(0);
+    const attemptSave = async (dataToSave, generation, retryCount)=>{
+        if (saveGenerationRef.current !== generation) return; // a newer save has superseded this one
+        setSyncing(true);
+        const currentRemoteRaw = await fetchRawBlob();
+        if (saveGenerationRef.current !== generation) {
+            setSyncing(false);
+            return;
+        }
+        if (currentRemoteRaw === null) {
+            if (retryCount === 2) setSaveError("Could not verify server state — retrying...");
+            setTimeout(()=>attemptSave(dataToSave, generation, retryCount + 1), Math.min(2000 * (retryCount + 1), 30000));
+            return;
+        }
+        if (lastSyncedRawRef.current !== null && currentRemoteRaw !== lastSyncedRawRef.current) {
+            setConflict(true);
+            setSyncing(false);
+            return;
+        }
+        const newRaw = JSON.stringify(dataToSave);
+        const ok = await saveToBlob(dataToSave);
+        if (saveGenerationRef.current !== generation) {
+            setSyncing(false);
+            return;
+        }
+        if (ok) {
+            lastSyncedRawRef.current = newRaw;
+            setLastSaved(new Date());
+            setSaveError(null);
+            setSyncing(false);
+        } else {
+            if (retryCount === 2) setSaveError("Could not save to the cloud — retrying...");
+            setTimeout(()=>attemptSave(dataToSave, generation, retryCount + 1), Math.min(2000 * (retryCount + 1), 30000));
+        }
+    };
     useEffect(()=>{
         if (!loadedRef.current || conflict) return;
         if (saveTimer.current) clearTimeout(saveTimer.current);
-        saveTimer.current = setTimeout(async ()=>{
-            setSyncing(true);
-            const currentRemoteRaw = await fetchRawBlob();
-            if (currentRemoteRaw === null) {
-                // Couldn't verify current server state — safer to skip this save than risk clobbering.
-                setSyncing(false);
-                return;
-            }
-            if (lastSyncedRawRef.current !== null && currentRemoteRaw !== lastSyncedRawRef.current) {
-                // Someone else changed the data since we last synced. Do not overwrite.
-                setConflict(true);
-                setSyncing(false);
-                return;
-            }
-            const newRaw = JSON.stringify(builders);
-            const ok = await saveToBlob(builders);
-            if (ok) {
-                lastSyncedRawRef.current = newRaw;
-                setLastSaved(new Date());
-            }
-            setSyncing(false);
+        saveTimer.current = setTimeout(()=>{
+            saveGenerationRef.current += 1;
+            attemptSave(builders, saveGenerationRef.current, 0);
         }, 3000);
         return ()=>clearTimeout(saveTimer.current);
     }, [
@@ -100811,7 +100832,8 @@ function useAzureStorage(builders, setBuilders, setLoading) {
         syncing,
         lastSaved,
         loadError,
-        conflict
+        conflict,
+        saveError
     };
 }
 // ── Duplicate address detection ───────────────────────────────────────────────
@@ -103404,7 +103426,7 @@ export default function BuilderCRM() {
         } catch  {}
     }, []);
     const [appLoading, setAppLoading] = useState(true);
-    const { syncing, lastSaved, loadError, conflict } = useAzureStorage(builders, setBuilders, setAppLoading);
+    const { syncing, lastSaved, loadError, conflict, saveError } = useAzureStorage(builders, setBuilders, setAppLoading);
     const { progress: geoProgress, addToQueue } = useGeocoder(builders, setBuilders);
     const dupeSet = useMemo(()=>buildDupeSet(builders), [
         builders
@@ -103414,13 +103436,29 @@ export default function BuilderCRM() {
         setTimeout(()=>setToast(""), 3000);
     };
     const saveBuilder = (b)=>{
+        const existing = builders.find((x)=>x.id === b.id);
+        const addressChanged = b.address && (!existing || existing.address !== b.address);
+        const finalB = addressChanged ? {
+            ...b,
+            lat: null,
+            lng: null
+        } : b;
         setBuilders((p)=>p.find((x)=>x.id === b.id) ? p.map((x)=>x.id === b.id ? {
                     ...x,
-                    ...b
+                    ...finalB
                 } : x) : [
                 ...p,
-                b
+                finalB
             ]);
+        if (addressChanged) {
+            addToQueue([
+                {
+                    type: "builder",
+                    id: b.id,
+                    address: b.address
+                }
+            ]);
+        }
         showToast("Saved ✓");
     };
     const deleteBuilder = (id)=>{
@@ -103429,13 +103467,31 @@ export default function BuilderCRM() {
         showToast("Deleted");
     };
     const saveJob = (bid, job)=>{
+        const existingBuilder = builders.find((x)=>x.id === bid);
+        const existing = existingBuilder?.jobs.find((j)=>j.id === job.id);
+        const addressChanged = job.address && (!existing || existing.address !== job.address);
+        const finalJob = addressChanged ? {
+            ...job,
+            lat: null,
+            lng: null
+        } : job;
         setBuilders((p)=>p.map((b)=>b.id !== bid ? b : {
                     ...b,
-                    jobs: b.jobs.find((j)=>j.id === job.id) ? b.jobs.map((j)=>j.id === job.id ? job : j) : [
+                    jobs: existing ? b.jobs.map((j)=>j.id === job.id ? finalJob : j) : [
                         ...b.jobs,
-                        job
+                        finalJob
                     ]
                 }));
+        if (addressChanged) {
+            addToQueue([
+                {
+                    type: "job",
+                    builderId: bid,
+                    id: job.id,
+                    address: job.address
+                }
+            ]);
+        }
         showToast("Job saved ✓");
     };
     const deleteJob = (bid, jid)=>{
@@ -103701,7 +103757,19 @@ export default function BuilderCRM() {
             fontWeight: 800,
             cursor: "pointer"
         }
-    }, "Reload Now")), geoProgress.running && /*#__PURE__*/ React.createElement("div", {
+    }, "Reload Now")), saveError && /*#__PURE__*/ React.createElement("div", {
+        style: {
+            position: "sticky",
+            top: 0,
+            zIndex: 10000,
+            background: "#DC2626",
+            color: "white",
+            padding: "10px 16px",
+            fontWeight: 700,
+            fontSize: 13,
+            textAlign: "center"
+        }
+    }, "⚠️ ", saveError, " Keep this tab open — it will keep retrying automatically."), geoProgress.running && /*#__PURE__*/ React.createElement("div", {
         style: {
             position: "sticky",
             top: 0,
