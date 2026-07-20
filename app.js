@@ -101634,6 +101634,7 @@ function JobForm({ job, builderType, onSave, onCancel }) {
         startDate: "",
         endDate: "",
         cabinetDesigner: "",
+        notes: "",
         skus: [],
         lat: null,
         lng: null
@@ -101714,6 +101715,22 @@ function JobForm({ job, builderType, onSave, onCancel }) {
         style: inp,
         value: f.cabinetDesigner || "",
         onChange: (e)=>s("cabinetDesigner", e.target.value)
+    })), /*#__PURE__*/ React.createElement("div", {
+        style: {
+            marginTop: 12
+        }
+    }, /*#__PURE__*/ React.createElement("label", {
+        style: lbl
+    }, "Notes"), /*#__PURE__*/ React.createElement("textarea", {
+        style: {
+            ...inp,
+            minHeight: 70,
+            fontFamily: "inherit",
+            resize: "vertical"
+        },
+        value: f.notes || "",
+        placeholder: "Internal notes about this deal — never touched by Excel imports",
+        onChange: (e)=>s("notes", e.target.value)
     })), /*#__PURE__*/ React.createElement("div", {
         style: {
             marginTop: 16
@@ -102227,7 +102244,13 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             }
         }, "*")), /*#__PURE__*/ React.createElement(StatusBadge, {
             status: job.status
-        }), /*#__PURE__*/ React.createElement("div", {
+        }), job.notes && /*#__PURE__*/ React.createElement("span", {
+            title: job.notes,
+            style: {
+                fontSize: 13,
+                cursor: "help"
+            }
+        }, "📝"), /*#__PURE__*/ React.createElement("div", {
             style: {
                 display: "flex",
                 gap: 3
@@ -102325,7 +102348,18 @@ function BuilderDetail({ builder, onBack, onSaveBuilder, onSaveJob, onDeleteJob,
             skus: job.skus,
             onChange: ()=>{},
             readOnly: true
-        }))));
+        }), job.notes && /*#__PURE__*/ React.createElement("div", {
+            style: {
+                marginTop: 12,
+                padding: 10,
+                background: "#FFFBEB",
+                border: "1px solid #FDE68A",
+                borderRadius: 6,
+                fontSize: 12,
+                color: "#374151",
+                whiteSpace: "pre-wrap"
+            }
+        }, /*#__PURE__*/ React.createElement("strong", null, "📝 Notes: "), job.notes))));
     }))), tab === "map" && /*#__PURE__*/ React.createElement("div", {
         style: card
     }, /*#__PURE__*/ React.createElement("div", {
@@ -103464,6 +103498,7 @@ export default function BuilderCRM() {
                     startDate: item.startDate,
                     endDate: item.endDate,
                     cabinetDesigner: item.cabinetDesigner || "",
+                    notes: "",
                     skus: item.skus,
                     lat: null,
                     lng: null
@@ -104462,7 +104497,13 @@ export default function BuilderCRM() {
             }
         }, "*")), /*#__PURE__*/ React.createElement(StatusBadge, {
             status: job.status
-        })), /*#__PURE__*/ React.createElement("div", {
+        }), job.notes && /*#__PURE__*/ React.createElement("span", {
+            title: job.notes,
+            style: {
+                fontSize: 13,
+                cursor: "help"
+            }
+        }, "📝")), /*#__PURE__*/ React.createElement("div", {
             style: {
                 fontSize: 12,
                 marginBottom: 2
