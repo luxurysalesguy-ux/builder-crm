@@ -100828,12 +100828,23 @@ function useAzureStorage(builders, setBuilders, setLoading) {
     }, [
         builders
     ]);
+    // Bypasses the debounce entirely — used right when geocoding finishes so the
+    // final result saves immediately instead of waiting on the normal 3s quiet
+    // window (which a long, continuously-updating geocoding run never reaches
+    // until the very last item completes anyway).
+    const forceSave = ()=>{
+        if (!loadedRef.current || conflict) return;
+        if (saveTimer.current) clearTimeout(saveTimer.current);
+        saveGenerationRef.current += 1;
+        attemptSave(builders, saveGenerationRef.current, 0);
+    };
     return {
         syncing,
         lastSaved,
         loadError,
         conflict,
-        saveError
+        saveError,
+        forceSave
     };
 }
 // ── Duplicate address detection ───────────────────────────────────────────────
@@ -103426,8 +103437,28 @@ export default function BuilderCRM() {
         } catch  {}
     }, []);
     const [appLoading, setAppLoading] = useState(true);
-    const { syncing, lastSaved, loadError, conflict, saveError } = useAzureStorage(builders, setBuilders, setAppLoading);
+    const { syncing, lastSaved, loadError, conflict, saveError, forceSave } = useAzureStorage(builders, setBuilders, setAppLoading);
     const { progress: geoProgress, addToQueue } = useGeocoder(builders, setBuilders);
+    const wasGeocodingRef = useRef(false);
+    const [finishingGeoSave, setFinishingGeoSave] = useState(false);
+    useEffect(()=>{
+        if (wasGeocodingRef.current && !geoProgress.running) {
+            // Geocoding just finished — save immediately rather than waiting on
+            // the normal debounce, since a continuously-updating run never hits
+            // the 3s quiet window until this exact moment anyway. Keep the banner
+            // up until this specific save actually completes.
+            setFinishingGeoSave(true);
+            forceSave();
+        }
+        wasGeocodingRef.current = geoProgress.running;
+    }, [
+        geoProgress.running
+    ]);
+    useEffect(()=>{
+        if (finishingGeoSave && lastSaved) setFinishingGeoSave(false);
+    }, [
+        lastSaved
+    ]);
     const dupeSet = useMemo(()=>buildDupeSet(builders), [
         builders
     ]);
@@ -103769,7 +103800,7 @@ export default function BuilderCRM() {
             fontSize: 13,
             textAlign: "center"
         }
-    }, "⚠️ ", saveError, " Keep this tab open — it will keep retrying automatically."), geoProgress.running && /*#__PURE__*/ React.createElement("div", {
+    }, "⚠️ ", saveError, " Keep this tab open — it will keep retrying automatically."), (geoProgress.running || finishingGeoSave) && /*#__PURE__*/ React.createElement("div", {
         style: {
             position: "sticky",
             top: 0,
@@ -103781,7 +103812,7 @@ export default function BuilderCRM() {
             fontSize: 12,
             textAlign: "center"
         }
-    }, "📍 Geocoding addresses: ", geoProgress.done, " / ", geoProgress.total, " done — keep this tab open until finished (do not close or navigate away)."), toast && /*#__PURE__*/ React.createElement("div", {
+    }, geoProgress.running ? `📍 Geocoding addresses: ${geoProgress.done} / ${geoProgress.total} done — keep this tab open until finished (do not close or navigate away).` : "💾 Saving final results to the cloud — almost done, please wait a few more seconds before closing or refreshing..."), toast && /*#__PURE__*/ React.createElement("div", {
         style: {
             position: "fixed",
             top: 20,
