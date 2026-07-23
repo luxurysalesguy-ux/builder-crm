@@ -100862,19 +100862,43 @@ function buildDupeSet(builders) {
 const GEO_CACHE_KEY = "crm_geocache_v1";
 async function geocodeAddress(address) {
     if (!address || address.trim().length < 5) return null;
-    try {
-        const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(address)}`;
-        const res = await fetch(url, {
-            headers: {
-                "User-Agent": "SubZeroBuilderCRM/1.0"
-            }
-        });
-        const data = await res.json();
-        if (data?.[0]) return {
-            lat: parseFloat(data[0].lat),
-            lng: parseFloat(data[0].lon)
+    const tryQuery = async (q)=>{
+        try {
+            const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(q)}`;
+            const res = await fetch(url, {
+                headers: {
+                    "User-Agent": "SubZeroBuilderCRM/1.0"
+                }
+            });
+            const data = await res.json();
+            if (data?.[0]) return {
+                lat: parseFloat(data[0].lat),
+                lng: parseFloat(data[0].lon)
+            };
+        } catch  {}
+        return null;
+    };
+    // Try the exact full address first
+    const exact = await tryQuery(address);
+    if (exact) return {
+        ...exact,
+        approx: false
+    };
+    // New-construction addresses (a lot number in a brand-new community) are
+    // often not in OpenStreetMap's database yet and will never resolve no
+    // matter how many times it's retried. Fall back to just city/state/zip
+    // for an approximate community-level pin instead of leaving it unmapped
+    // and endlessly re-queuing it on every future run.
+    const parts = address.split(",").map((s)=>s.trim()).filter(Boolean);
+    if (parts.length > 1) {
+        const cityStateZip = parts.slice(1).join(", ");
+        await new Promise((r)=>setTimeout(r, 1100)); // stay under Nominatim's rate limit between our two requests
+        const approx = await tryQuery(cityStateZip);
+        if (approx) return {
+            ...approx,
+            approx: true
         };
-    } catch  {}
+    }
     return null;
 }
 function useGeocoder(builders, setBuilders, dataReady) {
@@ -100901,12 +100925,13 @@ function useGeocoder(builders, setBuilders, dataReady) {
             });
         } catch  {}
     }, []);
-    const applyCoords = (item, lat, lng)=>{
+    const applyCoords = (item, lat, lng, approx = false)=>{
         setBuilders((prev)=>prev.map((b)=>{
                 if (item.type === "builder" && b.id === item.id) return {
                     ...b,
                     lat,
-                    lng
+                    lng,
+                    geoApprox: approx
                 };
                 if (item.type === "job" && b.id === item.builderId) {
                     return {
@@ -100914,7 +100939,8 @@ function useGeocoder(builders, setBuilders, dataReady) {
                         jobs: b.jobs.map((j)=>j.id === item.id ? {
                                 ...j,
                                 lat,
-                                lng
+                                lng,
+                                geoApprox: approx
                             } : j)
                     };
                 }
@@ -100941,8 +100967,8 @@ function useGeocoder(builders, setBuilders, dataReady) {
             const item = queueRef.current.shift();
             // Check cache first
             if (cacheRef.current[item.address]) {
-                const { lat, lng } = cacheRef.current[item.address];
-                applyCoords(item, lat, lng);
+                const { lat, lng, approx } = cacheRef.current[item.address];
+                applyCoords(item, lat, lng, approx);
                 setProgress((p)=>({
                         ...p,
                         done: p.done + 1
@@ -100956,7 +100982,7 @@ function useGeocoder(builders, setBuilders, dataReady) {
                 try {
                     window.storage?.set(GEO_CACHE_KEY, JSON.stringify(cacheRef.current));
                 } catch  {}
-                applyCoords(item, coords.lat, coords.lng);
+                applyCoords(item, coords.lat, coords.lng, coords.approx);
             }
             setProgress((p)=>({
                     ...p,
@@ -101114,7 +101140,7 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick, zoomToSingle =
                     const std = skuCount(j.skus, "standard");
                     const icon = window.L.divIcon({
                         className: "",
-                        html: `<div style="width:14px;height:14px;border-radius:50%;background:${tc.color};border:2px solid white;box-shadow:0 2px 4px rgba(0,0,0,.3)"></div>`,
+                        html: `<div style="width:14px;height:14px;border-radius:50%;background:${tc.color};border:2px ${j.geoApprox ? "dashed" : "solid"} white;box-shadow:0 2px 4px rgba(0,0,0,.3)${j.geoApprox ? ";opacity:0.75" : ""}"></div>`,
                         iconSize: [
                             14,
                             14
@@ -101137,6 +101163,7 @@ function MapView({ builders, mapMode, onBuilderClick, onJobClick, zoomToSingle =
               <span style="font-size:11px;color:#6B7280">${b.name}</span><br/>
               <span style="background:${sc.bg};color:${sc.color};padding:1px 6px;border-radius:3px;font-size:11px;font-weight:700">${j.status}</span>
               <span style="font-size:11px;margin-left:6px">👤 ${j.salesperson}</span><br/>
+              ${j.geoApprox ? '<span style="font-size:10px;color:#B45309">📍 Approximate location (exact address not found)</span><br/>' : ""}
               <span style="font-size:11px;color:#374151">${std} standard SKUs · Reg# ${j.registrationNumber}</span><br/>
               <button id="${popupId}" style="margin-top:8px;padding:4px 12px;background:#1E3A5F;color:white;border:none;border-radius:4px;cursor:pointer;font-size:12px;font-weight:700;width:100%">View Job →</button>
             </div>`);
