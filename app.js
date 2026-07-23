@@ -100877,7 +100877,7 @@ async function geocodeAddress(address) {
     } catch  {}
     return null;
 }
-function useGeocoder(builders, setBuilders) {
+function useGeocoder(builders, setBuilders, dataReady) {
     const [progress, setProgress] = useState({
         total: 0,
         done: 0,
@@ -100966,8 +100966,16 @@ function useGeocoder(builders, setBuilders) {
         };
         processNext();
     };
-    // Build queue on mount — find anything missing lat/lng
+    // Build queue once the real data has actually finished loading — NOT on
+    // raw mount. The initial load from Azure Blob is async and takes at least
+    // one network round-trip, while this effect (if it ran on plain mount with
+    // empty deps) would fire essentially immediately, virtually always before
+    // the real data replaces the placeholder/seed state. That meant this scan
+    // was almost always run against the wrong (seed) data, silently missing
+    // most of what actually needed geocoding — a hidden cause of a lot of the
+    // inconsistent "it's not picking everything up" behavior.
     useEffect(()=>{
+        if (!dataReady) return;
         const needed = [];
         builders.forEach((b)=>{
             if (!b.lat && b.address) needed.push({
@@ -100994,7 +101002,9 @@ function useGeocoder(builders, setBuilders) {
                 }));
             processQueue();
         }
-    }, []); // Only on mount — new items added via addToQueue
+    }, [
+        dataReady
+    ]); // Fires once, right when the real data finishes loading — new items after that are added via addToQueue
     const addToQueue = (newItems)=>{
         const toFetch = newItems.filter((n)=>!cacheRef.current[n.address]);
         if (toFetch.length === 0) return;
@@ -103405,6 +103415,7 @@ export default function BuilderCRM() {
     const [jFilterDupesOnly, setJFilterDupesOnly] = useState(false);
     const [jFilterType, setJFilterType] = useState("all");
     const [jFilterMarket, setJFilterMarket] = useState("all");
+    const [jFilterGeo, setJFilterGeo] = useState("all");
     const [jumpToJobId, setJumpToJobId] = useState(null);
     const [jSearch, setJSearch] = useState("");
     const [toast, setToast] = useState("");
@@ -103438,7 +103449,7 @@ export default function BuilderCRM() {
     }, []);
     const [appLoading, setAppLoading] = useState(true);
     const { syncing, lastSaved, loadError, conflict, saveError, forceSave } = useAzureStorage(builders, setBuilders, setAppLoading);
-    const { progress: geoProgress, addToQueue } = useGeocoder(builders, setBuilders);
+    const { progress: geoProgress, addToQueue } = useGeocoder(builders, setBuilders, !appLoading);
     const wasGeocodingRef = useRef(false);
     const [finishingGeoSave, setFinishingGeoSave] = useState(false);
     useEffect(()=>{
@@ -103698,6 +103709,8 @@ export default function BuilderCRM() {
         if (jFilterDupesOnly && !dupeSet.has((j.address || "").trim().toLowerCase())) return false;
         if (jFilterType !== "all" && j.builderType !== jFilterType) return false;
         if (jFilterMarket !== "all" && (j.builderMarket || "") !== jFilterMarket) return false;
+        if (jFilterGeo === "missing" && j.lat) return false;
+        if (jFilterGeo === "has" && !j.lat) return false;
         if (jSearch && !j.projectName.toLowerCase().includes(jSearch.toLowerCase()) && !j.builderName.toLowerCase().includes(jSearch.toLowerCase()) && !j.registrationNumber.includes(jSearch)) return false;
         return true;
     }).sort((a, b)=>{
@@ -104445,7 +104458,20 @@ export default function BuilderCRM() {
     }, "All Markets"), allMarkets.map((m)=>/*#__PURE__*/ React.createElement("option", {
             key: m,
             value: m
-        }, m))), /*#__PURE__*/ React.createElement("button", {
+        }, m))), /*#__PURE__*/ React.createElement("select", {
+        style: {
+            ...inp,
+            width: 170
+        },
+        value: jFilterGeo,
+        onChange: (e)=>setJFilterGeo(e.target.value)
+    }, /*#__PURE__*/ React.createElement("option", {
+        value: "all"
+    }, "Map Status: All"), /*#__PURE__*/ React.createElement("option", {
+        value: "missing"
+    }, "❌ Missing Coordinates"), /*#__PURE__*/ React.createElement("option", {
+        value: "has"
+    }, "✅ Has Coordinates")), /*#__PURE__*/ React.createElement("button", {
         onClick: ()=>setJFilterDupesOnly((d)=>!d),
         style: {
             ...btnG,
